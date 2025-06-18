@@ -2326,140 +2326,145 @@ void institucionesCentrosApoyo()
         cout << "5.- 🤝 Organizaciones y Asociaciones Civiles" << endl;
         cout << "6.- 🚪 Salir del menú" << endl << endl;
 
-        opcionMenu = obtenerEntradaNumerica<int>("Ingresa tu opción: ", 1, 5);
+        opcionMenu = obtenerEntradaNumerica<int>("Ingresa tu opción: ", 1, 6);
             system("color 9"); // Color azul claro
 
             switch (opcionMenu)
             {
             case 1:
-               cout << "## 🏨 Hospitales con Área de Salud Mental (Veracruz y zonas cercanas):" << endl;
+                cout << "## 🏨✨ Hospitales con Área de Salud Mental (Veracruz y zonas cercanas):" << endl;
                 cout << "--------------------------------------------------------------------------------" << endl;
-                cout << "- **Hospital Regional de Alta Especialidad de Veracruz**" << endl;
-                cout << "  Descripción: Es un hospital de referencia para la zona conurbada. Su departamento de Psiquiatría ofrece evaluación, diagnóstico y tratamiento de diversos trastornos mentales. Es un recurso vital para emergencias psiquiátricas y estabilización de crisis agudas, incluyendo un área de internamiento para pacientes que lo requieran." << endl;
-                cout << "  Ubicación: Av. 20 de Noviembre #1072, Col. Centro, Veracruz, Ver." << endl;
-                cout << "  Servicios: Hospitalización psiquiátrica (aguda y de corta estancia), consulta externa de psiquiatría, interconsultas a otras especialidades del hospital, manejo de crisis y urgencias psiquiátricas, psicofarmacología." << endl;
-                cout << "  Población: Adultos. Atención de urgencias psiquiátricas y referencias de otros niveles de atención." << endl;
-                cout << "  Consideraciones: Para acceso a consulta externa, generalmente se requiere referencia. Para urgencias, la atención es inmediata si se considera una emergencia. Es una institución de carácter público." << endl << endl;
+                cout << "- **Hospital Regional de Alta Especialidad de Veracruz** 🏥🚑🌟" << endl;
+                cout << " Descripción: Es un hospital de referencia para la zona conurbada. Su departamento de Psiquiatría ofrece evaluación, diagnóstico y tratamiento de diversos trastornos mentales. Es un recurso vital para emergencias psiquiátricas y estabilización de crisis agudas, incluyendo un área de internamiento para pacientes que lo requieran. 🚨🛌" << endl;
+                cout << " Ubicación: Av. 20 de Noviembre #1072, Col. Centro, Veracruz, Ver. 📍🗺️" << endl;
+                cout << " Servicios: Hospitalización psiquiátrica (aguda y de corta estancia), consulta externa de psiquiatría, interconsultas a otras especialidades del hospital, manejo de crisis y urgencias psiquiátricas, psicofarmacología. 🩺💬💊" << endl;
+                cout << " Población: Adultos. Atención de urgencias psiquiátricas y referencias de otros niveles de atención. 🧑‍🤝‍🧑👤" << endl;
+                cout << " Consideraciones: Para acceso a consulta externa, generalmente se requiere referencia. Para urgencias, la atención es inmediata si se considera una emergencia. Es una institución de carácter público. ✍️➡️🆓" << endl << endl;
 
-                cout << "- **Hospital de Salud Mental de Orizaba (Dr. Víctor Manuel Concha Vásquez)**" << endl;
-                cout << "  Descripción: El principal hospital psiquiátrico del estado de Veracruz, especializado en la atención de trastornos mentales complejos y crónicos. Ofrece programas de rehabilitación y reintegración social, además de la atención médica y terapéutica con enfoques a largo plazo." << endl;
-                cout << "  Ubicación: Carretera Federal Fortín-Orizaba km 2.5, Colonia Ferrer Guardia, Orizaba, Ver. (confirmar dirección exacta)." << endl;
-                cout << "  Servicios: Hospitalización de media y larga estancia, consulta externa de psiquiatría y psicología, farmacoterapia, terapia ocupacional, terapia de grupo, rehabilitación psicosocial, apoyo familiar, programas de desintoxicación y manejo de adicciones con comorbilidad psiquiátrica." << endl;
-                cout << "  Población: Adolescentes y adultos con trastornos mentales graves o persistentes. También atiende casos de pacientes con adicciones y problemas de salud mental." << endl;
-                cout << "  Consideraciones: Es un hospital estatal. Los procesos de ingreso pueden requerir evaluación previa o derivación de otros centros de salud. Tienen un enfoque integral." << endl << endl;
+                cout << "- **Hospital de Salud Mental de Orizaba (Dr. Víctor Manuel Concha Vásquez)** 🧠🌳🌟" << endl;
+                cout << " Descripción: El principal hospital psiquiátrico del estado de Veracruz, especializado en la atención de trastornos mentales complejos y crónicos. Ofrece programas de rehabilitación y reintegración social, además de la atención médica y terapéutica con enfoques a largo plazo. 🌱🧘‍♀️" << endl;
+                cout << " Ubicación: Carretera Federal Fortín-Orizaba km 2.5, Colonia Ferrer Guardia, Orizaba, Ver. (confirmar dirección exacta). 📍🗺️🧐" << endl;
+                cout << " Servicios: Hospitalización de media y larga estancia, consulta externa de psiquiatría y psicología, farmacoterapia, terapia ocupacional, terapia de grupo, rehabilitación psicosocial, apoyo familiar, programas de desintoxicación y manejo de adicciones con comorbilidad psiquiátrica. 🛌🗣️👨‍👩‍👧‍👦💉" << endl;
+                cout << " Población: Adolescentes y adultos con trastornos mentales graves o persistentes. También atiende casos de pacientes con adicciones y problemas de salud mental. 🧑‍🤝‍🧑 किशोर🧑" << endl;
+                cout << " Consideraciones: Es un hospital estatal. Los procesos de ingreso pueden requerir evaluación previa o derivación de otros centros de salud. Tienen un enfoque integral. 📄➡️ holistic" << endl << endl; // Nota: 'holistic' no es un emoji. Mantengo el texto original.
 
-                cout << "- **Hospitales Generales del IMSS, ISSSTE, PEMEX (Veracruz/Boca del Río)**" << endl;
-                cout << "  Descripción: Estos hospitales, dirigidos a derechohabientes de sus respectivas instituciones, cuentan con servicios de salud mental generalmente a través de sus departamentos de medicina interna o especialidades. La atención psiquiátrica suele ser para interconsultas (pacientes ya hospitalizados) o para casos referidos dentro de su propio sistema de salud. En algunos casos, pueden tener clínicas de salud mental ambulatorias." << endl;
-                cout << "  Ubicación: Varía según la institución. Ej. Hospital General de Zona No. 71 del IMSS (Díaz Mirón), Hospital de Alta Especialidad del ISSSTE (Av. Cuauhtémoc), Hospital Regional de PEMEX (Boca del Río)." << endl;
-                cout << "  Servicios: Interconsulta psiquiátrica para pacientes internados, valoración psiquiátrica inicial, medicación, y en algunos casos, referencia a Unidades de Medicina Familiar (UMF) para seguimiento, o a servicios especializados propios de la institución." << endl;
-                cout << "  Población: Derechohabientes de cada institución." << endl;
-                cout << "  Consideraciones: La atención está ligada a la afiliación. Es fundamental acudir primero a la Unidad de Medicina Familiar (UMF) o clínica de adscripción para una derivación al servicio de psiquiatría." << endl << endl;
+                cout << "- **Hospitales Generales del IMSS, ISSSTE, PEMEX (Veracruz/Boca del Río)** 👨‍⚕️👩‍⚕️📋" << endl;
+                cout << " Descripción: Estos hospitales, dirigidos a derechohabientes de sus respectivas instituciones, cuentan con servicios de salud mental generalmente a través de sus departamentos de medicina interna o especialidades. La atención psiquiátrica suele ser para interconsultas (pacientes ya hospitalizados) o para casos referidos dentro de su propio sistema de salud. En algunos casos, pueden tener clínicas de salud mental ambulatorias. 🏥💼🩺" << endl;
+                cout << " Ubicación: Varía según la institución. Ej. Hospital General de Zona No. 71 del IMSS (Díaz Mirón), Hospital de Alta Especialidad del ISSSTE (Av. Cuauhtémoc), Hospital Regional de PEMEX (Boca del Río). 📍🌐" << endl;
+                cout << " Servicios: Interconsulta psiquiátrica para pacientes internados, valoración psiquiátrica inicial, medicación, y en algunos casos, referencia a Unidades de Medicina Familiar (UMF) para seguimiento, o a servicios especializados propios de la institución. 🗣️💊➡️" << endl;
+                cout << " Población: Derechohabientes de cada institución. 💳👥" << endl;
+                cout << " Consideraciones: La atención está ligada a la afiliación. Es fundamental acudir primero a la Unidad de Medicina Familiar (UMF) o clínica de adscripción para una derivación al servicio de psiquiatría. 📝✅" << endl << endl;
                 cout << "--------------------------------------------------------------------------------" << endl;
                 break;
+
             case 2:
-                cout << "## 👨‍👩‍👧‍👦 Centros de Atención Primaria en Salud Mental (COMUSAM/CCOMSAM):" << endl;
+                cout << "## 👨‍👩‍👧‍👦🏡 Centros de Atención Primaria en Salud Mental (COMUSAM/CCOMSAM):" << endl;
                 cout << "--------------------------------------------------------------------------------" << endl;
-                cout << "- **Centros Comunitarios de Salud Mental y Adicciones (CECOSAMA / CCOMSAM)**" << endl;
-                cout << "  Descripción: Son unidades ambulatorias fundamentales de la Secretaría de Salud en Veracruz que ofrecen atención psicológica, psiquiátrica (con disponibilidad variable de especialistas), de trabajo social y enfermería para trastornos mentales comunes (ansiedad, depresión leve a moderada), problemas de conducta y adicciones. Se enfocan en la prevención, detección temprana y rehabilitación comunitaria, siendo un primer contacto accesible." << endl;
-                cout << "  Ubicación en Veracruz: Existen varios. Por ejemplo, en la Colonia Centro, Colonia Norte, y otras colonias con alta densidad poblacional. Es importante buscar el más cercano a tu domicilio." << endl;
-                cout << "  Servicios: Consulta externa psicológica (individual, familiar, grupal), psicoterapia breve, orientación familiar, detección temprana de trastornos, programas de prevención de adicciones, talleres psicoeducativos, y referencia a niveles de atención especializados (hospitalarios o psiquiátricos) cuando el caso lo amerita. Algunos cuentan con psiquiatra para valoración y seguimiento farmacológico." << endl;
-                cout << "  Población: Niños, adolescentes, adultos y adultos mayores. Son de acceso público y gratuito, buscando la integración comunitaria de la salud mental." << endl;
-                cout << "  Consideraciones: Generalmente no requieren referencia médica para la primera consulta. Son un excelente punto de partida para cualquier persona que busque apoyo inicial y no cuente con otros medios." << endl << endl;
+                cout << "- **Centros Comunitarios de Salud Mental y Adicciones (CECOSAMA / CCOMSAM)** 🏘️🤝🌟" << endl;
+                cout << " Descripción: Son unidades ambulatorias fundamentales de la Secretaría de Salud en Veracruz que ofrecen atención psicológica, psiquiátrica (con disponibilidad variable de especialistas), de trabajo social y enfermería para trastornos mentales comunes (ansiedad, depresión leve a moderada), problemas de conducta y adicciones. Se enfocan en la prevención, detección temprana y rehabilitación comunitaria, siendo un primer contacto accesible. 🗣️🧠🌿" << endl;
+                cout << " Ubicación en Veracruz: Existen varios. Por ejemplo, en la Colonia Centro, Colonia Norte, y otras colonias con alta densidad poblacional. Es importante buscar el más cercano a tu domicilio. 📍🗺️🏡" << endl;
+                cout << " Servicios: Consulta externa psicológica (individual, familiar, grupal), psicoterapia breve, orientación familiar, detección temprana de trastornos, programas de prevención de adicciones, talleres psicoeducativos, y referencia a niveles de atención especializados (hospitalarios o psiquiátricos) cuando el caso lo amerita. Algunos cuentan con psiquiatra para valoración y seguimiento farmacológico. 💬🧑‍🤝‍🧑🚫💊" << endl;
+                cout << " Población: Niños, adolescentes, adultos y adultos mayores. Son de acceso público y gratuito, buscando la integración comunitaria de la salud mental. 👶🧑‍🦱👴👵🆓" << endl;
+                cout << " Consideraciones: Generalmente no requieren referencia médica para la primera consulta. Son un excelente punto de partida para cualquier persona que busque apoyo inicial y no cuente con otros medios. ✅🚀" << endl << endl;
 
-                cout << "- **CAPASITS / SARE (Centros de Atención Integral a Personas con VIH/SIDA y Salud Reproductiva)**" << endl;
-                cout << "  Descripción: Aunque su misión principal es la atención a personas con VIH/SIDA e Infecciones de Transmisión Sexual (ITS), estos centros reconocen la estrecha relación entre la salud física y mental. Por ello, incluyen servicios de apoyo psicológico y, en ocasiones, psiquiátrico como parte integral de sus servicios, brindando un espacio de confidencialidad, comprensión y libre de estigma." << endl;
-                cout << "  Ubicación: En Veracruz, suelen estar ubicados en la Av. 20 de Noviembre #1063, Col. Centro, o direcciones similares. (Verificar dirección exacta y horarios)." << endl;
-                cout << "  Servicios: Asesoramiento psicológico, psicoterapia individual, apoyo a la adherencia al tratamiento antirretroviral, manejo del estigma, intervención en crisis, y en algunos casos, atención psiquiátrica de enlace para condiciones relacionadas." << endl;
-                cout << "  Población: Personas que viven con VIH/SIDA y sus familiares, así como población en riesgo o interesada en salud sexual y reproductiva. El apoyo psicológico es un pilar para la calidad de vida de sus usuarios." << endl;
-                cout << "  Consideraciones: Ofrecen un servicio altamente especializado y sensible a las necesidades de su población objetivo. El acceso es gratuito y confidencial." << endl << endl;
+                cout << "- **CAPASITS / SARE (Centros de Atención Integral a Personas con VIH/SIDA y Salud Reproductiva)** 🛡️❤️‍🩹🌈" << endl;
+                cout << " Descripción: Aunque su misión principal es la atención a personas con VIH/SIDA e Infecciones de Transmisión Sexual (ITS), estos centros reconocen la estrecha relación entre la salud física y mental. Por ello, incluyen servicios de apoyo psicológico y, en ocasiones, psiquiátrico como parte integral de sus servicios, brindando un espacio de confidencialidad, comprensión y libre de estigma. 🤝🔒" << endl;
+                cout << " Ubicación: En Veracruz, suelen estar ubicados en la Av. 20 de Noviembre #1063, Col. Centro, o direcciones similares. (Verificar dirección exacta y horarios). 📍⏰" << endl;
+                cout << " Servicios: Asesoramiento psicológico, psicoterapia individual, apoyo a la adherencia al tratamiento antirretroviral, manejo del estigma, intervención en crisis, y en algunos casos, atención psiquiátrica de enlace para condiciones relacionadas. 🗣️💊🫂" << endl;
+                cout << " Población: Personas que viven con VIH/SIDA y sus familiares, así como población en riesgo o interesada en salud sexual y reproductiva. El apoyo psicológico es un pilar para la calidad de vida de sus usuarios. 🧑‍🤝‍🧑💞" << endl;
+                cout << " Consideraciones: Ofrecen un servicio altamente especializado y sensible a las necesidades de su población objetivo. El acceso es gratuito y confidencial. 💯🔐" << endl << endl;
                 cout << "--------------------------------------------------------------------------------" << endl;
                 break;
+
             case 3:
-                cout << "## 🏢 Clínicas y Centros Privados de Psicoterapia y Psiquiatría (Veracruz):" << endl;
+                cout << "## 🏢💼✨ Clínicas y Centros Privados de Psicoterapia y Psiquiatría (Veracruz):" << endl;
                 cout << "--------------------------------------------------------------------------------" << endl;
-                cout << "- **Asociación Libre (Psicólogos)**" << endl;
-                cout << "  Descripción: Un reconocido centro de psicoterapia con un equipo de profesionales con diversas especialidades y enfoques terapéuticos. Se caracterizan por ofrecer un espacio de diálogo abierto y constructivo para explorar y resolver problemáticas emocionales. Atienden un amplio rango de edades y situaciones." << endl;
-                cout << "  Ubicación: Colonia Reforma, Veracruz, Ver. (Se recomienda buscar en línea para la dirección exacta y agendar cita)." << endl;
-                cout << "  Servicios: Psicoterapia individual para adolescentes y adultos, terapia de pareja, terapia familiar, tratamiento especializado en depresión, ansiedad, trastornos de la personalidad, duelo, trauma psicológico, fobias, estrés, y programas de desarrollo personal. Ofrecen diferentes modalidades de terapia para adaptarse al paciente." << endl;
-                cout << "  Enfoques: Psicoterapia Gestalt, Terapia Cognitivo-Conductual (TCC), Terapia Humanista, Psicoterapia Psicodinámica, entre otros (es importante consultar con el centro sus enfoques específicos)." << endl;
-                cout << "  Contacto: Buscar 'Asociación Libre Veracruz Psicólogos' en Google, suelen tener sitio web o perfiles en directorios especializados. Es necesario agendar cita previa." << endl << endl;
+                cout << "- **Asociación Libre (Psicólogos)** 🗣️🛋️🧠" << endl;
+                cout << " Descripción: Un reconocido centro de psicoterapia con un equipo de profesionales con diversas especialidades y enfoques terapéuticos. Se caracterizan por ofrecer un espacio de diálogo abierto y constructivo para explorar y resolver problemáticas emocionales. Atienden un amplio rango de edades y situaciones. 💬🧐🌈" << endl;
+                cout << " Ubicación: Colonia Reforma, Veracruz, Ver. (Se recomienda buscar en línea para la dirección exacta y agendar cita). 📍🌐🗓️" << endl;
+                cout << " Servicios: Psicoterapia individual para adolescentes y adultos, terapia de pareja, terapia familiar, tratamiento especializado en depresión, ansiedad, trastornos de la personalidad, duelo, trauma psicológico, fobias, estrés, y programas de desarrollo personal. Ofrecen diferentes modalidades de terapia para adaptarse al paciente. 🧑‍🤝‍🧑💔💡" << endl;
+                cout << " Enfoques: Psicoterapia Gestalt, Terapia Cognitivo-Conductual (TCC), Terapia Humanista, Psicoterapia Psicodinámica, entre otros (es importante consultar con el centro sus enfoques específicos). 🧩📜" << endl;
+                cout << " Contacto: Buscar 'Asociación Libre Veracruz Psicólogos' en Google, suelen tener sitio web o perfiles en directorios especializados. Es necesario agendar cita previa. 📞💻🗓️" << endl << endl;
 
-                cout << "- **Centro de Salud Emocional (Veracruz)**" << endl;
-                cout << "  Descripción: Un espacio dedicado al bienestar emocional que ofrece servicios psicológicos especializados con un enfoque integral y moderno. Se distinguen por su profunda especialización en terapia de pareja y sexología, además de la atención individual para diversas problemáticas." << endl;
-                cout << "  Ubicación: Av. Fernando de Magallanes 252 Departamento 2 Col. Reforma, Veracruz, Ver." << endl;
-                cout << "  Servicios: Terapia individual para adultos y adolescentes, terapia de pareja, sexología (abordaje de disfunciones sexuales, orientación sobre identidad de género y diversidad sexual), talleres psicoeducativos y grupos terapéuticos sobre temas específicos." << endl;
-                cout << "  Enfoques: Generalmente enfoques integrativos que combinan elementos de diversas corrientes psicológicas para crear un plan de tratamiento personalizado." << endl;
-                cout << "  Contacto: Buscar 'Centro de Salud Emocional Veracruz' en línea para conocer su oferta de servicios y agendar una primera sesión." << endl << endl;
+                cout << "- **Centro de Salud Emocional (Veracruz)** ❤️‍🩹💖🌟" << endl;
+                cout << " Descripción: Un espacio dedicado al bienestar emocional que ofrece servicios psicológicos especializados con un enfoque integral y moderno. Se distinguen por su profunda especialización en terapia de pareja y sexología, además de la atención individual para diversas problemáticas. 💏🏳️‍🌈" << endl;
+                cout << " Ubicación: Av. Fernando de Magallanes 252 Departamento 2 Col. Reforma, Veracruz, Ver. 📍🗺️" << endl;
+                cout << " Servicios: Terapia individual para adultos y adolescentes, terapia de pareja, sexología (abordaje de disfunciones sexuales, orientación sobre identidad de género y diversidad sexual), talleres psicoeducativos y grupos terapéuticos sobre temas específicos. 🗣️💑⚧️📚" << endl;
+                cout << " Enfoques: Generalmente enfoques integrativos que combinan elementos de diversas corrientes psicológicas para crear un plan de tratamiento personalizado. 💡🔄" << endl;
+                cout << " Contacto: Buscar 'Centro de Salud Emocional Veracruz' en línea para conocer su oferta de servicios y agendar una primera sesión. 🌐📞🗓️" << endl << endl;
 
-                cout << "- **Consultorios y Clínicas Privadas de Psiquiatría (Veracruz)**" << endl;
-                cout << "  Descripción: En Veracruz, hay psiquiatras privados que ofrecen atención médica especializada para trastornos mentales. Ellos pueden realizar diagnósticos, prescribir y ajustar medicación (farmacoterapia), y en muchos casos, combinar esto con psicoterapia. Son cruciales para el manejo de condiciones que requieren intervención farmacológica." << endl;
-                cout << "  Ubicación: Diversas zonas de Veracruz y Boca del Río. Muchos tienen consultorios en zonas céntricas o en complejos médicos." << endl;
-                cout << "  Servicios: Evaluación psiquiátrica completa, diagnóstico y tratamiento de trastornos como depresión mayor, trastorno bipolar, esquizofrenia, trastornos de ansiedad graves, TOC, TDAH en adultos, etc. Manejo farmacológico, y en algunos casos, psicoterapia de apoyo o derivación a psicólogos." << endl;
-                cout << "  Contacto: Se recomienda usar directorios especializados como Doctoralia, buscar en Google Maps 'psiquiatra Veracruz', o pedir recomendaciones a médicos de confianza. Es indispensable agendar cita." << endl;
-                cout << "  Consideraciones: Los costos pueden ser significativos, pero la inversión en la salud mental es fundamental. Algunos psiquiatras también ofrecen teleconsultas." << endl << endl;
+                cout << "- **Consultorios y Clínicas Privadas de Psiquiatría (Veracruz)** 🧑‍⚕️🧠💊" << endl;
+                cout << " Descripción: En Veracruz, hay psiquiatras privados que ofrecen atención médica especializada para trastornos mentales. Ellos pueden realizar diagnósticos, prescribir y ajustar medicación (farmacoterapia), y en muchos casos, combinar esto con psicoterapia. Son cruciales para el manejo de condiciones que requieren intervención farmacológica. 🩺📈" << endl;
+                cout << " Ubicación: Diversas zonas de Veracruz y Boca del Río. Muchos tienen consultorios en zonas céntricas o en complejos médicos. 📍🏢" << endl;
+                cout << " Servicios: Evaluación psiquiátrica completa, diagnóstico y tratamiento de trastornos como depresión mayor, trastorno bipolar, esquizofrenia, trastornos de ansiedad graves, TOC, TDAH en adultos, etc. Manejo farmacológico, y en algunos casos, psicoterapia de apoyo o derivación a psicólogos. 📋💊🗣️" << endl;
+                cout << " Contacto: Se recomienda usar directorios especializados como Doctoralia, buscar en Google Maps 'psiquiatra Veracruz', o pedir recomendaciones a médicos de confianza. Es indispensable agendar cita. 📱🌐🗓️" << endl;
+                cout << " Consideraciones: Los costos pueden ser significativos, pero la inversión en la salud mental es fundamental. Algunos psiquiatras también ofrecen teleconsultas. 💰💻✅" << endl << endl;
 
-                cout << "- **Centro Psicológico Integral 'Armonía' (Ejemplo Ficticio de Centro con Diversas Terapias)**" << endl;
-                cout << "  Descripción: (Ejemplo de un centro que podría existir). Un centro que ofrece una variedad de terapias y especialidades en un solo lugar, buscando la comodidad del paciente. Podría incluir psicología clínica, neuropsicología, terapia familiar y coaching." << endl;
-                cout << "  Ubicación: Av. Juan Pablo II #XXX, Boca del Río, Ver. (Ejemplo)." << endl;
-                cout << "  Servicios: Psicoterapia para niños, adolescentes y adultos, neuropsicología (evaluación y rehabilitación), terapia de lenguaje, terapia de juego, coaching personal y ejecutivo, talleres de desarrollo de habilidades sociales." << endl;
-                cout << "  Contacto: Buscar centros con nombres similares en Veracruz o Boca del Río y verificar sus servicios." << endl;
-                cout << "  Notas: Estos centros buscan ofrecer un abordaje más holístico y conveniente." << endl << endl;
+                cout << "- **Centro Psicológico Integral 'Armonía' (Ejemplo Ficticio de Centro con Diversas Terapias)** 💫🌟🌈" << endl;
+                cout << " Descripción: (Ejemplo de un centro que podría existir). Un centro que ofrece una variedad de terapias y especialidades en un solo lugar, buscando la comodidad del paciente. Podría incluir psicología clínica, neuropsicología, terapia familiar y coaching. 🛋️👨‍👩‍👧‍👦📈" << endl;
+                cout << " Ubicación: Av. Juan Pablo II #XXX, Boca del Río, Ver. (Ejemplo). 📍🗺️" << endl;
+                cout << " Servicios: Psicoterapia para niños, adolescentes y adultos, neuropsicología (evaluación y rehabilitación), terapia de lenguaje, terapia de juego, coaching personal y ejecutivo, talleres de desarrollo de habilidades sociales. 👶🧑‍🦱👴🗣️🧩🎮" << endl;
+                cout << " Contacto: Buscar centros con nombres similares en Veracruz o Boca del Río y verificar sus servicios. 🌐📞" << endl;
+                cout << " Notas: Estos centros buscan ofrecer un abordaje más holístico y conveniente. ✨🚀" << endl << endl;
                 cout << "--------------------------------------------------------------------------------" << endl;
                 break;
+
             case 4:
-                cout << "## 🎓 Centros Universitarios de Apoyo Psicológico (Veracruz y Xalapa):" << endl;
+                cout << "## 🎓📚 Centros Universitarios de Apoyo Psicológico (Veracruz y Xalapa):" << endl;
                 cout << "--------------------------------------------------------------------------------" << endl;
-                cout << "- **Clínicas de la Facultad de Psicología (Universidad Veracruzana - UV)**" << endl;
-                cout << "  Descripción: La UV, a través de su Facultad de Psicología (principalmente con sus clínicas en Xalapa, pero con posible vinculación en Veracruz/Boca del Río), opera clínicas universitarias. Estos centros son fundamentales para la formación de futuros profesionales de la psicología y, al mismo tiempo, brindan servicios de psicoterapia y evaluación psicológica a la comunidad a costos muy accesibles o, en ocasiones, de forma gratuita." << endl;
-                cout << "  Ubicación: La Clínica de Atención Psicológica de la Facultad de Psicología de la UV está en Xalapa (Av. Dr. Luis Castelazo Ayala s/n, Col. Industrial Las Ánimas). En Veracruz, es necesario verificar directamente con la Facultad de Psicología del Campus Mocambo si ofrecen servicios directos al público o solo prácticas académicas." << endl;
-                cout << "  Servicios: Psicoterapia individual para niños, adolescentes y adultos; terapia familiar y de pareja; evaluación psicológica (diagnóstico, vocacional, neuropsicológica); grupos terapéuticos y talleres psicoeducativos. La atención es supervisada por docentes con amplia experiencia." << endl;
-                cout << "  Población: Abierta al público en general, con costos simbólicos o ajustados a estudios socioeconómicos." << endl;
-                cout << "  Contacto: Buscar 'Clínica de Psicología UV Xalapa' o 'Facultad de Psicología UV Veracruz' para obtener información de contacto, horarios de atención y proceso de ingreso." << endl;
-                cout << "  Notas: Son una excelente opción para recibir atención de calidad a un costo reducido, ideal para quienes tienen limitaciones económicas." << endl << endl;
+                cout << "- **Clínicas de la Facultad de Psicología (Universidad Veracruzana - UV)** 🧑‍🎓🧠🌟" << endl;
+                cout << " Descripción: La UV, a través de su Facultad de Psicología (principalmente con sus clínicas en Xalapa, pero con posible vinculación en Veracruz/Boca del Río), opera clínicas universitarias. Estos centros son fundamentales para la formación de futuros profesionales de la psicología y, al mismo tiempo, brindan servicios de psicoterapia y evaluación psicológica a la comunidad a costos muy accesibles o, en ocasiones, de forma gratuita. 📚💡🆓" << endl;
+                cout << " Ubicación: La Clínica de Atención Psicológica de la Facultad de Psicología de la UV está en Xalapa (Av. Dr. Luis Castelazo Ayala s/n, Col. Industrial Las Ánimas). En Veracruz, es necesario verificar directamente con la Facultad de Psicología del Campus Mocambo si ofrecen servicios directos al público o solo prácticas académicas. 📍🗺️🧐" << endl;
+                cout << " Servicios: Psicoterapia individual para niños, adolescentes y adultos; terapia familiar y de pareja; evaluación psicológica (diagnóstico, vocacional, neuropsicológica); grupos terapéuticos y talleres psicoeducativos. La atención es supervisada por docentes con amplia experiencia. 🗣️👨‍👩‍👧‍👦📊🎓" << endl;
+                cout << " Población: Abierta al público en general, con costos simbólicos o ajustados a estudios socioeconómicos. 👥💰" << endl;
+                cout << " Contacto: Buscar 'Clínica de Psicología UV Xalapa' o 'Facultad de Psicología UV Veracruz' para obtener información de contacto, horarios de atención y proceso de ingreso. 📞🌐⏰" << endl;
+                cout << " Notas: Son una excelente opción para recibir atención de calidad a un costo reducido, ideal para quienes tienen limitaciones económicas. ⭐👍" << endl << endl;
 
-                cout << "- **Servicios Psicológicos de Universidades Privadas (Veracruz)**" << endl;
-                cout << "  Descripción: Varias universidades privadas en Veracruz con programas de psicología (ej. Universidad Cristóbal Colón, Universidad del Valle de México - UVM, Instituto de Estudios Superiores de Veracruz - IESVER) también cuentan con sus propios centros de atención psicológica. Estos centros cumplen una doble función: campo de práctica para los estudiantes de psicología y recurso de apoyo para la comunidad, ofreciendo servicios a tarifas accesibles." << endl;
-                cout << "  Ubicación: Depende de cada universidad. Se encuentran en sus respectivos campus o en clínicas afiliadas. (Ej. Campus de la Universidad Cristóbal Colón en Boca del Río)." << endl;
-                cout << "  Servicios: Diversos tipos de psicoterapia (individual, pareja, familiar), consejería, evaluaciones psicológicas (ej. rendimiento académico, personalidad), talleres y programas de intervención." << endl;
-                cout << "  Población: Estudiantes de la universidad, personal y público en general, con tarifas diferenciadas." << endl;
-                cout << "  Contacto: Investigar en los sitios web oficiales de cada universidad o contactar directamente a sus facultades de psicología para conocer los servicios que ofrecen y los requisitos para acceder a ellos." << endl << "  Notas: Otra alternativa para atención psicológica de calidad a precios moderados, con la supervisión académica de por medio." << endl << endl;
+                cout << "- **Servicios Psicológicos de Universidades Privadas (Veracruz)** 🏫🤝🌟" << endl;
+                cout << " Descripción: Varias universidades privadas en Veracruz con programas de psicología (ej. Universidad Cristóbal Colón, Universidad del Valle de México - UVM, Instituto de Estudios Superiores de Veracruz - IESVER) también cuentan con sus propios centros de atención psicológica. Estos centros cumplen una doble función: campo de práctica para los estudiantes de psicología y recurso de apoyo para la comunidad, ofreciendo servicios a tarifas accesibles. 🎓🧑‍🎓💸" << endl;
+                cout << " Ubicación: Depende de cada universidad. Se encuentran en sus respectivos campus o en clínicas afiliadas. (Ej. Campus de la Universidad Cristóbal Colón en Boca del Río). 📍🗺️" << endl;
+                cout << " Servicios: Diversos tipos de psicoterapia (individual, pareja, familiar), consejería, evaluaciones psicológicas (ej. rendimiento académico, personalidad), talleres y programas de intervención. 🗣️🧑‍🤝‍🧑📊📚" << endl;
+                cout << " Población: Estudiantes de la universidad, personal y público en general, con tarifas diferenciadas. 👥💲" << endl;
+                cout << " Contacto: Investigar en los sitios web oficiales de cada universidad o contactar directamente a sus facultades de psicología para conocer los servicios que ofrecen y los requisitos para acceder a ellos. 🌐📞" << endl << " Notas: Otra alternativa para atención psicológica de calidad a precios moderados, con la supervisión académica de por medio. ✅👍" << endl << endl;
                 cout << "--------------------------------------------------------------------------------" << endl;
                 break;
+
             case 5:
-                cout << "## 🤝 Organizaciones y Asociaciones Civiles sin Fines de Lucro (Veracruz y Nacionales):" << endl;
+                cout << "## 🤝❤️ Organizaciones y Asociaciones Civiles sin Fines de Lucro (Veracruz y Nacionales):" << endl;
                 cout << "--------------------------------------------------------------------------------" << endl;
-                cout << "- **Cáritas de Veracruz (Programas de Apoyo Social y Psicológico)**" << endl;
-                cout << "  Descripción: Cáritas es una organización humanitaria de la Iglesia Católica que ofrece asistencia social integral. Sus programas a menudo incluyen apoyo psicológico o consejería, especialmente dirigidos a poblaciones vulnerables, personas en situación de crisis, o aquellos que enfrentan dificultades socioeconómicas que impactan su salud mental. Su enfoque es la caridad y el servicio a la comunidad." << endl;
-                cout << "  Ubicación: Av. 16 de Septiembre No. 1317, Col. Centro, Veracruz, Ver. (Sujeto a confirmación de la dirección exacta y servicios actuales)." << endl;
-                cout << "  Servicios: Asistencia alimentaria, orientación legal, programas de desarrollo comunitario, y en muchos casos, servicios de escucha, consejería emocional o referencia a psicólogos con los que tienen convenio, a bajo costo o sin costo. Pueden tener talleres de resiliencia." << endl;
-                cout << "  Población: Abierto a la comunidad, con un enfoque especial en grupos vulnerables y personas en necesidad." << endl;
-                cout << "  Contacto: Se recomienda contactar directamente a Cáritas Veracruz para conocer sus programas actuales y si ofrecen servicios psicológicos directos o referencias." << endl << endl;
+                cout << "- **Cáritas de Veracruz (Programas de Apoyo Social y Psicológico)** 🙏💖🌟" << endl;
+                cout << " Descripción: Cáritas es una organización humanitaria de la Iglesia Católica que ofrece asistencia social integral. Sus programas a menudo incluyen apoyo psicológico o consejería, especialmente dirigidos a poblaciones vulnerables, personas en situación de crisis, o aquellos que enfrentan dificultades socioeconómicas que impactan su salud mental. Su enfoque es la caridad y el servicio a la comunidad. 🫂🤲" << endl;
+                cout << " Ubicación: Av. 16 de Septiembre No. 1317, Col. Centro, Veracruz, Ver. (Sujeto a confirmación de la dirección exacta y servicios actuales). 📍🗺️🧐" << endl;
+                cout << " Servicios: Asistencia alimentaria, orientación legal, programas de desarrollo comunitario, y en muchos casos, servicios de escucha, consejería emocional o referencia a psicólogos con los que tienen convenio, a bajo costo o sin costo. Pueden tener talleres de resiliencia. 🍎⚖️🗣️💪" << endl;
+                cout << " Población: Abierto a la comunidad, con un enfoque especial en grupos vulnerables y personas en necesidad. 🧑‍🤝‍🧑🆘" << endl;
+                cout << " Contacto: Se recomienda contactar directamente a Cáritas Veracruz para conocer sus programas actuales y si ofrecen servicios psicológicos directos o referencias. 📞🌐" << endl << endl;
 
-                cout << "- **Grupos de Autoayuda (Ej. Alcohólicos Anónimos, Narcóticos Anónimos, Al-Anon, Grupos para el Duelo)**" << endl;
-                cout << "  Descripción: Son comunidades de apoyo entre pares donde personas que comparten una misma problemática (adicciones, codependencia, duelo, ansiedad, etc.) se reúnen para compartir experiencias, fortalecerse mutuamente y aprender estrategias de afrontamiento. No son dirigidos por profesionales de la salud mental, pero son un recurso invaluable de apoyo emocional y comprensión." << endl;
-                cout << "  Ubicación: Múltiples ubicaciones en Veracruz y en todo el país. Muchos grupos también han adoptado reuniones en línea, lo que amplía su accesibilidad." << endl;
-                cout << "  Servicios: Apoyo mutuo entre pares, intercambio de vivencias, desarrollo de herramientas de afrontamiento basadas en la experiencia compartida, un espacio seguro para expresar emociones y sentirse comprendido." << endl;
-                cout << "  Población: Personas que enfrentan una problemática específica (adicciones, duelo, codependencia, etc.) y buscan el apoyo de otros en situaciones similares." << endl;
-                cout << "  Contacto: Buscar 'Alcohólicos Anónimos Veracruz', 'Narcóticos Anónimos Veracruz', 'Grupos de apoyo para el duelo Veracruz' en línea. Las reuniones suelen ser gratuitas y confidenciales." << endl;
-                cout << "  Notas: Complemento ideal a la terapia profesional. Ofrecen un sentido de pertenencia y validación." << endl << endl;
+                cout << "- **Grupos de Autoayuda (Ej. Alcohólicos Anónimos, Narcóticos Anónimos, Al-Anon, Grupos para el Duelo)** 🫂✨🗣️" << endl;
+                cout << " Descripción: Son comunidades de apoyo entre pares donde personas que comparten una misma problemática (adicciones, codependencia, duelo, ansiedad, etc.) se reúnen para compartir experiencias, fortalecerse mutuamente y aprender estrategias de afrontamiento. No son dirigidos por profesionales de la salud mental, pero son un recurso invaluable de apoyo emocional y comprensión. 🤝🧠❤️‍🩹" << endl;
+                cout << " Ubicación: Múltiples ubicaciones en Veracruz y en todo el país. Muchos grupos también han adoptado reuniones en línea, lo que amplía su accesibilidad. 📍🌐💻" << endl;
+                cout << " Servicios: Apoyo mutuo entre pares, intercambio de vivencias, desarrollo de herramientas de afrontamiento basadas en la experiencia compartida, un espacio seguro para expresar emociones y sentirse comprendido. 🗣️🤲🔒" << endl;
+                cout << " Población: Personas que enfrentan una problemática específica (adicciones, duelo, codependencia, etc.) y buscan el apoyo de otros en situaciones similares. 🧑‍🤝‍🧑💔🚭" << endl;
+                cout << " Contacto: Buscar 'Alcohólicos Anónimos Veracruz', 'Narcóticos Anónimos Veracruz', 'Grupos de apoyo para el duelo Veracruz' en línea. Las reuniones suelen ser gratuitas y confidenciales. 🌐📞🆓" << endl;
+                cout << " Notas: Complemento ideal a la terapia profesional. Ofrecen un sentido de pertenencia y validación. ✅👍" << endl << endl;
 
-                cout << "- **Cruz Roja Mexicana (Delegación Veracruz) - Apoyo Psicosocial**" << endl;
-                cout << "  Descripción: Además de su reconocida labor en emergencias médicas y desastres naturales, la Cruz Roja Mexicana a menudo cuenta con equipos de apoyo psicosocial. Estos equipos están capacitados para brindar primeros auxilios psicológicos y contención emocional a personas afectadas por eventos traumáticos o situaciones de crisis." << endl;
-                cout << "  Ubicación: Díaz Mirón S/N Esq. Juan Soto, Col. Centro, Veracruz, Ver. (Sujeto a confirmación de la dirección exacta y disponibilidad de servicios)." << endl;
-                cout << "  Servicios: Primeros auxilios psicológicos en campo, contención emocional, apoyo en situaciones de crisis, referencia a otros servicios de salud mental, y en algunos casos, talleres de preparación y resiliencia comunitaria." << endl;
-                cout << "  Población: Personas afectadas por emergencias, desastres, o en situaciones de vulnerabilidad que requieran apoyo emocional inmediato." << endl;
-                cout << "  Contacto: Consultar directamente a la delegación local de la Cruz Roja para conocer los servicios específicos de apoyo psicosocial que ofrecen." << endl;
-                cout << "  Notas: Un recurso fundamental en momentos de necesidad urgente y situaciones de alto estrés." << endl << endl;
+                cout << "- **Cruz Roja Mexicana (Delegación Veracruz) - Apoyo Psicosocial** 🚑🚨❤️‍🩹" << endl;
+                cout << " Descripción: Además de su reconocida labor en emergencias médicas y desastres naturales, la Cruz Roja Mexicana a menudo cuenta con equipos de apoyo psicosocial. Estos equipos están capacitados para brindar primeros auxilios psicológicos y contención emocional a personas afectadas por eventos traumáticos o situaciones de crisis. 🆘🩹" << endl;
+                cout << " Ubicación: Díaz Mirón S/N Esq. Juan Soto, Col. Centro, Veracruz, Ver. (Sujeto a confirmación de la dirección exacta y disponibilidad de servicios). 📍🗺️🧐" << endl;
+                cout << " Servicios: Primeros auxilios psicológicos en campo, contención emocional, apoyo en situaciones de crisis, referencia a otros servicios de salud mental, y en algunos casos, talleres de preparación y resiliencia comunitaria. 🗣️🫂💪📚" << endl;
+                cout << " Población: Personas afectadas por emergencias, desastres, o en situaciones de vulnerabilidad que requieran apoyo emocional inmediato. 🌊🌪️😢" << endl;
+                cout << " Contacto: Consultar directamente a la delegación local de la Cruz Roja para conocer los servicios específicos de apoyo psicosocial que ofrecen. 📞🌐" << endl;
+                cout << " Notas: Un recurso fundamental en momentos de necesidad urgente y situaciones de alto estrés. ⭐ lifeline" << endl << endl; // Nota: 'lifeline' no es un emoji. Mantengo el texto original.
 
-                cout << "- **Fondo Unido / United Way México (Proyectos de Salud Mental)**" << endl;
-                cout << "  Descripción: Aunque no son un centro de atención directa, Fondo Unido México (United Way) es una organización global que trabaja con socios locales para implementar proyectos en áreas como la educación, la estabilidad financiera y la salud. Es posible que apoyen iniciativas o programas de salud mental a través de alianzas con otras ONG en Veracruz o a nivel nacional." << endl;
-                cout << "  Ubicación: A nivel nacional, con posibles proyectos en Veracruz a través de socios locales." << endl;
-                cout << "  Servicios: Financiamiento y apoyo a proyectos de salud, incluyendo salud mental, a través de organizaciones aliadas. No ofrecen atención directa al público." << endl;
-                cout << "  Contacto: Visitar su sitio web oficial 'Fondo Unido México' para conocer sus proyectos y organizaciones aliadas en salud." << endl;
-                cout << "  Notas: Para buscar recursos indirectos o alianzas." << endl << endl;
+                cout << "- **Fondo Unido / United Way México (Proyectos de Salud Mental)** 🤝💰🌟" << endl;
+                cout << " Descripción: Aunque no son un centro de atención directa, Fondo Unido México (United Way) es una organización global que trabaja con socios locales para implementar proyectos en áreas como la educación, la estabilidad financiera y la salud. Es posible que apoyen iniciativas o programas de salud mental a través de alianzas con otras ONG en Veracruz o a nivel nacional. 🌎🇲🇽" << endl;
+                cout << " Ubicación: A nivel nacional, con posibles proyectos en Veracruz a través de socios locales. 📍🌐" << endl;
+                cout << " Servicios: Financiamiento y apoyo a proyectos de salud, incluyendo salud mental, a través de organizaciones aliadas. No ofrecen atención directa al público. 💲📈" << endl;
+                cout << " Contacto: Visitar su sitio web oficial 'Fondo Unido México' para conocer sus proyectos y organizaciones aliadas en salud. 🌐📧" << endl;
+                cout << " Notas: Para buscar recursos indirectos o alianzas. 💡🔗" << endl << endl;
                 cout << "--------------------------------------------------------------------------------" << endl;
                 break;
-            case 6:
+
+            case 6: // Opción para salir del programa
                 mensajeSatisfaccion();
                 break;
             }
@@ -2587,19 +2592,19 @@ void Tristeza()
             switch (opcSB)
             {
             case 1:
-
+                terapiaDecepcion();
                 break;
             case 2:
-
+                terapiaRemordimiento();
                 break;
             case 3:
-
+                terapiaDesesperacion();
                 break;
             case 4:
-
+                terapiaTristesa();
                 break;
             case 5:
-
+                terapiaMelancolia();
                 break;
             case 6:
                 mensajeSatisfaccion();
@@ -2655,19 +2660,19 @@ void Miedo()
             switch (opcSB)
             {
             case 1:
-
+                terapiaAlarmado();
                 break;
             case 2:
-
+                terapiaAnsiedad();
                 break;
             case 3:
-
+                terapiaSumiso();
                 break;
             case 4:
-
+                terapiaTemor();
                 break;
             case 5:
-
+                terapiaInquietud();
                 break;
             case 6:
                 mensajeSatisfaccion();
@@ -2723,19 +2728,19 @@ void Ira()
             switch (opcSB)
             {
             case 1:
-
+                terapiaDesprecio();
                 break;
             case 2:
-
+                terapiaAgresion();
                 break;
             case 3:
-
+                terapiaDominio();
                 break;
             case 4:
-
+                terapiaFuria();
                 break;
             case 5:
-
+                terapiaMolestia();
                 break;
             case 6:
                 mensajeSatisfaccion();
@@ -2791,19 +2796,19 @@ void Asco()
             switch (opcSB)
             {
             case 1:
-
+                terapiaRemordimiento();
                 break;
             case 2:
-
+                terapiaAscoDesprecio();
                 break;
             case 3:
-
+                terapiaVerguenza();
                 break;
             case 4:
-
+                terapiaAsco();
                 break;
             case 5:
-
+                terapiaDesinteres();
                 break;
             case 6:
                 mensajeSatisfaccion();
@@ -2954,7 +2959,7 @@ void apoyoProfesional()
 // Funcion emociones positivas
 void InformacionAsistente()
 {
-    int opcSB;
+    int opc;
     string respFin;
     string opcExt;
     // Siclo Do-While externo para finalizar la calculadora básica
@@ -2966,49 +2971,89 @@ void InformacionAsistente()
             system("cls");
             system("color 9"); // Color azul claro
             // Menu principal
-            cout << endl << "😄 Excelente, ¿qué tipo de emoción positiva experimentas hoy?: " << endl;
-            cout << "1.- Feliz 😊" << endl
-                 << "2.- Enamorado 😍" << endl
-                 << "3.- Orgulloso 😌" << endl
-                 << "4.- Emocionado 😄" << endl
-                 << "5.- Exitado 🥵" << endl
-                 << "6.- Volver al menu principal 🔚" << endl;
-            opcSB = obtenerEntradaNumerica<int>("Ingrese su opción: ", 1, 6); // Reutilizando la función de validación
+   cout << "\n--- 🤓 INFORMACIÓN SOBRE EL PROGRAMA 🤓---\n"; 
+        cout << "1. 🧠 Teoría Psicológica en la que fue basada.\n";
+        cout << "2. 💻 Programadores que participaron.\n";
+        cout << "3. 🌟 Descripción del Programa.\n";
+        cout << "4. 📚 Fuentes Consultadas.\n";
+        cout << "5. 🚪 Salir.\n"; 
+        opc = obtenerEntradaNumerica<int>("🤓 Ingrese su opción: ", 1, 5); 
 
-            system("cls");
-            system("color 9"); // Color azul claro
+        system("cls"); // Limpia la pantalla antes de mostrar la información de la opción
 
-            switch (opcSB)
-            {
+        switch(opc)
+        {
             case 1:
-                cout << "<<--Seleccionaste la opcion Suma-->>" << endl;
+                cout << "\n--- 🧠 TEORÍA PSICOLÓGICA --- \n";
+                cout << "Este programa se basó en la teoría de la rueda de PLUTCHIK, que dice lo siguiente:\n";
+                cout << "La rueda de emociones de PLUTCHIK es un modelo psicológico desarrollado por ROBERT PLUTCHIK en 1980.\n";
+                cout << "Organiza las emociones humanas de manera sistemática y visual. Este modelo es ampliamente utilizado en psicología, terapia y estudios del comportamiento.\n";
+                cout << "\n--- 📊 ESTRUCTURA BÁSICA ---\n";
+                cout << "La rueda identifica 8 emociones primarias organizadas en pares opuestos:\n";
+                cout << "• ALEGRÍA 😊 vs TRISTEZA 😢\n"; 
+                cout << "• CONFIANZA 🤗 vs DISGUSTO 🤢\n"; 
+                cout << "• MIEDO 😨 vs IRA 😡\n"; 
+                cout << "• SORPRESA 😮 vs ANTICIPACIÓN 🧐\n"; 
+                cout << "\n--- ✨ CARACTERÍSTICAS PRINCIPALES ---\n"; 
+                cout << "INTENSIDAD EMOCIONAL: Cada emoción tiene diferentes niveles de intensidad, representados por tonalidades más intensas o suaves.\n";
+                cout << "COMBINACIONES EMOCIONALES: Las emociones adyacentes se combinan para crear emociones complejas (ej. Alegría + Confianza = Amor).\n";
+                cout << "REPRESENTACIÓN VISUAL: Se representa como una flor o rueda de colores, donde cada 'pétalo' representa una emoción primaria, con tonalidades más intensas hacia el centro y más suaves hacia el exterior.\n";
+                cout << "\n--- 💡 APLICACIONES PRÁCTICAS ---\n"; 
+                cout << "Este modelo se utiliza para ayudar a las personas a identificar y nombrar sus emociones con mayor precisión, lo cual es fundamental en terapia psicológica, inteligencia emocional y desarrollo personal. Nos permite entender mejor nuestras reacciones y las de los demás. 🤝\n"; // Handshake
                 break;
+                
             case 2:
-                cout << "<<--Seleccionaste la opcion Resta-->>" << endl;
+                cout << "\n--- 🧑‍💻 PROGRAMADORES QUE PARTICIPARON ---\n";
+                cout << "MAURICIO ALEJANDRO CANSECO CRISTERNA 🤫\n"; 
+                cout << "ROXANA MAXIM HERNÁNDEZ GUERRERO 🚀\n"; 
+                cout << "ENRIQUE ALBERTO LOPEZ BECERRA 🤓\n"; 
+                cout << "DANIELA VARGAZ SOSA 🌸\n"; 
+                cout << "AMERICA RAMIREZ GARCIA 🌟\n";
                 break;
+                
             case 3:
-                cout << "<<--Seleccionaste la opcion Multiplicacion-->>" << endl;
+                cout << "\n--- 🎯 DESCRIPCIÓN DEL PROGRAMA ---\n";
+                cout << "Este programa busca mejorar el estado de ánimo de las personas. Reconociendo que la mente es algo complejo de entender, este programa se enfoca en brindar una experiencia gratificante a todo individuo, sin importar su estado de ánimo inicial. El programa tiene varios aspectos que ayudarán desde saber cómo te sientes hasta qué hacer cuando estás en cierto estado de ánimo, incluyendo el acceso a lugares de apoyo. ¡Es una herramienta para tu bienestar emocional! ✨\n";
                 break;
+
             case 4:
-                cout << "<<--Seleccionaste la opcion Divicion-->>" << endl;
+                cout << "\n--- 📚 FUENTES CONSULTADAS ---\n";
+                cout << "Las fuentes que consultamos para la información que se presenta en el programa son:\n";
+                cout << "\n## FUENTES PARA LA INFORMACIÓN SOBRE LA RUEDA DE PLUTCHIK:\n";
+                cout << "• Google Scholar: Para artículos académicos sobre la rueda de Plutchik. (No es un link directo a un artículo específico, sino al buscador académico para el tema).\n";
+                cout << "  🔗 https://scholar.google.com/scholar?q=rueda+de+las+emociones+plutchik\n";
+                cout << "• Psicología y Mente: Portal de divulgación psicológica.\n";
+                cout << "  🔗 https://psicologiaymente.com/psicologia/rueda-emociones-plutchik\n";
+                cout << "• Mundo Psicólogos: Plataforma de recursos y artículos psicológicos.\n";
+                cout << "  🔗 https://www.mundopsicologos.com/articulos/la-rueda-de-las-emociones-de-plutchik\n";
+                cout << "\n## FUENTES CONSULTADAS PARA LOS LUGARES DE APOYO EMOCIONAL:\n";
+                cout << "• Secretaría de Salud Federal (México): Fuente oficial de políticas y programas nacionales.\n";
+                cout << "  🔗 Sitio Principal: https://www.gob.mx/salud\n";
+                cout << "  Notas: Para sección de Salud Mental, busca dentro del portal 'Salud Mental' o 'Dirección General de Información en Salud'.\n";
+                cout << "• Gobierno del Estado de Veracruz (Secretaría de Salud de Veracruz): Fuente de recursos de salud a nivel estatal.\n";
+                cout << "  🔗 Sitio Principal: Busca 'Secretaría de Salud de Veracruz' en tu navegador (ej. https://ssaver.gob.mx/).\n";
+                cout << "• Universidad Veracruzana (UV) - Facultades de Psicología/Medicina: Institución académica con clínicas universitarias.\n";
+                cout << "  🔗 Busca 'Facultad de Psicología UV Xalapa' o 'Facultad de Psicología UV Veracruz' para sus sitios web y clínicas.\n";
+                cout << "  Notas: Se basó en la información pública disponible de estas instituciones.\n";
                 break;
+
             case 5:
-                cout << "<<--Seleccionaste la opcion Potencia-->>" << endl;
-                break;
-            case 6:
+                cout << endl;
                 mensajeSatisfaccion();
                 break;
-            }
+        }
             opcExt = "No";
-            if (opcSB != 6)
+            if (opc != 5)
             {
-                cout << "¿Quieres volver al menú anterior?(Si/No) ";
+                cout << endl << "¿🤓 Quieres seguir explorando?(Si/No) " << endl 
+                << "Esperando tu  respuesta: ";
                 cin >> opcExt;
                 system("cls");
             }
         } while (opcExt != "No" && opcExt != "no");
         cout << "Volviendo al menú principal...";
-    } while (opcExt != "No" && opcExt != "no" && opcSB != 6);
+        system ("pause");
+    } while (opcExt != "No" && opcExt != "no" && opc != 5);
 }
 
 int main()
