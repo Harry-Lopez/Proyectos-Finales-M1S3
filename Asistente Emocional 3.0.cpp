@@ -29,7 +29,7 @@ T obtenerEntradaNumerica(const string &mensaje, T minNum, T maxNum)
         }
         else
         {
-            system("color 9");                                   // Color azul claro si es válido
+            system("color 0B");                                   // Color azul claro si es válido
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Limpiar el buffer después de una entrada válida
             return numero;
         }
@@ -63,7 +63,7 @@ T obtenerEntradaNumerica(const string &mensaje)
     T valor;
     while (true)
     {
-        system("color 9");
+        system("color 0B");
         cout << mensaje;
         cin >> valor;
         if (cin.fail())
@@ -95,8 +95,10 @@ void mensajeSatisfaccion()
     }
 }
 
+
 /**********************************************************
     Funciones para que el usuario descubra su emoción
+    By: Mauricio Canseco
 **********************************************************/
 
 // Funcion para identificar el desgloce de la emocion de alegria
@@ -110,7 +112,7 @@ void identificacionAlegria()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
             cout << endl << "😀 La alegría es una emoción agradable de bienestar y placer." << endl << endl;
             cout << "🤓 Pero se puede manifestar en estas otras emociones:" << endl << endl;
             cout << "1.- 😁Alegria pura😁" << endl;
@@ -175,7 +177,7 @@ void identificacionAlegria()
     } while (opcExt != "Si" && opcExt != "si" && opcSB != 6);
 }
 
-// Funcion pra idenntificar el desgloce de la emocion de tristeza
+// Funcion para identificar el desgloce de la emocion de tristeza
 void identificacionTristeza()
 {
     int opcSB;
@@ -186,7 +188,7 @@ void identificacionTristeza()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
             cout << endl << "La tristeza es una emoción dolorosa que surge ante una pérdida, decepción o desilusión." << endl << endl;
             cout << "🤓 Pero se puede manifestar en estas otras emociones:" << endl << endl;
             cout << "1.- 😞Decepción😞" << endl;
@@ -251,7 +253,7 @@ void identificacionTristeza()
     } while (opcExt != "Si" && opcExt != "si" && opcSB != 6);
 }
 
-// Funcion pra idenntificar el desgloce de la emocion de miedo
+// Funcion para identificar el desgloce de la emocion de miedo
 void identificacionMiedo()
 {
     int opcSB;
@@ -262,7 +264,7 @@ void identificacionMiedo()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
             cout << endl << "El miedo es una emoción que surge ante una amenaza o peligro." << endl << endl;
             cout << "🤓 Pero se puede manifestar en estas otras emociones:" << endl << endl;
             cout << "1.- 🚨Alarmado😨" << endl;
@@ -327,7 +329,7 @@ void identificacionMiedo()
     } while (opcExt != "Si" && opcExt != "si" && opcSB != 6);
 }
 
-// Funcion pra idenntificar el desgloce de la emocion de ira
+// Funcion para identificar el desgloce de la emocion de ira
 void identificacionIra()
 {
     int opcSB;
@@ -338,7 +340,7 @@ void identificacionIra()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
             cout << endl << "La ira es una emoción que surge cuando te sientes frustrado, injustamente tratado o amenazado." << endl << endl;
             cout << "🤓 Pero se puede manifestar en estas otras emociones:" << endl << endl;
             cout << "1.- 😒Desprecio😒" << endl;
@@ -404,7 +406,7 @@ void identificacionIra()
     } while (opcExt != "Si" && opcExt != "si" && opcSB != 6);
 }
 
-// Funcion pra idenntificar el desgloce de la emocion de asco
+// Funcion para identificar el desgloce de la emocion de asco
 void identificacionAsco()
 {
     int opcSB;
@@ -415,7 +417,7 @@ void identificacionAsco()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
             cout << endl << "El Asco/Desagrado es una emoción de aversión o rechazo hacia algo que percibimos como desagradable o tóxico." << endl << endl;
             cout << "🤓 Pero se puede manifestar en estas otras emociones:" << endl << endl;
             cout << "1.- 😫Remordimiento😖" << endl;
@@ -481,6 +483,7 @@ void identificacionAsco()
     } while (opcExt != "Si" && opcExt != "si" && opcSB != 6);
 }
 
+// Función para la situación de que el usuario no siente ninguna emoción
 void noSientoNada()
 {
     int respuesta;
@@ -597,29 +600,31 @@ else {
 }
 }
 
+
 /**********************************************************
     Funciones de las terapias para cada emoción (25)
+    By: Roxanna Maxim
 ***********************************************************/
 //Alegría
 void terapiaAlegriaPura()
 {
-    string causa;
-    int sensacion, acompanante, sensacionConAcompanante, otrasAcciones;
+    string causaAlegriaPura;
+    int sensacionAlegria, acompananteAlegria, sensacionAcompananteAlegria, otrasAccionesAlegria;
 
     system("cls");
-    system("color 9");
+    system("color 0B");
 
     cout << endl << "¡Qué bonito que estés experimentando alegría! 😄 Cuéntame" << endl
          << "¿Qué te hizo sentir así hoy? ✨" << endl
          << "😊 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+    getline(cin, causaAlegriaPura);
     cout << endl << "¡Excelente! Me alegro mucho por ti 😊" << endl << endl
          << "¿Pero cómo te diste cuenta de que estabas alegre? 🤔" << endl << endl;
     cout << "1.- Por mis sensaciones físicas (sonrisa espontánea, ''mariposas'' en el estómago, ligereza, energía) 🦋" << endl
          << "2.- Por mis pensamientos (positivos, de optimismo, gratitud) 💡" << endl
          << "3.- Por mis acciones (cantar, bailar, querer compartir la noticia) 💃🎶" << endl
          << "4.- Sentí un cambio dentro de mi para bien (Me sentí repentinamente positivo y en bienestar) ✨😊" << endl << endl;
-    sensacion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    sensacionAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "Es muy común sentirlo al presentar esta emoción, de hecho, se siente gratificante 🥰" << endl
          << "Me alegro por ti 🎉" << endl << endl
          << "¿Con quién compartiste ese momento? 🤝" << endl << endl;
@@ -629,10 +634,10 @@ void terapiaAlegriaPura()
          << "4.- Con amigas/amigos 👯‍♀️" << endl
          << "5.- Con mi mascota 🐾" << endl
          << "6.- Solo 🧘‍♀️" << endl << endl;
-    acompanante = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 6);
+    acompananteAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 6);
     system("cls");
-    system("color 9");
-    switch (acompanante)
+    system("color 0B");
+    switch (acompananteAlegria)
     {
     case 1:
         cout << endl << endl << "¡Qué lindo! Compartir la alegría con un familiar cercano siempre es muy especial. 🤗" << endl
@@ -643,8 +648,8 @@ void terapiaAlegriaPura()
              << "3.- Simplemente su compañía, me siento seguro/a. 🛡️" << endl
              << "4.- Que podemos celebrar juntos de verdad, es como que mi alegría se duplica. 🎉" << endl
              << "5.- Que me da buenos consejos o perspectivas sobre lo que me hace feliz. 💡" << endl << endl;
-        sensacionConAcompanante = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
-        switch (sensacionConAcompanante)
+        sensacionAcompananteAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
+        switch (sensacionAcompananteAlegria)
         {
         case 1:
             cout << endl << endl << "¡Eso es un tesoro! 💎 Qué bueno que tienes esa conexión tan profunda. Gracias por compartirlo." << endl;
@@ -672,8 +677,8 @@ void terapiaAlegriaPura()
              << "3.- Cuando nos juntamos, casi siempre hay risas y buen ambiente. 😂" << endl
              << "4.- Depende, pero siempre intentamos buscar esos momentos especiales. ✨" << endl
              << "5.- Nos encanta celebrar cualquier cosita, por pequeña que sea. 🥂" << endl << endl;
-        sensacionConAcompanante = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
-        switch (sensacionConAcompanante)
+        sensacionAcompananteAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
+        switch (sensacionAcompananteAlegria)
         {
         case 1:
             cout << endl << endl << "¡Es maravilloso tener una familia así! 🥰 Me da gusto escuchar que se apoyan tanto." << endl;
@@ -702,8 +707,8 @@ void terapiaAlegriaPura()
              << "3.- Saber que tengo a alguien incondicional a mi lado. 💖" << endl
              << "4.- La posibilidad de celebrar y hacer planes juntos. 🥂" << endl
              << "5.- La tranquilidad y paz que me da su presencia. 😌" << endl << endl;
-        sensacionConAcompanante = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
-        switch (sensacionConAcompanante)
+        sensacionAcompananteAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
+        switch (sensacionAcompananteAlegria)
         {
         case 1:
             cout << endl << "¡Qué profundo! 💖 Esa conexión es un regalo. Me alegro que disfruten de ese entendimiento." << endl;
@@ -732,8 +737,8 @@ void terapiaAlegriaPura()
              << "3.- La confianza, puedo ser yo mismo/a y compartirlo todo. 🤝" << endl
              << "4.- Sus risas y bromas, hacen el momento inolvidable. 😂" << endl
              << "5.- El hecho de que son como una segunda familia para mí. 👨‍👩‍👧‍👦" << endl << endl;
-        sensacionConAcompanante = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
-        switch (sensacionConAcompanante)
+        sensacionAcompananteAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
+        switch (sensacionAcompananteAlegria)
         {
         case 1:
             cout << endl << endl << "¡Qué buena vibra! ✨ Es genial tener amigos que te impulsen así. Me alegro mucho por ti." << endl;
@@ -760,8 +765,8 @@ void terapiaAlegriaPura()
              << "2.- Estoy casi seguro que sí, me mueve la cola o se me acerca a lamerme. 😻" << endl
              << "3.- La verdad sí, capta mis emociones y siempre está ahí para mí. 🐕‍🦺🌟" << endl
              << "4.- Muy probablemente no, pero siempre puedo contar con ella. 🐾🤝" << endl << endl;
-        sensacionConAcompanante = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
-        switch (sensacionConAcompanante)
+        sensacionAcompananteAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+        switch (sensacionAcompananteAlegria)
         {
         case 1:
             cout << endl << endl << "¡Qué bonito! Nuestros animalitos son muy sensibles. 🥺 Me alegra que sientas esa conexión con tu mascota." << endl;
@@ -789,8 +794,8 @@ void terapiaAlegriaPura()
              << "3.- Me siento muy en paz y conectado/a conmigo mismo/a. 💖" << endl
              << "4.- Puedo celebrarlo a mi manera, sin expectativas de nadie más.  свобода" << endl
              << "5.- Es un momento de pura gratitud personal. 🙏" << endl << endl;
-        sensacionConAcompanante = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
-        switch (sensacionConAcompanante)
+        sensacionAcompananteAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
+        switch (sensacionAcompananteAlegria)
         {
         case 1:
             cout << endl << endl << "¡Qué valioso! 💎 Disfrutar plenamente sin interrupciones es una gran forma de autocuidado." << endl;
@@ -823,14 +828,14 @@ void terapiaAlegriaPura()
          << "2.- Personas (familia, amigos, pareja) 👨‍👩‍👧‍👦❤️👯‍♀️" << endl
          << "3.- Eventos (viajes, logros) ✈️🏆" << endl
          << "4.- Pequeños placeres (comer algo rico, escuchar música) 🍔🎶" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Qué interesante! 😊 Es genial saber que encuentras alegría en ello" << endl << endl;
     cout << "¿Cómo se siente tu cuerpo cuando estás alegre? ✨" << endl << endl
          << "1.- Con ligereza 🎈" << endl
          << "2.- Con energía ⚡" << endl
          << "3.- Con sensaciones específicas en el pecho, cara, etc. 😊" << endl
          << "4.- Todas las anteriores y más 🥳" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Gracias por describir cómo se siente la alegría en ti! 😌" << endl
          << "🤩 Es fascinante cómo nuestras emociones se manifiestan físicamente." << endl << endl;
 
@@ -842,7 +847,7 @@ void terapiaAlegriaPura()
          << "2.- Logros personales 🏅" << endl
          << "3.- Momentos sencillos de la vida 🍃" << endl
          << "4.- Alguna película, canción, lectura, etc. 🎬🎵📚" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Qué bonito es revivir esos recuerdos! 💫" << endl
          << "😊 Ya sean grandes hitos o pequeños instantes, todos contribuyen a nuestra historia de felicidad." << endl << endl;
 
@@ -850,8 +855,8 @@ void terapiaAlegriaPura()
          << "1.- Sí, la disfruto sin reservas 🎉" << endl
          << "2.- No me lo permito por algún motivo 😔" << endl
          << "3.- Me cuesta disfrutarla del todo 😕" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
-    if (otrasAcciones == 2 || otrasAcciones == 3)
+    otrasAccionesAlegria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    if (otrasAccionesAlegria == 2 || otrasAccionesAlegria == 3)
     {
         cout << endl << "Comprendo. Es valioso reconocerlo. 🤔" << endl
              << "A veces, existen razones por las que nos cuesta entregarnos a la alegría. 😔" << endl
@@ -867,6 +872,17 @@ void terapiaAlegriaPura()
     system("pause");
     system("cls");
 
+    // --- Resumen de tu Terapia de Alegría Pura ---
+    cout << endl << "--- Resumen de tu Terapia de Alegría Pura ---" << endl;
+    cout << "Causa de la alegría: " << causaAlegriaPura << endl;
+    cout << "Cómo te diste cuenta de la alegría: " << sensacionAlegria << endl;
+    cout << "Con quién compartiste el momento: " << acompananteAlegria << endl;
+    cout << "Lo que aprecias de la conexión al compartir: " << sensacionAcompananteAlegria << endl;
+    // IMPORTANTE: 'otrasAccionesAlegria' contendrá solo el último valor asignado.
+    // Esto se debe a que la variable se reutiliza para varias preguntas diferentes.
+    cout << "Última respuesta sobre otras acciones/sensaciones/recuerdos/permiso de disfrute (valor final de 'otrasAccionesAlegria'): " << otrasAccionesAlegria << endl;
+    cout << "-----------------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un gusto charlar contigo sobre la alegría y todo lo que la rodea" << endl
          << "😄 Recuerda que permitirte sentir y disfrutar cada momento es clave para tu bienestar" << endl
          << "😊 ¡Te deseo mucha felicidad y, si necesitas algo más, ya sabes dónde encontrarme!" << endl
@@ -875,20 +891,20 @@ void terapiaAlegriaPura()
 
 void terapiaAmor()
 {
-    string causa;
-    int sensacion, interaccion, profundidadEmocional, reflexionesAmor;
+    string causaAmor;
+    int sensacionAmor, interaccionAmor, profundidadEmocionalAmor, reflexionesAmor;
 
     cout << endl << "¡Hola! Es un placer que me acompañes hoy. ✨ Hablemos del amor, una emoción tan poderosa." << endl
          << "¿Podrías compartirme algo que te haya causado la emoción del amor recientemente, o incluso un recuerdo que atesores? 🥰" << endl
          << "💖 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+    getline(cin, causaAmor);
     cout << endl << "¡Gracias por compartir eso tan valioso! Es hermoso ver cómo el amor se manifiesta en tu vida. 😊" << endl << endl
          << "Cuando sentiste esa emoción de amor, ¿cómo la notaste principalmente? 🤔" << endl << endl;
     cout << "1.- Por mis sensaciones físicas (una calidez en el pecho, 'mariposas' en el estómago, una sonrisa incontrolable). 🦋" << endl
          << "2.- Por mis pensamientos (optimistas, de gratitud, de conexión profunda con alguien o algo). 💡" << endl
          << "3.- Por mis acciones o el impulso de hacer algo (abrazar, cuidar, expresar afecto, querer compartirlo). 🫂🥂" << endl
          << "4.- Sentí un bienestar general y una profunda paz interior, una expansión en mi ser. ✨💖" << endl << endl;
-    sensacion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu experiencia: ", 1, 4);
+    sensacionAmor = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu experiencia: ", 1, 4);
     cout << endl << "Es fascinante cómo el amor se manifiesta en nosotros. ¡Qué alegría que lo experimentes así! 🥰" << endl
          << "Me encanta que te permitas sentirlo. 🎉" << endl << endl
          << "¿Con quien estabas o quien te compañaba en ese momento? 🤝" << endl << endl;
@@ -896,10 +912,10 @@ void terapiaAmor()
          << "2.- Fue con un familiar, sentí un amor incondicional y reconfortante. 👨‍👩‍👧‍👦" << endl
          << "3.- Fue con amigos, un sentimiento de hermandad y apoyo mutuo. 👯‍♀️" << endl
          << "4.- Fue un amor más general (hacia la vida, la naturaleza, una pasión personal) o lo sentí a solas. 🧘‍♀️🌳" << endl << endl;
-    interaccion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    interaccionAmor = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (interaccion)
+    switch (interaccionAmor)
     {
     case 1:
         cout << endl << endl
@@ -910,8 +926,8 @@ void terapiaAmor()
              << "2.- El apoyo incondicional y saber que están ahí el uno para el otro. 💖" << endl
              << "3.- La alegría de compartir sueños, risas y la vida misma. 🥂" << endl
              << "4.- La sensación de ser completamente tú mismo/a y ser amado/a por ello. 😌" << endl << endl;
-        profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se identifique contigo: ", 1, 4);
-        switch (profundidadEmocional)
+        profundidadEmocionalAmor = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se identifique contigo: ", 1, 4);
+        switch (profundidadEmocionalAmor)
         {
         case 1:
             cout << endl << "¡Esa conexión es un verdadero tesoro! 💖 Es la base de un amor profundo." << endl;
@@ -935,8 +951,8 @@ void terapiaAmor()
              << "2.- El apoyo incondicional en los momentos difíciles y la celebración en los buenos. 💪" << endl
              << "3.- Los recuerdos compartidos y la historia que los une. 📸" << endl
              << "4.- La simple presencia y el cariño constante que recibes. 🏡" << endl << endl;
-        profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más te reconforta: ", 1, 4);
-        switch (profundidadEmocional)
+        profundidadEmocionalAmor = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más te reconforta: ", 1, 4);
+        switch (profundidadEmocionalAmor)
         {
         case 1:
             cout << endl << "¡Es maravilloso tener esa sensación de pertenencia! 🥰 Un gran pilar en la vida." << endl;
@@ -960,8 +976,8 @@ void terapiaAmor()
              << "2.- La complicidad y las risas que solo tienes con ellos. 😂" << endl
              << "3.- Su apoyo incondicional en tus sueños y desafíos. 🏆" << endl
              << "4.- La libertad de explorar y crecer juntos. 🚀" << endl << endl;
-        profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más valoras: ", 1, 4);
-        switch (profundidadEmocional)
+        profundidadEmocionalAmor = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más valoras: ", 1, 4);
+        switch (profundidadEmocionalAmor)
         {
         case 1:
             cout << endl << "La confianza en la amistad es un pilar fundamental. 🥰 Qué bueno que te sientes tan libre con ellos." << endl;
@@ -986,8 +1002,8 @@ void terapiaAmor()
              << "2.- Me permite reflexionar profundamente sobre el significado del amor en mi vida. 💡" << endl
              << "3.- Siento una gran paz y una conexión con algo más grande que yo. 💖" << endl
              << "4.- Es un momento de pura gratitud y aprecio por la vida y las experiencias. 🙏" << endl << endl;
-        profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más te identifique: ", 1, 4);
-        switch (profundidadEmocional)
+        profundidadEmocionalAmor = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más te identifique: ", 1, 4);
+        switch (profundidadEmocionalAmor)
         {
         case 1:
             cout << endl << "¡Qué valioso! 💎 Esa libertad de sentir el amor es un acto de autocuidado." << endl;
@@ -1036,6 +1052,17 @@ void terapiaAmor()
     system("pause"); // Pausa la consola, espera la entrada del usuario
     system("cls");   // Limpia la pantalla de la consola
 
+    // --- Resumen de tu Terapia de Amor ---
+    cout << endl << "--- Resumen de tu Terapia de Amor ---" << endl;
+    cout << "Causa del amor: " << causaAmor << endl;
+    cout << "Cómo notaste la emoción: " << sensacionAmor << endl;
+    cout << "Con quién compartiste el momento: " << interaccionAmor << endl;
+    cout << "Profundidad emocional del amor (aspecto más apreciado/identificado): " << profundidadEmocionalAmor << endl;
+    // IMPORTANTE: 'reflexionesAmor' contendrá solo el último valor asignado.
+    // Esto se debe a que la variable se reutiliza para varias preguntas diferentes.
+    cout << "Última reflexión sobre el amor (valor final de 'reflexionesAmor'): " << reflexionesAmor << endl;
+    cout << "-------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta pequeña exploración sobre el amor en tu vida." << endl
          << "😄 Recuerda que el amor, en todas sus formas, es una fuerza vital que nos enriquece y nos impulsa a crecer." << endl
          << "😊 ¡Valora cada momento, cada conexión y cada sentimiento que te traiga el amor!" << endl
@@ -1044,13 +1071,14 @@ void terapiaAmor()
 
 void terapiaOptimismo()
 {
-    string causa;
-    int sensacion, interaccion, profundidadEmocional, otrasAcciones;
+    string causaOptimismo;
+    int sensacionOptimismo, interaccionOptimismo, profundidadEmocionalOptimismo, otrasAccionesOptimismo;
+    int influenciaOptimismo, recursoOptimismo;
 
     cout << endl << "¡Hola! Es genial que estés aquí para explorar el optimismo ✨" << endl
               << "¿Podrías compartirme lo que te hizo sentir optimismo recientemente o realmente esperanzado/a? 😊" << endl
               << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+    getline(cin, causaOptimismo);
     cout << endl << "¡Gracias por compartirlo! Es inspirador ver cómo el optimismo se manifiesta en tu vida. 😄" << endl << endl
               << "Cuando sentiste esa emoción, ¿Cómo supiste o persiviste que era optimismo? 🤔" << endl << endl;
     cout << "1.- Por mis sensaciones físicas (ligereza, más energía, una sensación de apertura o expansión). 🦋" << endl
@@ -1058,7 +1086,7 @@ void terapiaOptimismo()
               << "3.- Por mis acciones o el impulso de hacer algo (planificar, tomar iniciativas, sonreír más, hablar con entusiasmo). 🚀" << endl
               << "4.- Sentí una certeza interna de que todo iba a mejorar, una claridad mental. ✨🧘‍♀️" << endl 
               << "5.- Todas las anteriores e inluso puede que más 😅" << endl << endl;
-    sensacion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu experiencia: ", 1, 5);
+    sensacionOptimismo = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu experiencia: ", 1, 5);
     cout << endl << "Es maravilloso cómo el optimismo nos logra impulsar. ¡Qué bien que lo experimentes así! 😊" << endl
               << "Es una emoción muy valiosa. 🎉" << endl << endl
               << "¿Con quién estabas cuando te sentiste optimista?🤝" << endl << endl;
@@ -1067,10 +1095,10 @@ void terapiaOptimismo()
               << "3.- Estaba con mis amigos. 👯‍♀️" << endl
               << "4.- Estaba a solas, disfrutando de mi propia reflexión o logro. 🧘‍♀️" << endl
               << "5.- Estaba en un entorno público (trabajo, evento, ciudad). 🏢🌳" << endl << endl;
-    interaccion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
+    interaccionOptimismo= obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5);
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (interaccion) {
+    switch (interaccionOptimismo) {
         case 1:
             cout << endl << endl << "¡Qué lindo! Compartir el optimismo con tu pareja puede fortalecer aún más la conexión. ❤️‍🔥" << endl
                       << "Me imagino que su presencia o palabras hicieron el momento aún más especial. ✨" << endl << endl
@@ -1079,8 +1107,9 @@ void terapiaOptimismo()
                       << "2.- Su visión positiva de la situación me inspiró. 💡" << endl
                       << "3.- El simple hecho de compartir ese momento me hizo sentir más fuerte. 💪" << endl
                       << "4.- Juntos, nos sentimos invencibles ante cualquier desafío. 🚀" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más se relacione contigo: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalOptimismo= obtenerEntradaNumerica<int>("Selecciona la opción que más se relacione contigo: ", 1, 4);
+            switch (profundidadEmocionalOptimismo)
+             {
                 case 1:
                     cout << endl << "¡El apoyo de pareja es un gran pilar! Qué bueno que te impulsó así. 🌟" << endl;
                     break;
@@ -1103,8 +1132,8 @@ void terapiaOptimismo()
                       << "2.- El sentir su amor incondicional y respaldo. 💖" << endl
                       << "3.- Recordar momentos positivos o valores familiares que dan fuerza. 🕰️" << endl
                       << "4.- Su propia actitud positiva que te contagió. 😄" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapta a tu caso: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalOptimismo = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapta a tu caso: ", 1, 4);
+            switch (profundidadEmocionalOptimismo) {
                 case 1:
                     cout << endl << "¡Las palabras sabias de la familia son un tesoro! Qué bien que te guíen hacia el optimismo. 🌟" << endl;
                     break;
@@ -1127,8 +1156,9 @@ void terapiaOptimismo()
                       << "2.- Sus palabras de aliento y fe en mis capacidades. 🗣️" << endl
                       << "3.- El simple hecho de compartir un buen rato y sentirme conectado/a. 🤝" << endl
                       << "4.- La sensación de que podemos superar cualquier cosa juntos. 🚀" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más te identifique: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalOptimismo = obtenerEntradaNumerica<int>("Selecciona la opción que más te identifique: ", 1, 4);
+            switch (profundidadEmocionalOptimismo)
+             {
                 case 1:
                     cout << endl << "¡Las risas con amigos son la mejor medicina para el optimismo! Qué bien que las tengas. 🌟" << endl;
                     break;
@@ -1152,8 +1182,9 @@ void terapiaOptimismo()
                       << "2.- Me permite reflexionar profundamente sobre mis metas y lo que quiero lograr. 💡" << endl
                       << "3.- Siento una gran paz y una conexión con mi fuerza interior. 💖" << endl
                       << "4.- Es un momento de pura gratitud y aprecio por las posibilidades que la vida me ofrece. 🙏" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapte a tu sentir: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalOptimismo = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapte a tu sentir: ", 1, 4);
+            switch (profundidadEmocionalOptimismo) 
+            {
                 case 1:
                     cout << endl << "¡Qué valioso! 💎 Esa libertad de sentir el optimismo es un acto de auto-cuidado." << endl;
                     break;
@@ -1177,8 +1208,9 @@ void terapiaOptimismo()
                       << "2.- Observar la creatividad o el progreso de otras personas. 🎨" << endl
                       << "3.- Sentir la energía colectiva de un grupo o comunidad. 🤝" << endl
                       << "4.- Descubrir una nueva oportunidad o posibilidad inesperada. 🗺️" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tu experiencia: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalOptimismo = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tu experiencia: ", 1, 4);
+            switch (profundidadEmocionalOptimismo)
+             {
                 case 1:
                     cout << endl << "¡Qué bien! Es genial que encuentres optimismo en las buenas noticias del mundo. 🌟" << endl;
                     break;
@@ -1203,7 +1235,7 @@ void terapiaOptimismo()
               << "2.- Pequeños logros diarios o avances en mis proyectos. 📝✅" << endl
               << "3.- Conectar con la naturaleza o experimentar belleza. 🌳🌅" << endl
               << "4.- Aprender algo nuevo o adquirir conocimiento. 📚💡" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesOptimismo = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Qué interesante! 😊 Es genial saber que encuentras optimismo en estas áreas de tu vida." << endl << endl;
 
     cout << "¿Cómo se siente tu cuerpo cuando estás optimista? ✨" << endl << endl
@@ -1211,7 +1243,7 @@ void terapiaOptimismo()
               << "2.- Con energía renovada y motivación para actuar. ⚡" << endl
               << "3.- Con una sensación de apertura en el pecho y una sonrisa fácil. 😊" << endl
               << "4.- Todas las anteriores y una sensación general de bienestar. 🥳" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesOptimismo = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Gracias por describir cómo se siente el optimismo en ti! 😌" << endl
               << "🤩 Es fascinante cómo nuestras emociones se manifiestan físicamente." << endl << endl;
 
@@ -1223,7 +1255,7 @@ void terapiaOptimismo()
               << "2.- Logros personales que me abrieron nuevas puertas. 🏅" << endl
               << "3.- Momentos sencillos en los que sentí una gran esperanza o fe. 🍃" << endl
               << "4.- Alguna historia, película o canción que me inspiró a ser optimista. 🎬🎵📚" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesOptimismo = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Qué bonito es revivir esos recuerdos llenos de optimismo! 💫" << endl
               << "😊 Ya sean grandes hitos o pequeños instantes, todos contribuyen a tu capacidad de ver lo positivo." << endl << endl;
 
@@ -1231,8 +1263,8 @@ void terapiaOptimismo()
               << "1.- Sí, me permito sentir el optimismo sin reservas. 🎉" << endl
               << "2.- No me lo permito por algún motivo (miedo a la decepción, no querer 'gafar'). 😔" << endl
               << "3.- Me cuesta ser optimista del todo, hay algo que me frena. 😕" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 3);
-    if (otrasAcciones == 2 || otrasAcciones == 3) {
+    otrasAccionesOptimismo = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 3);
+    if (otrasAccionesOptimismo == 2 || otrasAccionesOptimismo == 3) {
         cout << endl << "Comprendo. Es valioso reconocerlo. 🤔" << endl
                   << "A veces, existen razones por las que nos cuesta entregarnos al optimismo. 😔" << endl
                   << "Lo importante es ser consciente de ello y trabajar en permitirnos esos momentos de esperanza. ✨" << endl
@@ -1250,7 +1282,7 @@ void terapiaOptimismo()
               << "2.- Demostrando que, incluso en la adversidad, se puede encontrar la esperanza. 🌱" << endl
               << "3.- Ofreciendo una perspectiva diferente, más positiva, cuando ellos lo necesitan. 💡" << endl
               << "4.- Siendo un ejemplo de resiliencia y actitud positiva. 💪" << endl << endl;
-    int influenciaOptimismo = obtenerEntradaNumerica<int>("Selecciona la opción que más se identifique contigo: ", 1, 4);
+        influenciaOptimismo = obtenerEntradaNumerica<int>("Selecciona la opción que más se identifique contigo: ", 1, 4);
     cout << endl << "¡Qué hermoso! El optimismo es una fuerza poderosa que no solo te beneficia a ti, sino que también puede ser un faro para los demás. ✨" << endl << endl;
 
     cout << "¿Hay algún recurso (libro, podcast, persona) que te ayude a mantener o fortalecer tu optimismo? 📚🎧👥" << endl << endl
@@ -1259,7 +1291,7 @@ void terapiaOptimismo()
               << "3.- Una persona específica que siempre me anima y me impulsa hacia el optimismo. 💖" << endl
               << "4.- Actividades como la meditación o el mindfulness que me ayudan a centrarme en lo positivo. 🧘‍♀️" << endl 
               << "5.- Yo solo 😁" << endl << endl;
-    int recursoOptimismo = obtenerEntradaNumerica<int>("Selecciona el recurso que más te apoya: ", 1, 4);
+        recursoOptimismo = obtenerEntradaNumerica<int>("Selecciona el recurso que más te apoya: ", 1, 4);
     cout << endl << "¡Qué valioso! Identificarlo y usarlo es una estrategia inteligente para nutrir tu optimismo.🌟" << endl << endl;
 
     cout << "¿Qué pequeño paso podrías dar para fomentar aún más tu optimismo? 👣" << endl
@@ -1267,6 +1299,23 @@ void terapiaOptimismo()
     string pasoOptimismo;
     getline(cin, pasoOptimismo);
     cout << endl << "¡Excelente! Los pequeños pasos son el cimiento de grandes cambios. Confío en que ese paso te acercará a un optimismo aún mayor. 💪" << endl << endl;
+
+    system ("pause");
+    system ("cls");
+
+        // --- Resumen de tu Terapia de Optimismo ---
+    cout << endl << "--- Resumen de tu Terapia de Optimismo ---" << endl;
+    cout << "Causa del optimismo: " << causaOptimismo << endl;
+    cout << "Cómo percibiste el optimismo: " << sensacionOptimismo << endl;
+    cout << "Con quién estabas al sentir optimismo: " << interaccionOptimismo << endl;
+    cout << "Profundidad emocional del optimismo (lo que más lo impulsó/contribuyó): " << profundidadEmocionalOptimismo << endl;
+    // IMPORTANTE: 'otrasAccionesOptimismo' contendrá solo el último valor asignado.
+    // Esto se debe a que la variable se reutiliza para varias preguntas diferentes.
+    cout << "Última respuesta sobre otras acciones/sensaciones/recuerdos/permiso de optimismo (valor final de 'otrasAccionesOptimismo'): " << otrasAccionesOptimismo << endl;
+    cout << "Cómo crees que tu optimismo puede influir en otros: " << influenciaOptimismo << endl;
+    cout << "Recurso que te ayuda a mantener el optimismo: " << recursoOptimismo << endl;
+    cout << "Tu pequeño paso para fomentar el optimismo: " << pasoOptimismo << endl; // Incluimos la nueva variable string
+    cout << "-------------------------------------------" << endl;
 
     cout << endl << "🤗 Ha sido un gusto charlar contigo sobre el optimismo y todo lo que lo rodea." << endl
               << "😄 Recuerda que mantener una perspectiva optimista puede ser una de tus mayores fortalezas y una elección poderosa que puedes hacer cada día." << endl
@@ -1276,20 +1325,20 @@ void terapiaOptimismo()
 
 void terapiaPlacer()
 {
-    string causa;
-    int sensacion, interaccion, profundidadEmocional, otrasAcciones, balancePlacer, masPlacer; 
+    string causaPlacer;
+    int sensacionPlacer, interaccionPlacer, profundidadEmocionalPlacer, otrasAccionesPlacer, balancePlacer, masPlacer; 
 
     cout << endl << "¡Hola! Es un gusto que estés aquí para explorar el placer. ✨" << endl
               << "¿Podrías compartirme eso que te causó placer recientemente? 😊" << endl
               << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+    getline(cin, causaPlacer);
     cout << endl << "¡Gracias por compartir eso! Es inspirador ver cómo el placer se manifiesta en tu vida. 😄" << endl << endl
               << "¿Cómo supiste que era placer? 🤔" << endl << endl;
     cout << "1.- Por mis sensaciones físicas (relajación, una sensación de bienestar, calidez). 🦋" << endl
               << "2.- Por mis pensamientos (felicidad, satisfacción, aprecio por el momento). 💡" << endl
               << "3.- Por mis acciones o el impulso de hacer algo (sonreír, expresar alegría, querer prolongar el momento). 🚀" << endl
               << "4.- Sentí una profunda paz interior y claridad mental. ✨🧘‍♀️" << endl << endl;
-    sensacion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu experiencia: ", 1, 4);
+    sensacionPlacer = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu experiencia: ", 1, 4);
     cout << endl << "Es maravilloso cómo el placer nos conecta con el bienestar. ¡Qué bien que lo experimentes así! 😊" << endl
               << "Es una emoción muy valiosa. 🎉" << endl << endl
               << "¿Con quién estabas cuando sentiste placer?🤝" << endl << endl; 
@@ -1298,10 +1347,10 @@ void terapiaPlacer()
               << "3.- Estaba con mis amigos. 👯‍♀️" << endl
               << "4.- Estaba a solas, disfrutando de mi propia reflexión o logro. 🧘‍♀️" << endl
               << "5.- Estaba en un entorno público (trabajo, evento, ciudad). 🏢🌳" << endl << endl; 
-    interaccion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5); 
+    interaccionPlacer = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5); 
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (interaccion) {
+    switch (interaccionPlacer) {
         case 1:
             cout << endl << endl << "¡Qué importante es compartir el placer con tu pareja! ❤️‍🔥" << endl
                       << "Saber que cuentas con alguien con quien disfrutar estos momentos es un gran impulso. ✨" << endl << endl
@@ -1310,8 +1359,8 @@ void terapiaPlacer()
                       << "2.- Su alegría o aprecio por la situación me hizo sentir más gozo. 💡" << endl
                       << "3.- El simple hecho de compartir ese momento especial fortaleció mi sensación de bienestar. 💪" << endl
                       << "4.- Sentimos una conexión profunda que hizo el momento inolvidable. 🚀" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalPlacer = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+            switch (profundidadEmocionalPlacer) {
                 case 1:
                     cout << endl << "¡El afecto de pareja es un pilar fundamental! Qué bueno que te impulsó así. 🌟" << endl;
                     break;
@@ -1334,8 +1383,8 @@ void terapiaPlacer()
                       << "2.- El sentir su amor incondicional y respaldo. 💖" << endl
                       << "3.- Recordar momentos positivos o valores familiares que te brindan alegría. 🕰️" << endl
                       << "4.- Su propia actitud positiva que te contagió. 😄" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapte a ti: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalPlacer = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapte a ti: ", 1, 4);
+            switch (profundidadEmocionalPlacer) {
                 case 1:
                     cout << endl << "¡Las palabras sabias de la familia son un tesoro! Qué bien que te guíen hacia el placer. 🌟" << endl;
                     break;
@@ -1358,8 +1407,8 @@ void terapiaPlacer()
                       << "2.- Sus palabras de aliento y fe en mis capacidades. 🗣️" << endl
                       << "3.- El simple hecho de compartir un buen rato y sentirme conectado/a. 🤝" << endl
                       << "4.- La sensación de que podemos disfrutar plenamente la vida juntos. 🚀" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapte a ti: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalPlacer = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapte a ti: ", 1, 4);
+            switch (profundidadEmocionalPlacer) {
                 case 1:
                     cout << endl << "¡Las risas con amigos son la mejor medicina para el placer! Qué bien que las tengas. 🌟" << endl;
                     break;
@@ -1382,8 +1431,8 @@ void terapiaPlacer()
                       << "2.- Me permitió reflexionar profundamente sobre mis satisfacciones y bienestar. 💡" << endl
                       << "3.- Sentí una gran paz y una conexión con mi fuerza interior. 💖" << endl
                       << "4.- Fue un momento de pura gratitud y aprecio por las alegrías de la vida. 🙏" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapte a tu caso: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalPlacer = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapte a tu caso: ", 1, 4);
+            switch (profundidadEmocionalPlacer) {
                 case 1:
                     cout << endl << "¡Qué valioso! 💎 Esa libertad de sentir el placer es un acto de auto-cuidado." << endl;
                     break;
@@ -1407,8 +1456,8 @@ void terapiaPlacer()
                       << "2.- Observar la belleza o la creatividad en el ambiente. 🎨" << endl
                       << "3.- Sentir la energía colectiva de un grupo o comunidad disfrutando. 🤝" << endl
                       << "4.- Un descubrimiento inesperado que me brindó alegría. 🗺️" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tu experiencia: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalPlacer = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tu experiencia: ", 1, 4);
+            switch (profundidadEmocionalPlacer) {
                 case 1:
                     cout << endl << "¡Qué bien! Es genial que encuentres placer en las experiencias del mundo. 🌟" << endl;
                     break;
@@ -1433,7 +1482,7 @@ void terapiaPlacer()
               << "2.- Pequeños logros diarios o avances en mis proyectos. 📝✅" << endl
               << "3.- Conectar con la naturaleza o experimentar belleza. 🌳🌅" << endl
               << "4.- Aprender algo nuevo o adquirir conocimiento. 📚💡" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesPlacer = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Qué interesante! 😊 Es genial saber que encuentras placer en estas áreas de tu vida." << endl << endl;
 
     cout << "¿Cómo se siente tu cuerpo cuando sientes placer? ✨" << endl << endl
@@ -1441,7 +1490,7 @@ void terapiaPlacer()
               << "2.- Con energía renovada y motivación para actuar. ⚡" << endl
               << "3.- Con una sensación de apertura en el pecho y una sonrisa fácil. 😊" << endl
               << "4.- Todas las anteriores y una sensación general de satisfacción. 🥳" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesPlacer = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Gracias por describir cómo se siente el placer en ti! 😌" << endl
               << "🤩 Es fascinante cómo nuestras emociones se manifiestan físicamente." << endl << endl;
 
@@ -1453,7 +1502,7 @@ void terapiaPlacer()
               << "2.- Experiencias que me abrieron nuevas posibilidades de disfrute. 🏅" << endl
               << "3.- Momentos sencillos en los que sentí una gran alegría o gratitud. 🍃" << endl
               << "4.- Alguna historia, película o canción que me brindó una profunda sensación de bienestar. 🎬🎵📚" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesPlacer = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Qué bonito es revivir esos recuerdos llenos de placer! 💫" << endl
               << "😊 Ya sean grandes hitos o pequeños instantes, todos contribuyen a tu capacidad de disfrutar la vida." << endl << endl;
 
@@ -1461,8 +1510,8 @@ void terapiaPlacer()
               << "1.- Sí, me permito sentir el placer sin reservas. 🎉" << endl
               << "2.- No me lo permito por algún motivo (miedo a que se acabe, sentir que no lo merezco). 😔" << endl
               << "3.- Me cuesta disfrutarlo del todo, hay algo que me frena. 😕" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 3);
-    if (otrasAcciones == 2 || otrasAcciones == 3) {
+    otrasAccionesPlacer = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 3);
+    if (otrasAccionesPlacer == 2 || otrasAccionesPlacer == 3) {
         cout << endl << "Comprendo. Es valioso reconocerlo. 🤔" << endl
                   << "A veces, existen razones por las que nos cuesta entregarnos al placer. 😔" << endl
                   << "Lo importante es ser consciente de ello y trabajar en permitirnos esos momentos de disfrute. ✨" << endl
@@ -1499,6 +1548,22 @@ void terapiaPlacer()
         cout << endl << "¡Qué excelente disposición! Es un paso importante abrirte a más placer en tu vida. Te lo mereces. 😊" << endl << endl;
     }
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Placer ---
+    cout << endl << "--- Resumen de tu Terapia de Placer ---" << endl;
+    cout << "Causa del placer: " << causaPlacer << endl;
+    cout << "Cómo percibiste el placer: " << sensacionPlacer << endl;
+    cout << "Con quién estabas al sentir placer: " << interaccionPlacer << endl;
+    cout << "Profundidad emocional del placer (lo que más lo impulsó/contribuyó): " << profundidadEmocionalPlacer << endl;
+    // IMPORTANTE: 'otrasAccionesPlacer' contendrá solo el último valor asignado.
+    // Esto se debe a que la variable se reutiliza para varias preguntas diferentes.
+    cout << "Última respuesta sobre otras acciones/sensaciones/recuerdos/permiso de placer (valor final de 'otrasAccionesPlacer'): " << otrasAccionesPlacer << endl;
+    cout << "Cómo el placer contribuye a tu equilibrio y bienestar: " << balancePlacer << endl;
+    cout << "Cómo te sentirías al tener más momentos de placer en tu futuro: " << masPlacer << endl;
+    cout << "-------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración sobre el placer." << endl
               << "😄 Recuerda que buscar y experimentar el placer es una parte fundamental de vivir una vida plena y de cuidar tu bienestar." << endl
               << "😊 ¡Permítete disfrutar de esas experiencias que te nutren cada día! Si necesitas algo más, ya sabes dónde encontrarme." << endl
@@ -1507,20 +1572,20 @@ void terapiaPlacer()
 
 void terapiaCalma()
 {
-    string causa;
-    int sensacion, interaccion, profundidadEmocional, otrasAcciones, calmaManejoEstres, gestoCalma; 
+    string causaCalma;
+    int sensacionCalma, interaccionCalma, profundidadEmocionalCalma, otrasAccionesCalma, calmaManejoEstres, gestoCalma; 
 
     cout << endl << "¡Hola! Es un gusto que estés aquí para explorar la calma. 🌿" << endl
               << "¿Podrías compartirme lo que te haya causado la sensación de calma? 😊" << endl
               << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+    getline(cin, causaCalma);
     cout << endl << "¡Gracias por compartir eso! Es inspirador ver cómo la calma se manifiesta en tu vida. 😄" << endl << endl
               << "¿Cómo la notaste principalmente en ti? 🤔" << endl << endl;
     cout << "1.- Por mis sensaciones físicas (respiración lenta, músculos relajados, una sensación de ligereza). 🦋" << endl
               << "2.- Por mis pensamientos (claros, sin preocupaciones, de aceptación). 💡" << endl
               << "3.- Por mis acciones o el impulso de hacer algo (moverme lentamente, sonreír suavemente, simplemente estar). 🚀" << endl
               << "4.- Sentí una profunda paz interior y una quietud mental. ✨🧘‍♀️" << endl << endl;
-    sensacion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu experiencia: ", 1, 4);
+    sensacionCalma = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu experiencia: ", 1, 4);
     cout << endl << "Es maravilloso cómo la calma nos envuelve y nos da serenidad. ¡Qué bien que la experimentes así! 😊" << endl
               << "Es una emoción muy valiosa para nuestro bienestar. 🎉" << endl << endl
               << "¿Con quién estabas cuando te sentiste en calma?🤝" << endl << endl; 
@@ -1529,10 +1594,10 @@ void terapiaCalma()
               << "3.- Estaba con mis amigos, en un ambiente relajado. 👯‍♀️" << endl
               << "4.- Estaba a solas, disfrutando de mi propio espacio y quietud. 🧘‍♀️" << endl
               << "5.- Estaba en un entorno público (un parque, una biblioteca, un café tranquilo). 🏢🌳" << endl << endl; 
-    interaccion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5); 
+    interaccionCalma = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 5); 
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (interaccion) {
+    switch (interaccionCalma) {
         case 1:
             cout << endl << endl << "¡Qué armonioso! Compartir la calma con tu pareja puede fortalecer aún más la conexión. ❤️‍🔥" << endl
                       << "Seguro que su presencia te brindó un apoyo extra para esa serenidad. ✨" << endl << endl
@@ -1541,8 +1606,8 @@ void terapiaCalma()
                       << "2.- Compartir un momento de silencio o entendimiento mutuo me dio paz. 💡" << endl
                       << "3.- El simple hecho de compartir ese espacio de tranquilidad me hizo sentir más sereno/a. 💪" << endl
                       << "4.- Juntos, creamos una atmósfera de completa relajación. 🚀" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalCalma = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+            switch (profundidadEmocionalCalma ) {
                 case 1:
                     cout << endl << "¡El apoyo de pareja es un gran pilar! Qué bueno que te brindó esa calma. 🌟" << endl;
                     break;
@@ -1565,8 +1630,8 @@ void terapiaCalma()
                       << "2.- El sentir su amor incondicional y su presencia tranquilizadora. 💖" << endl
                       << "3.- Recordar momentos pacíficos o tradiciones familiares que te dan paz. 🕰️" << endl
                       << "4.- Su propia actitud tranquila que te contagió. 😄" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalCalma = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+            switch (profundidadEmocionalCalma ) {
                 case 1:
                     cout << endl << "¡Las palabras sabias de la familia son un tesoro! Qué bien que te guíen hacia la calma. 🌟" << endl;
                     break;
@@ -1589,8 +1654,8 @@ void terapiaCalma()
                       << "2.- Sus palabras de apoyo que me ayudaron a relajarme. 🗣️" << endl
                       << "3.- El simple hecho de compartir un momento pacífico y sentirme conectado/a. 🤝" << endl
                       << "4.- La sensación de que podemos encontrar la paz juntos. 🚀" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalCalma = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+            switch (profundidadEmocionalCalma) {
                 case 1:
                     cout << endl << "¡Las pláticas tranquilas o los silencios compartidos con amigos son un tesoro! Qué bien que los disfrutas. 🌟" << endl;
                     break;
@@ -1613,8 +1678,8 @@ void terapiaCalma()
                       << "2.- Me permitió reflexionar profundamente sobre mis pensamientos y encontrar claridad. 💡" << endl
                       << "3.- Sentí una gran paz y una conexión con mi fuerza interior. 💖" << endl
                       << "4.- Fue un momento de pura gratitud y aprecio por la quietud. 🙏" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalCalma = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+            switch (profundidadEmocionalCalma) {
                 case 1:
                     cout << endl << "¡Qué valioso! 💎 Esa libertad de sentir la calma es un acto de auto-cuidado." << endl;
                     break;
@@ -1638,8 +1703,8 @@ void terapiaCalma()
                       << "2.- Observar la naturaleza o la belleza en el ambiente urbano. 🎨" << endl
                       << "3.- Sentir la tranquilidad o el ritmo pausado de un lugar. 🤝" << endl
                       << "4.- Un descubrimiento inesperado que me brindó una sensación de paz. 🗺️" << endl << endl;
-            profundidadEmocional = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tu experiencia: ", 1, 4);
-            switch (profundidadEmocional) {
+            profundidadEmocionalCalma = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tu experiencia: ", 1, 4);
+            switch (profundidadEmocionalCalma) {
                 case 1:
                     cout << endl << "¡Qué bien! Es genial que encuentres calma en ambientes serenos. 🌟" << endl;
                     break;
@@ -1664,7 +1729,7 @@ void terapiaCalma()
               << "2.- Momentos de silencio o quietud en mi día a día. 🤫✅" << endl
               << "3.- Conectar con la naturaleza o el aire libre. 🌳🌅" << endl
               << "4.- Realizar tareas repetitivas o que no requieren mucha concentración. 📚💡" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesCalma = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Qué interesante! 😊 Es genial saber que encuentras calma en estas áreas de tu vida." << endl << endl;
 
     cout << "¿Cómo se siente tu cuerpo cuando estás calma? ✨" << endl << endl
@@ -1672,7 +1737,7 @@ void terapiaCalma()
               << "2.- Con los músculos relajados y una respiración profunda. ⚡" << endl
               << "3.- Con una sensación de calorcito suave y el corazón en paz. 😊" << endl
               << "4.- Todas las anteriores y una sensación general de serenidad total. 🥳" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesCalma = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Gracias por describir cómo se siente la calma en ti! 😌" << endl
               << "🤩 Es fascinante cómo nuestras emociones se manifiestan físicamente." << endl << endl;
 
@@ -1684,7 +1749,7 @@ void terapiaCalma()
               << "2.- Experiencias en la naturaleza que me conectaron con la tranquilidad. 🏅" << endl
               << "3.- Momentos sencillos en los que sentí una gran paz interior. 🍃" << endl
               << "4.- Alguna melodía, paisaje o lectura que me brindó una profunda serenidad. 🎬🎵📚" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
+    otrasAccionesCalma = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 4);
     cout << endl << "¡Qué bonito es revivir esos recuerdos llenos de calma! 💫" << endl
               << "😊 Ya sean grandes logros o pequeños instantes, todos contribuyen a tu capacidad de encontrar la paz." << endl << endl;
 
@@ -1692,8 +1757,8 @@ void terapiaCalma()
               << "1.- Sí, me permito sentir la calma sin reservas. 🎉" << endl
               << "2.- No me lo permito por algún motivo (creer que no hay tiempo, sentir que debo estar activo/a). 😔" << endl
               << "3.- Me cuesta relajarme del todo, hay algo que me frena. 😕" << endl << endl;
-    otrasAcciones = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 3);
-    if (otrasAcciones == 2 || otrasAcciones == 3) {
+    otrasAccionesCalma = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu caso: ", 1, 3);
+    if (otrasAccionesCalma == 2 || otrasAccionesCalma == 3) {
         cout << endl << "Comprendo. Es valioso reconocerlo. 🤔" << endl
                   << "A veces, existen razones por las que nos cuesta entregarnos a la calma. 😔" << endl
                   << "Lo importante es ser consciente de ello y trabajar en permitirnos esos momentos de serenidad. ✨" << endl
@@ -1726,6 +1791,23 @@ void terapiaCalma()
          gestoCalma = obtenerEntradaNumerica<int>("Selecciona el gesto que más te gustaría hacer: ", 1, 4);
     cout << endl << "¡Excelente! Los pequeños gestos son el cimiento de grandes cambios. Confío en que ese paso te acercará a una calma aún mayor. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Calma ---
+    cout << endl << "--- Resumen de tu Terapia de Calma ---" << endl;
+    cout << "Causa de la calma: " << causaCalma << endl;
+    cout << "Cómo percibiste la calma: " << sensacionCalma << endl;
+    cout << "Con quién estabas al sentir calma: " << interaccionCalma << endl;
+    cout << "Profundidad emocional de la calma (lo que más la impulsó/contribuyó): " << profundidadEmocionalCalma << endl;
+    // IMPORTANTE: 'otrasAccionesCalma' contendrá solo el último valor asignado.
+    // Esto se debe a que la variable se reutiliza para varias preguntas diferentes.
+    cout << "Última respuesta sobre otras acciones/sensaciones/recuerdos/permiso de calma (valor final de 'otrasAccionesCalma'): " << otrasAccionesCalma << endl;
+    cout << "Cómo la calma te ayuda a manejar el estrés/ansiedad: " << calmaManejoEstres << endl;
+    cout << "Pequeño gesto para invitar más calma a tu día: " << gestoCalma << endl;
+    cout << "-----------------------------------" << endl;
+
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración sobre la calma y todo lo que la rodea." << endl
               << "😄 Recuerda que cultivar la calma es una de tus mayores fortalezas y una elección poderosa que puedes hacer cada día." << endl
               << "😊 ¡Sigue buscando esos momentos de serenidad y permítete vivirlos plenamente! Si necesitas algo más, ya sabes dónde encontrarme." << endl
@@ -1735,21 +1817,22 @@ void terapiaCalma()
 //Tristeza
 void terapiaDecepcion ()
 {
-    string causa;
-    int impactoExpectativa, fuenteDecepcion, reaccionesIniciales, aprendizajeYAccion; 
+    string causaDecepcion;
+    int impactoExpectativaDecepcion, fuenteDecepcion, reaccionesInicialesDecepcion, aprendizajeYAccionDecepcion; 
+    int primerasReaccionesDecepcion, pensamientosRecurrentesDecepcion, alivioMomentaneoDecepcion, recursosInternosDecepcion,  accionConcretaDecepcion;
 
     // --- Inicio de la mini-terapia sobre la emoción de la decepción ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la *decepción* que sientes. Es una emoción desafiante, y es un acto de fortaleza abordarla. 😔" << endl
               << "¿Podrías compartirme brevemente la situación específica que te causó esta *decepción*? No necesitas entrar en detalles si no lo deseas, solo el evento principal. 💔" << endl
               << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+    getline(cin, causaDecepcion);
     cout << endl << "Gracias por compartir eso. Es completamente válido sentir *decepción* cuando las cosas no salen como esperamos. Permítete reconocer esa emoción. 🙏" << endl << endl
               << "Pensando en esa situación, ¿cuál crees que fue la expectativa principal que no se cumplió y te llevó a sentir *decepción*? 🤔" << endl << endl;
     cout << "1.- Esperaba un resultado diferente en un evento o proyecto. 📊" << endl
               << "2.- Tenía una expectativa clara sobre el comportamiento o las palabras de alguien. 🗣" << endl
               << "3.- Confiaba en que una oportunidad se concretaría o que algo cambiaría. 🚀" << endl
               << "4.- Creía en mis propias capacidades o decisiones, y siento que me fallé a mí mismo/a. 🧠" << endl << endl;
-    impactoExpectativa = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa esa expectativa: ", 1, 4);
+    impactoExpectativaDecepcion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa esa expectativa: ", 1, 4);
     cout << endl << "Es crucial identificar qué expectativa se rompió, ya que esto nos ayuda a entender la raíz de tu *decepción*. Reconocerlo es un paso importante. 💡" << endl
               << "Ahora, ¿quién o qué fue la fuente principal de esta *decepción* en la situación que me compartiste? 💔" << endl << endl;
     cout << "1.- Fue la acción o inacción de otra persona. 👤" << endl
@@ -1768,7 +1851,7 @@ void terapiaDecepcion ()
                       << "2.- Sentí que mi confianza fue vulnerada. 💔" << endl
                       << "3.- Me sentí subestimado/a o que no fui tomado/a en cuenta. 🌬" << endl
                       << "4.- La situación me hizo reevaluar la relación con esa persona. ⚖" << endl << endl;
-            reaccionesIniciales = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+            reaccionesInicialesDecepcion = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
             break;
         case 2:
             cout << endl << endl << "Comprendo. Es frustrante cuando la *decepción* surge de circunstancias que están fuera de nuestro control. ☔" << endl
@@ -1778,7 +1861,7 @@ void terapiaDecepcion ()
                       << "2.- Sentí que mis esfuerzos fueron en vano, a pesar de mis intenciones. 💧" << endl
                       << "3.- Me vi obligado/a a cambiar mis planes o expectativas de forma abrupta. 🗺" << endl
                       << "4.- Me sentí desanimado/a sobre el futuro o sobre situaciones similares. 📉" << endl << endl;
-            reaccionesIniciales = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+            reaccionesInicialesDecepcion = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
             break;
         case 3:
             cout << endl << endl << "Es un acto de gran honestidad reconocer que la *decepción* puede venir de nuestras propias acciones o decisiones. 🧠" << endl
@@ -1788,7 +1871,7 @@ void terapiaDecepcion ()
                       << "2.- Dudé de mis capacidades o mi juicio. 💡" << endl
                       << "3.- Me sentí frustrado/a por no haber hecho las cosas de otra manera. 🚧" << endl
                       << "4.- Me impulsó a reflexionar profundamente sobre mi comportamiento o mis patrones. 🌟" << endl << endl;
-            reaccionesIniciales = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+            reaccionesInicialesDecepcion = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
             break;
         case 4:
             cout << endl << endl << "Comprendo. A veces la *decepción* es el resultado de una compleja interacción entre factores externos y nuestras propias reacciones. 🔗" << endl
@@ -1798,7 +1881,7 @@ void terapiaDecepcion ()
                       << "2.- Me costó distinguir qué parte era mi responsabilidad y cuál no. 🧭" << endl
                       << "3.- Sentí una mezcla de frustración con el exterior y conmigo mismo/a. 🎭" << endl
                       << "4.- Esto me llevó a reevaluar tanto mis expectativas como mi entorno. 🔄" << endl << endl;
-            reaccionesIniciales = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+            reaccionesInicialesDecepcion = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
             break;
     }
     
@@ -1810,7 +1893,7 @@ void terapiaDecepcion ()
               << "2.- Sentí frustración o enojo por lo sucedido. 😠" << endl
               << "3.- Experimenté una sensación de shock o incredulidad. 😲" << endl
               << "4.- Me sentí sin energía o con desmotivación para seguir adelante. 😴" << endl << endl;
-    int primerasReacciones = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+        primerasReaccionesDecepcion = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
     cout << endl << "Es natural reaccionar de esas maneras ante la *decepción*. Estas reacciones iniciales son parte del proceso de asimilación. 🫂" << endl << endl;
 
     cout << "¿Qué pensamientos recurrentes o mensajes internos te surgen cuando piensas en esta situación de *decepción*? 💭" << endl << endl
@@ -1818,7 +1901,7 @@ void terapiaDecepcion ()
               << "2.- 'Debí haber hecho las cosas de otra manera' o 'Fue mi culpa'. ✋" << endl
               << "3.- 'Nunca va a mejorar' o 'Siempre me pasa lo mismo'. 🌧" << endl
               << "4.- 'Qué puedo aprender de esto' o 'Cómo puedo seguir adelante'. 🌱" << endl << endl;
-    int pensamientosRecurrentes = obtenerEntradaNumerica<int>("Selecciona la opción que más se acerque a tus pensamientos: ", 1, 4);
+        pensamientosRecurrentesDecepcion = obtenerEntradaNumerica<int>("Selecciona la opción que más se acerque a tus pensamientos: ", 1, 4);
     cout << endl << "Nuestros pensamientos moldean mucho cómo vivimos la *decepción*. Identificarlos es clave para poder transformarlos, si es necesario. ✨" << endl << endl;
 
     system("pause"); 
@@ -1829,7 +1912,7 @@ void terapiaDecepcion ()
               << "2.- Mi optimismo y la habilidad de encontrar el lado positivo. 🌟" << endl
               << "3.- Mi red de apoyo (familia, amigos) en quienes puedo confiar. 🤝" << endl
               << "4.- Mi creatividad para encontrar nuevas soluciones o caminos. 🎨" << endl << endl;
-    int recursosInternos = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más te resuene: ", 1, 4);
+        recursosInternosDecepcion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más te resuene: ", 1, 4);
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Esas son tus herramientas más valiosas para superar la *decepción*." << endl
               << "Recuerda que ya tienes la capacidad dentro de ti para afrontar esto. 💖" << endl << endl;
 
@@ -1838,8 +1921,8 @@ void terapiaDecepcion ()
               << "2.- Realizar una actividad que disfruto (un hobby, ejercicio, lectura). 📚" << endl
               << "3.- Permitirme llorar o expresar la tristeza. 😭" << endl
               << "4.- Darme tiempo para procesarlo a solas, en silencio. 🤫" << endl << endl;
-    int alivioMomentaneo = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu experiencia: ", 1, 4);
-    if (alivioMomentaneo == 3) {
+        alivioMomentaneoDecepcion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más se adapte a tu experiencia: ", 1, 4);
+    if (alivioMomentaneoDecepcion == 3) {
         cout << endl << "Permitirte expresar la tristeza es un paso vital para liberar la *decepción*. Es un acto de autenticidad. 🙏" << endl;
     } else {
         cout << endl << "Es genial que hayas encontrado algo que te brinde un respiro. Esos momentos de alivio son importantes en el proceso de sanación. ✨" << endl;
@@ -1855,7 +1938,7 @@ void terapiaDecepcion ()
               << "2.- Cómo proteger mi confianza en los demás o en mí mismo/a. 🛡" << endl
               << "3.- Nuevas formas de comunicarme o de gestionar situaciones difíciles. 🗣" << endl
               << "4.- Reconocer mis límites o los de la situación, y saber cuándo soltar. 🍃" << endl << endl;
-    aprendizajeYAccion = obtenerEntradaNumerica<int>("Selecciona la lección más importante para ti: ", 1, 4);
+    aprendizajeYAccionDecepcion = obtenerEntradaNumerica<int>("Selecciona la lección más importante para ti: ", 1, 4);
     cout << endl << "¡Excelente! Cada *decepción* puede ser un maestro. Convertir el dolor en aprendizaje es una habilidad poderosa que te acompañará. 🌱" << endl << endl;
 
     cout << "Finalmente, ¿qué acción pequeña y concreta puedes comprometerte a tomar HOY o en los próximos días para empezar a sanar o avanzar de esta *decepción*? 👣" << endl << endl
@@ -1863,8 +1946,25 @@ void terapiaDecepcion ()
               << "2.- Establecer un límite o una nueva expectativa para proteger mi bienestar. 🚫" << endl
               << "3.- Enfocar mi energía en un nuevo proyecto o meta que me ilusione. 🌟" << endl
               << "4.- Practicar el auto-cuidado (meditación, ejercicio, tiempo de calidad conmigo mismo/a). 💖" << endl << endl;
-    int accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+        accionConcretaDecepcion = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia adelante. 💪" << endl << endl;
+
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Decepción ---
+    cout << endl << "--- Resumen de tu Terapia de Decepción ---" << endl;
+    cout << "Causa de la decepción: " << causaDecepcion << endl;
+    cout << "Expectativa principal no cumplida: " << impactoExpectativaDecepcion << endl;
+    cout << "Fuente principal de la decepción: " << fuenteDecepcion << endl;
+    cout << "Reacciones iniciales emocionales ante la decepción: " << reaccionesInicialesDecepcion << endl;
+    cout << "Tus primeras reacciones (físicas/emocionales) a la decepción: " << primerasReaccionesDecepcion << endl;
+    cout << "Pensamientos recurrentes sobre la decepción: " << pensamientosRecurrentesDecepcion << endl;
+    cout << "Recursos internos para manejar la decepción: " << recursosInternosDecepcion << endl;
+    cout << "Alivio momentáneo de la decepción: " << alivioMomentaneoDecepcion << endl;
+    cout << "Aprendizaje clave de esta decepción: " << aprendizajeYAccionDecepcion << endl;
+    cout << "Acción concreta para sanar/avanzar: " << accionConcretaDecepcion << endl;
+    cout << "---------------------------------------" << endl;
 
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la *decepción*." << endl
               << "😄 Recuerda que sentir decepción es parte de ser humano, y tu capacidad para afrontarla te hace más fuerte." << endl
@@ -1874,31 +1974,31 @@ void terapiaDecepcion ()
 
 void decepionRemordimiento ()
 {
-    string causa;
-    int tipoAccion, impactoAccion, reaccionInicial, aprendizajeYAccion; 
+    string causaRemordimiento;
+    int tipoAccionRemordimiento, impactoAccionRemordimiento, reaccionInicialRemordimiento; 
 
     // --- Inicio de la mini-terapia sobre la emoción del remordimiento ---
     cout << endl << "¡Hola! Es un espacio seguro para que exploremos el remordimiento. Es una emoción que puede pesar, y es valiente de tu parte abordarla. 😔" << endl
               << "¿Podrías compartirme brevemente la situación o acción específica que te está causando remordimiento en este momento? No tienes que dar detalles si no lo deseas, solo el evento principal. 💔" << endl
               << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+    getline(cin, causaRemordimiento);
     cout << endl << "Gracias por compartir eso. Reconocer el remordimiento es el primer paso para entenderlo y sanar. Es una emoción compleja, y es completamente válido sentirla. 🙏" << endl << endl
               << "Pensando en esa situación, ¿cómo describirías la acción que te generó el remordimiento? 🤔" << endl << endl;
     cout << "1.- Fue algo que hice directamente y que lamento. 🛠" << endl
               << "2.- Fue algo que no hice, una omisión de mi parte. ⏳" << endl
               << "3.- Fue algo que dije y desearía no haber dicho. 🗣" << endl
               << "4.- Fue algo que pensé o sentí, y que me pesa. 🧠" << endl << endl;
-    tipoAccion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa esa acción: ", 1, 4);
+    tipoAccionRemordimiento = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa esa acción: ", 1, 4);
     cout << endl << "Identificar la naturaleza de la acción nos ayuda a comprender mejor el remordimiento. Es importante ser honesto/a con uno mismo en este proceso. 💡" << endl
               << "Ahora, ¿cuál fue el impacto principal de esa acción (o inacción) en ti o en otras personas? 💔" << endl << endl;
     cout << "1.- Causó daño o malestar a otra persona. 😥" << endl
               << "2.- Me afectó directamente a mí mismo/a (mis metas, mi bienestar). 😔" << endl
               << "3.- Rompió mi propia moral o mis valores personales. ⚖" << endl
               << "4.- Generó una pérdida de confianza o una oportunidad importante. 📉" << endl << endl; 
-    impactoAccion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); 
+    impactoAccionRemordimiento = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); 
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (impactoAccion) {
+    switch (impactoAccionRemordimiento) {
         case 1:
             cout << endl << endl << "Entiendo. Cuando nuestras acciones afectan a otros, el remordimiento puede ser muy profundo. 🫂" << endl
                       << "Es un signo de empatía y de tu capacidad para reconocer el impacto en los demás. 😔" << endl << endl
@@ -1907,7 +2007,7 @@ void decepionRemordimiento ()
                       << "2.- Siento una gran tristeza por la otra persona. 💧" << endl
                       << "3.- Me preocupa cómo esa acción afectó la relación o su percepción de mí. 🌬" << endl
                       << "4.- Estoy buscando activamente una forma de compensar o disculparme. ✨" << endl << endl;
-            reaccionInicial = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+            reaccionInicialRemordimiento = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
             break;
         case 2:
             cout << endl << endl << "Comprendo. El remordimiento por algo que nos afecta a nosotros mismos puede ser igualmente pesado. 🧠" << endl
@@ -1917,7 +2017,7 @@ void decepionRemordimiento ()
                       << "2.- Me siento decepcionado/a de mí mismo/a. 📉" << endl
                       << "3.- Me doy cuenta de una oportunidad perdida por mi toma de decisión. ⏳" << endl
                       << "4.- Estoy reconsiderando mis prioridades o mi camino debido a esto. 🧭" << endl << endl;
-            reaccionInicial = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+            reaccionInicialRemordimiento = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
             break;
         case 3:
             cout << endl << endl << "Es un acto de gran integridad sentir remordimiento cuando una acción va en contra de tus valores. 🌟" << endl
@@ -1927,7 +2027,7 @@ void decepionRemordimiento ()
                       << "2.- Me siento culpable por haber traicionado mis principios. 😔" << endl
                       << "3.- Esto me impulsa a reafirmar mis valores y a ser más consciente de ellos. ✨" << endl
                       << "4.- Me cuestiono mis propias creencias o mi camino. ❓" << endl << endl;
-            reaccionInicial = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+            reaccionInicialRemordimiento = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
             break;
         case 4:
             cout << endl << endl << "Comprendo. El remordimiento por una pérdida de confianza o una oportunidad importante puede ser muy desalentador. 💔" << endl
@@ -1937,7 +2037,7 @@ void decepionRemordimiento ()
                       << "2.- Me siento frustrado/a por haber contribuido a esa pérdida. 😠" << endl
                       << "3.- Estoy reevaluando mis relaciones o mis decisiones futuras. 🔄" << endl
                       << "4.- Me siento con la necesidad de reconstruir la confianza o buscar nuevas oportunidades. 🚧" << endl << endl;
-            reaccionInicial = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+            reaccionInicialRemordimiento = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
             break;
     }
     
@@ -1957,7 +2057,7 @@ void decepionRemordimiento ()
               << "2.- Mi capacidad para tomar buenas decisiones. 💡" << endl
               << "3.- Mi creencia en que los errores son parte del aprendizaje y el crecimiento. 🌟" << endl
               << "4.- Mi capacidad para perdonarme a mí mismo/a. 🙏" << endl << endl;
-    int pensamientosDesafiados = obtenerEntradaNumerica<int>("Selecciona la opción que más se acerque a tus pensamientos: ", 1, 4);
+    int pensamientosDesafiadosRemordimiento = obtenerEntradaNumerica<int>("Selecciona la opción que más se acerque a tus pensamientos: ", 1, 4);
     cout << endl << "El remordimiento a menudo nos confronta con nuestras propias percepciones. Identificar estos pensamientos es crucial para reconstruir y fortalecer tu autoimagen. ✨" << endl << endl;
 
     system("pause"); 
@@ -1968,7 +2068,7 @@ void decepionRemordimiento ()
               << "2.- Escribir sobre mis sentimientos o la situación en un diario. 📝" << endl
               << "3.- Buscar formas de enmendar la situación, si es posible. 🩹" << endl
               << "4.- Practicar la auto-compasión y el perdón hacia mí mismo/a. 💖" << endl << endl;
-    int recursosApoyo = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más te resuene: ", 1, 4);
+    int recursosApoyoRemordimiento = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más te resuene: ", 1, 4);
     cout << endl << "¡Es muy poderoso reconocer tus propias herramientas de sanación! 🚀 Esos son tus mayores aliados para superar el remordimiento." << endl
               << "Recuerda que no tienes que llevar esta carga solo/a. 🫂" << endl << endl;
 
@@ -1977,19 +2077,19 @@ void decepionRemordimiento ()
               << "2.- Dedicar 5 minutos a la meditación o la respiración consciente. 🌬" << endl
               << "3.- Investigar sobre el perdón o la auto-compasión. 📚" << endl
               << "4.- Comprometerte a hacer una acción, por pequeña que sea, para rectificar si es posible. ✅" << endl << endl;
-    int pequenoPaso = obtenerEntradaNumerica<int>("Selecciona el paso que te sientes capaz de realizar: ", 1, 4);
-    if (pequenoPaso == 1) {
+    int pequenoPasoRemordimiento = obtenerEntradaNumerica<int>("Selecciona el paso que te sientes capaz de realizar: ", 1, 4);
+    if (pequenoPasoRemordimiento == 1) {
         cout << endl << "Escribir es una poderosa herramienta para liberar emociones. Ese acto de expresar te ayudará a procesar el remordimiento. 🙏" << endl;
-    } else if (pequenoPaso == 2) {
+    } else if (pequenoPasoRemordimiento == 2) {
         cout << endl << "La meditación y la respiración son anclas de paz. Es un excelente paso para encontrar serenidad ante el remordimiento. ✨" << endl;
-    } else if (pequenoPaso == 3) {
+    } else if (pequenoPasoRemordimiento == 3) {
         cout << endl << "Buscar conocimiento sobre el perdón es un camino hacia la liberación. Es una gran forma de trabajar con el remordimiento. 💡" << endl;
     } else {
         cout << endl << "Asumir la responsabilidad con una acción es un paso valiente hacia la reparación y la liberación del remordimiento. 🚀" << endl;
     }
 
-    system("pause"); 
-    system("cls");
+    system ("pause");
+    system ("cls");
 
     // --- Reflexión final y camino a seguir ---
 
@@ -2006,12 +2106,31 @@ void decepionRemordimiento ()
               << "2.- Me parece un desafío, pero estoy abierto/a a intentarlo. 🗓" << endl
               << "3.- Me cuesta mucho, siento que aún no me lo merezco o que es difícil. 😬" << endl
               << "4.- No me lo había planteado así, pero suena necesario. 💡" << endl << endl;
-    int autoCompasionPerdon = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapte a lo que sientes: ", 1, 4);
-    if (autoCompasionPerdon == 3) {
+    int autoCompasionPerdonRemordimiento = obtenerEntradaNumerica<int>("Selecciona la opción que más se adapte a lo que sientes: ", 1, 4);
+    if (autoCompasionPerdonRemordimiento == 3) {
         cout << endl << "Comprendo ese sentimiento. Es común que el remordimiento venga acompañado de auto-exigencia. Recuerda que el perdón a uno mismo es un proceso gradual y que mereces la paz. ✨" << endl << endl;
     } else {
         cout << endl << "¡Qué valiente disposición! El camino hacia la auto-compasión y el perdón es fundamental para liberar el remordimiento. Estás en el camino correcto. 💪" << endl << endl;
     }
+
+    system ("cls");
+    system ("pause");
+
+    // --- Resumen de tu Terapia de Remordimiento ---
+    cout << endl << "--- Resumen de tu Terapia de Remordimiento ---" << endl;
+    cout << "Causa del remordimiento: " << causaRemordimiento << endl;
+    cout << "Tipo de acción que causó remordimiento: " << tipoAccionRemordimiento << endl;
+    cout << "Impacto principal de la acción: " << impactoAccionRemordimiento << endl;
+    cout << "Reacción inicial emocional ante el remordimiento: " << reaccionInicialRemordimiento << endl;
+    // Las siguientes variables no fueron definidas ni asignadas en el código proporcionado
+    // Por lo tanto, no se pueden incluir en el resumen con valores significativos.
+    cout << "Intensidad del remordimiento: " << intensidadRemordimiento << endl;
+    cout << "Pensamientos desafiados por el remordimiento: " << pensamientosDesafiadosRemordimiento << endl;
+    cout << "Recursos de apoyo para manejar el remordimiento: " << recursosApoyoRemordimiento << endl;
+    cout << "Pequeño paso para procesar/liberar el remordimiento: " << pequenoPasoRemordimiento << endl;
+    cout << "Remordimiento como maestro para el crecimiento: " << remordimientoMaestro << endl;
+    cout << "Camino hacia la auto-compasión y el perdón: " << autoCompasionPerdonRemordimiento << endl;
+    cout << "---------------------------------------" << endl;
 
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración del remordimiento." << endl
               << "😄 Recuerda que reconocer y procesar esta emoción es un paso fundamental hacia tu bienestar y crecimiento personal." << endl
@@ -2019,72 +2138,72 @@ void decepionRemordimiento ()
               << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaDesesperacion ()
+void terapiaDesesperacion()
 {
-    string causa;
-    int origenDesesperacion, impactoEmocional, senalesCuerpoMente, busquedaApoyo; 
+    string causaDesesperacion; // Variable renombrada
+    int origenDesesperacion, impactoEmocionalDesesperacion, senalesCuerpoMenteDesesperacion, busquedaApoyoDesesperacion; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de la desesperación ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la *desesperación*. Es una emoción intensa y abrumadora, y es un acto de gran valentía enfrentarla. 🌑" << endl
-              << "¿Podrías compartirme brevemente la situación o el sentimiento que te ha llevado a sentir *desesperación* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente la situación o el sentimiento que te ha llevado a sentir *desesperación* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaDesesperacion); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte. Reconocer la *desesperación* es el primer y más importante paso. Es completamente válido sentirse así cuando las circunstancias son difíciles. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el origen principal de tu *desesperación*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el origen principal de tu *desesperación*? 🤔" << endl << endl;
     cout << "1.- Siento que no hay solución o salida a mi problema actual. 🚧" << endl
-              << "2.- La pérdida de algo o alguien significativo que me dejó sin esperanza. 💔" << endl
-              << "3.- Una sensación de impotencia o falta de control sobre mi vida o el futuro. ⛓" << endl
-              << "4.- Un cúmulo de problemas o dificultades que parecen no tener fin. 🌧" << endl << endl;
+                 << "2.- La pérdida de algo o alguien significativo que me dejó sin esperanza. 💔" << endl
+                 << "3.- Una sensación de impotencia o falta de control sobre mi vida o el futuro. ⛓" << endl
+                 << "4.- Un cúmulo de problemas o dificultades que parecen no tener fin. 🌧" << endl << endl;
     origenDesesperacion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
     cout << endl << "Entender el origen de tu *desesperación* nos da claridad sobre lo que estás enfrentando. Este reconocimiento es una herramienta poderosa. 💡" << endl
-              << "Ahora, ¿cómo ha impactado esta *desesperación* tu vida diaria y tus emociones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha impactado esta *desesperación* tu vida diaria y tus emociones? 😥" << endl << endl;
     cout << "1.- Afecta mi motivación y energía para hacer cosas que antes disfrutaba. 😴" << endl
-              << "2.- Me siento aislado/a o con dificultades para conectar con los demás. 👤" << endl
-              << "3.- Tengo problemas para dormir o para concentrarme en mis tareas. 🧠" << endl
-              << "4.- Experimenté una profunda tristeza o una sensación de vacío persistente. 🌑" << endl << endl; 
-    impactoEmocional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); 
+                 << "2.- Me siento aislado/a o con dificultades para conectar con los demás. 👤" << endl
+                 << "3.- Tengo problemas para dormir o para concentrarme en mis tareas. 🧠" << endl
+                 << "4.- Experimenté una profunda tristeza o una sensación de vacío persistente. 🌑" << endl << endl; 
+    impactoEmocionalDesesperacion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (impactoEmocional) {
+    switch (impactoEmocionalDesesperacion) { // Usando la variable renombrada
         case 1:
             cout << endl << endl << "Comprendo. La *desesperación* puede drenar nuestra energía y robar la alegría de actividades que antes nos llenaban. 🔋" << endl
-                      << "Es un impacto significativo, y es válido sentir esa pérdida. 😔" << endl << endl
-                      << "¿Cómo crees que esta disminución de motivación te afecta más en tu día a día? 🤔" << endl << endl
-                      << "1.- Me cuesta iniciar tareas o proyectos que son importantes. ⏳" << endl
-                      << "2.- Siento que mis relaciones personales se ven afectadas. 🫂" << endl
-                      << "3.- Me siento abrumado/a incluso con las responsabilidades más pequeñas. ⛰" << endl
-                      << "4.- Mis pensamientos se vuelven más negativos o pesimistas. 📉" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+                         << "Es un impacto significativo, y es válido sentir esa pérdida. 😔" << endl << endl
+                         << "¿Cómo crees que esta disminución de motivación te afecta más en tu día a día? 🤔" << endl << endl
+                         << "1.- Me cuesta iniciar tareas o proyectos que son importantes. ⏳" << endl
+                         << "2.- Siento que mis relaciones personales se ven afectadas. 🫂" << endl
+                         << "3.- Me siento abrumado/a incluso con las responsabilidades más pequeñas. ⛰" << endl
+                         << "4.- Mis pensamientos se vuelven más negativos o pesimistas. 📉" << endl << endl;
+            senalesCuerpoMenteDesesperacion = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4); // Usando la variable renombrada
             break;
         case 2:
             cout << endl << endl << "Entiendo. La *desesperación* a menudo nos empuja al aislamiento, dificultando la conexión con otros. 😔" << endl
-                      << "Aunque te sientas así, es importante recordar que la conexión humana es un recurso vital. 🙏" << endl << endl
-                      << "¿Cómo crees que este aislamiento o dificultad para conectar te afecta más? 🤔" << endl << endl
-                      << "1.- Siento una profunda soledad, a pesar de estar rodeado/a de gente. 🌧" << endl
-                      << "2.- Me cuesta pedir ayuda o expresar lo que siento. 🗣" << endl
-                      << "3.- Siento que nadie puede entenderme realmente en este momento. 🔒" << endl
-                      << "4.- Me alejo de actividades sociales o reuniones que antes disfrutaba. 🚶‍♀" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Aunque te sientas así, es importante recordar que la conexión humana es un recurso vital. 🙏" << endl << endl
+                         << "¿Cómo crees que este aislamiento o dificultad para conectar te afecta más? 🤔" << endl << endl
+                         << "1.- Siento una profunda soledad, a pesar de estar rodeado/a de gente. 🌧" << endl
+                         << "2.- Me cuesta pedir ayuda o expresar lo que siento. 🗣" << endl
+                         << "3.- Siento que nadie puede entenderme realmente en este momento. 🔒" << endl
+                         << "4.- Me alejo de actividades sociales o reuniones que antes disfrutaba. 🚶‍♀" << endl << endl;
+            senalesCuerpoMenteDesesperacion = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 3:
             cout << endl << endl << "Comprendo. La *desesperación* puede afectar profundamente nuestro descanso y nuestra claridad mental. 🧠" << endl
-                      << "Es un ciclo agotador que puede dificultar aún más encontrar soluciones. 🌙" << endl << endl
-                      << "¿Cómo crees que estos problemas para dormir o concentrarte te afectan más en tu vida? 🤔" << endl << endl
-                      << "1.- Me siento constantemente cansado/a y sin energía. 😴" << endl
-                      << "2.- Mis pensamientos están acelerados y no puedo 'desconectar'. ⚡" << endl
-                      << "3.- Me cuesta tomar decisiones o resolver problemas cotidianos. 🧭" << endl
-                      << "4.- Siento que mi rendimiento en el trabajo o estudios ha disminuido. 📉" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es un ciclo agotador que puede dificultar aún más encontrar soluciones. 🌙" << endl << endl
+                         << "¿Cómo crees que estos problemas para dormir o concentrarte te afectan más en tu vida? 🤔" << endl << endl
+                         << "1.- Me siento constantemente cansado/a y sin energía. 😴" << endl
+                         << "2.- Mis pensamientos están acelerados y no puedo 'desconectar'. ⚡" << endl
+                         << "3.- Me cuesta tomar decisiones o resolver problemas cotidianos. 🧭" << endl
+                         << "4.- Siento que mi rendimiento en el trabajo o estudios ha disminuido. 📉" << endl << endl;
+            senalesCuerpoMenteDesesperacion = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 4:
             cout << endl << endl << "Entiendo. La *desesperación* a menudo se manifiesta como una tristeza profunda o un vacío persistente. 🌑" << endl
-                      << "Es un peso emocional que puede sentirse abrumador. Es importante reconocer esta intensidad. 😥" << endl << endl
-                      << "¿Cómo crees que esta tristeza o vacío te impacta más en tu vida emocional? 🤔" << endl << endl
-                      << "1.- Me siento desconectado/a de mis propias emociones o de lo que me rodea. 🧊" << endl
-                      << "2.- Siento una sensación de desesperanza sobre el futuro. 🌬" << endl
-                      << "3.- Me cuesta encontrar alegría o interés en cualquier cosa. 🚫" << endl
-                      << "4.- Mis pensamientos se centran en lo negativo o en la falta de sentido. 🥀" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es un peso emocional que puede sentirse abrumador. Es importante reconocer esta intensidad. 😥" << endl << endl
+                         << "¿Cómo crees que esta tristeza o vacío te impacta más en tu vida emocional? 🤔" << endl << endl
+                         << "1.- Me siento desconectado/a de mis propias emociones o de lo que me rodea. 🧊" << endl
+                         << "2.- Siento una sensación de desesperanza sobre el futuro. 🌬" << endl
+                         << "3.- Me cuesta encontrar alegría o interés en cualquier cosa. 🚫" << endl
+                         << "4.- Mis pensamientos se centran en lo negativo o en la falta de sentido. 🥀" << endl << endl;
+            senalesCuerpoMenteDesesperacion = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
     }
     
@@ -2092,39 +2211,39 @@ void terapiaDesesperacion ()
     system("cls");   
 
     cout << endl << "Ahora, pensemos en las señales que tu cuerpo y mente te dan cuando sientes *desesperación*. ¿Cuáles de estas son las más notorias en ti? 😟" << endl << endl
-              << "1.- Sensación de nudo en el estómago o pecho, o dolor físico sin causa aparente. 🌪" << endl
-              << "2.- Dificultad para respirar, opresión o sensación de ahogo. 🌬" << endl
-              << "3.- Fatiga extrema, falta de energía o movimientos lentos. 🐌" << endl
-              << "4.- Pensamientos repetitivos, negativos o dificultad para concentrarse. 🧠" << endl << endl;
-    senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "1.- Sensación de nudo en el estómago o pecho, o dolor físico sin causa aparente. 🌪" << endl
+                 << "2.- Dificultad para respirar, opresión o sensación de ahogo. 🌬" << endl
+                 << "3.- Fatiga extrema, falta de energía o movimientos lentos. 🐌" << endl
+                 << "4.- Pensamientos repetitivos, negativos o dificultad para concentrarse. 🧠" << endl << endl;
+    senalesCuerpoMenteDesesperacion = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer cómo la *desesperación* se manifiesta en tu cuerpo y mente es vital. Escuchar estas señales te ayudará a actuar cuando más lo necesitas. 🫂" << endl << endl;
 
     cout << "¿Qué recursos internos o fortalezas personales, por pequeñas que parezcan, crees que aún posees para enfrentar esta *desesperación*? 🌟" << endl << endl
-              << "1.- Mi capacidad de resiliencia, de haber superado dificultades antes. 💪" << endl
-              << "2.- Mi deseo de encontrar una salida, por mínima que sea. 💡" << endl
-              << "3.- Mi habilidad para reflexionar y buscar comprensión. 📚" << endl
-              << "4.- Mi fe en que las cosas pueden mejorar, incluso si ahora es difícil de ver. 🙏" << endl << endl;
-    int recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad de resiliencia, de haber superado dificultades antes. 💪" << endl
+                 << "2.- Mi deseo de encontrar una salida, por mínima que sea. 💡" << endl
+                 << "3.- Mi habilidad para reflexionar y buscar comprensión. 📚" << endl
+                 << "4.- Mi fe en que las cosas pueden mejorar, incluso si ahora es difícil de ver. 🙏" << endl << endl;
+    int recursosInternosDesesperacion = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando te sientes *desesperado/a*, estas capacidades residen en ti y pueden ser tus anclas. 💖" << endl
-              << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
+                 << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
 
     system("pause"); 
     system("cls");   
 
     cout << endl << "Exploremos ahora las posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento de *desesperación*? 🤝" << endl << endl
-              << "1.- Hablar con un profesional de la salud mental (terapeuta, psicólogo). 🗣" << endl
-              << "2.- Conectar con un ser querido que te escuche sin juzgar. 🫂" << endl
-              << "3.- Unirte a un grupo de apoyo o comunidad con experiencias similares. 👥" << endl
-              << "4.- Buscar información o recursos sobre cómo manejar la *desesperación* y encontrar soluciones. 📚" << endl << endl;
-    busquedaApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un profesional de la salud mental (terapeuta, psicólogo). 🗣" << endl
+                 << "2.- Conectar con un ser querido que te escuche sin juzgar. 🫂" << endl
+                 << "3.- Unirte a un grupo de apoyo o comunidad con experiencias similares. 👥" << endl
+                 << "4.- Buscar información o recursos sobre cómo manejar la *desesperación* y encontrar soluciones. 📚" << endl << endl;
+    busquedaApoyoDesesperacion = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar la *desesperación*. Es un paso hacia la sanación. ✨" << endl << endl;
 
     cout << "¿Qué pequeño gesto de autocuidado puedes comprometerte a hacer hoy mismo o en las próximas 24 horas para aliviar un poco esta *desesperación*? 👣" << endl << endl
-              << "1.- Tomar una pausa para respirar profundamente durante 5 minutos. 🌬" << endl
-              << "2.- Escuchar música que te genere calma o que te permita expresar tus emociones. 🎶" << endl
-              << "3.- Dar un paseo corto, incluso si es solo alrededor de la casa. 🚶‍♀" << endl
-              << "4.- Beber un vaso de agua conscientemente y notar la sensación. 💧" << endl << endl;
-    int gestoAutocuidado = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Tomar una pausa para respirar profundamente durante 5 minutos. 🌬" << endl
+                 << "2.- Escuchar música que te genere calma o que te permita expresar tus emociones. 🎶" << endl
+                 << "3.- Dar un paseo corto, incluso si es solo alrededor de la casa. 🚶‍♀" << endl
+                 << "4.- Beber un vaso de agua conscientemente y notar la sensación. 💧" << endl << endl;
+    int gestoAutocuidadoDesesperacion = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños actos de autocuidado son poderosos anclajes. Comprométete con esa acción y date crédito por cuidarte en este momento. 💪" << endl << endl;
 
     system("pause"); 
@@ -2133,93 +2252,111 @@ void terapiaDesesperacion ()
     // --- Reflexión final y camino a seguir ---
 
     cout << endl << "¿De qué manera crees que el solo hecho de hablar sobre tu *desesperación* te ha ayudado, aunque sea un poco? 🗣" << endl << endl
-              << "1.- Me ha ayudado a sentirme menos solo/a. 🫂" << endl
-              << "2.- Me ha permitido organizar mis pensamientos y sentimientos. 🧠" << endl
-              << "3.- Me ha dado una perspectiva diferente o me ha hecho ver posibles pasos. 💡" << endl
-              << "4.- Me ha aliviado un peso que estaba cargando. 🎈" << endl << endl;
-    int hablarAyuda = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me ha ayudado a sentirme menos solo/a. 🫂" << endl
+                 << "2.- Me ha permitido organizar mis pensamientos y sentimientos. 🧠" << endl
+                 << "3.- Me ha dado una perspectiva diferente o me ha hecho ver posibles pasos. 💡" << endl
+                 << "4.- Me ha aliviado un peso que estaba cargando. 🎈" << endl << endl;
+    int hablarAyudaDesesperacion = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de expresar tus emociones es un paso significativo. Tu valentía para hablar sobre la *desesperación* es una fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué mensaje de esperanza o fortaleza te gustaría darte a ti mismo/a en este momento de *desesperación*? ✨" << endl << endl
-              << "1.- 'Esto también pasará, soy más fuerte de lo que creo.' 🚀" << endl
-              << "2.- 'Merezco apoyo y puedo pedirlo.' 🤝" << endl
-              << "3.- 'Un paso a la vez, no tengo que resolverlo todo ahora.' 👣" << endl
-              << "4.- 'Cada día es una nueva oportunidad para encontrar un poco de luz.' ☀" << endl << endl;
-    int mensajeEsperanza = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Esto también pasará, soy más fuerte de lo que creo.' 🚀" << endl
+                 << "2.- 'Merezco apoyo y puedo pedirlo.' 🤝" << endl
+                 << "3.- 'Un paso a la vez, no tengo que resolverlo todo ahora.' 👣" << endl
+                 << "4.- 'Cada día es una nueva oportunidad para encontrar un poco de luz.' ☀" << endl << endl;
+    int mensajeEsperanzaDesesperacion = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en medio de la *desesperación*. Recuerda que mereces sentirte mejor y que la esperanza es un motor para el cambio. 💖" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Desesperación ---
+    cout << endl << "--- Resumen de tu Terapia de Desesperación ---" << endl;
+    cout << "Causa de la desesperación: " << causaDesesperacion << endl;
+    cout << "Origen principal de la desesperación: " << origenDesesperacion << endl;
+    cout << "Impacto emocional de la desesperación: " << impactoEmocionalDesesperacion << endl;
+    cout << "Señales en cuerpo y mente de la desesperación: " << senalesCuerpoMenteDesesperacion << endl;
+    // Las siguientes variables no fueron definidas ni asignadas con los nombres utilizados para el resumen
+    // Por lo tanto, no se pueden incluir en el resumen con valores significativos.
+    cout << "Recursos internos para enfrentar la desesperación: " << recursosInternosDesesperacion << endl;
+    cout << "Tipo de apoyo más útil en la desesperación: " << busquedaApoyoDesesperacion << endl;
+    cout << "Gesto de autocuidado para aliviar la desesperación: " << gestoAutocuidadoDesesperacion << endl;
+    cout << "Cómo hablar sobre la desesperación te ha ayudado: " << hablarAyudaDesesperacion << endl;
+    cout << "Mensaje de esperanza para ti mismo/a: " << mensajeEsperanzaDesesperacion << endl;
+    cout << "---------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la *desesperación*." << endl
-              << "😄 Recuerda que buscar ayuda y permitirte sentir es un acto de amor propio. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para encontrar el camino, un paso a la vez. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que buscar ayuda y permitirte sentir es un acto de amor propio. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para encontrar el camino, un paso a la vez. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaTristesa ()
+void terapiaTristesa()
 {
-    string causa;
-    int origenTristeza, impactoEmocional, manifestacionFisica, gestionEmocion; 
+    string causaTristesa; // Variable renombrada
+    int origenTristeza, impactoEmocionalTristesa, manifestacionFisicaTristesa, gestionEmocionTristesa; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de la tristeza ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la *tristeza*. Es una emoción fundamental y a veces pesada, y es valiente de tu parte permitirte sentirla y abordarla. 🌧" << endl
-              << "¿Podrías compartirme brevemente la situación o el sentimiento que te ha llevado a sentir *tristeza* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente la situación o el sentimiento que te ha llevado a sentir *tristeza* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaTristesa); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer la *tristeza* es el primer paso para procesarla. Es una emoción completamente válida y necesaria en nuestras vidas. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el origen principal de tu *tristeza*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el origen principal de tu *tristeza*? 🤔" << endl << endl;
     cout << "1.- La pérdida de algo o alguien significativo para mí. 🥀" << endl
-              << "2.- Una desilusión o expectativa no cumplida. 😔" << endl
-              << "3.- Sentimientos de soledad o aislamiento. 👤" << endl
-              << "4.- Un cúmulo de pequeñas frustraciones o eventos estresantes. 🌫" << endl << endl;
+                 << "2.- Una desilusión o expectativa no cumplida. 😔" << endl
+                 << "3.- Sentimientos de soledad o aislamiento. 👤" << endl
+                 << "4.- Un cúmulo de pequeñas frustraciones o eventos estresantes. 🌫" << endl << endl;
     origenTristeza = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
     cout << endl << "Entender el origen de tu *tristeza* nos da claridad sobre lo que estás enfrentando. Este reconocimiento es una herramienta poderosa para empezar a sanar. 💡" << endl
-              << "Ahora, ¿cómo ha impactado esta *tristeza* tu vida diaria y tus emociones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha impactado esta *tristeza* tu vida diaria y tus emociones? 😥" << endl << endl;
     cout << "1.- Afecta mi motivación y energía para realizar mis actividades. 😴" << endl
-              << "2.- Me siento con ganas de llorar o con los ojos húmedos con frecuencia. 💧" << endl
-              << "3.- Tengo dificultades para concentrarme o mis pensamientos se vuelven lentos. 🧠" << endl
-              << "4.- Me siento más irritable o sensible de lo habitual. 😠" << endl << endl; 
-    impactoEmocional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); 
+                 << "2.- Me siento con ganas de llorar o con los ojos húmedos con frecuencia. 💧" << endl
+                 << "3.- Tengo dificultades para concentrarme o mis pensamientos se vuelven lentos. 🧠" << endl
+                 << "4.- Me siento más irritable o sensible de lo habitual. 😠" << endl << endl; 
+    impactoEmocionalTristesa = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (impactoEmocional) {
+    switch (impactoEmocionalTristesa) { // Usando la variable renombrada
         case 1:
             cout << endl << endl << "Comprendo. La *tristeza* a menudo drena nuestra energía y puede hacer que las tareas cotidianas parezcan gigantes. 🔋" << endl
-                      << "Es un impacto significativo, y es válido sentir esa pérdida de impulso. 😔" << endl << endl
-                      << "¿Cómo crees que esta disminución de motivación te afecta más en tu día a día? 🤔" << endl << endl
-                      << "1.- Me cuesta iniciar mis responsabilidades o proyectos. ⏳" << endl
-                      << "2.- Siento que mis relaciones personales se ven afectadas por mi estado de ánimo. 🫂" << endl
-                      << "3.- Me siento abrumado/a con facilidad ante cualquier desafío. ⛰" << endl
-                      << "4.- Tiendo a posponer cosas o a sentir desinterés. 🐌" << endl << endl;
-            manifestacionFisica = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+                         << "Es un impacto significativo, y es válido sentir esa pérdida de impulso. 😔" << endl << endl
+                         << "¿Cómo crees que esta disminución de motivación te afecta más en tu día a día? 🤔" << endl << endl
+                         << "1.- Me cuesta iniciar mis responsabilidades o proyectos. ⏳" << endl
+                         << "2.- Siento que mis relaciones personales se ven afectadas por mi estado de ánimo. 🫂" << endl
+                         << "3.- Me siento abrumado/a con facilidad ante cualquier desafío. ⛰" << endl
+                         << "4.- Tiendo a posponer cosas o a sentir desinterés. 🐌" << endl << endl;
+            manifestacionFisicaTristesa = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4); // Usando la variable renombrada
             break;
         case 2:
-            cout << endl << endl << "Entiendo. El llanto es una forma natural y saludable de expresar la *tristeza* y liberar emociones. 💧" << endl
-                      << "Permitirte llorar es un acto de auto-compasión. 🙏" << endl << endl
-                      << "¿Cómo crees que esta expresión de tristeza te afecta más? 🤔" << endl << endl
-                      << "1.- Después de llorar, siento un ligero alivio o una sensación de liberación. 🍃" << endl
-                      << "2.- Me siento agotado/a o con los ojos hinchados después de llorar. 😴" << endl
-                      << "3.- Me preocupa que otros me vean triste o vulnerable. 🎭" << endl
-                      << "4.- A veces me siento avergonzado/a o culpable por llorar. 😥" << endl << endl;
-            manifestacionFisica = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+            cout << endl << endl << "Entiendo. El llanto es una forma natural y saludable de expresar la *tristeza* y liberar emociones.💧" << endl
+                         << "Permitirte llorar es un acto de auto-compasión. 🙏" << endl << endl
+                         << "¿Cómo crees que esta expresión de tristeza te afecta más? 🤔" << endl << endl
+                         << "1.- Después de llorar, siento un ligero alivio o una sensación de liberación. 🍃" << endl
+                         << "2.- Me siento agotado/a o con los ojos hinchados después de llorar. 😴" << endl
+                         << "3.- Me preocupa que otros me vean triste o vulnerable. 🎭" << endl
+                         << "4.- A veces me siento avergonzado/a o culpable por llorar. 😥" << endl << endl;
+            manifestacionFisicaTristesa = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 3:
             cout << endl << endl << "Comprendo. La *tristeza* puede afectar profundamente nuestra capacidad de concentración y la claridad de nuestros pensamientos. 🧠" << endl
-                      << "Es como si una neblina cubriera la mente, haciendo todo más lento. 🌫" << endl << endl
-                      << "¿Cómo crees que estas dificultades para concentrarte te afectan más en tu vida? 🤔" << endl << endl
-                      << "1.- Me cuesta tomar decisiones o planificar el día. 🧭" << endl
-                      << "2.- Siento que no estoy siendo productivo/a o que mi rendimiento disminuye. 📉" << endl
-                      << "3.- Mis pensamientos son repetitivos o negativos, y me cuesta salir de ellos. 🥀" << endl
-                      << "4.- Olvido cosas con más facilidad o me siento en las nubes. ☁" << endl << endl;
-            manifestacionFisica = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es como si una neblina cubriera la mente, haciendo todo más lento. 🌫" << endl << endl
+                         << "¿Cómo crees que estas dificultades para concentrarte te afectan más en tu vida? 🤔" << endl << endl
+                         << "1.- Me cuesta tomar decisiones o planificar el día. 🧭" << endl
+                         << "2.- Siento que no estoy siendo productivo/a o que mi rendimiento disminuye. 📉" << endl
+                         << "3.- Mis pensamientos son repetitivos o negativos, y me cuesta salir de ellos. 🥀" << endl
+                         << "4.- Olvido cosas con más facilidad o me siento en las nubes. ☁" << endl << endl;
+            manifestacionFisicaTristesa = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 4:
             cout << endl << endl << "Entiendo. La *tristeza* a veces viene acompañada de una mayor irritabilidad o sensibilidad emocional. 😠" << endl
-                      << "Es como si las emociones estuvieran a flor de piel. Es natural experimentar esto. 😔" << endl << endl
-                      << "¿Cómo crees que esta irritabilidad o sensibilidad te impacta más en tu vida? 🤔" << endl << endl
-                      << "1.- Reacciono de forma exagerada a situaciones pequeñas. 💥" << endl
-                      << "2.- Me siento más susceptible a los comentarios o acciones de los demás. 💔" << endl
-                      << "3.- Me cuesta regular mis emociones, sintiendo altibajos intensos. 🎢" << endl
-                      << "4.- Me siento fácilmente frustrado/a o enojado/a con cosas que antes no me afectaban. 😡" << endl << endl;
-            manifestacionFisica = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es como si las emociones estuvieran a flor de piel. Es natural experimentar esto. 😔" << endl << endl
+                         << "¿Cómo crees que esta irritabilidad o sensibilidad te impacta más en tu vida? 🤔" << endl << endl
+                         << "1.- Reacciono de forma exagerada a situaciones pequeñas. 💥" << endl
+                         << "2.- Me siento más susceptible a los comentarios o acciones de los demás. 💔" << endl
+                         << "3.- Me cuesta regular mis emociones, sintiendo altibajos intensos. 🎢" << endl
+                         << "4.- Me siento fácilmente frustrado/a o enojado/a con cosas que antes no me afectaban. 😡" << endl << endl;
+            manifestacionFisicaTristesa = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
     }
     
@@ -2227,39 +2364,39 @@ void terapiaTristesa ()
     system("cls");   
 
     cout << endl << "Ahora, pensemos en las señales físicas que tu cuerpo te da cuando sientes *tristeza*. ¿Cuáles de estas son las más notorias en ti? 😟" << endl << endl
-              << "1.- Una sensación de pesadez en el pecho o en el cuerpo. 🏋‍♀" << endl
-              << "2.- Opresión en la garganta o ganas de llorar. 💧" << endl
-              << "3.- Falta de apetito o cambios en los patrones de alimentación. 🍽" << endl
-              << "4.- Dolores de cabeza o molestias físicas sin una causa clara. 🤕" << endl << endl;
-    manifestacionFisica = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "1.- Una sensación de pesadez en el pecho o en el cuerpo. 🏋‍♀" << endl
+                 << "2.- Opresión en la garganta o ganas de llorar. 💧" << endl
+                 << "3.- Falta de apetito o cambios en los patrones de alimentación. 🍽" << endl
+                 << "4.- Dolores de cabeza o molestias físicas sin una causa clara. 🤕" << endl << endl;
+    manifestacionFisicaTristesa = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer cómo la *tristeza* se manifiesta en tu cuerpo es vital. Escuchar estas señales te ayudará a actuar cuando más lo necesitas y a darte el cuidado que mereces. 🫂" << endl << endl;
 
     cout << "¿Qué recursos internos o fortalezas personales, por pequeñas que parezcan, crees que aún posees para enfrentar esta *tristeza*? 🌟" << endl << endl
-              << "1.- Mi capacidad de auto-reflexión y de buscar el porqué de mis sentimientos. 🧠" << endl
-              << "2.- Mi deseo de sentirme mejor y de buscar soluciones. 💡" << endl
-              << "3.- Mi conexión con personas que me importan, incluso si ahora me cuesta contactarlas. 🤝" << endl
-              << "4.- Mi capacidad para apreciar pequeños momentos de consuelo o belleza, incluso en la tristeza. 🍃" << endl << endl;
-    int recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad de auto-reflexión y de buscar el porqué de mis sentimientos. 🧠" << endl
+                 << "2.- Mi deseo de sentirme mejor y de buscar soluciones. 💡" << endl
+                 << "3.- Mi conexión con personas que me importan, incluso si ahora me cuesta contactarlas. 🤝" << endl
+                 << "4.- Mi capacidad para apreciar pequeños momentos de consuelo o belleza, incluso en la tristeza. 🍃" << endl << endl;
+    int recursosInternosTristesa = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando te sientes triste, estas capacidades residen en ti y pueden ser tus anclas. 💖" << endl
-              << "Recuerda que tienes recursos valiosos dentro de ti. ✨" << endl << endl;
+                 << "Recuerda que tienes recursos valiosos dentro de ti. ✨" << endl << endl;
 
     system("pause"); 
     system("cls");   
 
     cout << endl << "Ahora, pensemos en cómo gestionas la *tristeza*. ¿Qué estrategias utilizas (o has utilizado) para lidiar con ella? 🧘‍♀" << endl << endl
-              << "1.- Hablar con alguien de confianza sobre lo que siento. 🗣" << endl
-              << "2.- Distraerme con actividades (películas, juegos, trabajo). 🎬" << endl
-              << "3.- Expresar la emoción a través del arte, la escritura o la música. 🎨" << endl
-              << "4.- Buscar momentos de soledad para procesar mis sentimientos. 🤫" << endl << endl;
-    gestionEmocion = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con alguien de confianza sobre lo que siento. 🗣" << endl
+                 << "2.- Distraerme con actividades (películas, juegos, trabajo). 🎬" << endl
+                 << "3.- Expresar la emoción a través del arte, la escritura o la música. 🎨" << endl
+                 << "4.- Buscar momentos de soledad para procesar mis sentimientos. 🤫" << endl << endl;
+    gestionEmocionTristesa = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Es bueno que tengas estrategias para manejar la *tristeza*. Recuerda que no todas las estrategias son igualmente saludables o útiles en todo momento, pero lo importante es que estás buscando formas de afrontarla. ✨" << endl << endl;
 
     cout << "¿Qué pequeño gesto de autocuidado puedes comprometerte a hacer hoy mismo o en las próximas 24 horas para nutrirte en medio de la *tristeza*? 👣" << endl << endl
-              << "1.- Permitirme llorar si siento la necesidad, sin juzgarme. 💧" << endl
-              << "2.- Abrirme a alguien de confianza y compartir un poco de lo que siento. 🫂" << endl
-              << "3.- Escuchar una canción que me permita sentir la tristeza y luego otra que me dé un poco de esperanza. 🎶" << endl
-              << "4.- Abrazar una almohada, una mascota o a un ser querido para sentir un poco de consuelo. 🤗" << endl << endl;
-    int gestoAutocuidado = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Permitirme llorar si siento la necesidad, sin juzgarme. 💧" << endl
+                 << "2.- Abrirme a alguien de confianza y compartir un poco de lo que siento. 🫂" << endl
+                 << "3.- Escuchar una canción que me permita sentir la tristeza y luego otra que me dé un poco de esperanza. 🎶" << endl
+                 << "4.- Abrazar una almohada, una mascota o a un ser querido para sentir un poco de consuelo. 🤗" << endl << endl;
+    int gestoAutocuidadoTristesa = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños actos de autocuidado son poderosos anclajes. Comprométete con esa acción y date crédito por cuidarte en este momento. 💪" << endl << endl;
 
     system("pause"); 
@@ -2268,93 +2405,111 @@ void terapiaTristesa ()
     // --- Reflexión final y camino a seguir ---
 
     cout << endl << "¿De qué manera crees que la *tristeza*, aunque dolorosa, puede ser un mensaje o una oportunidad para ti? 🌱" << endl << endl
-              << "1.- Me indica que necesito un cambio o que algo no está funcionando en mi vida. 🧭" << endl
-              << "2.- Me permite conectar con mi vulnerabilidad y con mi humanidad. 💖" << endl
-              << "3.- Me ayuda a valorar más los momentos de alegría y a buscar lo que realmente me importa. 🌟" << endl
-              << "4.- Todas las anteriores, la veo como una emoción que, al ser escuchada, me guía. 💡" << endl << endl;
-    int tristezaMensaje = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me indica que necesito un cambio o que algo no está funcionando en mi vida. 🧭" << endl
+                 << "2.- Me permite conectar con mi vulnerabilidad y con mi humanidad. 💖" << endl
+                 << "3.- Me ayuda a valorar más los momentos de alegría y a buscar lo que realmente me importa. 🌟" << endl
+                 << "4.- Todas las anteriores, la veo como una emoción que, al ser escuchada, me guía. 💡" << endl << endl;
+    int tristezaMensajeTristesa = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Excelente! Reconocer el mensaje de la *tristeza* es un paso significativo. Tu capacidad para reflexionar y encontrar significado, incluso en el dolor, es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué mensaje de auto-compasión o paciencia te gustaría darte a ti mismo/a en este momento de *tristeza*? ✨" << endl << endl
-              << "1.- 'Está bien no estar bien, me doy permiso para sentir esto.' 🙏" << endl
-              << "2.- 'Merezco apoyo y puedo buscarlo.' 🤝" << endl
-              << "3.- 'Esto también pasará, la tristeza no es permanente.' ⏳" << endl
-              << "4.- 'Soy resiliente y puedo superar esto, un paso a la vez.' 🚀" << endl << endl;
-    int mensajeAutoCompasion = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Está bien no estar bien, me doy permiso para sentir esto.' 🙏" << endl
+                 << "2.- 'Merezco apoyo y puedo buscarlo.' 🤝" << endl
+                 << "3.- 'Esto también pasará, la tristeza no es permanente.' ⏳" << endl
+                 << "4.- 'Soy resiliente y puedo superar esto, un paso a la vez.' 🚀" << endl << endl;
+    int mensajeAutoCompasionTristesa = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en medio de la *tristeza*. Recuerda que mereces ser amable contigo mismo/a y que el camino hacia la sanación es un proceso. 💖" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Tristeza ---
+    cout << endl << "--- Resumen de tu Terapia de Tristeza ---" << endl;
+    cout << "Causa de la tristeza: " << causaTristesa << endl;
+    cout << "Origen principal de la tristeza: " << origenTristeza << endl;
+    cout << "Impacto emocional de la tristeza: " << impactoEmocionalTristesa << endl;
+    cout << "Manifestaciones físicas de la tristeza: " << manifestacionFisicaTristesa << endl;
+    // Las siguientes variables no fueron definidas ni asignadas con los nombres utilizados para el resumen
+    // en el ámbito principal de esta función.
+    cout << "Recursos internos para enfrentar la tristeza: " << recursosInternosTristesa << endl;
+    cout << "Estrategias de gestión de la emoción: " << gestionEmocionTristesa << endl;
+    cout << "Gesto de autocuidado para nutrirte: " << gestoAutocuidadoTristesa << endl;
+    cout << "La tristeza como mensaje u oportunidad: " << tristezaMensajeTristesa << endl;
+    cout << "Mensaje de auto-compasión o paciencia: " << mensajeAutoCompasionTristesa << endl;
+    cout << "---------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la *tristeza*." << endl
-              << "😄 Recuerda que sentir y procesar esta emoción es un acto de amor propio y de profunda humanidad. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia el bienestar. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que sentir y procesar esta emoción es un acto de amor propio y de profunda humanidad. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia el bienestar. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaMelancolia ()
+void terapiaMelancolia()
 {
-    string causa;
-    int origenMelancolia, impactoEmocional, manifestacionFisica, gestionEmocion; 
+    string causaMelancolia; // Variable renombrada
+    int origenMelancolia, impactoEmocionalMelancolia, manifestacionFisicaMelancolia, gestionEmocionMelancolia; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de la melancolía ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la melancolía. Es una emoción que a menudo se siente como una tristeza suave, teñida de nostalgia o introspección. Es valiente de tu parte permitirte sentirla. 🍂" << endl
-              << "¿Podrías compartirme brevemente la situación, el recuerdo o el sentimiento que te ha llevado a sentir melancolía últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente la situación, el recuerdo o el sentimiento que te ha llevado a sentir melancolía últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaMelancolia); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer la melancolía es el primer paso para entender su mensaje. Es una emoción válida y a menudo es muy importante que sepas su significado o que es lo que hace que te sientas con esta emoción. Puedes hablar sobre tu emoción y sentirte libre, recuerda que es un espacio sano donde no habrá ningún juicio sobre lo que sientes.🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el origen principal de tu melancolía? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el origen principal de tu melancolía? 🤔" << endl << endl;
     cout << "1.- La nostalgia por el pasado (personas, lugares, momentos) que ya no está. 🕰" << endl
-              << "2.- Una sensación de nostalgia por algo inalcanzable o un ideal no cumplido. 💭" << endl
-              << "3.-Pensar en cómo todo cambia y desaparece, y encontrar belleza en que nada dura para siempre." << endl
-              << "4.- Un sentimiento general de tristeza suave o una inquietud contemplativa sin una causa clara. 🌫" << endl << endl;
+                 << "2.- Una sensación de nostalgia por algo inalcanzable o un ideal no cumplido. 💭" << endl
+                 << "3.-Pensar en cómo todo cambia y desaparece, y encontrar belleza en que nada dura para siempre." << endl
+                 << "4.- Un sentimiento general de tristeza suave o una inquietud contemplativa sin una causa clara. 🌫" << endl << endl;
     origenMelancolia = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
     cout << endl << "Entender el origen de tu melancolía nos da claridad sobre la capa más profunda de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a abrazarla. 💡" << endl
-              << "Ahora, ¿cómo ha impactado esta melancolía tu vida diaria y tus emociones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha impactado esta melancolía tu vida diaria y tus emociones? 😥" << endl << endl;
     cout << "1.- Me siento más reflexivo/a e introspectivo/a. 🧠" << endl
-              << "2.- Me siento con una tristeza suave, a veces dulce, a veces un poco pesada. 💧" << endl
-              << "3.- Me siento más sensible a la belleza, el arte o la música. 🎶" << endl
-              << "4.- Afecta mi energía, siento un deseo de estar a solas la mayor parte del tiempo.😴" << endl << endl; 
-    impactoEmocional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); 
+                 << "2.- Me siento con una tristeza suave, a veces dulce, a veces un poco pesada. 💧" << endl
+                 << "3.- Me siento más sensible a la belleza, el arte o la música. 🎶" << endl
+                 << "4.- Afecta mi energía, siento un deseo de estar a solas la mayor parte del tiempo.😴" << endl << endl; 
+    impactoEmocionalMelancolia = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (impactoEmocional) {
+    switch (impactoEmocionalMelancolia) { // Usando la variable renombrada
         case 1:
             cout << endl << endl << "Comprendo. La melancolía a menudo nos invita a la introspección, llevándonos a un estado de profunda reflexión. 🧠" << endl
-                      << "Es un espacio valioso para el autoconocimiento y la contemplación. 😔" << endl << endl
-                      << "¿Cómo crees que esta reflexión te ayuda o afecta en tu día a día? 🤔" << endl << endl
-                      << "1.- Me ayuda a procesar eventos pasados o sentimientos no resueltos. ⏳" << endl
-                      << "2.- Me lleva a apreciar más la vida y los momentos significativos. 🌟" << endl
-                      << "3.- A veces me siento un poco distante o desconectado/a del ritmo exterior. 🌫" << endl
-                      << "4.- Me inspira a crear, escribir o expresar lo que siento. 🎨" << endl << endl;
-            manifestacionFisica = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+                         << "Es un espacio valioso para el autoconocimiento y la contemplación. 😔" << endl << endl
+                         << "¿Cómo crees que esta reflexión te ayuda o afecta en tu día a día? 🤔" << endl << endl
+                         << "1.- Me ayuda a procesar eventos pasados o sentimientos no resueltos. ⏳" << endl
+                         << "2.- Me lleva a apreciar más la vida y los momentos significativos. 🌟" << endl
+                         << "3.- A veces me siento un poco distante o desconectado/a del ritmo exterior. 🌫" << endl
+                         << "4.- Me inspira a crear, escribir o expresar lo que siento. 🎨" << endl << endl;
+            manifestacionFisicaMelancolia = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4); // Usando la variable renombrada
             break;
         case 2:
             cout << endl << endl << "Entiendo. Esa tristeza suave y agridulce es la esencia de la melancolía. 💧" << endl
-                      << "Es una emoción que nos permite conectar con la profundidad de nuestros sentimientos. Permítete sentirla. 🙏" << endl << endl
-                      << "¿Cómo crees que esta tristeza suave te afecta más? 🤔" << endl << endl
-                      << "1.- Me siento con una necesidad de inquietud, de simplemente querer estar a solas. 🍃" << endl
-                      << "2.- Me siento más sensible a mis recuerdos o a las emociones ajenas. 🫂" << endl
-                      << "3.- A veces me pregunto sobre el sentido de la vida o de mis experiencias. ❓" << endl
-                      << "4.- Siento un anhelo por algo que no puedo definir completamente. 💭" << endl << endl;
-            manifestacionFisica = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es una emoción que nos permite conectar con la profundidad de nuestros sentimientos. Permítete sentirla. 🙏" << endl << endl
+                         << "¿Cómo crees que esta tristeza suave te afecta más? 🤔" << endl << endl
+                         << "1.- Me siento con una necesidad de inquietud, de simplemente querer estar a solas. 🍃" << endl
+                         << "2.- Me siento más sensible a mis recuerdos o a las emociones ajenas. 🫂" << endl
+                         << "3.- A veces me pregunto sobre el sentido de la vida o de mis experiencias. ❓" << endl
+                         << "4.- Siento un anhelo por algo que no puedo definir completamente. 💭" << endl << endl;
+            manifestacionFisicaMelancolia = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 3:
             cout << endl << endl << "Comprendo. La melancolía a menudo agudiza nuestra percepción de la belleza, especialmente en el arte o la música. 🎶" << endl
-                      << "Es como si esta emoción abriera un canal más profundo para la apreciación estética. 🌟" << endl << endl
-                      << "¿Cómo crees que esta sensibilidad te impacta más en tu vida? 🤔" << endl << endl
-                      << "1.- Disfruto más de la música, películas o libros con un tono nostálgico. 🎬" << endl
-                      << "2.- Me siento más conectado/a con la expresión artística y sus mensajes profundos. 🎨" << endl
-                      << "3.- Me inspira a buscar o crear belleza en mi propio entorno. ✨" << endl
-                      << "4.- Siento que entiendo las emociones humanas de una manera más compleja. 🧠" << endl << endl;
-            manifestacionFisica = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es como si esta emoción abriera un canal más profundo para la apreciación estética. 🌟" << endl << endl
+                         << "¿Cómo crees que esta sensibilidad te impacta más en tu vida? 🤔" << endl << endl
+                         << "1.- Disfruto más de la música, películas o libros con un tono nostálgico. 🎬" << endl
+                         << "2.- Me siento más conectado/a con la expresión artística y sus mensajes profundos. 🎨" << endl
+                         << "3.- Me inspira a buscar o crear belleza en mi propio entorno. ✨" << endl
+                         << "4.- Siento que entiendo las emociones humanas de una manera más compleja. 🧠" << endl << endl;
+            manifestacionFisicaMelancolia = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 4:
             cout << endl << endl << "Entiendo. La melancolía a veces nos pide un respiro del ajetreo, invitándonos a la quietud y al recogimiento. 😴" << endl
-                      << "Es una señal de que necesitas un momento para ti, para procesar y descansar. 🍂" << endl << endl
-                      << "¿Cómo crees que esta necesidad de quietud te impacta más en tu vida? 🤔" << endl << endl
-                      << "1.- Me siento con menos ganas de interactuar socialmente. 👤" << endl
-                      << "2.- Busco momentos para estar a solas, sin distracciones. 🤫" << endl
-                      << "3.- Me cuesta concentrarme en tareas que requieren mucha energía mental. ⏳" << endl
-                      << "4.- Siento que necesito recargar mis emociones y mi espíritu. 🔋" << endl << endl;
-            manifestacionFisica = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es una señal de que necesitas un momento para ti, para procesar y descansar. 🍂" << endl << endl
+                         << "¿Cómo crees que esta necesidad de quietud te impacta más en tu vida? 🤔" << endl << endl
+                         << "1.- Me siento con menos ganas de interactuar socialmente. 👤" << endl
+                         << "2.- Busco momentos para estar a solas, sin distracciones. 🤫" << endl
+                         << "3.- Me cuesta concentrarme en tareas que requieren mucha energía mental. ⏳" << endl
+                         << "4.- Siento que necesito recargar mis emociones y mi espíritu. 🔋" << endl << endl;
+            manifestacionFisicaMelancolia = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
     }
     
@@ -2362,135 +2517,154 @@ void terapiaMelancolia ()
     system("cls");   
 
     cout << endl << "Ahora, pensemos en las señales físicas que tu cuerpo te da cuando sientes melancolía. ¿Cuáles de estas son las más notorias en ti? 😟" << endl << endl
-              << "1.- Una sensación de calma o cansancio en el cuerpo. 🌬" << endl
-              << "2.- Un suspiro frecuente o una respiración más profunda. 💧" << endl
-              << "3.- Un leve peso en el pecho o una sensación de dulzura agridulce. 💖" << endl
-              << "4.- Una sensación de retardo o deseo de descansar. 😴" << endl << endl;
-    manifestacionFisica = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "1.- Una sensación de calma o cansancio en el cuerpo. 🌬" << endl
+                 << "2.- Un suspiro frecuente o una respiración más profunda. 💧" << endl
+                 << "3.- Un leve peso en el pecho o una sensación de dulzura agridulce. 💖" << endl
+                 << "4.- Una sensación de retardo o deseo de descansar. 😴" << endl << endl;
+    manifestacionFisicaMelancolia = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer cómo la melancolía se manifiesta en tu cuerpo es importante. Estas señales sutiles pueden indicarte la necesidad de introspección y autocuidado. 🫂" << endl << endl;
 
     cout << "¿Qué recursos internos o fortalezas personales, por pequeñas que parezcan, crees que te ayudan a transitar la melancolía? 🌟" << endl << endl
-              << "1.- Mi capacidad de apreciación por la belleza y los recuerdos. 🎨" << endl
-              << "2.- Mi paciencia y mi capacidad para darme tiempo para procesar. ⏳" << endl
-              << "3.- Mi conexión con mi mundo interior y mi creatividad. 🧠" << endl
-              << "4.- Mi capacidad para encontrar consuelo en momentos de quietud. 🤫" << endl << endl;
-    int recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad de apreciación por la belleza y los recuerdos. 🎨" << endl
+                 << "2.- Mi paciencia y mi capacidad para darme tiempo para procesar. ⏳" << endl
+                 << "3.- Mi conexión con mi mundo interior y mi creatividad. 🧠" << endl
+                 << "4.- Mi capacidad para encontrar consuelo en momentos de quietud. 🤫" << endl << endl;
+    int recursosInternosMelancolia = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso en la melancolía, estas capacidades residen en ti y pueden ser tus anclas. 💖" << endl
-              << "Recuerda que tienes recursos valiosos dentro de ti. ✨" << endl << endl;
+                 << "Recuerda que tienes recursos valiosos dentro de ti. ✨" << endl << endl;
 
     system("pause"); 
     system("cls");   
 
     cout << endl << "Ahora, pensemos en cómo gestionas la melancolía. ¿Qué estrategias utilizas (o has utilizado) para abrazarla o transitarla? 🧘‍♀" << endl << endl
-              << "1.- Permitirme sumergirme en recuerdos o música que evoca nostalgia. 🎶" << endl
-              << "2.- Escribir, dibujar o crear algo para expresar lo que siento. ✍" << endl
-              << "3.- Buscar la naturaleza o lugares tranquilos para reflexionar. 🌳" << endl
-              << "4.- Compartir mis sentimientos con alguien que entienda mi introspección. 🗣" << endl << endl;
-    gestionEmocion = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Permitirme sumergirme en recuerdos o música que evoca nostalgia. 🎶" << endl
+                 << "2.- Escribir, dibujar o crear algo para expresar lo que siento. ✍" << endl
+                 << "3.- Buscar la naturaleza o lugares tranquilos para reflexionar. 🌳" << endl
+                 << "4.- Compartir mis sentimientos con alguien que entienda mi introspección. 🗣" << endl << endl;
+    gestionEmocionMelancolia = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Es genial que tengas estrategias para abrazar y transitar la melancolía. Esta emoción, bien gestionada, puede ser una fuente de profunda conexión contigo mismo/a. ✨" << endl << endl;
 
     cout << "¿Qué pequeño gesto de autocuidado puedes comprometerte a hacer hoy mismo o en las próximas 24 horas para nutrirte en medio de la melancolía? 👣" << endl << endl
-              << "1.- Dedicar un tiempo a escuchar tu música favorita que te evoque sentimientos. 🎧" << endl
-              << "2.- Mirar por la ventana y observar el cielo, la naturaleza o la gente pasando. 🌥" << endl
-              << "3.- Leer un poema o un fragmento de un libro que resuene con tu estado de ánimo. 📚" << endl
-              << "4.- Simplemente, permitirte sentir y estar contigo mismo/a en quietud, sin hacer nada. 🧘‍♀" << endl << endl;
-    int gestoAutocuidado = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Dedicar un tiempo a escuchar tu música favorita que te evoque sentimientos. 🎧" << endl
+                 << "2.- Mirar por la ventana y observar el cielo, la naturaleza o la gente pasando. 🌥" << endl
+                 << "3.- Leer un poema o un fragmento de un libro que resuene con tu estado de ánimo. 📚" << endl
+                 << "4.- Simplemente, permitirte sentir y estar contigo mismo/a en quietud, sin hacer nada. 🧘‍♀" << endl << endl;
+    int gestoAutocuidadoMelancolia = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños actos de autocuidado son poderosos anclajes. Comprométete con esa acción y date crédito por cuidarte en este momento. 💪" << endl << endl;
 
-    system("pause"); 
-    system("cls");
+    system ("pause");
+    system ("cls");
 
     // --- Reflexión final y camino a seguir ---
 
     cout << endl << "¿De qué manera crees que la melancolía, aunque puede sentirse como una tristeza, es también una emoción que te enriquece? 🌱" << endl << endl
-              << "1.- Me permite apreciar la profundidad de la vida y sus ciclos. 💫" << endl
-              << "2.- Me conecta con mi pasado, mis raíces y mi identidad. 🕰" << endl
-              << "3.- Me inspira a la creatividad y a la expresión artística. 🎨" << endl
-              << "4.- Todas las anteriores, la veo como una compañera que me enseña sobre la belleza de la existencia. 🦋" << endl << endl;
-    int melancoliaEnriquece = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me permite apreciar la profundidad de la vida y sus ciclos. 💫" << endl
+                 << "2.- Me conecta con mi pasado, mis raíces y mi identidad. 🕰" << endl
+                 << "3.- Me inspira a la creatividad y a la expresión artística. 🎨" << endl
+                 << "4.- Todas las anteriores, la veo como una compañera que me enseña sobre la belleza de la existencia. 🦋" << endl << endl;
+    int melancoliaEnriqueceMelancolia = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de la melancolía es un paso significativo. Tu capacidad para encontrar significado y riqueza en esta emoción es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué mensaje de aceptación o consuelo te gustaría darte a ti mismo/a en este momento de melancolía? ✨" << endl << endl
-              << "1.- 'Está bien sentir esto, es parte de la experiencia humana.' 🙏" << endl
-              << "2.- 'Merezco este tiempo para la reflexión y el descanso.' 😴" << endl
-              << "3.- 'La belleza también se encuentra en la nostalgia y la quietud.' 🍂" << endl
-              << "4.- 'Soy capaz de abrazar todas mis emociones, incluso las más suaves.' 💖" << endl << endl;
-    int mensajeAceptacion = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Está bien sentir esto, es parte de la experiencia humana.' 🙏" << endl
+                 << "2.- 'Merezco este tiempo para la reflexión y el descanso.' 😴" << endl
+                 << "3.- 'La belleza también se encuentra en la nostalgia y la quietud.' 🍂" << endl
+                 << "4.- 'Soy capaz de abrazar todas mis emociones, incluso las más suaves.' 💖" << endl << endl;
+    int mensajeAceptacionMelancolia = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en medio de la melancolía. Recuerda que es una emoción que te invita a la introspección y a la apreciación de la vida en todas sus facetas. 💖" << endl << endl;
 
+    system ("cls");
+    system ("pause");
+
+    // --- Resumen de tu Terapia de Melancolía ---
+    cout << endl << "--- Resumen de tu Terapia de Melancolía ---" << endl;
+    cout << "Causa de la melancolía: " << causaMelancolia << endl;
+    cout << "Origen principal de la melancolía: " << origenMelancolia << endl;
+    cout << "Impacto emocional de la melancolía: " << impactoEmocionalMelancolia << endl;
+    cout << "Manifestaciones físicas de la melancolía: " << manifestacionFisicaMelancolia << endl;
+    // Las siguientes variables no fueron definidas ni asignadas con los nombres utilizados para el resumen
+    // en el ámbito principal de esta función.
+    cout << "Recursos internos para transitar la melancolía: " << recursosInternosMelancolia << endl;
+    cout << "Estrategias de gestión de la emoción: " << gestionEmocionMelancolia << endl;
+    cout << "Gesto de autocuidado para nutrirte: " << gestoAutocuidadoMelancolia << endl;
+    cout << "La melancolía como emoción que te enriquece: " << melancoliaEnriqueceMelancolia << endl;
+    cout << "Mensaje de aceptación o consuelo: " << mensajeAceptacionMelancolia << endl;
+    cout << "---------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la melancolía." << endl
-              << "😄 Recuerda que es una emoción que te conecta con la profundidad de tu ser y con la riqueza de tus recuerdos y reflexiones. No estás solo/a en esto." << endl
-              << "😊 Confío en tu capacidad para abrazar esta emoción y encontrar en ella una fuente de inspiración y autoconocimiento. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que es una emoción que te conecta con la profundidad de tu ser y con la riqueza de tus recuerdos y reflexiones. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu capacidad para abrazar esta emoción y encontrar en ella una fuente de inspiración y autoconocimiento. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
 //Miedo
-void terapiaAlarmado ()
+void terapiaAlarmado()
 {
-    string causa;
-    int origenAlarma, impactoFisicoMental, busquedaApoyo, accionConcreta; 
+    string causaAlarmado; // Variable renombrada
+    int origenAlarmaAlarmado, impactoFisicoMentalAlarmado, busquedaApoyoAlarmado, accionConcretaAlarmado; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de estar alarmado ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción de estar *alarmado*. Es una señal intensa de que algo nos preocupa o nos pone en alerta. Es valiente de tu parte permitirte sentirla y abordarla. 🚨" << endl
-              << "¿Podrías compartirme brevemente la situación o el pensamiento principal que te ha llevado a sentirte *alarmado* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente la situación o el pensamiento principal que te ha llevado a sentirte *alarmado* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaAlarmado); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer la sensación de estar *alarmado* es el primer paso para entender qué la provoca. Es una emoción que, aunque incómoda, nos avisa de posibles peligros o desafíos. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de esta alarma que sientes? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de esta alarma que sientes? 🤔" << endl << endl;
     cout << "1.- Una amenaza real o percibida para mi seguridad o bienestar. 🛡" << endl
-              << "2.- La incertidumbre sobre el futuro o un evento próximo. ❓" << endl
-              << "3.- La preocupación por la seguridad o el bienestar de alguien más. 🫂" << endl
-              << "4.- Un cúmulo de estrés o ansiedad que llegó a un punto crítico. ⚡" << endl << endl;
-    origenAlarma = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- La incertidumbre sobre el futuro o un evento próximo. ❓" << endl
+                 << "3.- La preocupación por la seguridad o el bienestar de alguien más. 🫂" << endl
+                 << "4.- Un cúmulo de estrés o ansiedad que llegó a un punto crítico. ⚡" << endl << endl;
+    origenAlarmaAlarmado = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *alarma* nos da claridad sobre la raíz de esta intensa emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta sensación de estar alarmado en tu cuerpo y tu mente? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta sensación de estar alarmado en tu cuerpo y tu mente? 😥" << endl << endl;
     cout << "1.- Siento mi corazón acelerado, respiración agitada o tensión muscular. 💨" << endl
-              << "2.- Tengo pensamientos intrusivos o una sensación constante de preocupación. 🧠" << endl
-              << "3.- Me siento inquieto/a, con ganas de moverme o con dificultad para quedarme quieto/a.  restless_person" << endl
-              << "4.- Mi sueño o apetito se han visto afectados, o me siento agotado/a. 😴" << endl << endl; 
-    impactoFisicoMental = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); 
+                 << "2.- Tengo pensamientos intrusivos o una sensación constante de preocupación. 🧠" << endl
+                 << "3.- Me siento inquieto/a, con ganas de moverme o con dificultad para quedarme quieto/a.  restless_person" << endl
+                 << "4.- Mi sueño o apetito se han visto afectados, o me siento agotado/a. 😴" << endl << endl; 
+    impactoFisicoMentalAlarmado = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (impactoFisicoMental) {
+    switch (impactoFisicoMentalAlarmado) { // Usando la variable renombrada
         case 1:
             cout << endl << endl << "Comprendo. Esas son respuestas físicas comunes a la *alarma*. Tu cuerpo está reaccionando a lo que percibe como una amenaza. 💨" << endl
-                      << "Reconocer estas señales te permite empezar a buscar calma. 😔" << endl << endl
-                      << "¿Cómo crees que estas sensaciones físicas te afectan más en tu día a día? 🤔" << endl << endl
-                      << "1.- Me cuesta relajarme o sentirme en paz. 🧘‍♀" << endl
-                      << "2.- Me siento constantemente en estado de alerta o 'a la defensiva'. 🛡" << endl
-                      << "3.- La tensión me causa dolores de cabeza o molestias musculares. 🤕" << endl
-                      << "4.- Me siento abrumado/a por la intensidad de las sensaciones. 🌊" << endl << endl;
-            obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4); // Dummy call to keep structure
+                         << "Reconocer estas señales te permite empezar a buscar calma. 😔" << endl << endl
+                         << "¿Cómo crees que estas sensaciones físicas te afectan más en tu día a día? 🤔" << endl << endl
+                         << "1.- Me cuesta relajarme o sentirme en paz. 🧘‍♀" << endl
+                         << "2.- Me siento constantemente en estado de alerta o 'a la defensiva'. 🛡" << endl
+                         << "3.- La tensión me causa dolores de cabeza o molestias musculares. 🤕" << endl
+                         << "4.- Me siento abrumado/a por la intensidad de las sensaciones. 🌊" << endl << endl;
+            // No se asigna a manifestacionFisica, se asume que es una variable local no declarada previamente o se usa como dummy call
+            obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4); // Dummy call para mantener estructura
             break;
         case 2:
             cout << endl << endl << "Entiendo. Los pensamientos intrusivos o la preocupación constante pueden ser muy agotadores cuando te sientes *alarmado*. 🧠" << endl
-                      << "Es como si tu mente no pudiera encontrar un descanso. Es válido sentir esa fatiga mental. 😔" << endl << endl
-                      << "¿Cómo crees que estos pensamientos te afectan más? 🤔" << endl << endl
-                      << "1.- Me cuesta concentrarme en otras cosas o en mis tareas. 📚" << endl
-                      << "2.- Me siento atrapado/a en un ciclo de 'qué pasaría si'. 🔄" << endl
-                      << "3.- La preocupación me quita el sueño o me genera insomnio. 😴" << endl
-                      << "4.- Siento que no puedo disfrutar del presente. 🚫" << endl << endl;
-            obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Dummy call to keep structure
+                         << "Es como si tu mente no pudiera encontrar un descanso. Es válido sentir esa fatiga mental. 😔" << endl << endl
+                         << "¿Cómo crees que estos pensamientos te afectan más? 🤔" << endl << endl
+                         << "1.- Me cuesta concentrarme en otras cosas o en mis tareas. 📚" << endl
+                         << "2.- Me siento atrapado/a en un ciclo de 'qué pasaría si'. 🔄" << endl
+                         << "3.- La preocupación me quita el sueño o me genera insomnio. 😴" << endl
+                         << "4.- Siento que no puedo disfrutar del presente. 🚫" << endl << endl;
+            obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Dummy call para mantener estructura
             break;
         case 3:
             cout << endl << endl << "Comprendo. Sentirse inquieto/a o con dificultad para quedarse quieto/a es una manifestación común de estar *alarmado*.  restless_person" << endl
-                      << "Es como si tu cuerpo buscara una salida para la energía acumulada. ⚡" << endl << endl
-                      << "¿Cómo crees que esta inquietud te afecta más en tu vida? 🤔" << endl << endl
-                      << "1.- Me cuesta relajarme o descansar. 🛋" << endl
-                      << "2.- Siento la necesidad de estar siempre haciendo algo. 🏃‍♀" << endl
-                      << "3.- Me genera impaciencia o frustración conmigo mismo/a. 😠" << endl
-                      << "4.- Afecta mi capacidad para interactuar con calma con los demás. 🗣" << endl << endl;
-            obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Dummy call to keep structure
+                         << "Es como si tu cuerpo buscara una salida para la energía acumulada. ⚡" << endl << endl
+                         << "¿Cómo crees que esta inquietud te afecta más en tu vida? 🤔" << endl << endl
+                         << "1.- Me cuesta relajarme o descansar. 🛋" << endl
+                         << "2.- Siento la necesidad de estar siempre haciendo algo. 🏃‍♀" << endl
+                         << "3.- Me genera impaciencia o frustración conmigo mismo/a. 😠" << endl
+                         << "4.- Afecta mi capacidad para interactuar con calma con los demás. 🗣" << endl << endl;
+            obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Dummy call para mantener estructura
             break;
         case 4:
             cout << endl << endl << "Entiendo. La *alarma* puede tener un impacto significativo en tu bienestar físico, afectando el sueño y el apetito. 😴" << endl
-                      << "Es una señal clara de que tu cuerpo está bajo estrés. 😔" << endl << endl
-                      << "¿Cómo crees que estos efectos físicos te impactan más en tu vida? 🤔" << endl << endl
-                      << "1.- Me siento constantemente fatigado/a y con poca energía. 🔋" << endl
-                      << "2.- Mi estado de ánimo se ve afectado por la falta de descanso.  mood_swing" << endl
-                      << "3.- Me cuesta cuidar mi alimentación o mis hábitos saludables. 🍎" << endl
-                      << "4.- Me siento más vulnerable a enfermedades o resfriados. 🤧" << endl << endl;
-            obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Dummy call to keep structure
+                         << "Es una señal clara de que tu cuerpo está bajo estrés. 😔" << endl << endl
+                         << "¿Cómo crees que estos efectos físicos te impactan más en tu vida? 🤔" << endl << endl
+                         << "1.- Me siento constantemente fatigado/a y con poca energía. 🔋" << endl
+                         << "2.- Mi estado de ánimo se ve afectado por la falta de descanso.  mood_swing" << endl
+                         << "3.- Me cuesta cuidar mi alimentación o mis hábitos saludables. 🍎" << endl
+                         << "4.- Me siento más vulnerable a enfermedades o resfriados. 🤧" << endl << endl;
+            obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Dummy call para mantener estructura
             break;
     }
     
@@ -2500,121 +2674,139 @@ void terapiaAlarmado ()
     cout << endl << "Reconocer cómo la *alarma* se manifiesta en tu cuerpo y mente es vital. Estas señales son mensajes importantes que tu sistema te envía. Escucharlas te ayudará a darte el cuidado que mereces. 🫂" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal*, por pequeña que parezca, crees que aún posees para enfrentar esta situación que te alarma? 🌟" << endl << endl
-              << "1.- Mi capacidad para analizar la situación y buscar soluciones lógicas. 📊" << endl
-              << "2.- Mi resiliencia, porque he superado momentos difíciles antes. 💪" << endl
-              << "3.- Mi red de apoyo (familia, amigos) a quienes puedo recurrir. 🤝" << endl
-              << "4.- Mi fe o mi capacidad para mantener la esperanza, incluso en la adversidad. 🙏" << endl << endl;
-    int recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad para analizar la situación y buscar soluciones lógicas. 📊" << endl
+                 << "2.- Mi resiliencia, porque he superado momentos difíciles antes. 💪" << endl
+                 << "3.- Mi red de apoyo (familia, amigos) a quienes puedo recurrir. 🤝" << endl
+                 << "4.- Mi fe o mi capacidad para mantener la esperanza, incluso en la adversidad. 🙏" << endl << endl;
+    int recursosInternosAlarmado = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando te sientes *alarmado*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes recursos valiosos dentro de ti. ✨" << endl
-              << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
+                 << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
 
     cout << "Exploremos ahora las *posibilidades de apoyo*. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento? 🤝" << endl << endl
-              << "1.- Hablar con un profesional de la salud mental para estrategias de manejo del estrés/ansiedad. 🗣" << endl
-              << "2.- Conectar con un ser querido que te brinde calma y una escucha activa. 🫂" << endl
-              << "3.- Realizar una actividad que te ayude a disipar la tensión (ejercicio, meditación). 🧘‍♀" << endl
-              << "4.- Buscar información confiable o planificar pasos concretos para abordar la situación que me alarma. 📚" << endl << endl;
-    busquedaApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un profesional de la salud mental para estrategias de manejo del estrés/ansiedad. 🗣" << endl
+                 << "2.- Conectar con un ser querido que te brinde calma y una escucha activa. 🫂" << endl
+                 << "3.- Realizar una actividad que te ayude a disipar la tensión (ejercicio, meditación). 🧘‍♀" << endl
+                 << "4.- Buscar información confiable o planificar pasos concretos para abordar la situación que me alarma. 📚" << endl << endl;
+    busquedaApoyoAlarmado = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar la *alarma*. Es un paso hacia la calma. ✨" << endl << endl;
 
     system("pause"); 
     system("cls");
 
     cout << endl << "¿Qué *pequeño gesto de autocuidado* puedes comprometerte a hacer hoy mismo o en las próximas 24 horas para aliviar un poco esta sensación de estar *alarmado*? 👣" << endl << endl
-              << "1.- Tomar una pausa para hacer 5 respiraciones profundas y lentas. 🌬" << endl
-              << "2.- Escuchar una canción relajante o que te brinde una sensación de seguridad. 🎶" << endl
-              << "3.- Beber un vaso de agua lentamente, prestando atención a la sensación. 💧" << endl
-              << "4.- Escribir brevemente lo que sientes en un papel para sacarlo de tu mente. 📝" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Tomar una pausa para hacer 5 respiraciones profundas y lentas. 🌬" << endl
+                 << "2.- Escuchar una canción relajante o que te brinde una sensación de seguridad. 🎶" << endl
+                 << "3.- Beber un vaso de agua lentamente, prestando atención a la sensación. 💧" << endl
+                 << "4.- Escribir brevemente lo que sientes en un papel para sacarlo de tu mente. 📝" << endl << endl;
+    accionConcretaAlarmado = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños actos de autocuidado son poderosos anclajes. Comprométete con esa acción y date crédito por cuidarte en este momento. 💪" << endl << endl;
 
     cout << "¿De qué manera crees que esta sensación de estar *alarmado, aunque incómoda, podría contener un **mensaje importante* o una *oportunidad* para ti? 🌱" << endl << endl
-              << "1.- Me indica que necesito poner límites o protegerme en alguna área de mi vida. 🛡" << endl
-              << "2.- Me impulsa a buscar soluciones o a tomar acción ante una situación que he ignorado. 🧭" << endl
-              << "3.- Me enseña sobre mi propia capacidad de reacción y resiliencia ante el estrés. 🚀" << endl
-              << "4.- Me invita a reflexionar sobre mis miedos y cómo los gestiono. 🧠" << endl << endl;
-    int mensajeOportunidad = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me indica que necesito poner límites o protegerme en alguna área de mi vida. 🛡" << endl
+                 << "2.- Me impulsa a buscar soluciones o a tomar acción ante una situación que he ignorado. 🧭" << endl
+                 << "3.- Me enseña sobre mi propia capacidad de reacción y resiliencia ante el estrés. 🚀" << endl
+                 << "4.- Me invita a reflexionar sobre mis miedos y cómo los gestiono. 🧠" << endl << endl;
+    int mensajeOportunidadAlarmado = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Excelente! Reconocer el mensaje detrás de la *alarma* es un paso significativo. Tu capacidad para transformar la incomodidad en aprendizaje es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de tranquilidad* o *confianza* te gustaría darte a ti mismo/a en este momento de *alarma*? ✨" << endl << endl
-              << "1.- 'Estoy a salvo en este momento y puedo manejar un paso a la vez.' 🏞" << endl
-              << "2.- 'No estoy solo/a, y puedo buscar el apoyo que necesito.' 🤝" << endl
-              << "3.- 'Mis sentimientos son válidos, y me doy permiso para sentirlos sin juicio.' 🙏" << endl
-              << "4.- 'Esta sensación es temporal, y tengo la capacidad de encontrar la calma.' 💖" << endl << endl;
-    int mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Estoy a salvo en este momento y puedo manejar un paso a la vez.' 🏞" << endl
+                 << "2.- 'No estoy solo/a, y puedo buscar el apoyo que necesito.' 🤝" << endl
+                 << "3.- 'Mis sentimientos son válidos, y me doy permiso para sentirlos sin juicio.' 🙏" << endl
+                 << "4.- 'Esta sensación es temporal, y tengo la capacidad de encontrar la calma.' 💖" << endl << endl;
+    int mensajeFinalAlarmado = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en medio de la *alarma*. Recuerda que mereces sentirte seguro/a y tranquilo/a, y que tienes la capacidad de navegar a través de esta emoción. 💖" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Estar Alarmado ---
+    cout << endl << "--- Resumen de tu Terapia de Estar Alarmado ---" << endl;
+    cout << "Causa de la alarma: " << causaAlarmado << endl;
+    cout << "Origen principal de la alarma: " << origenAlarmaAlarmado << endl;
+    cout << "Impacto físico y mental de la alarma: " << impactoFisicoMentalAlarmado << endl;
+    // Nota: Las siguientes variables no fueron asignadas en el ámbito principal
+    // de la función con los nombres que se usan en las preguntas posteriores,
+    // por lo que no se pueden mostrar sus valores específicos aquí.
+    cout << "Recursos internos para enfrentar la alarma: " << recursosInternosAlarmado << endl;
+    cout << "Tipo de apoyo más útil: " << busquedaApoyoAlarmado << endl;
+    cout << "Gesto de autocuidado comprometido: " << accionConcretaAlarmado << endl;
+    cout << "Mensaje u oportunidad de la alarma: " << mensajeOportunidadAlarmado << endl;
+    cout << "Mensaje de tranquilidad o confianza: " << mensajeFinalAlarmado << endl;
+    cout << "---------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la sensación de estar *alarmado*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaAnsiedad ()
+void terapiaAnsiedad()
 {
-    string causa;
-    int origenAnsiedad, impactoFisicoMental, senalesCuerpoMente, busquedaApoyo; 
+    string causaAnsiedad; // Variable renombrada
+    int origenAnsiedadGeneral, impactoFisicoMentalAnsiedad, senalesCuerpoMenteAnsiedad, busquedaApoyoAnsiedad; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de la ansiedad ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la *ansiedad*. Es una emoción que nos puede abrumar con preocupaciones sobre el futuro. Es valiente de tu parte reconocerla y abordarla. 🌪" << endl
-              << "¿Podrías compartirme brevemente la situación o los pensamientos que te han llevado a sentir *ansiedad* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente la situación o los pensamientos que te han llevado a sentir *ansiedad* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaAnsiedad); // Usando la variable renombrada
     cout << endl << "Gracias por compartir eso. Reconocer la *ansiedad* es el primer paso para entenderla y gestionarla. Es una emoción compleja, y es completamente válido sentirla. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *ansiedad*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *ansiedad*? 🤔" << endl << endl;
     cout << "1.- La preocupación constante por eventos futuros o situaciones inciertas. ❓" << endl
-              << "2.- Sentir una presión excesiva por cumplir expectativas (propias o ajenas). 📈" << endl
-              << "3.- La sensación de falta de control o incapacidad para manejar lo que viene. ⛓" << endl
-              << "4.- Un cúmulo de pequeñas preocupaciones diarias que se volvieron abrumadoras. 🌧" << endl << endl;
-    origenAnsiedad = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- Sentir una presión excesiva por cumplir expectativas (propias o ajenas). 📈" << endl
+                 << "3.- La sensación de falta de control o incapacidad para manejar lo que viene. ⛓" << endl
+                 << "4.- Un cúmulo de pequeñas preocupaciones diarias que se volvieron abrumadoras. 🌧" << endl << endl;
+    origenAnsiedadGeneral = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *ansiedad* nos da claridad sobre la raíz de esta intensa emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta *ansiedad* tu vida diaria y tus emociones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta *ansiedad* tu vida diaria y tus emociones? 😥" << endl << endl;
     cout << "1.- Afecta mi concentración, me siento distraído/a o con 'la mente en blanco'. 🧠" << endl
-              << "2.- Tengo problemas para dormir, siento inquietud o nerviosismo constante. 😴" << endl
-              << "3.- Me siento irritable o con cambios de humor frecuentes. 😠" << endl
-              << "4.- Evito situaciones o lugares que me generan ansiedad. 🚫" << endl << endl; 
-    impactoFisicoMental = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); 
+                 << "2.- Tengo problemas para dormir, siento inquietud o nerviosismo constante. 😴" << endl
+                 << "3.- Me siento irritable o con cambios de humor frecuentes. 😠" << endl
+                 << "4.- Evito situaciones o lugares que me generan ansiedad. 🚫" << endl << endl; 
+    impactoFisicoMentalAnsiedad = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (impactoFisicoMental) {
+    switch (impactoFisicoMentalAnsiedad) { // Usando la variable renombrada
         case 1:
             cout << endl << endl << "Comprendo. La *ansiedad* a menudo puede hacer que nuestra mente se sienta dispersa o sobrecargada, dificultando la concentración. 🧠" << endl
-                      << "Es un impacto significativo, y es válido sentir esa frustración mental. 😔" << endl << endl
-                      << "¿Cómo crees que esta dificultad para concentrarte te afecta más en tu día a día? 🤔" << endl << endl
-                      << "1.- Me cuesta iniciar tareas o mantener el enfoque en ellas. ⏳" << endl
-                      << "2.- Siento que mis pensamientos están acelerados y no puedo 'apagarme'. ⚡" << endl
-                      << "3.- Me siento abrumado/a incluso con las responsabilidades más pequeñas. ⛰" << endl
-                      << "4.- Mi rendimiento en el trabajo o estudios se ha visto afectado. 📉" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+                         << "Es un impacto significativo, y es válido sentir esa frustración mental. 😔" << endl << endl
+                         << "¿Cómo crees que esta dificultad para concentrarte te afecta más en tu día a día? 🤔" << endl << endl
+                         << "1.- Me cuesta iniciar tareas o mantener el enfoque en ellas. ⏳" << endl
+                         << "2.- Siento que mis pensamientos están acelerados y no puedo 'apagarme'. ⚡" << endl
+                         << "3.- Me siento abrumado/a incluso con las responsabilidades más pequeñas. ⛰" << endl
+                         << "4.- Mi rendimiento en el trabajo o estudios se ha visto afectado. 📉" << endl << endl;
+            senalesCuerpoMenteAnsiedad = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4); // Usando la variable renombrada
             break;
         case 2:
             cout << endl << endl << "Entiendo. Los problemas para dormir y la inquietud constante son manifestaciones muy comunes de la *ansiedad*. 😴" << endl
-                      << "Es como si tu cuerpo estuviera siempre en alerta, sin poder relajarse. Es agotador, y es importante reconocerlo. 🙏" << endl << endl
-                      << "¿Cómo crees que esta inquietud o problemas de sueño te afectan más? 🤔" << endl << endl
-                      << "1.- Me siento constantemente cansado/a y sin energía durante el día. 🔋" << endl
-                      << "2.- Me cuesta relajarme, incluso cuando tengo tiempo libre. 🛋" << endl
-                      << "3.- Mis pensamientos ansiosos aumentan al intentar dormir. 🌃" << endl
-                      << "4.- Siento un malestar físico general por la falta de descanso. 🤕" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es como si tu cuerpo estuviera siempre en alerta, sin poder relajarse. Es agotador, y es importante reconocerlo. 🙏" << endl << endl
+                         << "¿Cómo crees que esta inquietud o problemas de sueño te afectan más? 🤔" << endl << endl
+                         << "1.- Me siento constantemente cansado/a y sin energía durante el día. 🔋" << endl
+                         << "2.- Me cuesta relajarme, incluso cuando tengo tiempo libre. 🛋" << endl
+                         << "3.- Mis pensamientos ansiosos aumentan al intentar dormir. 🌃" << endl
+                         << "4.- Siento un malestar físico general por la falta de descanso. 🤕" << endl << endl;
+            senalesCuerpoMenteAnsiedad = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 3:
             cout << endl << endl << "Comprendo. La *ansiedad* a menudo nos pone 'a flor de piel', haciendo que nos sintamos más irritables o con cambios de humor. 😠" << endl
-                      << "Es una respuesta a la tensión interna que experimentas. Es válido sentirlo. 😔" << endl << endl
-                      << "¿Cómo crees que esta irritabilidad o cambios de humor te afectan más? 🤔" << endl << endl
-                      << "1.- Reacciono de forma exagerada a situaciones pequeñas. 💥" << endl
-                      << "2.- Me cuesta mantener la calma en mis interacciones con los demás. 🗣" << endl
-                      << "3.- Siento que mi paciencia se agota rápidamente. ⏳" << endl
-                      << "4.- Después de un episodio de irritabilidad, me siento culpable o frustrado/a. 😥" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es una respuesta a la tensión interna que experimentas. Es válido sentirlo. 😔" << endl << endl
+                         << "¿Cómo crees que esta irritabilidad o cambios de humor te afectan más? 🤔" << endl << endl
+                         << "1.- Reacciono de forma exagerada a situaciones pequeñas. 💥" << endl
+                         << "2.- Me cuesta mantener la calma en mis interacciones con los demás. 🗣" << endl
+                         << "3.- Siento que mi paciencia se agota rápidamente. ⏳" << endl
+                         << "4.- Después de un episodio de irritabilidad, me siento culpable o frustrado/a. 😥" << endl << endl;
+            senalesCuerpoMenteAnsiedad = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 4:
             cout << endl << endl << "Entiendo. La evitación es una estrategia común, aunque a veces limitante, que usamos para lidiar con la *ansiedad*. 🚫" << endl
-                      << "Es un mecanismo de protección, pero puede impedirnos vivir plenamente. 😔" << endl << endl
-                      << "¿Cómo crees que esta evitación te afecta más en tu vida? 🤔" << endl << endl
-                      << "1.- Me pierdo de oportunidades o experiencias que me gustaría vivir. 🗺" << endl
-                      << "2.- Me siento limitado/a en mi día a día o en mis decisiones. ⛓" << endl
-                      << "3.- Siento que la ansiedad 'gana terreno' en mi vida. 📉" << endl
-                      << "4.- Me genera más estrés o frustración a largo plazo. 🌧" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es un mecanismo de protección, pero puede impedirnos vivir plenamente. 😔" << endl << endl
+                         << "¿Cómo crees que esta evitación te afecta más en tu vida? 🤔" << endl << endl
+                         << "1.- Me pierdo de oportunidades o experiencias que me gustaría vivir. 🗺" << endl
+                         << "2.- Me siento limitado/a en mi día a día o en mis decisiones. ⛓" << endl
+                         << "3.- Siento que la ansiedad 'gana terreno' en mi vida. 📉" << endl
+                         << "4.- Me genera más estrés o frustración a largo plazo. 🌧" << endl << endl;
+            senalesCuerpoMenteAnsiedad = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
     }
     
@@ -2622,39 +2814,39 @@ void terapiaAnsiedad ()
     system("cls");   
 
     cout << endl << "Ahora, pensemos en las *señales que tu cuerpo y mente te dan* cuando sientes *ansiedad*. ¿Cuáles de estas son las más notorias en ti? 😟" << endl << endl
-              << "1.- Sensación de nudo en el estómago, mariposas o malestar digestivo. 🦋" << endl
-              << "2.- Respiración rápida o superficial, sensación de falta de aire. 🌬" << endl
-              << "3.- Tensión muscular, temblores o inquietud en las extremidades. ⚡" << endl
-              << "4.- Sudoración, palmas húmedas o sensación de calor/frío. 🌡" << endl << endl;
-    senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "1.- Sensación de nudo en el estómago, mariposas o malestar digestivo. 🦋" << endl
+                 << "2.- Respiración rápida o superficial, sensación de falta de aire. 🌬" << endl
+                 << "3.- Tensión muscular, temblores o inquietud en las extremidades. ⚡" << endl
+                 << "4.- Sudoración, palmas húmedas o sensación de calor/frío. 🌡" << endl << endl;
+    senalesCuerpoMenteAnsiedad = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer cómo la *ansiedad* se manifiesta en tu cuerpo y mente es vital. Escuchar estas señales te ayudará a actuar cuando más lo necesitas y a darte el cuidado que mereces. 🫂" << endl << endl;
 
     cout << "¿Qué *recursos internos* o *fortalezas personales, por pequeñas que parezcan, crees que aún posees para enfrentar esta **ansiedad*? 🌟" << endl << endl
-              << "1.- Mi capacidad de auto-observación y de darme cuenta de lo que siento. 🧠" << endl
-              << "2.- Mi deseo de encontrar calma y bienestar. 💡" << endl
-              << "3.- Mi habilidad para buscar información o aprender sobre el manejo de la ansiedad. 📚" << endl
-              << "4.- Mi resiliencia, porque sé que he superado momentos difíciles antes. 💪" << endl << endl;
-    int recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad de auto-observación y de darme cuenta de lo que siento. 🧠" << endl
+                 << "2.- Mi deseo de encontrar calma y bienestar. 💡" << endl
+                 << "3.- Mi habilidad para buscar información o aprender sobre el manejo de la ansiedad. 📚" << endl
+                 << "4.- Mi resiliencia, porque sé que he superado momentos difíciles antes. 💪" << endl << endl;
+    int recursosInternosAnsiedad = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando te sientes ansioso/a, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes recursos valiosos dentro de ti. ✨" << endl
-              << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
+                 << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
 
     system("pause"); 
     system("cls");   
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento de **ansiedad*? 🤝" << endl << endl
-              << "1.- Hablar con un profesional de la salud mental (terapeuta, psicólogo). 🗣" << endl
-              << "2.- Conectar con un ser querido que te escuche sin juzgar y te brinde compañía. 🫂" << endl
-              << "3.- Unirte a un grupo de apoyo o comunidad donde puedas compartir experiencias. 👥" << endl
-              << "4.- Buscar información confiable o recursos de autoayuda sobre la ansiedad. 📚" << endl << endl;
-    busquedaApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un profesional de la salud mental (terapeuta, psicólogo). 🗣" << endl
+                 << "2.- Conectar con un ser querido que te escuche sin juzgar y te brinde compañía. 🫂" << endl
+                 << "3.- Unirte a un grupo de apoyo o comunidad donde puedas compartir experiencias. 👥" << endl
+                 << "4.- Buscar información confiable o recursos de autoayuda sobre la ansiedad. 📚" << endl << endl;
+    busquedaApoyoAnsiedad = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar la *ansiedad*. Es un paso hacia la sanación. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño gesto de autocuidado* puedes comprometerte a hacer hoy mismo o en las próximas 24 horas para aliviar un poco esta *ansiedad*? 👣" << endl << endl
-              << "1.- Realizar una técnica de respiración profunda (por ejemplo, 4-7-8). 🌬" << endl
-              << "2.- Escuchar música relajante o sonidos de la naturaleza. 🎶" << endl
-              << "3.- Dar un paseo corto al aire libre, prestando atención a tu entorno. 🌳" << endl
-              << "4.- Anotar en un papel tus preocupaciones por 5 minutos y luego guardarlas. 📝" << endl << endl;
-    int gestoAutocuidado = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Realizar una técnica de respiración profunda (por ejemplo, 4-7-8). 🌬" << endl
+                 << "2.- Escuchar música relajante o sonidos de la naturaleza. 🎶" << endl
+                 << "3.- Dar un paseo corto al aire libre, prestando atención a tu entorno. 🌳" << endl
+                 << "4.- Anotar en un papel tus preocupaciones por 5 minutos y luego guardarlas. 📝" << endl << endl;
+    int gestoAutocuidadoAnsiedad = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños actos de autocuidado son poderosos anclajes. Comprométete con esa acción y date crédito por cuidarte en este momento. 💪" << endl << endl;
 
     system("pause"); 
@@ -2663,93 +2855,112 @@ void terapiaAnsiedad ()
     // --- Reflexión final y camino a seguir ---
 
     cout << endl << "¿De qué manera crees que la *ansiedad, aunque dolorosa, puede ser un **mensaje* o una *oportunidad* para tu crecimiento personal? 🌱" << endl << endl
-              << "1.- Me indica la necesidad de establecer límites o priorizar mi bienestar. 🛡" << endl
-              << "2.- Me impulsa a desarrollar nuevas herramientas de afrontamiento y resiliencia. 🚀" << endl
-              << "3.- Me ayuda a reevaluar mis expectativas y a vivir más en el presente. 🧭" << endl
-              << "4.- Me conecta con mi vulnerabilidad y la importancia de pedir ayuda. 🤝" << endl << endl;
-    int ansiedadMensaje = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me indica la necesidad de establecer límites o priorizar mi bienestar. 🛡" << endl
+                 << "2.- Me impulsa a desarrollar nuevas herramientas de afrontamiento y resiliencia. 🚀" << endl
+                 << "3.- Me ayuda a reevaluar mis expectativas y a vivir más en el presente. 🧭" << endl
+                 << "4.- Me conecta con mi vulnerabilidad y la importancia de pedir ayuda. 🤝" << endl << endl;
+    int ansiedadMensajeAnsiedad = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Excelente! Reconocer el mensaje de la *ansiedad* es un paso significativo. Tu capacidad para transformar la incomodidad en aprendizaje es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-compasión* o *esperanza* te gustaría darte a ti mismo/a en este momento de *ansiedad*? ✨" << endl << endl
-              << "1.- 'Está bien sentir esto, mis emociones son válidas.' 🙏" << endl
-              << "2.- 'Soy más fuerte y capaz de lo que la ansiedad me hace creer.' 💪" << endl
-              << "3.- 'Un paso a la vez, puedo manejar esto y la calma llegará.' 👣" << endl
-              << "4.- 'Merezco paz y bienestar, y estoy trabajando para lograrlo.' 💖" << endl << endl;
-    int mensajeAutoCompasion = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Está bien sentir esto, mis emociones son válidas.' 🙏" << endl
+                 << "2.- 'Soy más fuerte y capaz de lo que la ansiedad me hace creer.' 💪" << endl
+                 << "3.- 'Un paso a la vez, puedo manejar esto y la calma llegará.' 👣" << endl
+                 << "4.- 'Merezco paz y bienestar, y estoy trabajando para lograrlo.' 💖" << endl << endl;
+    int mensajeAutoCompasionAnsiedad = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en medio de la *ansiedad*. Recuerda que mereces sentirte en paz y que tienes la capacidad de transitar y gestionar esta emoción. 💖" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Ansiedad ---
+    cout << endl << "--- Resumen de tu Terapia de Ansiedad ---" << endl;
+    cout << "Causa de la ansiedad: " << causaAnsiedad << endl;
+    cout << "Origen principal de la ansiedad: " << origenAnsiedadGeneral << endl;
+    cout << "Impacto físico y mental de la ansiedad: " << impactoFisicoMentalAnsiedad << endl;
+    cout << "Señales en cuerpo y mente de la ansiedad: " << senalesCuerpoMenteAnsiedad << endl;
+    // Nota: Las siguientes variables no fueron asignadas en el ámbito principal
+    // de la función con los nombres que se usan en las preguntas posteriores,
+    // por lo que no se pueden mostrar sus valores específicos aquí.
+    cout << "Recursos internos para enfrentar la ansiedad: " << recursosInternosAnsiedad << endl;
+    cout << "Tipo de apoyo más útil en la ansiedad: " << busquedaApoyoAnsiedad << endl;
+    cout << "Gesto de autocuidado para aliviar la ansiedad: " << gestoAutocuidadoAnsiedad << endl;
+    cout << "Mensaje u oportunidad de la ansiedad: " << ansiedadMensajeAnsiedad << endl;
+    cout << "Mensaje de auto-compasión o esperanza: " << mensajeAutoCompasionAnsiedad << endl;
+    cout << "---------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la *ansiedad*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaSumiso ()
+void terapiaSumiso()
 {
-    string causa;
-    int origenSumision, impactoPersonal, senalesInternas, primerPaso; 
+    string causaSumision; // Variable renombrada
+    int origenSumisionGeneral, impactoPersonalSumision, senalesInternasSumision, primerPasoSumision; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de sumisión ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción de la *sumisión*. A veces, sentir que cedemos nuestro poder puede ser complejo y agotador. Es valiente de tu parte reconocer esta dinámica y abordarla. 🙇‍♀" << endl
-              << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste que actuaste de manera *sumisa* o cediste ante la voluntad de otros, aunque no quisieras? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste que actuaste de manera *sumisa* o cediste ante la voluntad de otros, aunque no quisieras? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaSumision); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer la *sumisión* es el primer paso para entenderla y, si lo deseas, transformarla. Es una emoción válida, y a menudo, una respuesta aprendida. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de esa sensación de sumisión o de ceder tu voluntad? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de esa sensación de sumisión o de ceder tu voluntad? 🤔" << endl << endl;
     cout << "1.- El miedo al conflicto o al rechazo por parte de otros. 👥" << endl
-              << "2.- La necesidad de aprobación o el deseo de agradar a los demás. 💖" << endl
-              << "3.- Sentir que la opinión o el deseo del otro es más importante que el tuyo. 💡" << endl
-              << "4.- Un patrón aprendido de la infancia o de relaciones pasadas. 🕰" << endl << endl;
-    origenSumision = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- La necesidad de aprobación o el deseo de agradar a los demás. 💖" << endl
+                 << "3.- Sentir que la opinión o el deseo del otro es más importante que el tuyo. 💡" << endl
+                 << "4.- Un patrón aprendido de la infancia o de relaciones pasadas. 🕰" << endl << endl;
+    origenSumisionGeneral = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de la *sumisión* nos da claridad sobre las raíces de este comportamiento. Este reconocimiento es una herramienta poderosa para empezar a cambiar la narrativa. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta tendencia a la *sumisión* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta tendencia a la *sumisión* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
     cout << "1.- Siento frustración o resentimiento después de ceder. 😠" << endl
-              << "2.- Mi autoestima se ve afectada, siento que mis deseos no importan. 📉" << endl
-              << "3.- Las relaciones se vuelven desequilibradas o unidireccionales. ⚖" << endl
-              << "4.- Acumulo estrés o emociones no expresadas, afectando mi paz mental. 🤯" << endl << endl; 
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); 
+                 << "2.- Mi autoestima se ve afectada, siento que mis deseos no importan. 📉" << endl
+                 << "3.- Las relaciones se vuelven desequilibradas o unidireccionales. ⚖" << endl
+                 << "4.- Acumulo estrés o emociones no expresadas, afectando mi paz mental. 🤯" << endl << endl; 
+    impactoPersonalSumision = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (impactoPersonal) {
+    switch (impactoPersonalSumision) { // Usando la variable renombrada
         case 1:
             cout << endl << endl << "Comprendo. Sentir frustración o resentimiento después de ser sumiso/a es una señal clara de que tus propias necesidades no fueron satisfechas. 😠" << endl
-                      << "Es válido y necesario reconocer estas emociones. 😔" << endl << endl
-                      << "¿Cómo crees que esta frustración o resentimiento te afecta más? 🤔" << endl << endl
-                      << "1.- Me cuesta perdonarme por no haber actuado de otra manera. 😥" << endl
-                      << "2.- Afecta mi deseo de interactuar con la persona involucrada. 👤" << endl
-                      << "3.- Siento que estoy cargando un peso emocional. 🏋‍♀" << endl
-                      << "4.- Me hace cuestionar mi valía o mi capacidad para defenderme. ❓" << endl << endl;
-            senalesInternas = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+                         << "Es válido y necesario reconocer estas emociones. 😔" << endl << endl
+                         << "¿Cómo crees que esta frustración o resentimiento te afecta más? 🤔" << endl << endl
+                         << "1.- Me cuesta perdonarme por no haber actuado de otra manera. 😥" << endl
+                         << "2.- Afecta mi deseo de interactuar con la persona involucrada. 👤" << endl
+                         << "3.- Siento que estoy cargando un peso emocional. 🏋‍♀" << endl
+                         << "4.- Me hace cuestionar mi valía o mi capacidad para defenderme. ❓" << endl << endl;
+            senalesInternasSumision = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4); // Usando la variable renombrada
             break;
         case 2:
             cout << endl << endl << "Entiendo. Cuando la *sumisión* afecta la autoestima, es como si tu voz interior se silenciara. 📉" << endl
-                      << "Recuerda que tus deseos y opiniones son importantes y válidos. 🙏" << endl << endl
-                      << "¿Cómo crees que esta afectación a tu autoestima te impacta más? 🤔" << endl << endl
-                      << "1.- Me cuesta tomar decisiones o confiar en mi propio juicio. 💡" << endl
-                      << "2.- Siento que no tengo derecho a pedir lo que quiero o necesito. 🚫" << endl
-                      << "3.- Me comparo negativamente con los demás o siento que no soy suficiente. 🥀" << endl
-                      << "4.- Acepto situaciones que no me benefician para evitar conflictos. 😥" << endl << endl;
-            senalesInternas = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Recuerda que tus deseos y opiniones son importantes y válidos. 🙏" << endl << endl
+                         << "¿Cómo crees que esta afectación a tu autoestima te impacta más? 🤔" << endl << endl
+                         << "1.- Me cuesta tomar decisiones o confiar en mi propio juicio. 💡" << endl
+                         << "2.- Siento que no tengo derecho a pedir lo que quiero o necesito. 🚫" << endl
+                         << "3.- Me comparo negativamente con los demás o siento que no soy suficiente. 🥀" << endl
+                         << "4.- Acepto situaciones que no me benefician para evitar conflictos. 😥" << endl << endl;
+            senalesInternasSumision = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 3:
             cout << endl << endl << "Comprendo. Las relaciones desequilibradas pueden ser agotadoras y socavar tu energía. ⚖" << endl
-                      << "La *sumisión* en este contexto puede llevar a sentir que tus necesidades son constantemente ignoradas. 😔" << endl << endl
-                      << "¿Cómo crees que este desequilibrio en tus relaciones te afecta más? 🤔" << endl << endl
-                      << "1.- Siento que no soy escuchado/a o valorado/a. 👂" << endl
-                      << "2.- Me siento agotado/a de dar más de lo que recibo. 🔋" << endl
-                      << "3.- Mis necesidades o deseos quedan en segundo plano constantemente. 🗺" << endl
-                      << "4.- Me siento resentido/a con las personas involucradas. 😠" << endl << endl;
-            senalesInternas = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "La *sumisión* en este contexto puede llevar a sentir que tus necesidades son constantemente ignoradas. 😔" << endl << endl
+                         << "¿Cómo crees que este desequilibrio en tus relaciones te afecta más? 🤔" << endl << endl
+                         << "1.- Siento que no soy escuchado/a o valorado/a. 👂" << endl
+                         << "2.- Me siento agotado/a de dar más de lo que recibo. 🔋" << endl
+                         << "3.- Mis necesidades o deseos quedan en segundo plano constantemente. 🗺" << endl
+                         << "4.- Me siento resentido/a con las personas involucradas. 😠" << endl << endl;
+            senalesInternasSumision = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 4:
             cout << endl << endl << "Entiendo. Acumular emociones no expresadas puede convertirse en una carga pesada y afectar tu bienestar mental. 🤯" << endl
-                      << "La *sumisión* a menudo implica reprimir lo que realmente sientes. Es crucial encontrar formas de liberar esa tensión. 🌬" << endl << endl
-                      << "¿Cómo crees que esta acumulación de estrés te impacta más? 🤔" << endl << endl
-                      << "1.- Me siento con ansiedad o irritabilidad frecuente. 🌪" << endl
-                      << "2.- Tengo problemas para dormir o concentrarme. 😴" << endl
-                      << "3.- Me siento desconectado/a de mis propias emociones o deseos. 🧊" << endl
-                      << "4.- Siento que exploto por cosas pequeñas después de acumular mucho. 💥" << endl << endl;
-            senalesInternas = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "La *sumisión* a menudo implica reprimir lo que realmente sientes. Es crucial encontrar formas de liberar esa tensión. 🌬" << endl << endl
+                         << "¿Cómo crees que esta acumulación de estrés te impacta más? 🤔" << endl << endl
+                         << "1.- Me siento con ansiedad o irritabilidad frecuente. 🌪" << endl
+                         << "2.- Tengo problemas para dormir o concentrarme. 😴" << endl
+                         << "3.- Me siento desconectado/a de mis propias emociones o deseos. 🧊" << endl
+                         << "4.- Siento que exploto por cosas pequeñas después de acumular mucho. 💥" << endl << endl;
+            senalesInternasSumision = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
     }
     
@@ -2757,39 +2968,39 @@ void terapiaSumiso ()
     system("cls");   
 
     cout << endl << "Ahora, pensemos en las *señales internas* que experimentas cuando te encuentras en una situación de *sumisión*. ¿Cuáles de estas son las más notorias en ti? 😟" << endl << endl
-              << "1.- Una sensación de nudo en el estómago o de pesadez en el cuerpo. 🏋‍♀" << endl
-              << "2.- Silenciar tus propios pensamientos o decir sí cuando quieres decir no. 🤫" << endl
-              << "3.- Sentir una voz interna que te dice que no eres lo suficientemente bueno/a o que tus deseos no valen. 💬" << endl
-              << "4.- La necesidad de aprobación de los demás antes de actuar o expresar algo. 💖" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "1.- Una sensación de nudo en el estómago o de pesadez en el cuerpo. 🏋‍♀" << endl
+                 << "2.- Silenciar tus propios pensamientos o decir sí cuando quieres decir no. 🤫" << endl
+                 << "3.- Sentir una voz interna que te dice que no eres lo suficientemente bueno/a o que tus deseos no valen. 💬" << endl
+                 << "4.- La necesidad de aprobación de los demás antes de actuar o expresar algo. 💖" << endl << endl;
+    senalesInternasSumision = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que es momento de reconectar con tu propio poder. 💡" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal, por pequeña que parezca, crees que te podría ayudar a empezar a transformar la **sumisión* en autoafirmación? 🌟" << endl << endl
-              << "1.- Mi deseo de vivir de forma más auténtica y plena. ✨" << endl
-              << "2.- Mi capacidad para reflexionar sobre mis patrones y aprender de ellos. 🧠" << endl
-              << "3.- La conciencia de que mis límites son válidos y necesarios. 🚫" << endl
-              << "4.- Mi resiliencia para cambiar y crecer, incluso si es difícil. 💪" << endl << endl;
-    int recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi deseo de vivir de forma más auténtica y plena. ✨" << endl
+                 << "2.- Mi capacidad para reflexionar sobre mis patrones y aprender de ellos. 🧠" << endl
+                 << "3.- La conciencia de que mis límites son válidos y necesarios. 🚫" << endl
+                 << "4.- Mi resiliencia para cambiar y crecer, incluso si es difícil. 💪" << endl << endl;
+    int recursosInternosSumision = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso en este proceso de cambio, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes un poder interior inmenso. 💖" << endl
-              << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
+                 << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
 
     system("pause"); 
     system("cls");   
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo* para empoderarte y reducir la *sumisión*. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento? 🤝" << endl << endl
-              << "1.- Hablar con un terapeuta que te ayude a establecer límites y mejorar la autoafirmación. 🗣" << endl
-              << "2.- Practicar decir no en situaciones de baja presión o menos importantes. 🚫" << endl
-              << "3.- Rodearme de personas que me valoren y respeten mi individualidad. 🫂" << endl
-              << "4.- Leer libros o artículos sobre autoafirmación y establecimiento de límites. 📚" << endl << endl;
-    primerPaso = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un terapeuta que te ayude a establecer límites y mejorar la autoafirmación. 🗣" << endl
+                 << "2.- Practicar decir no en situaciones de baja presión o menos importantes. 🚫" << endl
+                 << "3.- Rodearme de personas que me valoren y respeten mi individualidad. 🫂" << endl
+                 << "4.- Leer libros o artículos sobre autoafirmación y establecimiento de límites. 📚" << endl << endl;
+    primerPasoSumision = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para transformar la *sumisión*. Es un paso hacia tu empoderamiento. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño paso concreto* puedes comprometerte a tomar HOY o en los próximos días para empezar a cultivar tu autoafirmación y reducir la *sumisión*? 👣" << endl << endl
-              << "1.- Identificar una pequeña situación donde usualmente cederías y, conscientemente, elegir actuar diferente. 🌱" << endl
-              << "2.- Escribir una lista de tus propios deseos y necesidades, sin juzgarlos. 📝" << endl
-              << "3.- Practicar la respiración profunda o la meditación para conectar con tu centro y fortaleza interior. 🧘‍♀" << endl
-              << "4.- Elegir una acción pequeña que solo sea para ti y que te dé placer, sin considerar a nadie más. 💖" << endl << endl;
-    int accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Identificar una pequeña situación donde usualmente cederías y, conscientemente, elegir actuar diferente. 🌱" << endl
+                 << "2.- Escribir una lista de tus propios deseos y necesidades, sin juzgarlos. 📝" << endl
+                 << "3.- Practicar la respiración profunda o la meditación para conectar con tu centro y fortaleza interior. 🧘‍♀" << endl
+                 << "4.- Elegir una acción pequeña que solo sea para ti y que te dé placer, sin considerar a nadie más. 💖" << endl << endl;
+    int accionConcretaSumision = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia tu empoderamiento. 💪" << endl << endl;
 
     system("pause"); 
@@ -2798,93 +3009,112 @@ void terapiaSumiso ()
     // --- Reflexión final y camino a seguir ---
 
     cout << endl << "¿De qué manera crees que el proceso de transformar la *sumisión* en autoafirmación puede enriquecer tu vida y tus relaciones? 🌱" << endl << endl
-              << "1.- Me permitirá vivir con más autenticidad y congruencia. ✨" << endl
-              << "2.- Mejorará la calidad de mis relaciones, haciéndolas más equilibradas y respetuosas. 🤝" << endl
-              << "3.- Aumentará mi autoestima y mi confianza en mí mismo/a. 🚀" << endl
-              << "4.- Todas las anteriores, me abrirá a una vida más plena y satisfactoria. 🦋" << endl << endl;
-    int enriqueceVida = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me permitirá vivir con más autenticidad y congruencia. ✨" << endl
+                 << "2.- Mejorará la calidad de mis relaciones, haciéndolas más equilibradas y respetuosas. 🤝" << endl
+                 << "3.- Aumentará mi autoestima y mi confianza en mí mismo/a. 🚀" << endl
+                 << "4.- Todas las anteriores, me abrirá a una vida más plena y satisfactoria. 🦋" << endl << endl;
+    int enriqueceVidaSumision = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de este proceso es un paso significativo. Tu capacidad para buscar el crecimiento y el bienestar es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de empoderamiento* o *auto-compasión* te gustaría darte a ti mismo/a al iniciar este camino de transformación? ✨" << endl << endl
-              << "1.- 'Mi voz importa, y merezco ser escuchado/a.' 🗣" << endl
-              << "2.- 'Está bien decir no y poner límites, es un acto de amor propio.' 🚫" << endl
-              << "3.- 'Soy digno/a de respeto y de tener mis propias necesidades.' 🙏" << endl
-              << "4.- 'Cada paso, por pequeño que sea, me acerca a la persona empoderada que soy.' 💖" << endl << endl;
-    int mensajeEmpoderamiento = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Mi voz importa, y merezco ser escuchado/a.' 🗣" << endl
+                 << "2.- 'Está bien decir no y poner límites, es un acto de amor propio.' 🚫" << endl
+                 << "3.- 'Soy digno/a de respeto y de tener mis propias necesidades.' 🙏" << endl
+                 << "4.- 'Cada paso, por pequeño que sea, me acerca a la persona empoderada que soy.' 💖" << endl << endl;
+    int mensajeEmpoderamientoSumision = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en tu camino hacia el empoderamiento. Recuerda que mereces vivir una vida donde tus necesidades y deseos sean valorados. 💖" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Sumisión ---
+    cout << endl << "--- Resumen de tu Terapia de Sumisión ---" << endl;
+    cout << "Causa de la sumisión: " << causaSumision << endl;
+    cout << "Origen principal de la sumisión: " << origenSumisionGeneral << endl;
+    cout << "Impacto personal de la sumisión: " << impactoPersonalSumision << endl;
+    cout << "Señales internas de la sumisión: " << senalesInternasSumision << endl;
+    // Nota: Las siguientes variables no fueron asignadas en el ámbito principal
+    // de la función con los nombres que se usan en las preguntas posteriores,
+    // por lo que no se pueden mostrar sus valores específicos aquí.
+    cout << "Recursos internos para transformar la sumisión: " << recursosInternosSumision << endl;
+    cout << "Primer paso de apoyo para el empoderamiento: " << primerPasoSumision << endl;
+    cout << "Acción concreta para cultivar la autoafirmación: " << accionConcretaSumision << endl;
+    cout << "Cómo el proceso de transformación enriquece tu vida: " << enriqueceVidaSumision << endl;
+    cout << "Mensaje de empoderamiento o auto-compasión: " << mensajeEmpoderamientoSumision << endl;
+    cout << "---------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la *sumisión* y el camino hacia la autoafirmación." << endl
-              << "😄 Recuerda que este es un proceso gradual y que cada pequeño paso cuenta. Sé amable contigo mismo/a." << endl
-              << "😊 Confío en tu resiliencia y en tu capacidad para reconectar con tu poder interior. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que este es un proceso gradual y que cada pequeño paso cuenta. Sé amable contigo mismo/a." << endl
+                 << "😊 Confío en tu resiliencia y en tu capacidad para reconectar con tu poder interior. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaTemor ()
+void terapiaTemor()
 {
-    string causa;
-    int origenTemor, impactoFisicoMental, senalesCuerpoMente, accionConcreta; 
+    string causaTemor; // Variable renombrada
+    int origenTemorGeneral, impactoFisicoMentalTemor, senalesCuerpoMenteTemor, accionConcretaTemor; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción del temor ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción del *temor*. Es una respuesta natural ante una amenaza, real o percibida, y es valiente de tu parte reconocerla y abordarla. 😨" << endl
-              << "¿Podrías compartirme brevemente la situación o el pensamiento principal que te ha llevado a sentir *temor* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente la situación o el pensamiento principal que te ha llevado a sentir *temor* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaTemor); // Usando la variable renombrada
     cout << endl << "Gracias por compartir eso. Reconocer el *temor* es el primer paso para entenderlo y gestionarlo. Es una emoción válida y a menudo protectora. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *temor*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *temor*? 🤔" << endl << endl;
     cout << "1.- Una amenaza directa a mi seguridad física o la de mis seres queridos. 🛡" << endl
-              << "2.- La posibilidad de fracaso, rechazo o juicio en una situación importante. 📉" << endl
-              << "3.- Lo desconocido o la incertidumbre sobre el futuro. ❓" << endl
-              << "4.- Un evento pasado traumático o una experiencia negativa que se repite. 🕰" << endl << endl;
-    origenTemor = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- La posibilidad de fracaso, rechazo o juicio en una situación importante. 📉" << endl
+                 << "3.- Lo desconocido o la incertidumbre sobre el futuro. ❓" << endl
+                 << "4.- Un evento pasado traumático o una experiencia negativa que se repite. 🕰" << endl << endl;
+    origenTemorGeneral = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *temor* nos da claridad sobre la raíz de esta intensa emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* este *temor* tu vida diaria y tus emociones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* este *temor* tu vida diaria y tus emociones? 😥" << endl << endl;
     cout << "1.- Me siento paralizado/a, con dificultad para tomar decisiones o actuar. 🥶" << endl
-              << "2.- Evito situaciones o personas relacionadas con mi temor. 🚫" << endl
-              << "3.- Tengo pensamientos intrusivos o una preocupación constante sobre lo que temo. 🧠" << endl
-              << "4.- Mi sueño o apetito se han visto afectados. 😴" << endl << endl; 
-    impactoFisicoMental = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); 
+                 << "2.- Evito situaciones o personas relacionadas con mi temor. 🚫" << endl
+                 << "3.- Tengo pensamientos intrusivos o una preocupación constante sobre lo que temo. 🧠" << endl
+                 << "4.- Mi sueño o apetito se han visto afectados. 😴" << endl << endl; 
+    impactoFisicoMentalTemor = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (impactoFisicoMental) {
+    switch (impactoFisicoMentalTemor) { // Usando la variable renombrada
         case 1:
             cout << endl << endl << "Comprendo. Sentirse paralizado/a por el *temor* es una respuesta natural de protección, pero puede limitar tu capacidad de acción. 🥶" << endl
-                      << "Es válido sentir esa dificultad para moverse hacia adelante. 😔" << endl << endl
-                      << "¿Cómo crees que esta parálisis te afecta más en tu día a día? 🤔" << endl << endl
-                      << "1.- Me cuesta iniciar tareas o tomar decisiones importantes. ⏳" << endl
-                      << "2.- Siento que estoy perdiendo oportunidades por miedo a actuar. 📉" << endl
-                      << "3.- Me siento frustrado/a conmigo mismo/a por no poder superar el temor. 😠" << endl
-                      << "4.- Afecta mi confianza en mi propia capacidad de respuesta. ❓" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+                         << "Es válido sentir esa dificultad para moverse hacia adelante. 😔" << endl << endl
+                         << "¿Cómo crees que esta parálisis te afecta más en tu día a día? 🤔" << endl << endl
+                         << "1.- Me cuesta iniciar tareas o tomar decisiones importantes. ⏳" << endl
+                         << "2.- Siento que estoy perdiendo oportunidades por miedo a actuar. 📉" << endl
+                         << "3.- Me siento frustrado/a conmigo mismo/a por no poder superar el temor. 😠" << endl
+                         << "4.- Afecta mi confianza en mi propia capacidad de respuesta. ❓" << endl << endl;
+            senalesCuerpoMenteTemor = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4); // Usando la variable renombrada
             break;
         case 2:
             cout << endl << endl << "Entiendo. La evitación es una estrategia común para lidiar con el *temor*, pero a largo plazo puede limitar tu vida. 🚫" << endl
-                      << "Es un mecanismo de protección, pero puede impedirnos experimentar cosas nuevas. 🙏" << endl << endl
-                      << "¿Cómo crees que esta evitación te afecta más? 🤔" << endl << endl
-                      << "1.- Me siento limitado/a en mis actividades diarias o sociales. ⛓" << endl
-                      << "2.- Siento que el temor 'gana terreno' en mi vida. 📉" << endl
-                      << "3.- Me genera más estrés o frustración a largo plazo. 🌧" << endl
-                      << "4.- Siento que me estoy perdiendo de vivir plenamente. 😔" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es un mecanismo de protección, pero puede impedirnos experimentar cosas nuevas. 🙏" << endl << endl
+                         << "¿Cómo crees que esta evitación te afecta más? 🤔" << endl << endl
+                         << "1.- Me siento limitado/a en mis actividades diarias o sociales. ⛓" << endl
+                         << "2.- Siento que el temor 'gana terreno' en mi vida. 📉" << endl
+                         << "3.- Me genera más estrés o frustración a largo plazo. 🌧" << endl
+                         << "4.- Siento que me estoy perdiendo de vivir plenamente. 😔" << endl << endl;
+            senalesCuerpoMenteTemor = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 3:
             cout << endl << endl << "Comprendo. Los pensamientos intrusivos y la preocupación constante son compañeros frecuentes del *temor*. 🧠" << endl
-                      << "Es como si tu mente estuviera atrapada en un ciclo de alerta. Es agotador, y es importante reconocerlo. 😔" << endl << endl
-                      << "¿Cómo crees que estos pensamientos te afectan más en tu vida? 🤔" << endl << endl
-                      << "1.- Me cuesta concentrarme en otras cosas o en mis tareas. 📚" << endl
-                      << "2.- Siento que no puedo desconectar mi mente, incluso al intentar descansar. ⚡" << endl
-                      << "3.- La preocupación me quita el sueño o me genera insomnio. 😴" << endl
-                      << "4.- Siento que estoy siempre en estado de alerta o 'a la defensiva'. 🛡" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es como si tu mente estuviera atrapada en un ciclo de alerta. Es agotador, y es importante reconocerlo. 😔" << endl << endl
+                         << "¿Cómo crees que estos pensamientos te afectan más en tu vida? 🤔" << endl << endl
+                         << "1.- Me cuesta concentrarme en otras cosas o en mis tareas. 📚" << endl
+                         << "2.- Siento que no puedo desconectar mi mente, incluso al intentar descansar. ⚡" << endl
+                         << "3.- La preocupación me quita el sueño o me genera insomnio. 😴" << endl
+                         << "4.- Siento que estoy siempre en estado de alerta o 'a la defensiva'. 🛡" << endl << endl;
+            senalesCuerpoMenteTemor = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 4:
             cout << endl << endl << "Entiendo. El *temor* puede tener un impacto significativo en tu bienestar físico, afectando el sueño y el apetito. 😴" << endl
-                      << "Es una señal clara de que tu cuerpo está bajo estrés. 😔" << endl << endl
-                      << "¿Cómo crees que estos efectos físicos te impactan más en tu vida? 🤔" << endl << endl
-                      << "1.- Me siento constantemente fatigado/a y con poca energía. 🔋" << endl
-                      << "2.- Mi estado de ánimo se ve afectado por la falta de descanso.  mood_swing" << endl
-                      << "3.- Me cuesta cuidar mi alimentación o mis hábitos saludables. 🍎" << endl
-                      << "4.- Me siento más vulnerable a enfermedades o resfriados. 🤧" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es una señal clara de que tu cuerpo está bajo estrés. 😔" << endl << endl
+                         << "¿Cómo crees que estos efectos físicos te impactan más en tu vida? 🤔" << endl << endl
+                         << "1.- Me siento constantemente fatigado/a y con poca energía. 🔋" << endl
+                         << "2.- Mi estado de ánimo se ve afectado por la falta de descanso.  mood_swing" << endl
+                         << "3.- Me cuesta cuidar mi alimentación o mis hábitos saludables. 🍎" << endl
+                         << "4.- Me siento más vulnerable a enfermedades o resfriados. 🤧" << endl << endl;
+            senalesCuerpoMenteTemor = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
     }
     
@@ -2892,39 +3122,39 @@ void terapiaTemor ()
     system("cls");   
 
     cout << endl << "Ahora, pensemos en las *señales que tu cuerpo y mente te dan* cuando sientes *temor*. ¿Cuáles de estas son las más notorias en ti? 😟" << endl << endl
-              << "1.- Corazón acelerado, sudoración o temblores. 💨" << endl
-              << "2.- Sensación de tensión muscular, especialmente en cuello, hombros o mandíbula. 💪" << endl
-              << "3.- Piel fría, 'escalofrío' o sensación de 'nudo' en el estómago. 🥶" << endl
-              << "4.- Dificultad para respirar profundamente o sensación de ahogo. 🌬" << endl << endl;
-    senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "1.- Corazón acelerado, sudoración o temblores. 💨" << endl
+                 << "2.- Sensación de tensión muscular, especialmente en cuello, hombros o mandíbula. 💪" << endl
+                 << "3.- Piel fría, 'escalofrío' o sensación de 'nudo' en el estómago. 🥶" << endl
+                 << "4.- Dificultad para respirar profundamente o sensación de ahogo. 🌬" << endl << endl;
+    senalesCuerpoMenteTemor = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer cómo el *temor* se manifiesta en tu cuerpo y mente es vital. Escuchar estas señales te ayudará a actuar cuando más lo necesitas y a darte el cuidado que mereces. 🫂" << endl << endl;
 
     cout << "¿Qué *recursos internos* o *fortalezas personales, por pequeñas que parezcan, crees que aún posees para enfrentar este **temor*? 🌟" << endl << endl
-              << "1.- Mi capacidad para analizar la situación y buscar información. 📊" << endl
-              << "2.- Mi resiliencia, porque he superado desafíos en el pasado. 💪" << endl
-              << "3.- Mi habilidad para buscar apoyo en personas de confianza. 🤝" << endl
-              << "4.- Mi fe o mi capacidad para mantener la esperanza, incluso en la adversidad. 🙏" << endl << endl;
-    int recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad para analizar la situación y buscar información. 📊" << endl
+                 << "2.- Mi resiliencia, porque he superado desafíos en el pasado. 💪" << endl
+                 << "3.- Mi habilidad para buscar apoyo en personas de confianza. 🤝" << endl
+                 << "4.- Mi fe o mi capacidad para mantener la esperanza, incluso en la adversidad. 🙏" << endl << endl;
+    int recursosInternosTemor = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando sientes *temor*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes recursos valiosos dentro de ti. ✨" << endl
-              << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
+                 << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
 
     system("pause"); 
     system("cls");   
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento de **temor*? 🤝" << endl << endl
-              << "1.- Hablar con un profesional de la salud mental que te ayude a manejar el temor y sus causas. 🗣" << endl
-              << "2.- Conectar con un ser querido que te escuche sin juzgar y te brinde compañía. 🫂" << endl
-              << "3.- Realizar una actividad que te ayude a disipar la tensión (ejercicio, meditación, hobby). 🧘‍♀" << endl
-              << "4.- Buscar estrategias prácticas para enfrentar directamente la situación que te causa temor, si es posible. 🧭" << endl << endl;
-    int busquedaApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un profesional de la salud mental que te ayude a manejar el temor y sus causas. 🗣" << endl
+                 << "2.- Conectar con un ser querido que te escuche sin juzgar y te brinde compañía. 🫂" << endl
+                 << "3.- Realizar una actividad que te ayude a disipar la tensión (ejercicio, meditación, hobby). 🧘‍♀" << endl
+                 << "4.- Buscar estrategias prácticas para enfrentar directamente la situación que te causa temor, si es posible. 🧭" << endl << endl;
+    int busquedaApoyoTemor = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar el *temor*. Es un paso hacia la sanación. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño gesto de autocuidado* o *acción* puedes comprometerte a hacer hoy mismo o en las próximas 24 horas para aliviar un poco este *temor*? 👣" << endl << endl
-              << "1.- Realizar una técnica de respiración consciente (ej. respiración diafragmática) por 5 minutos. 🌬" << endl
-              << "2.- Escuchar música que te genere calma o te distraiga de la preocupación. 🎶" << endl
-              << "3.- Dar un paseo corto, aunque sea dentro de casa, para mover el cuerpo. 🚶‍♀" << endl
-              << "4.- Escribir en un diario sobre lo que sientes y te preocupa. 📝" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Realizar una técnica de respiración consciente (ej. respiración diafragmática) por 5 minutos. 🌬" << endl
+                 << "2.- Escuchar música que te genere calma o te distraiga de la preocupación. 🎶" << endl
+                 << "3.- Dar un paseo corto, aunque sea dentro de casa, para mover el cuerpo. 🚶‍♀" << endl
+                 << "4.- Escribir en un diario sobre lo que sientes y te preocupa. 📝" << endl << endl;
+    accionConcretaTemor = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños actos de autocuidado son poderosos anclajes. Comprométete con esa acción y date crédito por cuidarte en este momento. 💪" << endl << endl;
 
     system("pause"); 
@@ -2933,93 +3163,112 @@ void terapiaTemor ()
     // --- Reflexión final y camino a seguir ---
 
     cout << endl << "¿De qué manera crees que el *temor, aunque incómodo, puede ser un **maestro* o una *oportunidad* para tu crecimiento personal? 🌱" << endl << endl
-              << "1.- Me indica las áreas de mi vida donde necesito establecer límites o protegerme. 🛡" << endl
-              << "2.- Me impulsa a desarrollar coraje y a enfrentar mis miedos de forma gradual. 🚀" << endl
-              << "3.- Me ayuda a ser más consciente de mis reacciones y a encontrar nuevas formas de afrontar el estrés. 🧠" << endl
-              << "4.- Me conecta con mi vulnerabilidad y la importancia de pedir ayuda cuando la necesito. 🤝" << endl << endl;
-    int temorMaestro = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me indica las áreas de mi vida donde necesito establecer límites o protegerme. 🛡" << endl
+                 << "2.- Me impulsa a desarrollar coraje y a enfrentar mis miedos de forma gradual. 🚀" << endl
+                 << "3.- Me ayuda a ser más consciente de mis reacciones y a encontrar nuevas formas de afrontar el estrés. 🧠" << endl
+                 << "4.- Me conecta con mi vulnerabilidad y la importancia de pedir ayuda cuando la necesito. 🤝" << endl << endl;
+    int temorMaestroTemor = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Excelente! Reconocer el mensaje del *temor* es un paso significativo. Tu capacidad para transformar la incomodidad en aprendizaje es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de valentía* o *auto-compasión* te gustaría darte a ti mismo/a en este momento de *temor*? ✨" << endl << endl
-              << "1.- 'Soy más valiente de lo que creo, y puedo enfrentar esto.' 💪" << endl
-              << "2.- 'Está bien sentir miedo, es una señal de que algo me importa.' 🙏" << endl
-              << "3.- 'No tengo que hacerlo todo solo/a, el apoyo me fortalece.' 🫂" << endl
-              << "4.- 'Cada paso que doy, por pequeño que sea, es un acto de coraje.' 💖" << endl << endl;
-    int mensajeValentia = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Soy más valiente de lo que creo, y puedo enfrentar esto.' 💪" << endl
+                 << "2.- 'Está bien sentir miedo, es una señal de que algo me importa.' 🙏" << endl
+                 << "3.- 'No tengo que hacerlo todo solo/a, el apoyo me fortalece.' 🫂" << endl
+                 << "4.- 'Cada paso que doy, por pequeño que sea, es un acto de coraje.' 💖" << endl << endl;
+    int mensajeValentiaTemor = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en medio del *temor*. Recuerda que mereces sentirte seguro/a y que tienes la capacidad de transitar y gestionar esta emoción. 💖" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Temor ---
+    cout << endl << "--- Resumen de tu Terapia de Temor ---" << endl;
+    cout << "Causa del temor: " << causaTemor << endl;
+    cout << "Origen principal del temor: " << origenTemorGeneral << endl;
+    cout << "Impacto físico y mental del temor: " << impactoFisicoMentalTemor << endl;
+    cout << "Señales en cuerpo y mente del temor: " << senalesCuerpoMenteTemor << endl;
+    // Nota: Las siguientes variables no fueron asignadas en el ámbito principal
+    // de la función con los nombres que se usan en las preguntas posteriores,
+    // por lo que no se pueden mostrar sus valores específicos aquí.
+    cout << "Recursos internos para enfrentar el temor: " << recursosInternosTemor << endl;
+    cout << "Tipo de apoyo más útil en el temor: " << busquedaApoyoTemor << endl;
+    cout << "Gesto de autocuidado o acción concreta: " << accionConcretaTemor << endl;
+    cout << "El temor como maestro u oportunidad: " << temorMaestroTemor << endl;
+    cout << "Mensaje de valentía o auto-compasión: " << mensajeValentiaTemor << endl;
+    cout << "---------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración del *temor*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la seguridad y la calma. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la seguridad y la calma. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaInquietud ()
+void terapiaInquietud()
 {
-    string causa;
-    int origenInquietud, impactoFisicoMental, senalesCuerpoMente,accionConcreta; 
+    string causaInquietud; // Variable renombrada
+    int origenInquietudGeneral, impactoFisicoMentalInquietud, senalesCuerpoMenteInquietud, accionConcretaInquietud; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de la inquietud ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción de la *inquietud*. Es esa sensación de desasosiego o agitación, a menudo sin una causa clara, y es valiente de tu parte reconocerla y abordarla. 🌪" << endl
-              << "¿Podrías compartirme brevemente la situación o el sentimiento general que te ha llevado a sentir *inquietud* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente la situación o el sentimiento general que te ha llevado a sentir *inquietud* últimamente? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaInquietud); // Usando la variable renombrada
     cout << endl << "Gracias por compartir eso. Reconocer la *inquietud* es el primer paso para entenderla y gestionarla. Es una emoción válida y a menudo un llamado a la introspección. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *inquietud*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *inquietud*? 🤔" << endl << endl;
     cout << "1.- La incertidumbre sobre el futuro o la espera de un evento. ❓" << endl
-              << "2.- Sentir que hay algo pendiente o no resuelto en tu vida. ⏳" << endl
-              << "3.- Un exceso de pensamientos o sobrecarga mental. 🧠" << endl
-              << "4.- Una energía interna que no encuentra dónde canalizarse. ⚡" << endl << endl;
-    origenInquietud = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- Sentir que hay algo pendiente o no resuelto en tu vida. ⏳" << endl
+                 << "3.- Un exceso de pensamientos o sobrecarga mental. 🧠" << endl
+                 << "4.- Una energía interna que no encuentra dónde canalizarse. ⚡" << endl << endl;
+    origenInquietudGeneral = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *inquietud* nos da claridad sobre la raíz de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta *inquietud* tu vida diaria y tus emociones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta *inquietud* tu vida diaria y tus emociones? 😥" << endl << endl;
     cout << "1.- Me cuesta concentrarme, me siento distraído/a o con dificultad para mantener la atención. 🧠" << endl
-              << "2.- Tengo problemas para relajarme, siento nerviosismo o agitación constante. 🛋" << endl
-              << "3.- Mi sueño se ha visto afectado, me cuesta conciliarlo o lo siento interrumpido. 😴" << endl
-              << "4.- Me siento con ganas de moverme, de hacer algo, pero no sé qué. 🏃‍♀" << endl << endl; 
-    impactoFisicoMental = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); 
+                 << "2.- Tengo problemas para relajarme, siento nerviosismo o agitación constante. 🛋" << endl
+                 << "3.- Mi sueño se ha visto afectado, me cuesta conciliarlo o lo siento interrumpido. 😴" << endl
+                 << "4.- Me siento con ganas de moverme, de hacer algo, pero no sé qué. 🏃‍♀" << endl << endl; 
+    impactoFisicoMentalInquietud = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
-    switch (impactoFisicoMental) {
+    switch (impactoFisicoMentalInquietud) { // Usando la variable renombrada
         case 1:
             cout << endl << endl << "Comprendo. La *inquietud* a menudo puede hacer que nuestra mente se sienta dispersa o sobrecargada, dificultando la concentración. 🧠" << endl
-                      << "Es un impacto significativo, y es válido sentir esa frustración mental. 😔" << endl << endl
-                      << "¿Cómo crees que esta dificultad para concentrarte te afecta más en tu día a día? 🤔" << endl << endl
-                      << "1.- Me cuesta iniciar tareas o mantener el enfoque en ellas. ⏳" << endl
-                      << "2.- Siento que mis pensamientos están acelerados y no puedo 'apagarme'. ⚡" << endl
-                      << "3.- Me siento abrumado/a incluso con las responsabilidades más pequeñas. ⛰" << endl
-                      << "4.- Mi rendimiento en el trabajo o estudios se ha visto afectado. 📉" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4);
+                         << "Es un impacto significativo, y es válido sentir esa frustración mental. 😔" << endl << endl
+                         << "¿Cómo crees que esta dificultad para concentrarte te afecta más en tu día a día? 🤔" << endl << endl
+                         << "1.- Me cuesta iniciar tareas o mantener el enfoque en ellas. ⏳" << endl
+                         << "2.- Siento que mis pensamientos están acelerados y no puedo 'apagarme'. ⚡" << endl
+                         << "3.- Me siento abrumado/a incluso con las responsabilidades más pequeñas. ⛰" << endl
+                         << "4.- Mi rendimiento en el trabajo o estudios se ha visto afectado. 📉" << endl << endl;
+            senalesCuerpoMenteInquietud = obtenerEntradaNumerica<int>("Selecciona la opción que más resuena contigo: ", 1, 4); // Usando la variable renombrada
             break;
         case 2:
             cout << endl << endl << "Entiendo. Los problemas para relajarse y el nerviosismo constante son manifestaciones muy comunes de la *inquietud*. 🛋" << endl
-                      << "Es como si tu cuerpo estuviera siempre en un estado de alerta suave. Es agotador, y es importante reconocerlo. 🙏" << endl << endl
-                      << "¿Cómo crees que esta inquietud o nerviosismo te afectan más? 🤔" << endl << endl
-                      << "1.- Me cuesta encontrar momentos de paz o tranquilidad. 🧘‍♀" << endl
-                      << "2.- Me siento constantemente 'en el borde' o a la expectativa. ❓" << endl
-                      << "3.- Mis relaciones personales se ven afectadas por mi estado de nerviosismo. 🫂" << endl
-                      << "4.- Siento un malestar físico general por la tensión constante. 🤕" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es como si tu cuerpo estuviera siempre en un estado de alerta suave. Es agotador, y es importante reconocerlo. 🙏" << endl << endl
+                         << "¿Cómo crees que esta inquietud o nerviosismo te afectan más? 🤔" << endl << endl
+                         << "1.- Me cuesta encontrar momentos de paz o tranquilidad. 🧘‍♀" << endl
+                         << "2.- Me siento constantemente 'en el borde' o a la expectativa. ❓" << endl
+                         << "3.- Mis relaciones personales se ven afectadas por mi estado de nerviosismo. 🫂" << endl
+                         << "4.- Siento un malestar físico general por la tensión constante. 🤕" << endl << endl;
+            senalesCuerpoMenteInquietud = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 3:
             cout << endl << endl << "Comprendo. La *inquietud* a menudo interfiere con nuestro descanso, afectando el sueño. 😴" << endl
-                      << "Es como si tu mente no pudiera desconectar. Es importante buscar formas de mejorar tu descanso. 😔" << endl << endl
-                      << "¿Cómo crees que estos problemas de sueño te impactan más? 🤔" << endl << endl
-                      << "1.- Me siento constantemente fatigado/a y con poca energía durante el día. 🔋" << endl
-                      << "2.- Mi estado de ánimo se ve afectado por la falta de descanso.  mood_swing" << endl
-                      << "3.- Me cuesta tomar decisiones o mi juicio se nubla. 🧭" << endl
-                      << "4.- Siento que mi cuerpo no se recupera adecuadamente. 📉" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es como si tu mente no pudiera desconectar. Es importante buscar formas de mejorar tu descanso. 😔" << endl << endl
+                         << "¿Cómo crees que estos problemas de sueño te impactan más? 🤔" << endl << endl
+                         << "1.- Me siento constantemente fatigado/a y con poca energía durante el día. 🔋" << endl
+                         << "2.- Mi estado de ánimo se ve afectado por la falta de descanso. mood_swing" << endl
+                         << "3.- Me cuesta tomar decisiones o mi juicio se nubla. 🧭" << endl
+                         << "4.- Siento que mi cuerpo no se recupera adecuadamente. 📉" << endl << endl;
+            senalesCuerpoMenteInquietud = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
         case 4:
             cout << endl << endl << "Entiendo. Esa sensación de 'tener que hacer algo' sin saber qué es muy característica de la *inquietud*. 🏃‍♀" << endl
-                      << "Es como si tu energía no tuviera un rumbo claro. Es importante encontrar una válvula de escape. 😔" << endl << endl
-                      << "¿Cómo crees que esta necesidad de movimiento o acción te afecta más? 🤔" << endl << endl
-                      << "1.- Me siento impaciente o frustrado/a conmigo mismo/a. 😠" << endl
-                      << "2.- Busco constantemente distracciones o nuevas actividades. 🎮" << endl
-                      << "3.- Me cuesta relajarme y simplemente 'estar'. 🧘‍♀" << endl
-                      << "4.- Siento que mi mente y mi cuerpo están siempre en marcha, sin un propósito claro. 🚀" << endl << endl;
-            senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4);
+                         << "Es como si tu energía no tuviera un rumbo claro. Es importante encontrar una válvula de escape. 😔" << endl << endl
+                         << "¿Cómo crees que esta necesidad de movimiento o acción te afecta más? 🤔" << endl << endl
+                         << "1.- Me siento impaciente o frustrado/a conmigo mismo/a. 😠" << endl
+                         << "2.- Busco constantemente distracciones o nuevas actividades. 🎮" << endl
+                         << "3.- Me cuesta relajarme y simplemente 'estar'. 🧘‍♀" << endl
+                         << "4.- Siento que mi mente y mi cuerpo están siempre en marcha, sin un propósito claro. 🚀" << endl << endl;
+            senalesCuerpoMenteInquietud = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuena: ", 1, 4); // Usando la variable renombrada
             break;
     }
     
@@ -3027,39 +3276,39 @@ void terapiaInquietud ()
     system("cls");   
 
     cout << endl << "Ahora, pensemos en las *señales que tu cuerpo y mente te dan* cuando sientes *inquietud*. ¿Cuáles de estas son las más notorias en ti? 😟" << endl << endl
-              << "1.- Agitación en las piernas o manos, dificultad para quedarse quieto/a.  restless_person" << endl
-              << "2.- Una sensación de 'nudo' en el estómago o tensión en el pecho. 🌪" << endl
-              << "3.- Suspiros frecuentes o una respiración más superficial. 🌬" << endl
-              << "4.- Pensamientos dispersos, dificultad para concentrarse o 'ruido mental'. 🧠" << endl << endl;
-    senalesCuerpoMente = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "1.- Agitación en las piernas o manos, dificultad para quedarse quieto/a. restless_person" << endl
+                 << "2.- Una sensación de 'nudo' en el estómago o tensión en el pecho. 🌪" << endl
+                 << "3.- Suspiros frecuentes o una respiración más superficial. 🌬" << endl
+                 << "4.- Pensamientos dispersos, dificultad para concentrarse o 'ruido mental'. 🧠" << endl << endl;
+    senalesCuerpoMenteInquietud = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer cómo la *inquietud* se manifiesta en tu cuerpo y mente es vital. Escuchar estas señales te ayudará a actuar cuando más lo necesitas y a darte el cuidado que mereces. 🫂" << endl << endl;
 
     cout << "¿Qué *recursos internos* o *fortalezas personales, por pequeñas que parezcan, crees que aún posees para enfrentar esta **inquietud*? 🌟" << endl << endl
-              << "1.- Mi capacidad de auto-observación y de identificar lo que me está pasando. 🧠" << endl
-              << "2.- Mi deseo de encontrar calma y serenidad. 💡" << endl
-              << "3.- Mi habilidad para buscar actividades que me distraigan o me relajen. 🧘‍♀" << endl
-              << "4.- Mi resiliencia, porque sé que he superado momentos de desasosiego antes. 💪" << endl << endl;
-    int recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad de auto-observación y de identificar lo que me está pasando. 🧠" << endl
+                 << "2.- Mi deseo de encontrar calma y serenidad. 💡" << endl
+                 << "3.- Mi habilidad para buscar actividades que me distraigan o me relajen. 🧘‍♀" << endl
+                 << "4.- Mi resiliencia, porque sé que he superado momentos de desasosiego antes. 💪" << endl << endl;
+    int recursosInternosInquietud = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando te sientes inquieto/a, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes recursos valiosos dentro de ti. ✨" << endl
-              << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
+                 << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
 
     system("pause"); 
     system("cls");   
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento de **inquietud*? 🤝" << endl << endl
-              << "1.- Hablar con un profesional de la salud mental para estrategias de manejo del estrés/ansiedad. 🗣" << endl
-              << "2.- Conectar con un ser querido que te escuche sin juzgar y te brinde compañía. 🫂" << endl
-              << "3.- Realizar una actividad física que te ayude a liberar el exceso de energía. 🏃‍♀" << endl
-              << "4.- Establecer una rutina de relajación o meditación diaria. 🧘‍♀" << endl << endl;
-    int busquedaApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un profesional de la salud mental para estrategias de manejo del estrés/ansiedad. 🗣" << endl
+                 << "2.- Conectar con un ser querido que te escuche sin juzgar y te brinde compañía. 🫂" << endl
+                 << "3.- Realizar una actividad física que te ayude a liberar el exceso de energía. 🏃‍♀" << endl
+                 << "4.- Establecer una rutina de relajación o meditación diaria. 🧘‍♀" << endl << endl;
+    int busquedaApoyoInquietud = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar la *inquietud*. Es un paso hacia la calma. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño gesto de autocuidado* o *acción* puedes comprometerte a hacer hoy mismo o en las próximas 24 horas para aliviar un poco esta *inquietud*? 👣" << endl << endl
-              << "1.- Realizar una técnica de respiración consciente (ej. respiración diafragmática) por 5 minutos. 🌬" << endl
-              << "2.- Escuchar música relajante o sonidos de la naturaleza. 🎶" << endl
-              << "3.- Dar un paseo corto al aire libre, prestando atención a tu entorno. 🌳" << endl
-              << "4.- Anotar en un papel tus pensamientos o preocupaciones para sacarlos de tu mente. 📝" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Realizar una técnica de respiración consciente (ej. respiración diafragmática) por 5 minutos. 🌬" << endl
+                 << "2.- Escuchar música relajante o sonidos de la naturaleza. 🎶" << endl
+                 << "3.- Dar un paseo corto al aire libre, prestando atención a tu entorno. 🌳" << endl
+                 << "4.- Anotar en un papel tus pensamientos o preocupaciones para sacarlos de tu mente. 📝" << endl << endl;
+    accionConcretaInquietud = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños actos de autocuidado son poderosos anclajes. Comprométete con esa acción y date crédito por cuidarte en este momento. 💪" << endl << endl;
 
     system("pause"); 
@@ -3068,75 +3317,96 @@ void terapiaInquietud ()
     // --- Reflexión final y camino a seguir ---
 
     cout << endl << "¿De qué manera crees que la *inquietud, aunque incómoda, puede ser un **mensaje* o una *oportunidad* para tu crecimiento personal? 🌱" << endl << endl
-              << "1.- Me indica la necesidad de prestar atención a algo que estoy ignorando. 💡" << endl
-              << "2.- Me impulsa a encontrar nuevas formas de canalizar mi energía o creatividad. 🚀" << endl
-              << "3.- Me ayuda a desarrollar paciencia y a practicar el desapego de lo que no puedo controlar. 🧘‍♀" << endl
-              << "4.- Me conecta con mi necesidad de paz y tranquilidad en mi vida. 💖" << endl << endl;
-    int inquietudMensaje = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me indica la necesidad de prestar atención a algo que estoy ignorando. 💡" << endl
+                 << "2.- Me impulsa a encontrar nuevas formas de canalizar mi energía o creatividad. 🚀" << endl
+                 << "3.- Me ayuda a desarrollar paciencia y a practicar el desapego de lo que no puedo controlar. 🧘‍♀" << endl
+                 << "4.- Me conecta con mi necesidad de paz y tranquilidad en mi vida. 💖" << endl << endl;
+    int inquietudMensajeInquietud = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Excelente! Reconocer el mensaje de la *inquietud* es un paso significativo. Tu capacidad para transformar la incomodidad en aprendizaje es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-compasión* o *paciencia* te gustaría darte a ti mismo/a en este momento de *inquietud*? ✨" << endl << endl
-              << "1.- 'Está bien no saberlo todo, un paso a la vez.' 👣" << endl
-              << "2.- 'Merezco la calma y puedo encontrarla dentro de mí.' 🏞" << endl
-              << "3.- 'Mi cuerpo y mente me están dando una señal, y los escucharé con amabilidad.' 🙏" << endl
-              << "4.- 'Esta sensación es temporal, y estoy aprendiendo a gestionarla.' 💖" << endl << endl;
-    int mensajeAutoCompasion = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Está bien no saberlo todo, un paso a la vez.' 👣" << endl
+                 << "2.- 'Merezco la calma y puedo encontrarla dentro de mí.' 🏞" << endl
+                 << "3.- 'Mi cuerpo y mente me están dando una señal, y los escucharé con amabilidad.' 🙏" << endl
+                 << "4.- 'Esta sensación es temporal, y estoy aprendiendo a gestionarla.' 💖" << endl << endl;
+    int mensajeAutoCompasionInquietud = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en medio de la *inquietud*. Recuerda que mereces sentirte en paz y que tienes la capacidad de transitar y gestionar esta emoción. 💖" << endl << endl;
 
     // Preguntas adicionales de opción múltiple
     cout << endl << "Para profundizar un poco más, ¿hay alguna pequeña acción que puedas tomar para *reducir la incertidumbre* que sientes, si es que esa es la raíz de tu inquietud? 🔍" << endl
-              << "1.- Hacer una llamada o enviar un mensaje para obtener información específica. 📞" << endl
-              << "2.- Crear una pequeña lista de cosas que sí puedes controlar en este momento. ✅" << endl
-              << "3.- Posponer una decisión difícil para cuando te sientas más tranquilo/a. ⏸" << endl
-              << "4.- Investigar más sobre el tema que te genera incertidumbre para tener más claridad. 📚" << endl << endl;
-    int accionReducirIncertidumbre = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hacer una llamada o enviar un mensaje para obtener información específica. 📞" << endl
+                 << "2.- Crear una pequeña lista de cosas que sí puedes controlar en este momento. ✅" << endl
+                 << "3.- Posponer una decisión difícil para cuando te sientas más tranquilo/a. ⏸" << endl
+                 << "4.- Investigar más sobre el tema que te genera incertidumbre para tener más claridad. 📚" << endl << endl;
+    int accionReducirIncertidumbreInquietud = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Variable renombrada
     cout << endl << "Gracias por pensar en eso. Identificar una acción concreta, por pequeña que sea, puede ser un gran paso para moverte de la *inquietud* hacia la acción y el control. 💪" << endl << endl;
 
     cout << "¿Y qué podrías hacer para darle a tu mente un *'descanso' intencional* hoy, incluso si es por unos pocos minutos? Esto puede ayudar a romper el ciclo de pensamientos. ⏸" << endl
-              << "1.- Observar un objeto o la naturaleza con total atención por un minuto. 🌳" << endl
-              << "2.- Escuchar tu canción favorita, prestando atención solo a la música. 🎧" << endl
-              << "3.- Realizar un estiramiento suave o mover tu cuerpo conscientemente. 🤸‍♀" << endl
-              << "4.- Simplemente, cerrar los ojos y respirar profundamente, sin juzgar los pensamientos que vengan. 🧘" << endl << endl;
-    int descansoIntencional = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Observar un objeto o la naturaleza con total atención por un minuto. 🌳" << endl
+                 << "2.- Escuchar tu canción favorita, prestando atención solo a la música. 🎧" << endl
+                 << "3.- Realizar un estiramiento suave o mover tu cuerpo conscientemente. 🤸‍♀" << endl
+                 << "4.- Simplemente, cerrar los ojos y respirar profundamente, sin juzgar los pensamientos que vengan. 🧘" << endl << endl;
+    int descansoIntencionalInquietud = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Variable renombrada
     cout << endl << "¡Excelente idea! Permitirte esos momentos de *descanso intencional* puede hacer una gran diferencia en cómo manejas la *inquietud*. Recuerda que cuidarte también es un acto de fuerza. ✨" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+     // --- Resumen de tu Terapia de Inquietud ---
+    cout << endl << "--- Resumen de tu Terapia de Inquietud ---" << endl;
+    cout << "Causa de la inquietud: " << causaInquietud << endl;
+    cout << "Origen principal de la inquietud: " << origenInquietudGeneral << endl;
+    cout << "Impacto físico y mental de la inquietud: " << impactoFisicoMentalInquietud << endl;
+    cout << "Señales en cuerpo y mente de la inquietud: " << senalesCuerpoMenteInquietud << endl;
+    // Nota: Las siguientes variables no fueron asignadas en el ámbito principal
+    // de la función con los nombres que se usan en las preguntas posteriores,
+    // por lo que no se pueden mostrar sus valores específicos aquí.
+    cout << "Recursos internos para enfrentar la inquietud: " << recursosInternosInquietud << endl;
+    cout << "Tipo de apoyo más útil en la inquietud: " << busquedaApoyoInquietud << endl;
+    cout << "Gesto de autocuidado o acción concreta: " << accionConcretaInquietud << endl;
+    cout << "La inquietud como mensaje u oportunidad: " << inquietudMensajeInquietud << endl;
+    cout << "Mensaje de auto-compasión o paciencia: " << mensajeAutoCompasionInquietud << endl;
+    cout << "Acción para reducir la incertidumbre: " << accionReducirIncertidumbreInquietud << endl;
+    cout << "Descanso intencional para la mente: " << descansoIntencionalInquietud << endl;
+    cout << "---------------------------------------" << endl;
+
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la *inquietud*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
 //Ira
-void terapiaDesprecio ()
+void terapiaDesprecio()
 {
-    string causa;
-    int origenDesprecio, impactoPersonal, senalesInternas, recursosInternos, posibilidadesApoyo;
-    int accionConcreta, transformarDesprecio, mensajeFinal, creenciaSubyacente, accionNoReaccion;
+    string causaDesprecio; // Variable renombrada
+    int origenDesprecioGeneral, impactoPersonalDesprecio, senalesInternasDesprecio, recursosInternosDesprecio, posibilidadesApoyoDesprecio; // Variables renombradas
+    int accionConcretaDesprecio, transformarDesprecioProceso, mensajeFinalDesprecio, creenciaSubyacenteDesprecio, accionNoReaccionDesprecio; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción del desprecio ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción del *desprecio*. A menudo es una emoción compleja, una mezcla de ira y disgusto, que nos distancia de los demás. Es un acto de valentía reconocerla y abordarla. 😠" << endl
-              << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *desprecio* hacia alguien o algo? No necesitas entrar en detalles, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *desprecio* hacia alguien o algo? No necesitas entrar en detalles, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaDesprecio); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer el *desprecio* es el primer paso para entender qué lo provoca y cómo te afecta. Es una emoción intensa que puede tener un gran impacto. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *desprecio*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *desprecio*? 🤔" << endl << endl;
     cout << "1.- Sentir que la otra persona o situación carece de valor o merece mi condena. 👎" << endl
-              << "2.- Percibir una violación de mis valores fundamentales o de lo que considero correcto. ⚖" << endl
-              << "3.- Una sensación de superioridad o de que soy 'mejor' que la otra persona/situación. 👑" << endl
-              << "4.- Una experiencia pasada dolorosa o un patrón repetitivo de decepción con esa persona/situación. 🕰" << endl << endl;
-    origenDesprecio = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- Percibir una violación de mis valores fundamentales o de lo que considero correcto. ⚖" << endl
+                 << "3.- Una sensación de superioridad o de que soy 'mejor' que la otra persona/situación. 👑" << endl
+                 << "4.- Una experiencia pasada dolorosa o un patrón repetitivo de decepción con esa persona/situación. 🕰" << endl << endl;
+    origenDesprecioGeneral = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *desprecio* nos da claridad sobre las raíces de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla y elegir cómo responder. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta emoción de *desprecio* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta emoción de *desprecio* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
     cout << "1.- Me siento distante o desconectado/a de esa persona o de mi entorno. 🧊" << endl
-              << "2.- Tengo pensamientos negativos recurrentes o juicios constantes. 🧠" << endl
-              << "3.- Afecta mi capacidad de empatía o de ver la perspectiva de los demás. 🚧" << endl
-              << "4.- Me genera una sensación de amargura o de estar siempre 'a la defensiva'. 😠" << endl << endl;
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4);
+                 << "2.- Tengo pensamientos negativos recurrentes o juicios constantes. 🧠" << endl
+                 << "3.- Afecta mi capacidad de empatía o de ver la perspectiva de los demás. 🚧" << endl
+                 << "4.- Me genera una sensación de amargura o de estar siempre 'a la defensiva'. 😠" << endl << endl;
+    impactoPersonalDesprecio = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
     // La siguiente sección se mantiene como un "dummy switch" para mantener la estructura de diálogo,
     // pero no solicita más entrada del usuario aquí, para agilizar el flujo.
-    switch (impactoPersonal) {
+    switch (impactoPersonalDesprecio) { // Usando la variable renombrada
         case 1:
             cout << endl << "Comprendo. Esa distancia emocional puede ser agotadora y aislante. Es válido sentirlo. 😔" << endl;
             break;
@@ -3155,59 +3425,59 @@ void terapiaDesprecio ()
     system("cls");
 
     cout << endl << "Reconocer cómo el *desprecio* se manifiesta en tu vida es vital. Estas señales son mensajes importantes que tu sistema te envía sobre lo que necesitas abordar. Escucharlas te ayudará a darte el cuidado que mereces. 🫂" << endl << endl
-              << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes *desprecio*? 😟" << endl << endl;
+                 << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes *desprecio*? 😟" << endl << endl;
     cout << "1.- Una sensación de contracción o endurecimiento en el pecho o el estómago. 💥" << endl
-              << "2.- Una sonrisa sardónica, levantar el labio o un gesto facial de disgusto. 😒" << endl
-              << "3.- Una voz interna crítica o juiciosa hacia la persona/situación. 💬" << endl
-              << "4.- Sentir una distancia emocional o una frialdad hacia el otro. 🥶" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "2.- Una sonrisa sardónica, levantar el labio o un gesto facial de disgusto. 😒" << endl
+                 << "3.- Una voz interna crítica o juiciosa hacia la persona/situación. 💬" << endl
+                 << "4.- Sentir una distancia emocional o una frialdad hacia el otro. 🥶" << endl << endl;
+    senalesInternasDesprecio = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que esta emoción está presente y necesita ser explorada. 💡" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal, por pequeña que parezca, crees que aún posees para empezar a transformar este **desprecio*? 🌟" << endl << endl
-              << "1.- Mi capacidad para reflexionar y cuestionar mis propios juicios. 🧠" << endl
-              << "2.- Mi deseo de encontrar paz y liberarme de emociones negativas. ✨" << endl
-              << "3.- Mi habilidad para recordar la humanidad compartida, incluso en la diferencia. 🤝" << endl
-              << "4.- Mi resiliencia para cambiar patrones emocionales, incluso si es difícil. 💪" << endl << endl;
-    recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad para reflexionar y cuestionar mis propios juicios. 🧠" << endl
+                 << "2.- Mi deseo de encontrar paz y liberarme de emociones negativas. ✨" << endl
+                 << "3.- Mi habilidad para recordar la humanidad compartida, incluso en la diferencia. 🤝" << endl
+                 << "4.- Mi resiliencia para cambiar patrones emocionales, incluso si es difícil. 💪" << endl << endl;
+    recursosInternosDesprecio = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando sientes *desprecio*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes un poder interior inmenso para elegir cómo respondes. 💖" << endl
-              << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
+                 << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento para gestionar el **desprecio*? 🤝" << endl << endl
-              << "1.- Hablar con un profesional de la salud mental para explorar las raíces y estrategias de manejo. 🗣" << endl
-              << "2.- Conectar con un ser querido que te ofrezca una perspectiva diferente o una escucha sin juicio. 🫂" << endl
-              << "3.- Practicar ejercicios de empatía o toma de perspectiva (ej. intentar ver la situación desde el otro lado). 🧭" << endl
-              << "4.- Trabajar en perdonar o dejar ir, si es aplicable a la situación. 🕊" << endl << endl;
-    posibilidadesApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un profesional de la salud mental para explorar las raíces y estrategias de manejo. 🗣" << endl
+                 << "2.- Conectar con un ser querido que te ofrezca una perspectiva diferente o una escucha sin juicio. 🫂" << endl
+                 << "3.- Practicar ejercicios de empatía o toma de perspectiva (ej. intentar ver la situación desde el otro lado). 🧭" << endl
+                 << "4.- Trabajar en perdonar o dejar ir, si es aplicable a la situación. 🕊" << endl << endl;
+    posibilidadesApoyoDesprecio = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar el *desprecio*. Es un paso hacia tu bienestar emocional. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño paso concreto* puedes comprometerte a tomar HOY o en los próximos días para empezar a gestionar el *desprecio* que sientes? 👣" << endl << endl
-              << "1.- Tomar 3 respiraciones profundas cuando notes la emoción de desprecio, para crear una pausa. 🌬" << endl
-              << "2.- Escribir en un diario sobre los pensamientos y sentimientos que surgen cuando sientes desprecio, sin juzgarte. 📝" << endl
-              << "3.- Identificar un rasgo positivo, por pequeño que sea, en la persona o situación hacia la que sientes desprecio. ➕" << endl
-              << "4.- Intentar posponer el juicio y simplemente observar la situación sin reaccionar inmediatamente. 🧘" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Tomar 3 respiraciones profundas cuando notes la emoción de desprecio, para crear una pausa. 🌬" << endl
+                 << "2.- Escribir en un diario sobre los pensamientos y sentimientos que surgen cuando sientes desprecio, sin juzgarte. 📝" << endl
+                 << "3.- Identificar un rasgo positivo, por pequeño que sea, en la persona o situación hacia la que sientes desprecio. ➕" << endl
+                 << "4.- Intentar posponer el juicio y simplemente observar la situación sin reaccionar inmediatamente. 🧘" << endl << endl;
+    accionConcretaDesprecio = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia tu bienestar. 💪" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "¿De qué manera crees que el proceso de transformar el *desprecio* puede enriquecer tu vida y tus relaciones? 🌱" << endl << endl
-              << "1.- Me permitirá vivir con más paz interior y menos carga emocional. 🏞" << endl
-              << "2.- Mejorará la calidad de mis relaciones, haciéndolas más auténticas y compasivas. 🤝" << endl
-              << "3.- Aumentará mi autoconocimiento y mi capacidad de empatía. 🚀" << endl
-              << "4.- Todas las anteriores, me abrirá a una vida más plena y conectada. 🦋" << endl << endl;
-    transformarDesprecio = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me permitirá vivir con más paz interior y menos carga emocional. 🏞" << endl
+                 << "2.- Mejorará la calidad de mis relaciones, haciéndolas más auténticas y compasivas. 🤝" << endl
+                 << "3.- Aumentará mi autoconocimiento y mi capacidad de empatía. 🚀" << endl
+                 << "4.- Todas las anteriores, me abrirá a una vida más plena y conectada. 🦋" << endl << endl;
+    transformarDesprecioProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de este proceso es un paso significativo. Tu capacidad para buscar el crecimiento y el bienestar es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-compasión* o *aceptación* te gustaría darte a ti mismo/a al iniciar este camino de transformación del *desprecio*? ✨" << endl << endl
-              << "1.- 'Está bien sentir esta emoción, pero puedo elegir cómo respondo a ella.' 🙏" << endl
-              << "2.- 'Soy capaz de crecer y de transformar mis emociones más difíciles.' 💪" << endl
-              << "3.- 'Mi paz interior es una prioridad, y merezco liberarme de lo que me pesa.' 💖" << endl
-              << "4.- 'Cada paso hacia la comprensión y la compasión es un regalo para mí mismo/a.' 🎁" << endl << endl;
-    mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Está bien sentir esta emoción, pero puedo elegir cómo respondo a ella.' 🙏" << endl
+                 << "2.- 'Soy capaz de crecer y de transformar mis emociones más difíciles.' 💪" << endl
+                 << "3.- 'Mi paz interior es una prioridad, y merezco liberarme de lo que me pesa.' 💖" << endl
+                 << "4.- 'Cada paso hacia la comprensión y la compasión es un regalo para mí mismo/a.' 🎁" << endl << endl;
+    mensajeFinalDesprecio = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en tu camino hacia la liberación del *desprecio*. Recuerda que mereces vivir una vida con más compasión, empezando por ti mismo/a. 💖" << endl << endl;
 
     // --- Preguntas adicionales de opción múltiple ---
@@ -3215,57 +3485,75 @@ void terapiaDesprecio ()
     system("cls");
 
     cout << endl << "Para profundizar en tu reflexión, ¿hay alguna *creencia subyacente* que tengas sobre ti mismo/a o sobre los demás que pueda estar alimentando este sentimiento de *desprecio*? 🤔" << endl << endl
-              << "1.- 'Siento que mis estándares son muy altos y los demás no los cumplen.' 📈" << endl
-              << "2.- 'Creo que debo protegerme de ser herido/a o decepcionado/a.' 🛡" << endl
-              << "3.- 'Hay una parte de mí que siente frustración por no poder cambiar a los demás.' 🤯" << endl
-              << "4.- 'Siento que mi valía depende de cuán 'correctas' sean mis opiniones.' 👑" << endl << endl;
-    creenciaSubyacente = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4);
+                 << "1.- 'Siento que mis estándares son muy altos y los demás no los cumplen.' 📈" << endl
+                 << "2.- 'Creo que debo protegerme de ser herido/a o decepcionado/a.' 🛡" << endl
+                 << "3.- 'Hay una parte de mí que siente frustración por no poder cambiar a los demás.' 🤯" << endl
+                 << "4.- 'Siento que mi valía depende de cuán 'correctas' sean mis opiniones.' 👑" << endl << endl;
+    creenciaSubyacenteDesprecio = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Gracias por esa reflexión. Identificar esas *creencias subyacentes* es clave, ya que a menudo son los cimientos de nuestras emociones más complejas. Solo al reconocerlas, podemos empezar a cuestionarlas y, si es necesario, cambiarlas. 💡" << endl << endl;
 
     cout << "¿Qué *pequeña acción consciente* puedes tomar hoy para practicar la *no-reacción* o la *observación* desapegada la próxima vez que surja el desprecio? 🧘" << endl << endl
-              << "1.- Respirar profundamente 3 veces y nombrar la emoción: 'Estoy sintiendo desprecio.' 🌬" << endl
-              << "2.- Cambiar el foco de mi atención a algo neutral o positivo en mi entorno. 🌳" << endl
-              << "3.- Recordarme que la emoción es mía y no define la valía del otro. ✨" << endl
-              << "4.- Elegir conscientemente una respuesta diferente a la que normalmente tendría. 🔄" << endl << endl;
-    accionNoReaccion = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Respirar profundamente 3 veces y nombrar la emoción: 'Estoy sintiendo desprecio.' 🌬" << endl
+                 << "2.- Cambiar el foco de mi atención a algo neutral o positivo en mi entorno. 🌳" << endl
+                 << "3.- Recordarme que la emoción es mía y no define la valía del otro. ✨" << endl
+                 << "4.- Elegir conscientemente una respuesta diferente a la que normalmente tendría. 🔄" << endl << endl;
+    accionNoReaccionDesprecio = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Practicar la *no-reacción* y la *observación desapegada* son herramientas poderosas para ganar control sobre tus respuestas emocionales. Cada vez que lo intentes, estás fortaleciendo tu capacidad de elegir la paz. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Desprecio ---
+    cout << endl << "--- Resumen de tu Terapia de Desprecio ---" << endl;
+    cout << "Causa del desprecio: " << causaDesprecio << endl;
+    cout << "Origen principal del desprecio: " << origenDesprecioGeneral << endl;
+    cout << "Impacto personal del desprecio: " << impactoPersonalDesprecio << endl;
+    cout << "Señales internas del desprecio: " << senalesInternasDesprecio << endl;
+    cout << "Recursos internos para transformar el desprecio: " << recursosInternosDesprecio << endl;
+    cout << "Posibilidades de apoyo para gestionar el desprecio: " << posibilidadesApoyoDesprecio << endl;
+    cout << "Acción concreta para gestionar el desprecio: " << accionConcretaDesprecio << endl;
+    cout << "Cómo el proceso de transformación enriquece tu vida: " << transformarDesprecioProceso << endl;
+    cout << "Mensaje de auto-compasión o aceptación: " << mensajeFinalDesprecio << endl;
+    cout << "Creencia subyacente que alimenta el desprecio: " << creenciaSubyacenteDesprecio << endl;
+    cout << "Acción consciente para practicar la no-reacción: " << accionNoReaccionDesprecio << endl;
+    cout << "---------------------------------------" << endl;
+    
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración del *desprecio*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la compasión y la conexión. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la compasión y la conexión. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaAgresion ()
+void terapiaAgresion()
 {
-    string causa;
-    int origenAgresion, impactoPersonal, senalesInternas, recursosInternos, posibilidadesApoyo;
-    int accionConcreta, transformarAgresion, mensajeFinal, senalTemprana, preguntaConsciente;
+    string causaAgresion; // Variable renombrada
+    int origenAgresionGeneral, impactoPersonalAgresion, senalesInternasAgresion, recursosInternosAgresion, posibilidadesApoyoAgresion; // Variables renombradas
+    int accionConcretaAgresion, transformarAgresionProceso, mensajeFinalAgresion, senalTempranaAgresion, preguntaConscienteAgresion; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de la agresión ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción de la *agresión*. A menudo, la agresión es una respuesta intensa a la frustración, el miedo o la percepción de una amenaza. Es un acto de valentía reconocerla y abordarla. 💥" << endl
-              << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste o expresaste *agresión*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste o expresaste *agresión*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaAgresion); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer la *agresión* es el primer paso para entender qué la provoca y cómo te afecta. Es una emoción poderosa y compleja. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *agresión*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *agresión*? 🤔" << endl << endl;
     cout << "1.- La frustración ante un obstáculo o una situación que no puedo controlar. 😠" << endl
-              << "2.- Sentirme amenazado/a, atacado/a o que mis límites fueron violados. 🛡" << endl
-              << "3.- Una acumulación de estrés o ira no expresada que finalmente explotó. 🤯" << endl
-              << "4.- La incapacidad para comunicarme o ser escuchado/a de otra manera. 🗣" << endl << endl;
-    origenAgresion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- Sentirme amenazado/a, atacado/a o que mis límites fueron violados. 🛡" << endl
+                 << "3.- Una acumulación de estrés o ira no expresada que finalmente explotó. 🤯" << endl
+                 << "4.- La incapacidad para comunicarme o ser escuchado/a de otra manera. 🗣" << endl << endl;
+    origenAgresionGeneral = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *agresión* nos da claridad sobre las raíces de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla y elegir cómo responder. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta emoción de *agresión* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta emoción de *agresión* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
     cout << "1.- Siento remordimiento o culpa después de un episodio agresivo. 😔" << endl
-              << "2.- Mis relaciones personales se han visto tensas o dañadas. 💔" << endl
-              << "3.- Me siento con mucha energía negativa, tensión o agotamiento. 🔋" << endl
-              << "4.- Me cuesta confiar en mí mismo/a para manejar mis emociones de forma constructiva. 📉" << endl << endl;
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4);
+                 << "2.- Mis relaciones personales se han visto tensas o dañadas. 💔" << endl
+                 << "3.- Me siento con mucha energía negativa, tensión o agotamiento. 🔋" << endl
+                 << "4.- Me cuesta confiar en mí mismo/a para manejar mis emociones de forma constructiva. 📉" << endl << endl;
+    impactoPersonalAgresion = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
     // La siguiente sección se mantiene como un "dummy switch" para mantener la estructura de diálogo,
     // pero no solicita más entrada del usuario aquí, para agilizar el flujo.
-    switch (impactoPersonal) {
+    switch (impactoPersonalAgresion) { // Usando la variable renombrada
         case 1:
             cout << endl << "Comprendo. Esos sentimientos de culpa pueden ser muy pesados. Reconocerlos es importante. 😔" << endl;
             break;
@@ -3284,59 +3572,59 @@ void terapiaAgresion ()
     system("cls");
 
     cout << endl << "Reconocer cómo la *agresión* se manifiesta en tu vida es vital. Estas señales son mensajes importantes que tu sistema te envía sobre lo que necesitas abordar. Escucharlas te ayudará a darte el cuidado que mereces. 🫂" << endl << endl
-              << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que la *agresión* está surgiendo? 😟" << endl << endl;
+                 << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que la *agresión* está surgiendo? 😟" << endl << endl;
     cout << "1.- Tensión muscular (mandíbula apretada, puños cerrados, hombros tensos). 💪" << endl
-              << "2.- Aumento del ritmo cardíaco, respiración acelerada, calor corporal. 💨" << endl
-              << "3.- Pensamientos acelerados, impulsividad o ganas de atacar verbal o físicamente. 🧠" << endl
-              << "4.- Una sensación de irritabilidad o impaciencia extrema. ⚡" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "2.- Aumento del ritmo cardíaco, respiración acelerada, calor corporal. 💨" << endl
+                 << "3.- Pensamientos acelerados, impulsividad o ganas de atacar verbal o físicamente. 🧠" << endl
+                 << "4.- Una sensación de irritabilidad o impaciencia extrema. ⚡" << endl << endl;
+    senalesInternasAgresion = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que esta emoción está presente y necesita ser explorada. 💡" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal, por pequeña que parezca, crees que aún posees para empezar a transformar esta **agresión* en una respuesta más constructiva? 🌟" << endl << endl
-              << "1.- Mi capacidad para reconocer cuándo estoy perdiendo el control. 🚦" << endl
-              << "2.- Mi deseo de mejorar mis relaciones y mi paz interior. ✨" << endl
-              << "3.- Mi habilidad para aprender nuevas formas de expresar mis necesidades. 📚" << endl
-              << "4.- Mi resiliencia para cambiar patrones de comportamiento. 💪" << endl << endl;
-    recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad para reconocer cuándo estoy perdiendo el control. 🚦" << endl
+                 << "2.- Mi deseo de mejorar mis relaciones y mi paz interior. ✨" << endl
+                 << "3.- Mi habilidad para aprender nuevas formas de expresar mis necesidades. 📚" << endl
+                 << "4.- Mi resiliencia para cambiar patrones de comportamiento. 💪" << endl << endl;
+    recursosInternosAgresion = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando sientes *agresión*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes un poder interior inmenso para elegir cómo respondes. 💖" << endl
-              << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
+                 << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento para gestionar la **agresión*? 🤝" << endl << endl
-              << "1.- Hablar con un profesional de la salud mental que te ayude a identificar detonantes y estrategias de manejo. 🗣" << endl
-              << "2.- Aprender y practicar técnicas de manejo de la ira o de comunicación asertiva. 📚" << endl
-              << "3.- Buscar actividades físicas o creativas para canalizar la energía acumulada. 🏃‍♀" << endl
-              << "4.- Conectar con un ser querido que te escuche y te ayude a ver la situación desde otra perspectiva. 🫂" << endl << endl;
-    posibilidadesApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un profesional de la salud mental que te ayude a identificar detonantes y estrategias de manejo. 🗣" << endl
+                 << "2.- Aprender y practicar técnicas de manejo de la ira o de comunicación asertiva. 📚" << endl
+                 << "3.- Buscar actividades físicas o creativas para canalizar la energía acumulada. 🏃‍♀" << endl
+                 << "4.- Conectar con un ser querido que te escuche y te ayude a ver la situación desde otra perspectiva. 🫂" << endl << endl;
+    posibilidadesApoyoAgresion = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar la *agresión*. Es un paso hacia tu bienestar emocional. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño paso concreto* puedes comprometerte a tomar HOY o en los próximos días para empezar a gestionar la *agresión* cuando surja? 👣" << endl << endl
-              << "1.- Alejarte físicamente de la situación por unos minutos antes de responder. 🚶" << endl
-              << "2.- Realizar 5 respiraciones profundas y lentas para calmar tu cuerpo. 🌬" << endl
-              << "3.- Identificar la emoción real debajo de la agresión (ej. miedo, tristeza, frustración). 💡" << endl
-              << "4.- Escribir lo que sientes en un diario antes de hablar o reaccionar. 📝" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Alejarte físicamente de la situación por unos minutos antes de responder. 🚶" << endl
+                 << "2.- Realizar 5 respiraciones profundas y lentas para calmar tu cuerpo. 🌬" << endl
+                 << "3.- Identificar la emoción real debajo de la agresión (ej. miedo, tristeza, frustración). 💡" << endl
+                 << "4.- Escribir lo que sientes en un diario antes de hablar o reaccionar. 📝" << endl << endl;
+    accionConcretaAgresion = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia tu bienestar. 💪" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "¿De qué manera crees que el proceso de transformar la *agresión* puede enriquecer tu vida y tus relaciones? 🌱" << endl << endl
-              << "1.- Me permitirá comunicarme de forma más efectiva y constructiva. 🗣" << endl
-              << "2.- Mejorará mis relaciones al reducir conflictos y aumentar la confianza. 🤝" << endl
-              << "3.- Aumentará mi autoconocimiento y mi capacidad de regular mis emociones. 🚀" << endl
-              << "4.- Todas las anteriores, me abrirá a una vida con más paz y conexión. 🦋" << endl << endl;
-    transformarAgresion = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me permitirá comunicarme de forma más efectiva y constructiva. 🗣" << endl
+                 << "2.- Mejorará mis relaciones al reducir conflictos y aumentar la confianza. 🤝" << endl
+                 << "3.- Aumentará mi autoconocimiento y mi capacidad de regular mis emociones. 🚀" << endl
+                 << "4.- Todas las anteriores, me abrirá a una vida con más paz y conexión. 🦋" << endl << endl;
+    transformarAgresionProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de este proceso es un paso significativo. Tu capacidad para buscar el crecimiento y el bienestar es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-compasión* o *esperanza* te gustaría darte a ti mismo/a al iniciar este camino de transformación de la *agresión*? ✨" << endl << endl
-              << "1.- 'Está bien sentir ira, lo importante es cómo elijo responder a ella.' 🙏" << endl
-              << "2.- 'Soy capaz de aprender y desarrollar nuevas formas de expresar mis emociones.' 💪" << endl
-              << "3.- 'Merezco paz y relaciones saludables, y estoy trabajando para lograrlas.' 💖" << endl
-              << "4.- 'Cada momento es una nueva oportunidad para elegir la calma sobre la reacción.' 🔄" << endl << endl;
-    mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Está bien sentir ira, lo importante es cómo elijo responder a ella.' 🙏" << endl
+                 << "2.- 'Soy capaz de aprender y desarrollar nuevas formas de expresar mis emociones.' 💪" << endl
+                 << "3.- 'Merezco paz y relaciones saludables, y estoy trabajando para lograrlas.' 💖" << endl
+                 << "4.- 'Cada momento es una nueva oportunidad para elegir la calma sobre la reacción.' 🔄" << endl << endl;
+    mensajeFinalAgresion = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en tu camino hacia la gestión de la *agresión*. Recuerda que mereces vivir una vida con más calma y respeto, empezando por ti mismo/a. 💖" << endl << endl;
 
     // --- Preguntas adicionales de opción múltiple ---
@@ -3344,57 +3632,75 @@ void terapiaAgresion ()
     system("cls");
 
     cout << endl << "Para profundizar en tu reflexión, ¿qué *señal temprana* podrías aprender a identificar para darte cuenta de que la agresión está escalando, y así poder intervenir antes? 🤔" << endl << endl
-              << "1.- Una sensación de calor o presión en el pecho o la cabeza. 🌡" << endl
-              << "2.- Mi voz se eleva o mis palabras se vuelven más cortantes. 🗣" << endl
-              << "3.- Siento el impulso de interrumpir a los demás o de no escuchar. 👂" << endl
-              << "4.- Empiezo a culpar a otros por lo que siento o pienso.  blaming_person" << endl << endl;
-    senalTemprana = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4);
+                 << "1.- Una sensación de calor o presión en el pecho o la cabeza. 🌡" << endl
+                 << "2.- Mi voz se eleva o mis palabras se vuelven más cortantes. 🗣" << endl
+                 << "3.- Siento el impulso de interrumpir a los demás o de no escuchar. 👂" << endl
+                 << "4.- Empiezo a culpar a otros por lo que siento o pienso. blaming_person" << endl << endl;
+    senalTempranaAgresion = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Gracias por esa reflexión. Identificar esas *señales tempranas* es clave para crear una \"ventana de oportunidad\" y elegir una respuesta diferente. La autoconciencia es tu mayor herramienta. 💡" << endl << endl;
 
     cout << "Cuando sientes el impulso de actuar agresivamente, ¿qué *pregunta consciente* podrías hacerte para redirigir tu energía de forma más productiva? 🧘" << endl << endl
-              << "1.- \"¿Qué necesidad real estoy tratando de satisfacer con esta agresión?\" ❓" << endl
-              << "2.- \"¿Qué resultado quiero realmente lograr en esta situación?\" ✅" << endl
-              << "3.- \"¿Hay otra forma, más constructiva, de comunicar lo que siento?\" 🗣" << endl
-              << "4.- \"¿Qué acción puedo tomar que me acerque a la calma en lugar de alejarme?\" 🏞" << endl << endl;
-    preguntaConsciente = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- \"¿Qué necesidad real estoy tratando de satisfacer con esta agresión?\" ❓" << endl
+                 << "2.- \"¿Qué resultado quiero realmente lograr en esta situación?\" ✅" << endl
+                 << "3.- \"¿Hay otra forma, más constructiva, de comunicar lo que siento?\" 🗣" << endl
+                 << "4.- \"¿Qué acción puedo tomar que me acerque a la calma en lugar de alejarme?\" 🏞" << endl << endl;
+    preguntaConscienteAgresion = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Hacerte esas *preguntas conscientes* en el momento puede cambiar radicalmente tu respuesta. Estás eligiendo el autocontrol y la sabiduría sobre el impulso. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Agresión ---
+    cout << endl << "--- Resumen de tu Terapia de Agresión ---" << endl;
+    cout << "Causa de la agresión: " << causaAgresion << endl;
+    cout << "Origen principal de la agresión: " << origenAgresionGeneral << endl;
+    cout << "Impacto personal de la agresión: " << impactoPersonalAgresion << endl;
+    cout << "Señales internas de la agresión: " << senalesInternasAgresion << endl;
+    cout << "Recursos internos para transformar la agresión: " << recursosInternosAgresion << endl;
+    cout << "Posibilidades de apoyo para gestionar la agresión: " << posibilidadesApoyoAgresion << endl;
+    cout << "Acción concreta para gestionar la agresión: " << accionConcretaAgresion << endl;
+    cout << "Cómo el proceso de transformación enriquece tu vida: " << transformarAgresionProceso << endl;
+    cout << "Mensaje de auto-compasión o esperanza: " << mensajeFinalAgresion << endl;
+    cout << "Señal temprana para intervenir en la agresión: " << senalTempranaAgresion << endl;
+    cout << "Pregunta consciente para redirigir la energía: " << preguntaConscienteAgresion << endl;
+    cout << "---------------------------------------" << endl;
+    
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la *agresión*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma y la auto-regulación. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma y la auto-regulación. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaDominio ()
+void terapiaDominio()
 {
-    string causa;
-    int origenDominio, impactoPersonal, senalesInternas, recursosInternos, posibilidadesApoyo;
-    int accionConcreta, transformarDominio, mensajeFinal, reconocerNecesidad, cambiarPatron;
+    string causaDominio; // Variable renombrada
+    int origenDominioGeneral, impactoPersonalDominio, senalesInternasDominio, recursosInternosDominio, posibilidadesApoyoDominio; // Variables renombradas
+    int accionConcretaDominio, transformarDominioProceso, mensajeFinalDominio, reconocerNecesidadDominio, cambiarPatronDominio; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción del dominio negativo ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción del *dominio negativo*. Esta es la sensación o el impulso de ejercer control excesivo o manipulador sobre otros, o de sentirte dominado/a de una manera perjudicial. Es un acto de valentía reconocer esta dinámica y abordarla. 🔗" << endl
-              << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste o ejerciste un *dominio negativo*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste o ejerciste un *dominio negativo*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaDominio); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer el *dominio negativo* es el primer paso para entender qué lo provoca y cómo te afecta. Es una emoción compleja que impacta profundamente las relaciones. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu sentir o ejercer el *dominio negativo*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu sentir o ejercer el *dominio negativo*? 🤔" << endl << endl;
     cout << "1.- El miedo a perder el control o a ser vulnerable. 😨" << endl
-              << "2.- La necesidad de sentirte seguro/a o de imponer tu voluntad. 👑" << endl
-              << "3.- Un patrón aprendido en relaciones pasadas o en tu entorno familiar. 🕰" << endl
-              << "4.- La percepción de que necesitas manipular para lograr tus objetivos. 🎭" << endl << endl;
-    origenDominio = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- La necesidad de sentirte seguro/a o de imponer tu voluntad. 👑" << endl
+                 << "3.- Un patrón aprendido en relaciones pasadas o en tu entorno familiar. 🕰" << endl
+                 << "4.- La percepción de que necesitas manipular para lograr tus objetivos. 🎭" << endl << endl;
+    origenDominioGeneral = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen del *dominio negativo* nos da claridad sobre las raíces de esta dinámica. Este reconocimiento es una herramienta poderosa para empezar a gestionarla y elegir cómo responder. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta emoción o patrón de *dominio negativo* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta emoción o patrón de *dominio negativo* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
     cout << "1.- Mis relaciones se sienten tensas, desequilibradas o basadas en el miedo. 💔" << endl
-              << "2.- Siento agotamiento, culpa o una presión constante por mantener el control. 🤯" << endl
-              << "3.- Me cuesta construir confianza genuina o intimidad con otros. 🧊" << endl
-              << "4.- Impide que otros expresen su autonomía o su verdadera opinión cerca de mí. 🚫" << endl << endl;
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4);
+                 << "2.- Siento agotamiento, culpa o una presión constante por mantener el control. 🤯" << endl
+                 << "3.- Me cuesta construir confianza genuina o intimidad con otros. 🧊" << endl
+                 << "4.- Impide que otros expresen su autonomía o su verdadera opinión cerca de mí. 🚫" << endl << endl;
+    impactoPersonalDominio = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
     // La siguiente sección se mantiene como un "dummy switch" para mantener la estructura de diálogo,
     // pero no solicita más entrada del usuario aquí, para agilizar el flujo.
-    switch (impactoPersonal) {
+    switch (impactoPersonalDominio) { // Usando la variable renombrada
         case 1:
             cout << endl << "Comprendo. Las relaciones tensas son agotadoras. Reconocerlo es un gran paso hacia el cambio. 💔" << endl;
             break;
@@ -3413,59 +3719,59 @@ void terapiaDominio ()
     system("cls");
 
     cout << endl << "Reconocer cómo el *dominio negativo* se manifiesta en tu vida es vital. Estas señales son mensajes importantes que tu sistema te envía sobre lo que necesitas abordar. Escucharlas te ayudará a darte el cuidado que mereces. 🫂" << endl << endl
-              << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes el impulso de ejercer un *dominio negativo*? 😟" << endl << endl;
+                 << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes el impulso de ejercer un *dominio negativo*? 😟" << endl << endl;
     cout << "1.- Una sensación de tensión o rigidez en el cuerpo, como si te prepararas para un conflicto. 💪" << endl
-              << "2.- Un aumento de la frustración o la impaciencia si las cosas no salen como quieres. 😠" << endl
-              << "3.- Pensamientos de que 'solo yo sé cómo se deben hacer las cosas' o 'si no lo hago yo, saldrá mal'. 🧠" << endl
-              << "4.- El impulso de interrumpir, corregir o invalidar la opinión de otros. 🗣" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "2.- Un aumento de la frustración o la impaciencia si las cosas no salen como quieres. 😠" << endl
+                 << "3.- Pensamientos de que 'solo yo sé cómo se deben hacer las cosas' o 'si no lo hago yo, saldrá mal'. 🧠" << endl
+                 << "4.- El impulso de interrumpir, corregir o invalidar la opinión de otros. 🗣" << endl << endl;
+    senalesInternasDominio = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que esta emoción está presente y necesita ser explorada. 💡" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal, por pequeña que parezca, crees que aún posees para empezar a transformar este **dominio negativo* en una interacción más equitativa y respetuosa? 🌟" << endl << endl
-              << "1.- Mi capacidad para la auto-reflexión y el deseo de crecer. 🧠" << endl
-              << "2.- Mi deseo de tener relaciones más sanas y auténticas. ✨" << endl
-              << "3.- Mi habilidad para escuchar activamente y validar a los demás. 👂" << endl
-              << "4.- Mi resiliencia para cambiar patrones de comportamiento arraigados. 💪" << endl << endl;
-    recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad para la auto-reflexión y el deseo de crecer. 🧠" << endl
+                 << "2.- Mi deseo de tener relaciones más sanas y auténticas. ✨" << endl
+                 << "3.- Mi habilidad para escuchar activamente y validar a los demás. 👂" << endl
+                 << "4.- Mi resiliencia para cambiar patrones de comportamiento arraigados. 💪" << endl << endl;
+    recursosInternosDominio = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando sientes la tendencia al *dominio negativo*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes un poder interior inmenso para elegir cómo respondes. 💖" << endl
-              << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
+                 << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento para gestionar el **dominio negativo*? 🤝" << endl << endl
-              << "1.- Buscar terapia o coaching para trabajar en patrones de control y comunicación. 🗣" << endl
-              << "2.- Practicar la empatía activa, intentando ver las situaciones desde la perspectiva de otros. 🧭" << endl
-              << "3.- Establecer límites saludables en tus relaciones, tanto para ti como para los demás. 🚫" << endl
-              << "4.- Rodearte de personas que te desafíen a crecer y a ser más colaborativo/a. 🫂" << endl << endl;
-    posibilidadesApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Buscar terapia o coaching para trabajar en patrones de control y comunicación. 🗣" << endl
+                 << "2.- Practicar la empatía activa, intentando ver las situaciones desde la perspectiva de otros. 🧭" << endl
+                 << "3.- Establecer límites saludables en tus relaciones, tanto para ti como para los demás. 🚫" << endl
+                 << "4.- Rodearte de personas que te desafíen a crecer y a ser más colaborativo/a. 🫂" << endl << endl;
+    posibilidadesApoyoDominio = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar el *dominio negativo*. Es un paso hacia tu bienestar emocional y relacional. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño paso concreto* puedes comprometerte a tomar HOY o en los próximos días para empezar a cambiar el patrón de *dominio negativo*? 👣" << endl << endl
-              << "1.- Escuchar activamente a alguien sin interrumpir, incluso si no estás de acuerdo. 👂" << endl
-              << "2.- Delegar una tarea o responsabilidad, confiando en la capacidad de otro. ✅" << endl
-              << "3.- Preguntar la opinión de otra persona antes de dar la tuya o tomar una decisión. ❓" << endl
-              << "4.- Practicar soltar el control sobre una pequeña situación que te genere ansiedad. 🌬" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Escuchar activamente a alguien sin interrumpir, incluso si no estás de acuerdo. 👂" << endl
+                 << "2.- Delegar una tarea o responsabilidad, confiando en la capacidad de otro. ✅" << endl
+                 << "3.- Preguntar la opinión de otra persona antes de dar la tuya o tomar una decisión. ❓" << endl
+                 << "4.- Practicar soltar el control sobre una pequeña situación que te genere ansiedad. 🌬" << endl << endl;
+    accionConcretaDominio = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia tu bienestar. 💪" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "¿De qué manera crees que el proceso de transformar el *dominio negativo* puede enriquecer tu vida y tus relaciones? 🌱" << endl << endl
-              << "1.- Mis relaciones serán más equilibradas, respetuosas y llenas de confianza. 🤝" << endl
-              << "2.- Sentiré más paz interior y menos necesidad de control constante. 🏞" << endl
-              << "3.- Aumentará mi capacidad de colaborar y de valorar las perspectivas de los demás. 🚀" << endl
-              << "4.- Todas las anteriores, me abrirá a una vida más auténtica y conectada. 🦋" << endl << endl;
-    transformarDominio = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mis relaciones serán más equilibradas, respetuosas y llenas de confianza. 🤝" << endl
+                 << "2.- Sentiré más paz interior y menos necesidad de control constante. 🏞" << endl
+                 << "3.- Aumentará mi capacidad de colaborar y de valorar las perspectivas de los demás. 🚀" << endl
+                 << "4.- Todas las anteriores, me abrirá a una vida más auténtica y conectada. 🦋" << endl << endl;
+    transformarDominioProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de este proceso es un paso significativo. Tu capacidad para buscar el crecimiento y el bienestar es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-compasión* o *crecimiento* te gustaría darte a ti mismo/a al iniciar este camino de transformación del *dominio negativo*? ✨" << endl << endl
-              << "1.- 'Estoy aprendiendo a confiar más en mí y en los demás.' 🙏" << endl
-              << "2.- 'Merezco relaciones basadas en el respeto mutuo, no en el control.' 💪" << endl
-              << "3.- 'Cada vez que elijo soltar el control, me abro a nuevas posibilidades.' 💖" << endl
-              << "4.- 'Mi valor no depende de mi capacidad para controlar a otros.' 🌟" << endl << endl;
-    mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Estoy aprendiendo a confiar más en mí y en los demás.' 🙏" << endl
+                 << "2.- 'Merezco relaciones basadas en el respeto mutuo, no en el control.' 💪" << endl
+                 << "3.- 'Cada vez que elijo soltar el control, me abro a nuevas posibilidades.' 💖" << endl
+                 << "4.- 'Mi valor no depende de mi capacidad para controlar a otros.' 🌟" << endl << endl;
+    mensajeFinalDominio = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en tu camino hacia la gestión del *dominio negativo*. Recuerda que mereces vivir una vida con más libertad y conexión genuina, empezando por ti mismo/a. 💖" << endl << endl;
 
     // --- Preguntas adicionales de opción múltiple ---
@@ -3473,57 +3779,75 @@ void terapiaDominio ()
     system("cls");
 
     cout << endl << "Para profundizar en tu reflexión, ¿qué *necesidad profunda no satisfecha* crees que podría estar impulsando el impulso de control o dominio? (Ej: necesidad de seguridad, validación, amor...) 🤔" << endl << endl
-              << "1.- Necesidad de sentir seguridad o certeza. 🛡" << endl
-              << "2.- Necesidad de ser reconocido/a o validado/a. 🏆" << endl
-              << "3.- Necesidad de evitar el dolor o la vulnerabilidad. 💔" << endl
-              << "4.- Necesidad de sentirte competente o capaz. ✅" << endl << endl;
-    reconocerNecesidad = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4);
+                 << "1.- Necesidad de sentir seguridad o certeza. 🛡" << endl
+                 << "2.- Necesidad de ser reconocido/a o validado/a. 🏆" << endl
+                 << "3.- Necesidad de evitar el dolor o la vulnerabilidad. 💔" << endl
+                 << "4.- Necesidad de sentirte competente o capaz. ✅" << endl << endl;
+    reconocerNecesidadDominio = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Gracias por esa reflexión. Identificar esas *necesidades profundas* es clave, ya que a menudo el dominio es una estrategia (disfuncional) para satisfacerlas. Solo al reconocerlas, podemos buscar formas más saludables de nutrirlas. 💡" << endl << endl;
 
     cout << "Si pudieras visualizar una interacción ideal donde no hubiera *dominio negativo, ¿qué **cambio de comportamiento* específico te gustaría implementar en ti mismo/a la próxima vez? 🧘" << endl << endl
-              << "1.- Practicar la escucha activa y hacer preguntas abiertas. 👂" << endl
-              << "2.- Permitir que la otra persona tome una decisión o lleve la iniciativa. 🚀" << endl
-              << "3.- Expresar mi propia vulnerabilidad o una preocupación genuina. 💖" << endl
-              << "4.- Celebrar un logro o idea de otro sin añadir mi 'mejora'. ✨" << endl << endl;
-    cambiarPatron = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Practicar la escucha activa y hacer preguntas abiertas. 👂" << endl
+                 << "2.- Permitir que la otra persona tome una decisión o lleve la iniciativa. 🚀" << endl
+                 << "3.- Expresar mi propia vulnerabilidad o una preocupación genuina. 💖" << endl
+                 << "4.- Celebrar un logro o idea de otro sin añadir mi 'mejora'. ✨" << endl << endl;
+    cambiarPatronDominio = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Visualizar y comprometerte con un *cambio de comportamiento* específico es un paso poderoso hacia relaciones más equitativas y satisfactorias. Cada pequeño paso construye una nueva forma de ser. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Dominio Negativo ---
+    cout << endl << "--- Resumen de tu Terapia de Dominio Negativo ---" << endl;
+    cout << "Causa del dominio negativo: " << causaDominio << endl;
+    cout << "Origen principal del dominio negativo: " << origenDominioGeneral << endl;
+    cout << "Impacto personal del dominio negativo: " << impactoPersonalDominio << endl;
+    cout << "Señales internas del impulso de dominio negativo: " << senalesInternasDominio << endl;
+    cout << "Recursos internos para transformar el dominio negativo: " << recursosInternosDominio << endl;
+    cout << "Posibilidades de apoyo para gestionar el dominio negativo: " << posibilidadesApoyoDominio << endl;
+    cout << "Acción concreta para cambiar el patrón de dominio negativo: " << accionConcretaDominio << endl;
+    cout << "Cómo el proceso de transformación enriquece tu vida: " << transformarDominioProceso << endl;
+    cout << "Mensaje de auto-compasión o crecimiento: " << mensajeFinalDominio << endl;
+    cout << "Necesidad profunda que impulsa el control/dominio: " << reconocerNecesidadDominio << endl;
+    cout << "Cambio de comportamiento específico en una interacción ideal: " << cambiarPatronDominio << endl;
+    cout << "---------------------------------------" << endl;
+    
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración del *dominio negativo*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la colaboración, el respeto mutuo y la conexión genuina. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la colaboración, el respeto mutuo y la conexión genuina. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaFuria ()
+void terapiaFuria()
 {
-    string causa;
-    int origenFuria, impactoPersonal, senalesInternas, recursosInternos, posibilidadesApoyo;
-    int accionConcreta, transformarFuria, mensajeFinal, reconocerDetonante, canalizarFuria;
+    string causaFuria; // Variable renombrada
+    int origenFuriaGeneral, impactoPersonalFuria, senalesInternasFuria, recursosInternosFuria, posibilidadesApoyoFuria; // Variables renombradas
+    int accionConcretaFuria, transformarFuriaProceso, mensajeFinalFuria, reconocerDetonanteFuria, canalizarFuriaMetodo; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de la furia ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción de la *furia*. Es una de las emociones más intensas y a menudo surge cuando percibimos una injusticia o una amenaza significativa. Es valiente de tu parte reconocerla y abordarla. 😡" << endl
-              << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *furia*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *furia*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaFuria); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer la *furia* es el primer paso para entender qué la provoca y cómo te afecta. Es una emoción poderosa. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *furia*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *furia*? 🤔" << endl << endl;
     cout << "1.- Sentir que he sido tratado/a injustamente o que se ha cometido una injusticia. ⚖" << endl
-              << "2.- La frustración extrema ante un obstáculo o algo que está fuera de mi control. 😠" << endl
-              << "3.- La percepción de una amenaza significativa a mi bienestar o el de mis seres queridos. 🛡" << endl
-              << "4.- La acumulación de estrés, irritación o frustración que finalmente desborda. 🤯" << endl << endl;
-    origenFuria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- La frustración extrema ante un obstáculo o algo que está fuera de mi control. 😠" << endl
+                 << "3.- La percepción de una amenaza significativa a mi bienestar o el de mis seres queridos. 🛡" << endl
+                 << "4.- La acumulación de estrés, irritación o frustración que finalmente desborda. 🤯" << endl << endl;
+    origenFuriaGeneral = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *furia* nos da claridad sobre las raíces de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla y elegir cómo responder. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta emoción de *furia* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta emoción de *furia* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
     cout << "1.- Me siento agotado/a después de un episodio de furia o con remordimiento. 😔" << endl
-              << "2.- Mis relaciones personales se han visto tensas o dañadas por mi expresión de furia. 💔" << endl
-              << "3.- Dificulta mi capacidad para pensar con claridad o tomar decisiones racionales. 🧠" << endl
-              << "4.- Genera una sensación de descontrol o de ser dominado/a por la emoción. 💥" << endl << endl;
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4);
+                 << "2.- Mis relaciones personales se han visto tensas o dañadas por mi expresión de furia. 💔" << endl
+                 << "3.- Dificulta mi capacidad para pensar con claridad o tomar decisiones racionales. 🧠" << endl
+                 << "4.- Genera una sensación de descontrol o de ser dominado/a por la emoción. 💥" << endl << endl;
+    impactoPersonalFuria = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
     // La siguiente sección se mantiene como un "dummy switch" para mantener la estructura de diálogo,
     // pero no solicita más entrada del usuario aquí, para agilizar el flujo.
-    switch (impactoPersonal) {
+    switch (impactoPersonalFuria) { // Usando la variable renombrada
         case 1:
             cout << endl << "Comprendo. El agotamiento y el remordimiento son cargas pesadas. Reconocerlo es crucial para el cambio. 😔" << endl;
             break;
@@ -3542,59 +3866,59 @@ void terapiaFuria ()
     system("cls");
 
     cout << endl << "Reconocer cómo la *furia* se manifiesta en tu vida es vital. Estas señales son mensajes importantes que tu sistema te envía sobre lo que necesitas abordar. Escucharlas te ayudará a darte el cuidado que mereces. 🫂" << endl << endl
-              << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que la *furia* está surgiendo? 😟" << endl << endl;
+                 << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que la *furia* está surgiendo? 😟" << endl << endl;
     cout << "1.- Tensión extrema en el cuerpo, mandíbula apretada, puños cerrados, músculos rígidos. 💪" << endl
-              << "2.- Aumento rápido del ritmo cardíaco, calor intenso, temblor o sudoración. 💨" << endl
-              << "3.- Pensamientos de venganza, deseos de gritar, golpear o destruir. 🤯" << endl
-              << "4.- Una sensación de explosión inminente o de que 'vas a estallar'. 🌋" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "2.- Aumento rápido del ritmo cardíaco, calor intenso, temblor o sudoración. 💨" << endl
+                 << "3.- Pensamientos de venganza, deseos de gritar, golpear o destruir. 🤯" << endl
+                 << "4.- Una sensación de explosión inminente o de que 'vas a estallar'. 🌋" << endl << endl;
+    senalesInternasFuria = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que esta emoción está presente y necesita ser explorada. 💡" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal, por pequeña que parezca, crees que aún posees para empezar a transformar esta **furia* en una respuesta más adaptativa? 🌟" << endl << endl
-              << "1.- Mi capacidad para pausar y respirar antes de reaccionar. 🌬" << endl
-              << "2.- Mi deseo de encontrar soluciones pacíficas a los conflictos. ✨" << endl
-              << "3.- Mi habilidad para reflexionar sobre las consecuencias de mis acciones. 🧠" << endl
-              << "4.- Mi resiliencia para aprender de mis experiencias y crecer. 💪" << endl << endl;
-    recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad para pausar y respirar antes de reaccionar. 🌬" << endl
+                 << "2.- Mi deseo de encontrar soluciones pacíficas a los conflictos. ✨" << endl
+                 << "3.- Mi habilidad para reflexionar sobre las consecuencias de mis acciones. 🧠" << endl
+                 << "4.- Mi resiliencia para aprender de mis experiencias y crecer. 💪" << endl << endl;
+    recursosInternosFuria = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando sientes *furia*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes un poder interior inmenso para elegir cómo respondes. 💖" << endl
-              << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
+                 << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento para gestionar la **furia*? 🤝" << endl << endl
-              << "1.- Buscar terapia especializada en manejo de la ira o gestión emocional. 🗣" << endl
-              << "2.- Aprender y practicar técnicas de relajación como la meditación o el mindfulness. 🧘" << endl
-              << "3.- Desarrollar habilidades de comunicación asertiva para expresar tus necesidades sin agresión. 📚" << endl
-              << "4.- Identificar y evitar detonantes conocidos o modificar tu entorno para reducirlos. 🚧" << endl << endl;
-    posibilidadesApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Buscar terapia especializada en manejo de la ira o gestión emocional. 🗣" << endl
+                 << "2.- Aprender y practicar técnicas de relajación como la meditación o el mindfulness. 🧘" << endl
+                 << "3.- Desarrollar habilidades de comunicación asertiva para expresar tus necesidades sin agresión. 📚" << endl
+                 << "4.- Identificar y evitar detonantes conocidos o modificar tu entorno para reducirlos. 🚧" << endl << endl;
+    posibilidadesApoyoFuria = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar la *furia*. Es un paso hacia tu bienestar emocional. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño paso concreto* puedes comprometerte a tomar HOY o en los próximos días para empezar a gestionar la *furia* cuando surja? 👣" << endl << endl
-              << "1.- Dar un paseo corto o realizar alguna actividad física intensa para liberar energía. 🏃‍♀" << endl
-              << "2.- Contar lentamente hasta 10 (o 20) antes de responder a una situación frustrante. ⏳" << endl
-              << "3.- Expresar tu frustración o enojo con palabras calmadas, enfocándote en tus sentimientos. 🗣" << endl
-              << "4.- Escribir una carta (que no enviarás) a la persona o situación que te provoca furia. 📝" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Dar un paseo corto o realizar alguna actividad física intensa para liberar energía. 🏃‍♀" << endl
+                 << "2.- Contar lentamente hasta 10 (o 20) antes de responder a una situación frustrante. ⏳" << endl
+                 << "3.- Expresar tu frustración o enojo con palabras calmadas, enfocándote en tus sentimientos. 🗣" << endl
+                 << "4.- Escribir una carta (que no enviarás) a la persona o situación que te provoca furia. 📝" << endl << endl;
+    accionConcretaFuria = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia tu bienestar. 💪" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "¿De qué manera crees que el proceso de transformar la *furia* puede enriquecer tu vida y tus relaciones? 🌱" << endl << endl
-              << "1.- Me permitirá experimentar más paz interior y menos reactividad. 🏞" << endl
-              << "2.- Mis relaciones serán más armoniosas y basadas en el respeto. 🤝" << endl
-              << "3.- Aumentará mi inteligencia emocional y mi capacidad de auto-regulación. 🚀" << endl
-              << "4.- Todas las anteriores, me abrirá a una vida con más calma y control. 🦋" << endl << endl;
-    transformarFuria = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me permitirá experimentar más paz interior y menos reactividad. 🏞" << endl
+                 << "2.- Mis relaciones serán más armoniosas y basadas en el respeto. 🤝" << endl
+                 << "3.- Aumentará mi inteligencia emocional y mi capacidad de auto-regulación. 🚀" << endl
+                 << "4.- Todas las anteriores, me abrirá a una vida con más calma y control. 🦋" << endl << endl;
+    transformarFuriaProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de este proceso es un paso significativo. Tu capacidad para buscar el crecimiento y el bienestar es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-compasión* o *esperanza* te gustaría darte a ti mismo/a al iniciar este camino de transformación de la *furia*? ✨" << endl << endl
-              << "1.- 'Soy capaz de aprender a manejar esta emoción, un paso a la vez.' 🙏" << endl
-              << "2.- 'Merezco la calma y la paz en mi vida y en mis relaciones.' 💪" << endl
-              << "3.- 'Mi furia me señala algo que necesita atención, y lo abordaré con valentía.' 💖" << endl
-              << "4.- 'Cada vez que elijo la pausa, estoy construyendo una versión más tranquila de mí.' 🌟" << endl << endl;
-    mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Soy capaz de aprender a manejar esta emoción, un paso a la vez.' 🙏" << endl
+                 << "2.- 'Merezco la calma y la paz en mi vida y en mis relaciones.' 💪" << endl
+                 << "3.- 'Mi furia me señala algo que necesita atención, y lo abordaré con valentía.' 💖" << endl
+                 << "4.- 'Cada vez que elijo la pausa, estoy construyendo una versión más tranquila de mí.' 🌟" << endl << endl;
+    mensajeFinalFuria = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en tu camino hacia la gestión de la *furia*. Recuerda que mereces vivir una vida con más calma y control sobre tus emociones. 💖" << endl << endl;
 
     // --- Preguntas adicionales de opción múltiple ---
@@ -3602,57 +3926,75 @@ void terapiaFuria ()
     system("cls");
 
     cout << endl << "Para profundizar en tu reflexión, ¿qué *detonante específico* o tipo de situación suele encender tu furia más rápidamente? Identificarlo puede ayudarte a anticipar. 🤔" << endl << endl
-              << "1.- Sentir que mis límites personales han sido invadidos o ignorados. ⛔" << endl
-              << "2.- Cuando las cosas no salen como esperaba o hay mucha incertidumbre. ❓" << endl
-              << "3.- Percibir hipocresía o injusticia por parte de otros. 🎭" << endl
-              << "4.- Estar bajo mucho estrés, cansancio o hambre. 🔋" << endl << endl;
-    reconocerDetonante = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4);
+                 << "1.- Sentir que mis límites personales han sido invadidos o ignorados. ⛔" << endl
+                 << "2.- Cuando las cosas no salen como esperaba o hay mucha incertidumbre. ❓" << endl
+                 << "3.- Percibir hipocresía o injusticia por parte de otros. 🎭" << endl
+                 << "4.- Estar bajo mucho estrés, cansancio o hambre. 🔋" << endl << endl;
+    reconocerDetonanteFuria = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Gracias por esa reflexión. Identificar tus *detonantes* específicos es clave para desarrollar estrategias preventivas y reactivas. La autoconciencia es tu mayor herramienta. 💡" << endl << endl;
 
     cout << "Cuando sientas que la furia está surgiendo, ¿qué *estrategia de canalización* saludable podrías aplicar para liberar esa energía sin dañar a otros o a ti mismo/a? 🧘" << endl << endl
-              << "1.- Hacer ejercicio vigoroso (correr, saltar, boxear en el aire). 🏃‍♀" << endl
-              << "2.- Gritar en una almohada o en un lugar donde no molestes a nadie. 📣" << endl
-              << "3.- Dibujar, pintar o escribir intensamente sobre lo que sientes. 🎨" << endl
-              << "4.- Practicar técnicas de relajación profunda como la tensión-distensión muscular progresiva. 💆" << endl << endl;
-    canalizarFuria = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hacer ejercicio vigoroso (correr, saltar, boxear en el aire). 🏃‍♀" << endl
+                 << "2.- Gritar en una almohada o en un lugar donde no molestes a nadie. 📣" << endl
+                 << "3.- Dibujar, pintar o escribir intensamente sobre lo que sientes. 🎨" << endl
+                 << "4.- Practicar técnicas de relajación profunda como la tensión-distensión muscular progresiva. 💆" << endl << endl;
+    canalizarFuriaMetodo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Canalizar la *furia* de forma saludable es fundamental para tu bienestar. Estás eligiendo el autocontrol y la sabiduría sobre el impulso destructivo. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Furia ---
+    cout << endl << "--- Resumen de tu Terapia de Furia ---" << endl;
+    cout << "Causa de la furia: " << causaFuria << endl;
+    cout << "Origen principal de la furia: " << origenFuriaGeneral << endl;
+    cout << "Impacto personal de la furia: " << impactoPersonalFuria << endl;
+    cout << "Señales internas de la furia: " << senalesInternasFuria << endl;
+    cout << "Recursos internos para transformar la furia: " << recursosInternosFuria << endl;
+    cout << "Posibilidades de apoyo para gestionar la furia: " << posibilidadesApoyoFuria << endl;
+    cout << "Acción concreta para gestionar la furia: " << accionConcretaFuria << endl;
+    cout << "Cómo el proceso de transformación enriquece tu vida: " << transformarFuriaProceso << endl;
+    cout << "Mensaje de auto-compasión o esperanza: " << mensajeFinalFuria << endl;
+    cout << "Detonante específico de la furia: " << reconocerDetonanteFuria << endl;
+    cout << "Estrategia de canalización saludable de la furia: " << canalizarFuriaMetodo << endl;
+    cout << "---------------------------------------" << endl;
+    
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la *furia*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma, la auto-regulación y la expresión constructiva de tus emociones. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma, la auto-regulación y la expresión constructiva de tus emociones. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaMolestia ()
+void terapiaMolestia()
 {
-    string causa;
-    int origenMolestia, impactoPersonal, senalesInternas, recursosInternos, posibilidadesApoyo;
-    int accionConcreta, transformarMolestia, mensajeFinal, reinterpretarMolestia, comunicacionMolestia;
+    string causaMolestia; // Variable renombrada
+    int origenMolestiaGeneral, impactoPersonalMolestia, senalesInternasMolestia, recursosInternosMolestia, posibilidadesApoyoMolestia; // Variables renombradas
+    int accionConcretaMolestia, transformarMolestiaProceso, mensajeFinalMolestia, reinterpretarMolestiaEstrategia, comunicacionMolestiaEstrategia; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de la molestia ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción de la *molestia*. Es esa sensación de irritación o descontento leve, a menudo provocada por pequeñas interrupciones o frustraciones cotidianas. Es valiente de tu parte reconocerla y abordarla. 😒" << endl
-              << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *molestia*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *molestia*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaMolestia); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer la *molestia* es el primer paso para entender qué la provoca y cómo te afecta. Es una emoción común. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *molestia*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *molestia*? 🤔" << endl << endl;
     cout << "1.- La percepción de una injusticia menor o algo que no es 'justo'. ⚖" << endl
-              << "2.- Una interrupción o un obstáculo en tus planes o rutina. 🚧" << endl
-              << "3.- Sentir que tus expectativas no fueron cumplidas por alguien o algo. 📉" << endl
-              << "4.- La acumulación de pequeñas irritaciones que se van sumando. 😠" << endl << endl;
-    origenMolestia = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- Una interrupción o un obstáculo en tus planes o rutina. 🚧" << endl
+                 << "3.- Sentir que tus expectativas no fueron cumplidas por alguien o algo. 📉" << endl
+                 << "4.- La acumulación de pequeñas irritaciones que se van sumando. 😠" << endl << endl;
+    origenMolestiaGeneral = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *molestia* nos da claridad sobre las raíces de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla y elegir cómo responder. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta emoción de *molestia* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta emoción de *molestia* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
     cout << "1.- Me siento impaciente o de mal humor, lo que afecta mi día. 😔" << endl
-              << "2.- Mis interacciones con otros se vuelven más tensas o cortantes. 🗣" << endl
-              << "3.- Me cuesta concentrarme en otras cosas debido a la irritación. 🧠" << endl
-              << "4.- Siento una energía baja o me siento fácilmente frustrado/a. 🔋" << endl << endl;
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4);
+                 << "2.- Mis interacciones con otros se vuelven más tensas o cortantes. 🗣" << endl
+                 << "3.- Me cuesta concentrarme en otras cosas debido a la irritación. 🧠" << endl
+                 << "4.- Siento una energía baja o me siento fácilmente frustrado/a. 🔋" << endl << endl;
+    impactoPersonalMolestia = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
     // La siguiente sección se mantiene como un "dummy switch" para mantener la estructura de diálogo,
     // pero no solicita más entrada del usuario aquí, para agilizar el flujo.
-    switch (impactoPersonal) {
+    switch (impactoPersonalMolestia) { // Usando la variable renombrada
         case 1:
             cout << endl << "Comprendo. Ese mal humor puede colorear todo tu día. Reconocerlo es importante. 😔" << endl;
             break;
@@ -3671,59 +4013,59 @@ void terapiaMolestia ()
     system("cls");
 
     cout << endl << "Reconocer cómo la *molestia* se manifiesta en tu vida es vital. Estas señales son mensajes importantes que tu sistema te envía sobre lo que necesitas abordar. Escucharlas te ayudará a darte el cuidado que mereces. 🫂" << endl << endl
-              << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que la *molestia* está surgiendo? 😟" << endl << endl;
+                 << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que la *molestia* está surgiendo? 😟" << endl << endl;
     cout << "1.- Ceño fruncido, tensión ligera en la mandíbula o en los hombros. 💪" << endl
-              << "2.- Una sensación de calor o una ligera opresión en el pecho. ♨" << endl
-              << "3.- Un diálogo interno crítico o quejumbroso sobre la situación. 💬" << endl
-              << "4.- Impaciencia, ganas de que la situación termine rápido o de alejarte. ⏳" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "2.- Una sensación de calor o una ligera opresión en el pecho. ♨" << endl
+                 << "3.- Un diálogo interno crítico o quejumbroso sobre la situación. 💬" << endl
+                 << "4.- Impaciencia, ganas de que la situación termine rápido o de alejarte. ⏳" << endl << endl;
+    senalesInternasMolestia = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que esta emoción está presente y necesita ser explorada. 💡" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal, por pequeña que parezca, crees que aún posees para empezar a transformar esta **molestia* en una respuesta más calmada o productiva? 🌟" << endl << endl
-              << "1.- Mi capacidad para respirar profundamente y calmarme. 🌬" << endl
-              << "2.- Mi deseo de encontrar soluciones en lugar de quedarme en la queja. ✨" << endl
-              << "3.- Mi habilidad para reír o encontrar el lado cómico de las situaciones. 😂" << endl
-              << "4.- Mi resiliencia para no dejar que las pequeñas cosas arruinen mi día. 💪" << endl << endl;
-    recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad para respirar profundamente y calmarme. 🌬" << endl
+                 << "2.- Mi deseo de encontrar soluciones en lugar de quedarme en la queja. ✨" << endl
+                 << "3.- Mi habilidad para reír o encontrar el lado cómico de las situaciones. 😂" << endl
+                 << "4.- Mi resiliencia para no dejar que las pequeñas cosas arruinen mi día. 💪" << endl << endl;
+    recursosInternosMolestia = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando sientes *molestia*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes un poder interior inmenso para elegir cómo respondes. 💖" << endl
-              << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
+                 << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento para gestionar la **molestia*? 🤝" << endl << endl
-              << "1.- Practicar el mindfulness o la atención plena para observar la molestia sin apego. 🧘" << endl
-              << "2.- Hablar con un amigo o familiar de confianza para desahogarte de forma segura. 🗣" << endl
-              << "3.- Buscar formas de modificar o evitar las situaciones que te generan molestia recurrente. 🚧" << endl
-              << "4.- Leer o aprender sobre técnicas de manejo del estrés y la frustración. 📚" << endl << endl;
-    posibilidadesApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Practicar el mindfulness o la atención plena para observar la molestia sin apego. 🧘" << endl
+                 << "2.- Hablar con un amigo o familiar de confianza para desahogarte de forma segura. 🗣" << endl
+                 << "3.- Buscar formas de modificar o evitar las situaciones que te generan molestia recurrente. 🚧" << endl
+                 << "4.- Leer o aprender sobre técnicas de manejo del estrés y la frustración. 📚" << endl << endl;
+    posibilidadesApoyoMolestia = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar la *molestia*. Es un paso hacia tu bienestar emocional. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño paso concreto* puedes comprometerte a tomar HOY o en los próximos días para empezar a gestionar la *molestia* cuando surja? 👣" << endl << endl
-              << "1.- Dar un pequeño tiempo fuera de la situación (ej. ir por un vaso de agua). 🚶" << endl
-              << "2.- Identificar una cosa que sí esté bajo tu control en la situación. ✅" << endl
-              << "3.- Reírte de la situación o de tu reacción, si es posible. 😂" << endl
-              << "4.- Expresar tu molestia de forma asertiva pero calmada, si es apropiado. 🗣" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Dar un pequeño tiempo fuera de la situación (ej. ir por un vaso de agua). 🚶" << endl
+                 << "2.- Identificar una cosa que sí esté bajo tu control en la situación. ✅" << endl
+                 << "3.- Reírte de la situación o de tu reacción, si es posible. 😂" << endl
+                 << "4.- Expresar tu molestia de forma asertiva pero calmada, si es apropiado. 🗣" << endl << endl;
+    accionConcretaMolestia = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia tu bienestar. 💪" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "¿De qué manera crees que el proceso de transformar la *molestia* puede enriquecer tu vida y tus relaciones? 🌱" << endl << endl
-              << "1.- Me permitirá experimentar más paciencia y menos irritabilidad. 🏞" << endl
-              << "2.- Mis relaciones serán más fluidas y menos propensas a pequeños conflictos. 🤝" << endl
-              << "3.- Aumentará mi capacidad para adaptarme a lo inesperado y soltar el control. 🚀" << endl
-              << "4.- Todas las anteriores, me abrirá a una vida con más ligereza y satisfacción. 🦋" << endl << endl;
-    transformarMolestia = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me permitirá experimentar más paciencia y menos irritabilidad. 🏞" << endl
+                 << "2.- Mis relaciones serán más fluidas y menos propensas a pequeños conflictos. 🤝" << endl
+                 << "3.- Aumentará mi capacidad para adaptarme a lo inesperado y soltar el control. 🚀" << endl
+                 << "4.- Todas las anteriores, me abrirá a una vida con más ligereza y satisfacción. 🦋" << endl << endl;
+    transformarMolestiaProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de este proceso es un paso significativo. Tu capacidad para buscar el crecimiento y el bienestar es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-compasión* o *aceptación* te gustaría darte a ti mismo/a al iniciar este camino de transformación de la *molestia*? ✨" << endl << endl
-              << "1.- 'Está bien sentir molestia, pero puedo elegir no aferrarme a ella.' 🙏" << endl
-              << "2.- 'Merezco un día tranquilo y estoy aprendiendo a crearlo para mí.' 💪" << endl
-              << "3.- 'Cada pequeña irritación es una oportunidad para practicar la calma.' 💖" << endl
-              << "4.- 'La vida tiene sus baches, y yo tengo las herramientas para superarlos.' 🌟" << endl << endl;
-    mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Está bien sentir molestia, pero puedo elegir no aferrarme a ella.' 🙏" << endl
+                 << "2.- 'Merezco un día tranquilo y estoy aprendiendo a crearlo para mí.' 💪" << endl
+                 << "3.- 'Cada pequeña irritación es una oportunidad para practicar la calma.' 💖" << endl
+                 << "4.- 'La vida tiene sus baches, y yo tengo las herramientas para superarlos.' 🌟" << endl << endl;
+    mensajeFinalMolestia = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en tu camino hacia la gestión de la *molestia*. Recuerda que mereces vivir una vida con más ligereza y menos irritación. 💖" << endl << endl;
 
     // --- Preguntas adicionales de opción múltiple ---
@@ -3731,58 +4073,77 @@ void terapiaMolestia ()
     system("cls");
 
     cout << endl << "Para profundizar en tu reflexión, ¿cómo podrías *reinterpretar* la situación que te causó molestia para verla desde una perspectiva diferente, menos irritante? 🤔" << endl << endl
-              << "1.- Pensar en cómo esta situación podría ser una lección o un recordatorio importante. 💡" << endl
-              << "2.- Buscar el lado positivo o un beneficio inesperado de la interrupción. ✨" << endl
-              << "3.- Recordar que todos cometemos errores y que la imperfección es parte de la vida. 🫂" << endl
-              << "4.- Verla como una oportunidad para practicar tu paciencia o tu flexibilidad. 🧘" << endl << endl;
-    reinterpretarMolestia = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4);
+                 << "1.- Pensar en cómo esta situación podría ser una lección o un recordatorio importante. 💡" << endl
+                 << "2.- Buscar el lado positivo o un beneficio inesperado de la interrupción. ✨" << endl
+                 << "3.- Recordar que todos cometemos errores y que la imperfección es parte de la vida. 🫂" << endl
+                 << "4.- Verla como una oportunidad para practicar tu paciencia o tu flexibilidad. 🧘" << endl << endl;
+    reinterpretarMolestiaEstrategia = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Gracias por esa reflexión. *Reinterpretar* las situaciones puede cambiar radicalmente cómo las experimentas, transformando la molestia en una oportunidad de crecimiento. 💡" << endl << endl;
 
     cout << "Si la molestia surge de una interacción con otra persona, ¿qué *tipo de comunicación* podrías intentar para abordar la situación de forma constructiva, en lugar de acumular la molestia? 🗣" << endl << endl
-              << "1.- Usar 'mensajes Yo' para expresar tus sentimientos sin culpar al otro (ej. 'Me siento molesto cuando...'). 📝" << endl
-              << "2.- Preguntar con curiosidad la perspectiva del otro antes de sacar conclusiones. ❓" << endl
-              << "3.- Proponer una solución o un compromiso, en lugar de solo expresar el problema. ✅" << endl
-              << "4.- Decidir dejar ir la situación si es algo pequeño y no vale la pena el conflicto. 🌬" << endl << endl;
-    comunicacionMolestia = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Usar 'mensajes Yo' para expresar tus sentimientos sin culpar al otro (ej. 'Me siento molesto cuando...'). 📝" << endl
+                 << "2.- Preguntar con curiosidad la perspectiva del otro antes de sacar conclusiones. ❓" << endl
+                 << "3.- Proponer una solución o un compromiso, en lugar de solo expresar el problema. ✅" << endl
+                 << "4.- Decidir dejar ir la situación si es algo pequeño y no vale la pena el conflicto. 🌬" << endl << endl;
+    comunicacionMolestiaEstrategia = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Una *comunicación consciente* puede transformar una molestia en una oportunidad para fortalecer tus relaciones y resolver problemas. Estás eligiendo la conexión sobre la irritación. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Molestia ---
+    cout << endl << "--- Resumen de tu Terapia de Molestia ---" << endl;
+    cout << "Causa de la molestia: " << causaMolestia << endl;
+    cout << "Origen principal de la molestia: " << origenMolestiaGeneral << endl;
+    cout << "Impacto personal de la molestia: " << impactoPersonalMolestia << endl;
+    cout << "Señales internas de la molestia: " << senalesInternasMolestia << endl;
+    cout << "Recursos internos para transformar la molestia: " << recursosInternosMolestia << endl;
+    cout << "Posibilidades de apoyo para gestionar la molestia: " << posibilidadesApoyoMolestia << endl;
+    cout << "Acción concreta para gestionar la molestia: " << accionConcretaMolestia << endl;
+    cout << "Cómo el proceso de transformación enriquece tu vida: " << transformarMolestiaProceso << endl;
+    cout << "Mensaje de auto-compasión o aceptación: " << mensajeFinalMolestia << endl;
+    cout << "Estrategia para reinterpretar la molestia: " << reinterpretarMolestiaEstrategia << endl;
+    cout << "Tipo de comunicación para abordar la molestia: " << comunicacionMolestiaEstrategia << endl;
+    cout << "---------------------------------------" << endl;
+
+    
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la *molestia*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma, la paciencia y una mayor fluidez en tu día a día. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la calma, la paciencia y una mayor fluidez en tu día a día. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
 //Asco
-void terapiaRemordimiento ()
+void terapiaRemordimiento()
 {
-    string causa;
-    int origenRemordimientoAsco, impactoPersonal, senalesInternas, recursosInternos, posibilidadesApoyo;
-    int accionConcreta, transformarRemordimiento, mensajeFinal, reconocerAscoSubyacente, perdonAccion;
+    string causaRemordimiento; // Variable renombrada
+    int origenRemordimientoAscoGeneral, impactoPersonalRemordimiento, senalesInternasRemordimiento, recursosInternosRemordimiento, posibilidadesApoyoRemordimiento; // Variables renombradas
+    int accionConcretaRemordimiento, transformarRemordimientoProceso, mensajeFinalRemordimiento, reconocerAscoSubyacenteProfundo, perdonAccionConcreta; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción del remordimiento desde el asco ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción del *remordimiento, especialmente cuando surge de una profunda sensación de **asco* (hacia una acción que hiciste, una decisión, o incluso hacia una parte de ti mismo/a). Es una emoción pesada, y es muy valiente de tu parte reconocerla y abordarla. 🤢" << endl
-              << "¿Podrías compartirme brevemente la situación o el sentimiento general que te ha llevado a sentir *remordimiento, y cómo crees que se conecta con una sensación de **asco*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente la situación o el sentimiento general que te ha llevado a sentir *remordimiento, y cómo crees que se conecta con una sensación de **asco*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaRemordimiento); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer la conexión entre el *remordimiento* y el *asco* es un paso profundo. Es una emoción válida y a menudo un llamado a la sanación y al crecimiento. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *remordimiento* que se siente ligado al *asco*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *remordimiento* que se siente ligado al *asco*? 🤔" << endl << endl;
     cout << "1.- Haber actuado de una manera que va en contra de tus valores o principios más profundos. ⚖" << endl
-              << "2.- Haber causado daño o dolor a otra persona de forma directa o indirecta. 😔" << endl
-              << "3.- Sentir que te decepcionaste a ti mismo/a o no estuviste a la altura de tus propias expectativas. 📉" << endl
-              << "4.- Haber tomado una decisión que ahora percibes como 'sucia' o 'degradante'. 🤢" << endl << endl;
-    origenRemordimientoAsco = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- Haber causado daño o dolor a otra persona de forma directa o indirecta. 😔" << endl
+                 << "3.- Sentir que te decepcionaste a ti mismo/a o no estuviste a la altura de tus propias expectativas. 📉" << endl
+                 << "4.- Haber tomado una decisión que ahora percibes como 'sucia' o 'degradante'. 🤢" << endl << endl;
+    origenRemordimientoAscoGeneral = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *remordimiento* y su conexión con el *asco* nos da claridad sobre la raíz de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla y avanzar. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* este *remordimiento* y la sensación de *asco* en tu vida diaria y tus emociones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* este *remordimiento* y la sensación de *asco* en tu vida diaria y tus emociones? 😥" << endl << endl;
     cout << "1.- Me cuesta perdonarme a mí mismo/a, me siento constantemente juzgado/a. 😔" << endl
-              << "2.- Tengo problemas para dormir, me siento inquieto/a o revivo la situación. 😴" << endl
-              << "3.- Me siento alejado/a o aislado/a de otros, por vergüenza o culpa. 🧊" << endl
-              << "4.- Afecta mi autoestima y mi sentido de valía personal. 📉" << endl << endl;
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4);
+                 << "2.- Tengo problemas para dormir, me siento inquieto/a o revivo la situación. 😴" << endl
+                 << "3.- Me siento alejado/a o aislado/a de otros, por vergüenza o culpa. 🧊" << endl
+                 << "4.- Afecta mi autoestima y mi sentido de valía personal. 📉" << endl << endl;
+    impactoPersonalRemordimiento = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
     // La siguiente sección se mantiene como un "dummy switch" para mantener la estructura de diálogo,
     // pero no solicita más entrada del usuario aquí, para agilizar el flujo.
-    switch (impactoPersonal) {
+    switch (impactoPersonalRemordimiento) { // Usando la variable renombrada
         case 1:
             cout << endl << "Comprendo. La dificultad para perdonarte puede ser una carga inmensa. Es importante comenzar ese proceso. 🙏" << endl;
             break;
@@ -3801,40 +4162,40 @@ void terapiaRemordimiento ()
     system("cls");
 
     cout << endl << "Reconocer cómo el *remordimiento* y el *asco* se manifiestan en tu cuerpo y mente es vital. Escuchar estas señales te ayudará a actuar cuando más lo necesitas y a darte el cuidado que mereces. 🫂" << endl << endl
-              << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes este *remordimiento* mezclado con *asco*? 😟" << endl << endl;
+                 << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes este *remordimiento* mezclado con *asco*? 😟" << endl << endl;
     cout << "1.- Una sensación de náusea o repulsión física en el estómago o garganta. 🤢" << endl
-              << "2.- Sentimientos de suciedad, impureza o desvalorización personal. 🗑" << endl
-              << "3.- Pensamientos repetitivos sobre la situación o la acción, rumiación mental. 🧠" << endl
-              << "4.- Evitación de ciertas personas, lugares o recuerdos relacionados con la situación. 🚶" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "2.- Sentimientos de suciedad, impureza o desvalorización personal. 🗑" << endl
+                 << "3.- Pensamientos repetitivos sobre la situación o la acción, rumiación mental. 🧠" << endl
+                 << "4.- Evitación de ciertas personas, lugares o recuerdos relacionados con la situación. 🚶" << endl << endl;
+    senalesInternasRemordimiento = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que esta emoción está presente y necesita ser explorada. 💡" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal, por pequeñas que parezcan, crees que aún posees para empezar a procesar este **remordimiento* y la sensación de *asco*? 🌟" << endl << endl
-              << "1.- Mi capacidad de auto-observación y de buscar la verdad sobre lo ocurrido. 🧠" << endl
-              << "2.- Mi deseo de enmendar lo que se pueda o de aprender de mis errores. 💡" << endl
-              << "3.- Mi habilidad para buscar ayuda o apoyo cuando me siento abrumado/a. 🫂" << endl
-              << "4.- Mi resiliencia, porque sé que he superado momentos difíciles antes. 💪" << endl << endl;
-    recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad de auto-observación y de buscar la verdad sobre lo ocurrido. 🧠" << endl
+                 << "2.- Mi deseo de enmendar lo que se pueda o de aprender de mis errores. 💡" << endl
+                 << "3.- Mi habilidad para buscar ayuda o apoyo cuando me siento abrumado/a. 🫂" << endl
+                 << "4.- Mi resiliencia, porque sé que he superado momentos difíciles antes. 💪" << endl << endl;
+    recursosInternosRemordimiento = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando te sientes abrumado/a por el *remordimiento* y el *asco*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes recursos valiosos dentro de ti. ✨" << endl
-              << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
+                 << "Recuerda que no estás solo/a en esto. 🫂" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento para sanar el **remordimiento* y el *asco*? 🤝" << endl << endl
-              << "1.- Hablar con un profesional de la salud mental para procesar la culpa y la vergüenza. 🗣" << endl
-              << "2.- Buscar el perdón, si es posible y seguro, de la persona a la que pudiste haber dañado. 🕊" << endl
-              << "3.- Realizar acciones concretas para reparar el daño o contribuir positivamente. ✅" << endl
-              << "4.- Conectar con grupos de apoyo o personas que hayan transitado emociones similares. 🫂" << endl << endl;
-    posibilidadesApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un profesional de la salud mental para procesar la culpa y la vergüenza. 🗣" << endl
+                 << "2.- Buscar el perdón, si es posible y seguro, de la persona a la que pudiste haber dañado. 🕊" << endl
+                 << "3.- Realizar acciones concretas para reparar el daño o contribuir positivamente. ✅" << endl
+                 << "4.- Conectar con grupos de apoyo o personas que hayan transitado emociones similares. 🫂" << endl << endl;
+    posibilidadesApoyoRemordimiento = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar el *remordimiento* y el *asco*. Es un paso hacia la sanación. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño gesto de autocuidado* o *acción* puedes comprometerte a hacer hoy mismo o en las próximas 24 horas para aliviar un poco esta sensación de *remordimiento* y *asco*? 👣" << endl << endl
-              << "1.- Realizar una limpieza física o un acto simbólico de 'purificación' (ej. una ducha consciente, limpiar tu espacio). 💧" << endl
-              << "2.- Escribir en un papel todo lo que sientes, incluso el asco, y luego romperlo o quemarlo simbólicamente. 📝🔥" << endl
-              << "3.- Darte un momento de auto-compasión, reconociendo tu humanidad y la posibilidad de error. 🙏" << endl
-              << "4.- Recordarte una cualidad positiva tuya que no esté relacionada con la situación que te causa remordimiento. 🌟" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Realizar una limpieza física o un acto simbólico de 'purificación' (ej. una ducha consciente, limpiar tu espacio). 💧" << endl
+                 << "2.- Escribir en un papel todo lo que sientes, incluso el asco, y luego romperlo o quemarlo simbólicamente. 📝🔥" << endl
+                 << "3.- Darte un momento de auto-compasión, reconociendo tu humanidad y la posibilidad de error. 🙏" << endl
+                 << "4.- Recordarte una cualidad positiva tuya que no esté relacionada con la situación que te causa remordimiento. 🌟" << endl << endl;
+    accionConcretaRemordimiento = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños actos de autocuidado y simbolismo son poderosos anclajes. Comprométete con esa acción y date crédito por cuidarte en este momento. 💪" << endl << endl;
 
     system("pause");
@@ -3843,19 +4204,19 @@ void terapiaRemordimiento ()
     // --- Reflexión final y camino a seguir ---
 
     cout << endl << "¿De qué manera crees que el *remordimiento, aunque incómodo y ligado al asco, puede ser un **mensaje* o una *oportunidad* para tu crecimiento personal y cambio? 🌱" << endl << endl
-              << "1.- Me indica la necesidad de alinear mis acciones con mis valores más profundos. 💡" << endl
-              << "2.- Me impulsa a buscar el perdón (propio o ajeno) y la reparación del daño. 🕊" << endl
-              << "3.- Me ayuda a desarrollar una mayor auto-compasión y aceptación de mi imperfección. 💖" << endl
-              << "4.- Me conecta con mi deseo de ser una mejor persona y aprender de mis errores. 🚀" << endl << endl;
-    transformarRemordimiento = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me indica la necesidad de alinear mis acciones con mis valores más profundos. 💡" << endl
+                 << "2.- Me impulsa a buscar el perdón (propio o ajeno) y la reparación del daño. 🕊" << endl
+                 << "3.- Me ayuda a desarrollar una mayor auto-compasión y aceptación de mi imperfección. 💖" << endl
+                 << "4.- Me conecta con mi deseo de ser una mejor persona y aprender de mis errores. 🚀" << endl << endl;
+    transformarRemordimientoProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Reconocer el mensaje del *remordimiento* y el *asco* es un paso significativo. Tu capacidad para transformar la incomodidad en aprendizaje y acción es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-perdón* o *aceptación radical* te gustaría darte a ti mismo/a en este momento de *remordimiento* y *asco*? ✨" << endl << endl
-              << "1.- 'Soy humano/a, cometo errores, y estoy aprendiendo a crecer de ellos.' 🙏" << endl
-              << "2.- 'Merezco la paz y la liberación de esta carga, y estoy en el camino para lograrlo.' 🏞" << endl
-              << "3.- 'Mi pasado no define mi futuro; puedo elegir ser diferente a partir de hoy.' 💖" << endl
-              << "4.- 'Me acepto con todas mis imperfecciones, y estoy trabajando en mi evolución.' 🌟" << endl << endl;
-    mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Soy humano/a, cometo errores, y estoy aprendiendo a crecer de ellos.' 🙏" << endl
+                 << "2.- 'Merezco la paz y la liberación de esta carga, y estoy en el camino para lograrlo.' 🏞" << endl
+                 << "3.- 'Mi pasado no define mi futuro; puedo elegir ser diferente a partir de hoy.' 💖" << endl
+                 << "4.- 'Me acepto con todas mis imperfecciones, y estoy trabajando en mi evolución.' 🌟" << endl << endl;
+    mensajeFinalRemordimiento = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en medio del *remordimiento* y el *asco*. Recuerda que mereces sentirte en paz y que tienes la capacidad de transitar y gestionar esta emoción hacia el auto-perdón y la sanación. 💖" << endl << endl;
 
     // --- Preguntas adicionales de opción múltiple ---
@@ -3863,57 +4224,75 @@ void terapiaRemordimiento ()
     system("cls");
 
     cout << endl << "Para profundizar en tu reflexión, ¿qué *parte de la situación o de tu acción* es la que te genera mayor *asco* subyacente al remordimiento? Identificarlo puede ayudarte a enfocar la sanación. 🔍" << endl << endl
-              << "1.- La forma en que te sentiste al actuar, la sensación interna de repulsión. 🤢" << endl
-              << "2.- Las consecuencias concretas de tu acción, el daño causado a otros o a ti mismo/a. 💔" << endl
-              << "3.- La idea de que esa acción es parte de tu personalidad o que revela algo 'feo' de ti. 🎭" << endl
-              << "4.- El contraste entre quien crees que deberías ser y quien fuiste en ese momento. 💡" << endl << endl;
-    reconocerAscoSubyacente = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4);
+                 << "1.- La forma en que te sentiste al actuar, la sensación interna de repulsión. 🤢" << endl
+                 << "2.- Las consecuencias concretas de tu acción, el daño causado a otros o a ti mismo/a. 💔" << endl
+                 << "3.- La idea de que esa acción es parte de tu personalidad o que revela algo 'feo' de ti. 🎭" << endl
+                 << "4.- El contraste entre quien crees que deberías ser y quien fuiste en ese momento. 💡" << endl << endl;
+    reconocerAscoSubyacenteProfundo = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Gracias por esa reflexión. Reconocer la *raíz del asco* es fundamental para poder limpiar esa herida y avanzar hacia el auto-perdón y la aceptación. 💡" << endl << endl;
 
     cout << "¿Qué *acción concreta de auto-perdón o reparación* podrías considerar para empezar a aliviar el peso del remordimiento y el asco, incluso si es un acto simbólico? 🕊" << endl << endl
-              << "1.- Escribir una carta de auto-perdón a ti mismo/a, reconociendo tu humanidad y tus esfuerzos. 📝" << endl
-              << "2.- Realizar un acto de bondad desinteresado hacia alguien, para equilibrar la balanza. 🤝" << endl
-              << "3.- Comprometerte con un cambio de comportamiento específico para no repetir esa acción. ✅" << endl
-              << "4.- Pasar tiempo en la naturaleza o en un espacio que te haga sentir 'limpio/a' y en paz. 🌳" << endl << endl;
-    perdonAccion = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Escribir una carta de auto-perdón a ti mismo/a, reconociendo tu humanidad y tus esfuerzos. 📝" << endl
+                 << "2.- Realizar un acto de bondad desinteresado hacia alguien, para equilibrar la balanza. 🤝" << endl
+                 << "3.- Comprometerte con un cambio de comportamiento específico para no repetir esa acción. ✅" << endl
+                 << "4.- Pasar tiempo en la naturaleza o en un espacio que te haga sentir 'limpio/a' y en paz. 🌳" << endl << endl;
+    perdonAccionConcreta = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Comprometerte con una *acción de auto-perdón o reparación* es un paso poderoso hacia la liberación. Estás eligiendo la sanación y el crecimiento sobre la inmovilización. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Remordimiento (desde el Asco) ---
+    cout << endl << "--- Resumen de tu Terapia de Remordimiento ---" << endl;
+    cout << "Causa del remordimiento (y conexión con el asco): " << causaRemordimiento << endl;
+    cout << "Origen principal del remordimiento ligado al asco: " << origenRemordimientoAscoGeneral << endl;
+    cout << "Impacto personal del remordimiento y asco: " << impactoPersonalRemordimiento << endl;
+    cout << "Señales internas del remordimiento mezclado con asco: " << senalesInternasRemordimiento << endl;
+    cout << "Recursos internos para procesar el remordimiento/asco: " << recursosInternosRemordimiento << endl;
+    cout << "Posibilidades de apoyo para sanar el remordimiento/asco: " << posibilidadesApoyoRemordimiento << endl;
+    cout << "Pequeño gesto de autocuidado/acción para aliviar: " << accionConcretaRemordimiento << endl;
+    cout << "Cómo el remordimiento puede ser un mensaje/oportunidad de crecimiento: " << transformarRemordimientoProceso << endl;
+    cout << "Mensaje de auto-perdón o aceptación radical: " << mensajeFinalRemordimiento << endl;
+    cout << "Parte de la situación que genera mayor asco subyacente: " << reconocerAscoSubyacenteProfundo << endl;
+    cout << "Acción concreta de auto-perdón o reparación: " << perdonAccionConcreta << endl;
+    cout << "---------------------------------------" << endl;
+    
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración del *remordimiento* y su conexión con el *asco*." << endl
-              << "😄 Recuerda que reconocer y procesar estas emociones es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia el auto-perdón, la sanación y una mayor paz interior. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar estas emociones es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia el auto-perdón, la sanación y una mayor paz interior. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaAscoDesprecio ()
+void terapiaAscoDesprecio()
 {
-    string causa;
-    int origenDesprecio, impactoPersonal, senalesInternas, recursosInternos, posibilidadesApoyo;
-    int accionConcreta, transformarDesprecio, mensajeFinal, creenciaSubyacente, accionNoReaccion;
+    string causaDesprecio; // Variable renombrada
+    int origenDesprecioRaiz, impactoPersonalDesprecio, senalesInternasDesprecio, recursosInternosDesprecio, posibilidadesApoyoDesprecio; // Variables renombradas
+    int accionConcretaDesprecio, transformarDesprecioProceso, mensajeFinalDesprecio, creenciaSubyacenteDesprecio, accionNoReaccionDesprecio; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción del desprecio ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción del *desprecio*. A menudo es una emoción compleja, una mezcla de ira y disgusto, que nos distancia de los demás. Es un acto de valentía reconocerla y abordarla. 😠" << endl
-              << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *desprecio* hacia alguien o algo? No necesitas entrar en detalles, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *desprecio* hacia alguien o algo? No necesitas entrar en detalles, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaDesprecio); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer el *desprecio* es el primer paso para entender qué lo provoca y cómo te afecta. Es una emoción intensa que puede tener un gran impacto. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *desprecio*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *desprecio*? 🤔" << endl << endl;
     cout << "1.- Sentir que la otra persona o situación carece de valor o merece mi condena. 👎" << endl
-              << "2.- Percibir una violación de mis valores fundamentales o de lo que considero correcto. ⚖" << endl
-              << "3.- Una sensación de superioridad o de que soy 'mejor' que la otra persona/situación. 👑" << endl
-              << "4.- Una experiencia pasada dolorosa o un patrón repetitivo de decepción con esa persona/situación. 🕰" << endl << endl;
-    origenDesprecio = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- Percibir una violación de mis valores fundamentales o de lo que considero correcto. ⚖" << endl
+                 << "3.- Una sensación de superioridad o de que soy 'mejor' que la otra persona/situación. 👑" << endl
+                 << "4.- Una experiencia pasada dolorosa o un patrón repetitivo de decepción con esa persona/situación. 🕰" << endl << endl;
+    origenDesprecioRaiz = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *desprecio* nos da claridad sobre las raíces de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla y elegir cómo responder. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta emoción de *desprecio* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta emoción de *desprecio* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
     cout << "1.- Me siento distante o desconectado/a de esa persona o de mi entorno. 🧊" << endl
-              << "2.- Tengo pensamientos negativos recurrentes o juicios constantes. 🧠" << endl
-              << "3.- Afecta mi capacidad de empatía o de ver la perspectiva de los demás. 🚧" << endl
-              << "4.- Me genera una sensación de amargura o de estar siempre 'a la defensiva'. 😠" << endl << endl;
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4);
+                 << "2.- Tengo pensamientos negativos recurrentes o juicios constantes. 🧠" << endl
+                 << "3.- Afecta mi capacidad de empatía o de ver la perspectiva de los demás. 🚧" << endl
+                 << "4.- Me genera una sensación de amargura o de estar siempre 'a la defensiva'. 😠" << endl << endl;
+    impactoPersonalDesprecio = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
     // La siguiente sección se mantiene como un "dummy switch" para mantener la estructura de diálogo,
     // pero no solicita más entrada del usuario aquí, para agilizar el flujo.
-    switch (impactoPersonal) {
+    switch (impactoPersonalDesprecio) { // Usando la variable renombrada
         case 1:
             cout << endl << "Comprendo. Esa distancia emocional puede ser agotadora y aislante. Es válido sentirlo. 😔" << endl;
             break;
@@ -3927,64 +4306,64 @@ void terapiaAscoDesprecio ()
             cout << endl << "Entiendo. Esa sensación de amargura o estar a la defensiva consume mucha energía. Es importante liberar esa carga. 😠" << endl;
             break;
     }
-    
+
     system("pause");
     system("cls");
 
     cout << endl << "Reconocer cómo el *desprecio* se manifiesta en tu vida es vital. Estas señales son mensajes importantes que tu sistema te envía sobre lo que necesitas abordar. Escucharlas te ayudará a darte el cuidado que mereces. 🫂" << endl << endl
-              << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que el *desprecio* está surgiendo? 😟" << endl << endl;
+                 << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que el *desprecio* está surgiendo? 😟" << endl << endl;
     cout << "1.- Una sensación de contracción o endurecimiento en el pecho o el estómago. 💥" << endl
-              << "2.- Una sonrisa sardónica, levantar el labio o un gesto facial de disgusto. 😒" << endl
-              << "3.- Una voz interna crítica o juiciosa hacia la persona/situación. 💬" << endl
-              << "4.- Sentir una distancia emocional o una frialdad hacia el otro. 🥶" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "2.- Una sonrisa sardónica, levantar el labio o un gesto facial de disgusto. 😒" << endl
+                 << "3.- Una voz interna crítica o juiciosa hacia la persona/situación. 💬" << endl
+                 << "4.- Sentir una distancia emocional o una frialdad hacia el otro. 🥶" << endl << endl;
+    senalesInternasDesprecio = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que esta emoción está presente y necesita ser explorada. 💡" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal, por pequeña que parezca, crees que aún posees para empezar a transformar este **desprecio*? 🌟" << endl << endl
-              << "1.- Mi capacidad para reflexionar y cuestionar mis propios juicios. 🧠" << endl
-              << "2.- Mi deseo de encontrar paz y liberarme de emociones negativas. ✨" << endl
-              << "3.- Mi habilidad para recordar la humanidad compartida, incluso en la diferencia. 🤝" << endl
-              << "4.- Mi resiliencia para cambiar patrones emocionales, incluso si es difícil. 💪" << endl << endl;
-    recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad para reflexionar y cuestionar mis propios juicios. 🧠" << endl
+                 << "2.- Mi deseo de encontrar paz y liberarme de emociones negativas. ✨" << endl
+                 << "3.- Mi habilidad para recordar la humanidad compartida, incluso en la diferencia. 🤝" << endl
+                 << "4.- Mi resiliencia para cambiar patrones emocionales, incluso si es difícil. 💪" << endl << endl;
+    recursosInternosDesprecio = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando sientes *desprecio*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes un poder interior inmenso para elegir cómo respondes. 💖" << endl
-              << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
+                 << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento para gestionar el **desprecio*? 🤝" << endl << endl
-              << "1.- Hablar con un profesional de la salud mental para explorar las raíces y estrategias de manejo. 🗣" << endl
-              << "2.- Conectar con un ser querido que te ofrezca una perspectiva diferente o una escucha sin juicio. 🫂" << endl
-              << "3.- Practicar ejercicios de empatía o toma de perspectiva (ej. intentar ver la situación desde el otro lado). 🧭" << endl
-              << "4.- Trabajar en perdonar o dejar ir, si es aplicable a la situación. 🕊" << endl << endl;
-    posibilidadesApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un profesional de la salud mental para explorar las raíces y estrategias de manejo. 🗣" << endl
+                 << "2.- Conectar con un ser querido que te ofrezca una perspectiva diferente o una escucha sin juicio. 🫂" << endl
+                 << "3.- Practicar ejercicios de empatía o toma de perspectiva (ej. intentar ver la situación desde el otro lado). 🧭" << endl
+                 << "4.- Trabajar en perdonar o dejar ir, si es aplicable a la situación. 🕊" << endl << endl;
+    posibilidadesApoyoDesprecio = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar el *desprecio*. Es un paso hacia tu bienestar emocional. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño paso concreto* puedes comprometerte a tomar HOY o en los próximos días para empezar a gestionar el *desprecio* cuando surja? 👣" << endl << endl
-              << "1.- Tomar 3 respiraciones profundas cuando notes la emoción de desprecio, para crear una pausa. 🌬" << endl
-              << "2.- Escribir en un diario sobre los pensamientos y sentimientos que surgen cuando sientes desprecio, sin juzgarte. 📝" << endl
-              << "3.- Identificar un rasgo positivo, por pequeño que sea, en la persona o situación hacia la que sientes desprecio. ➕" << endl
-              << "4.- Intentar posponer el juicio y simplemente observar la situación sin reaccionar inmediatamente. 🧘" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Tomar 3 respiraciones profundas cuando notes la emoción de desprecio, para crear una pausa. 🌬" << endl
+                 << "2.- Escribir en un diario sobre los pensamientos y sentimientos que surgen cuando sientes desprecio, sin juzgarte. 📝" << endl
+                 << "3.- Identificar un rasgo positivo, por pequeño que sea, en la persona o situación hacia la que sientes desprecio. ➕" << endl
+                 << "4.- Intentar posponer el juicio y simplemente observar la situación sin reaccionar inmediatamente. 🧘" << endl << endl;
+    accionConcretaDesprecio = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia tu bienestar. 💪" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "¿De qué manera crees que el proceso de transformar el *desprecio* puede enriquecer tu vida y tus relaciones? 🌱" << endl << endl
-              << "1.- Me permitirá vivir con más paz interior y menos carga emocional. 🏞" << endl
-              << "2.- Mejorará la calidad de mis relaciones, haciéndolas más auténticas y compasivas. 🤝" << endl
-              << "3.- Aumentará mi autoconocimiento y mi capacidad de empatía. 🚀" << endl
-              << "4.- Todas las anteriores, me abrirá a una vida más plena y conectada. 🦋" << endl << endl;
-    transformarDesprecio = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me permitirá vivir con más paz interior y menos carga emocional. 🏞" << endl
+                 << "2.- Mejorará la calidad de mis relaciones, haciéndolas más auténticas y compasivas. 🤝" << endl
+                 << "3.- Aumentará mi autoconocimiento y mi capacidad de empatía. 🚀" << endl
+                 << "4.- Todas las anteriores, me abrirá a una vida más plena y conectada. 🦋" << endl << endl;
+    transformarDesprecioProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de este proceso es un paso significativo. Tu capacidad para buscar el crecimiento y el bienestar es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-compasión* o *aceptación* te gustaría darte a ti mismo/a al iniciar este camino de transformación del *desprecio*? ✨" << endl << endl
-              << "1.- 'Está bien sentir esta emoción, pero puedo elegir cómo respondo a ella.' 🙏" << endl
-              << "2.- 'Soy capaz de crecer y de transformar mis emociones más difíciles.' 💪" << endl
-              << "3.- 'Mi paz interior es una prioridad, y merezco liberarme de lo que me pesa.' 💖" << endl
-              << "4.- 'Cada paso hacia la comprensión y la compasión es un regalo para mí mismo/a.' 🎁" << endl << endl;
-    mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Está bien sentir esta emoción, pero puedo elegir cómo respondo a ella.' 🙏" << endl
+                 << "2.- 'Soy capaz de crecer y de transformar mis emociones más difíciles.' 💪" << endl
+                 << "3.- 'Mi paz interior es una prioridad, y merezco liberarme de lo que me pesa.' 💖" << endl
+                 << "4.- 'Cada paso hacia la comprensión y la compasión es un regalo para mí mismo/a.' 🎁" << endl << endl;
+    mensajeFinalDesprecio = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en tu camino hacia la liberación del *desprecio*. Recuerda que mereces vivir una vida con más compasión, empezando por ti mismo/a. 💖" << endl << endl;
 
     // --- Preguntas adicionales de opción múltiple ---
@@ -3992,57 +4371,75 @@ void terapiaAscoDesprecio ()
     system("cls");
 
     cout << endl << "Para profundizar en tu reflexión, ¿hay alguna *creencia subyacente* que tengas sobre ti mismo/a o sobre los demás que pueda estar alimentando este sentimiento de *desprecio*? (Ej: 'Siempre tengo que tener la razón', 'La gente no cambia', 'Soy superior a...') 🤔" << endl << endl
-              << "1.- 'Siento que mis estándares son muy altos y los demás no los cumplen.' 📈" << endl
-              << "2.- 'Creo que debo protegerme de ser herido/a o decepcionado/a.' 🛡" << endl
-              << "3.- 'Hay una parte de mí que siente frustración por no poder cambiar a los demás.' 🤯" << endl
-              << "4.- 'Siento que mi valía depende de cuán 'correctas' sean mis opiniones.' 👑" << endl << endl;
-    creenciaSubyacente = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4);
+                 << "1.- 'Siento que mis estándares son muy altos y los demás no los cumplen.' 📈" << endl
+                 << "2.- 'Creo que debo protegerme de ser herido/a o decepcionado/a.' 🛡" << endl
+                 << "3.- 'Hay una parte de mí que siente frustración por no poder cambiar a los demás.' 🤯" << endl
+                 << "4.- 'Siento que mi valía depende de cuán 'correctas' sean mis opiniones.' 👑" << endl << endl;
+    creenciaSubyacenteDesprecio = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Gracias por esa reflexión. Identificar esas *creencias subyacentes* es clave, ya que a menudo son los cimientos de nuestras emociones más complejas. Solo al reconocerlas, podemos empezar a cuestionarlas y, si es necesario, cambiarlas. 💡" << endl << endl;
 
     cout << "¿Qué *pequeña acción consciente* puedes tomar hoy para practicar la *no-reacción* o la *observación* desapegada la próxima vez que surja el desprecio? 🧘" << endl << endl
-              << "1.- Respirar profundamente 3 veces y nombrar la emoción: 'Estoy sintiendo desprecio.' 🌬" << endl
-              << "2.- Cambiar el foco de mi atención a algo neutral o positivo en mi entorno. 🌳" << endl
-              << "3.- Recordarme que la emoción es mía y no define la valía del otro. ✨" << endl
-              << "4.- Elegir conscientemente una respuesta diferente a la que normalmente tendría. 🔄" << endl << endl;
-    accionNoReaccion = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Respirar profundamente 3 veces y nombrar la emoción: 'Estoy sintiendo desprecio.' 🌬" << endl
+                 << "2.- Cambiar el foco de mi atención a algo neutral o positivo en mi entorno. 🌳" << endl
+                 << "3.- Recordarme que la emoción es mía y no define la valía del otro. ✨" << endl
+                 << "4.- Elegir conscientemente una respuesta diferente a la que normalmente tendría. 🔄" << endl << endl;
+    accionNoReaccionDesprecio = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Practicar la *no-reacción* y la *observación desapegada* son herramientas poderosas para ganar control sobre tus respuestas emocionales. Cada vez que lo intentes, estás fortaleciendo tu capacidad de elegir la paz. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Desprecio ---
+    cout << endl << "--- Resumen de tu Terapia de Desprecio ---" << endl;
+    cout << "Causa del desprecio: " << causaDesprecio << endl;
+    cout << "Origen principal del desprecio: " << origenDesprecioRaiz << endl;
+    cout << "Impacto personal del desprecio: " << impactoPersonalDesprecio << endl;
+    cout << "Señales internas del desprecio: " << senalesInternasDesprecio << endl;
+    cout << "Recursos internos para transformar el desprecio: " << recursosInternosDesprecio << endl;
+    cout << "Posibilidades de apoyo para gestionar el desprecio: " << posibilidadesApoyoDesprecio << endl;
+    cout << "Acción concreta para gestionar el desprecio: " << accionConcretaDesprecio << endl;
+    cout << "Cómo el proceso de transformación enriquece tu vida: " << transformarDesprecioProceso << endl;
+    cout << "Mensaje de auto-compasión o aceptación: " << mensajeFinalDesprecio << endl;
+    cout << "Creencia subyacente que alimenta el desprecio: " << creenciaSubyacenteDesprecio << endl;
+    cout << "Pequeña acción consciente para practicar la no-reacción/observación: " << accionNoReaccionDesprecio << endl;
+    cout << "---------------------------------------" << endl;
+    
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración del *desprecio*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la compasión y la conexión. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la compasión y la conexión. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaVerguenza ()
+void terapiaVerguenza()
 {
-    string causa;
-    int origenVerguenza, impactoPersonal, senalesInternas, recursosInternos, posibilidadesApoyo;
-    int accionConcreta, transformarVerguenza, mensajeFinal, reconocerVulnerabilidad, comunicarVerguenza;
+    string causaVerguenza; // Variable renombrada
+    int origenVerguenzaRaiz, impactoPersonalVerguenza, senalesInternasVerguenza, recursosInternosVerguenza, posibilidadesApoyoVerguenza; // Variables renombradas
+    int accionConcretaVerguenza, transformarVerguenzaProceso, mensajeFinalVerguenza, reconocerVulnerabilidadProfunda, comunicarVerguenzaAbiertamente; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de la vergüenza ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción de la *vergüenza*. Esta es una emoción profunda y a menudo dolorosa, que surge de la percepción de un defecto personal o de haber hecho algo 'malo'. Es un acto de valentía reconocerla y abordarla. 😔" << endl
-              << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *vergüenza*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *vergüenza*? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaVerguenza); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer la *vergüenza* es el primer paso para entender qué la provoca y cómo te afecta. Es una emoción compleja y a menudo silenciada. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *vergüenza*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *vergüenza*? 🤔" << endl << endl;
     cout << "1.- Sentir que hiciste algo moralmente 'incorrecto' o que dañaste a alguien. 💔" << endl
-              << "2.- La percepción de ser defectuoso/a o inadecuado/a como persona. 📉" << endl
-              << "3.- Creer que no cumples con las expectativas de otros o de la sociedad. 🎭" << endl
-              << "4.- La exposición de una parte de ti que querías mantener oculta. 🙈" << endl << endl;
-    origenVerguenza = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- La percepción de ser defectuoso/a o inadecuado/a como persona. 📉" << endl
+                 << "3.- Creer que no cumples con las expectativas de otros o de la sociedad. 🎭" << endl
+                 << "4.- La exposición de una parte de ti que querías mantener oculta. 🙈" << endl << endl;
+    origenVerguenzaRaiz = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *vergüenza* nos da claridad sobre las raíces de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla y encontrar la auto-compasión. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta emoción de *vergüenza* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta emoción de *vergüenza* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
     cout << "1.- Me siento indigno/a o inmerecedor/a de amor y conexión. 😔" << endl
-              << "2.- Tiendo a aislarme o a evitar situaciones sociales para no ser 'descubierto/a'. 🧊" << endl
-              << "3.- Me cuesta mostrar mi verdadero yo o ser vulnerable con otros. 🛡" << endl
-              << "4.- Afecta mi autoestima y mi capacidad para tomar riesgos o intentar cosas nuevas. 📉" << endl << endl;
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4);
+                 << "2.- Tiendo a aislarme o a evitar situaciones sociales para no ser 'descubierto/a'. 🧊" << endl
+                 << "3.- Me cuesta mostrar mi verdadero yo o ser vulnerable con otros. 🛡" << endl
+                 << "4.- Afecta mi autoestima y mi capacidad para tomar riesgos o intentar cosas nuevas. 📉" << endl << endl;
+    impactoPersonalVerguenza = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
     // La siguiente sección se mantiene como un "dummy switch" para mantener la estructura de diálogo,
     // pero no solicita más entrada del usuario aquí, para agilizar el flujo.
-    switch (impactoPersonal) {
+    switch (impactoPersonalVerguenza) { // Usando la variable renombrada
         case 1:
             cout << endl << "Comprendo. Esos sentimientos de indignidad son muy dolorosos. Es importante recordar tu valor inherente. 🙏" << endl;
             break;
@@ -4061,59 +4458,59 @@ void terapiaVerguenza ()
     system("cls");
 
     cout << endl << "Reconocer cómo la *vergüenza* se manifiesta en tu vida es vital. Estas señales son mensajes importantes que tu sistema te envía sobre lo que necesitas abordar. Escucharlas te ayudará a darte el cuidado que mereces. 🫂" << endl << endl
-              << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que la *vergüenza* está surgiendo? 😟" << endl << endl;
+                 << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que la *vergüenza* está surgiendo? 😟" << endl << endl;
     cout << "1.- Sonrojarse, bajar la mirada, o querer desaparecer físicamente. 🙈" << endl
-              << "2.- Una sensación de hundimiento en el estómago o el pecho, opresión. ⬇" << endl
-              << "3.- Pensamientos de auto-crítica intensa o de que soy un fracaso. 💬" << endl
-              << "4.- El impulso de esconderte, de no hablar o de desviar la atención. 🤐" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "2.- Una sensación de hundimiento en el estómago o el pecho, opresión. ⬇" << endl
+                 << "3.- Pensamientos de auto-crítica intensa o de que soy un fracaso. 💬" << endl
+                 << "4.- El impulso de esconderte, de no hablar o de desviar la atención. 🤐" << endl << endl;
+    senalesInternasVerguenza = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que esta emoción está presente y necesita ser explorada. 💡" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal, por pequeña que parezca, crees que aún posees para empezar a transformar esta **vergüenza* en auto-compasión? 🌟" << endl << endl
-              << "1.- Mi capacidad para reconocer mis errores y desear aprender de ellos. 💡" << endl
-              << "2.- Mi deseo de sentirme más libre y conectado/a con otros. ✨" << endl
-              << "3.- Mi habilidad para la empatía, que puedo extender hacia mí mismo/a. 🫂" << endl
-              << "4.- Mi resiliencia para enfrentar emociones difíciles y buscar la sanación. 💪" << endl << endl;
-    recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad para reconocer mis errores y desear aprender de ellos. 💡" << endl
+                 << "2.- Mi deseo de sentirme más libre y conectado/a con otros. ✨" << endl
+                 << "3.- Mi habilidad para la empatía, que puedo extender hacia mí mismo/a. 🫂" << endl
+                 << "4.- Mi resiliencia para enfrentar emociones difíciles y buscar la sanación. 💪" << endl << endl;
+    recursosInternosVerguenza = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando sientes *vergüenza*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes un poder interior inmenso para elegir cómo respondes y cómo te tratas a ti mismo/a. 💖" << endl
-              << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
+                 << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento para gestionar la **vergüenza*? 🤝" << endl << endl
-              << "1.- Hablar con un terapeuta que te ofrezca un espacio seguro para explorar la vergüenza sin juicio. 🗣" << endl
-              << "2.- Compartir tu experiencia con alguien de mucha confianza que te ofrezca validación y apoyo. 🫂" << endl
-              << "3.- Practicar ejercicios de auto-compasión, como la escritura o la meditación guiada. 🧘" << endl
-              << "4.- Leer sobre la vergüenza y entender que es una experiencia humana común. 📚" << endl << endl;
-    posibilidadesApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un terapeuta que te ofrezca un espacio seguro para explorar la vergüenza sin juicio. 🗣" << endl
+                 << "2.- Compartir tu experiencia con alguien de mucha confianza que te ofrezca validación y apoyo. 🫂" << endl
+                 << "3.- Practicar ejercicios de auto-compasión, como la escritura o la meditación guiada. 🧘" << endl
+                 << "4.- Leer sobre la vergüenza y entender que es una experiencia humana común. 📚" << endl << endl;
+    posibilidadesApoyoVerguenza = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar la *vergüenza*. Es un paso hacia tu bienestar emocional. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño paso concreto* puedes comprometerte a tomar HOY o en los próximos días para empezar a abordar la *vergüenza*? 👣" << endl << endl
-              << "1.- Escribir una carta a tu 'yo avergonzado/a' con palabras de consuelo y aceptación. 📝" << endl
-              << "2.- Identificar una parte de ti que te haga sentir orgullo y enfocarte en ella por unos minutos. 🌟" << endl
-              << "3.- Permitirte ser imperfecto/a en una situación pequeña y observar qué sucede. 🌈" << endl
-              << "4.- Compartir una pequeña vulnerabilidad con alguien de confianza para practicar la conexión. 🗣" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Escribir una carta a tu 'yo avergonzado/a' con palabras de consuelo y aceptación. 📝" << endl
+                 << "2.- Identificar una parte de ti que te haga sentir orgullo y enfocarte en ella por unos minutos. 🌟" << endl
+                 << "3.- Permitirte ser imperfecto/a en una situación pequeña y observar qué sucede. 🌈" << endl
+                 << "4.- Compartir una pequeña vulnerabilidad con alguien de confianza para practicar la conexión. 🗣" << endl << endl;
+    accionConcretaVerguenza = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia tu bienestar. 💪" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "¿De qué manera crees que el proceso de transformar la *vergüenza* puede enriquecer tu vida y tus relaciones? 🌱" << endl << endl
-              << "1.- Me permitirá experimentar mayor auto-aceptación y amor propio. 💖" << endl
-              << "2.- Mis relaciones serán más auténticas y profundas, basadas en la vulnerabilidad. 🤝" << endl
-              << "3.- Aumentará mi resiliencia y mi capacidad para manejar la imperfección. 🚀" << endl
-              << "4.- Todas las anteriores, me abrirá a una vida con más libertad y plenitud. 🦋" << endl << endl;
-    transformarVerguenza = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me permitirá experimentar mayor auto-aceptación y amor propio. 💖" << endl
+                 << "2.- Mis relaciones serán más auténticas y profundas, basadas en la vulnerabilidad. 🤝" << endl
+                 << "3.- Aumentará mi resiliencia y mi capacidad para manejar la imperfección. 🚀" << endl
+                 << "4.- Todas las anteriores, me abrirá a una vida con más libertad y plenitud. 🦋" << endl << endl;
+    transformarVerguenzaProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de este proceso es un paso significativo. Tu capacidad para buscar el crecimiento y el bienestar es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-compasión* o *aceptación radical* te gustaría darte a ti mismo/a al iniciar este camino de transformación de la *vergüenza*? ✨" << endl << endl
-              << "1.- 'Soy suficiente tal como soy, incluso con mis imperfecciones.' 🙏" << endl
-              << "2.- 'Merezco amor y conexión, y estoy aprendiendo a dármelos a mí mismo/a.' 💪" << endl
-              << "3.- 'La vergüenza es solo una emoción, no define quién soy.' 💖" << endl
-              << "4.- 'Estoy en un camino de crecimiento, y cada paso es válido.' 🌟" << endl << endl;
-    mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Soy suficiente tal como soy, incluso con mis imperfecciones.' 🙏" << endl
+                 << "2.- 'Merezco amor y conexión, y estoy aprendiendo a dármelos a mí mismo/a.' 💪" << endl
+                 << "3.- 'La vergüenza es solo una emoción, no define quién soy.' 💖" << endl
+                 << "4.- 'Estoy en un camino de crecimiento, y cada paso es válido.' 🌟" << endl << endl;
+    mensajeFinalVerguenza = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en tu camino hacia la gestión de la *vergüenza*. Recuerda que mereces vivir una vida con más auto-compasión y aceptación. 💖" << endl << endl;
 
     // --- Preguntas adicionales de opción múltiple ---
@@ -4121,57 +4518,75 @@ void terapiaVerguenza ()
     system("cls");
 
     cout << endl << "Para profundizar en tu reflexión, ¿qué *narrativa o creencia específica* sobre ti mismo/a (ej. 'soy un fraude', 'no soy bueno/a suficiente') sientes que la *vergüenza* está reforzando? 🤔" << endl << endl
-              << "1.- La creencia de que necesitas ser perfecto/a para ser amado/a. 👑" << endl
-              << "2.- La idea de que tus errores te hacen fundamentalmente defectuoso/a. 💔" << endl
-              << "3.- La presión de las expectativas externas o de cómo deberías ser. 🎭" << endl
-              << "4.- La noción de que no mereces ser feliz o tener éxito. 😔" << endl << endl;
-    reconocerVulnerabilidad = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4);
+                 << "1.- La creencia de que necesitas ser perfecto/a para ser amado/a. 👑" << endl
+                 << "2.- La idea de que tus errores te hacen fundamentalmente defectuoso/a. 💔" << endl
+                 << "3.- La presión de las expectativas externas o de cómo deberías ser. 🎭" << endl
+                 << "4.- La noción de que no mereces ser feliz o tener éxito. 😔" << endl << endl;
+    reconocerVulnerabilidadProfunda = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Gracias por esa reflexión. Identificar esas *narrativas subyacentes* es clave para desmantelar el poder de la vergüenza. A menudo, la vergüenza se aferra a historias que nos contamos sobre nosotros mismos. 💡" << endl << endl;
 
     cout << "Si pudieras *comunicar* una parte de tu experiencia de *vergüenza* a alguien en quien confías plenamente, ¿qué *verdadero sentimiento o miedo* expresarías para disolver su poder? 🗣" << endl << endl
-              << "1.- 'Tengo miedo de que si me conoces de verdad, no me aceptarías.' 😨" << endl
-              << "2.- 'Me siento solo/a con este secreto o esta parte de mí.' 🧊" << endl
-              << "3.- 'Deseo ser perdonado/a (por mí mismo/a o por otros) por lo que hice/soy.' 🙏" << endl
-              << "4.- 'Me siento profundamente avergonzado/a y no sé cómo salir de esto.' 😔" << endl << endl;
-    comunicarVerguenza = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- 'Tengo miedo de que si me conoces de verdad, no me aceptarías.' 😨" << endl
+                 << "2.- 'Me siento solo/a con este secreto o esta parte de mí.' 🧊" << endl
+                 << "3.- 'Deseo ser perdonado/a (por mí mismo/a o por otros) por lo que hice/soy.' 🙏" << endl
+                 << "4.- 'Me siento profundamente avergonzado/a y no sé cómo salir de esto.' 😔" << endl << endl;
+    comunicarVerguenzaAbiertamente = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! La *comunicación abierta* de la vergüenza con una persona de confianza es una de las herramientas más poderosas para disolver su poder y encontrar la conexión. Estás eligiendo la vulnerabilidad valiente sobre el aislamiento. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Vergüenza ---
+    cout << endl << "--- Resumen de tu Terapia de Vergüenza ---" << endl;
+    cout << "Causa de la vergüenza: " << causaVerguenza << endl;
+    cout << "Origen principal de la vergüenza: " << origenVerguenzaRaiz << endl;
+    cout << "Impacto personal de la vergüenza: " << impactoPersonalVerguenza << endl;
+    cout << "Señales internas de la vergüenza: " << senalesInternasVerguenza << endl;
+    cout << "Recursos internos para transformar la vergüenza: " << recursosInternosVerguenza << endl;
+    cout << "Posibilidades de apoyo para gestionar la vergüenza: " << posibilidadesApoyoVerguenza << endl;
+    cout << "Pequeño paso concreto para abordar la vergüenza: " << accionConcretaVerguenza << endl;
+    cout << "Cómo el proceso de transformar la vergüenza enriquece tu vida: " << transformarVerguenzaProceso << endl;
+    cout << "Mensaje de auto-compasión o aceptación radical: " << mensajeFinalVerguenza << endl;
+    cout << "Narrativa o creencia específica que la vergüenza refuerza: " << reconocerVulnerabilidadProfunda << endl;
+    cout << "Verdadero sentimiento o miedo a comunicar para disolver la vergüenza: " << comunicarVerguenzaAbiertamente << endl;
+    cout << "---------------------------------------" << endl;
+    
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración de la *vergüenza*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la auto-aceptación, la compasión y relaciones más auténticas. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la auto-aceptación, la compasión y relaciones más auténticas. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaAsco ()
+void terapiaAsco()
 {
-    string causa;
-    int origenAsco, impactoPersonal, senalesInternas, recursosInternos, posibilidadesApoyo;
-    int accionConcreta, transformarAsco, mensajeFinal, mensajeInternoAsco, respuestaSaludable;
+    string causaAsco; // Variable renombrada
+    int origenAscoRaiz, impactoPersonalAsco, senalesInternasAsco, recursosInternosAsco, posibilidadesApoyoAsco; // Variables renombradas
+    int accionConcretaAsco, transformarAscoProceso, mensajeFinalAsco, mensajeInternoAscoProfundo, respuestaSaludableAsco; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción de Asco/Repugnancia ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción del asco/repugnancia. Es una emoción poderosa que nos indica rechazo hacia algo que percibimos como sucio, dañino, o moralmente inaceptable. Es valiente de tu parte reconocerla y abordarla. 🤢" << endl
-              << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste asco o repugnancia? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste asco o repugnancia? No necesitas entrar en detalles si no lo deseas, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaAsco); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer el asco/repugnancia es el primer paso para entender qué lo provoca y cómo te afecta. Es una emoción con una función. Recuerda que en este espacio estás libre de expresarte sin ningún prejuicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el origen principal de tu asco/repugnancia? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el origen principal de tu asco/repugnancia? 🤔" << endl << endl;
     cout << "1.- Algo físico que percibes como sucio, contaminado o en descomposición. 🦠" << endl
-              << "2.- Una acción o comportamiento de otra persona que consideras moralmente inaceptable o cruel. 💔" << endl
-              << "3.- Una situación que te hace sentir invadido/a o que viola tus límites personales. 🚫" << endl
-              << "4.- Un pensamiento o una acción propia que te genera auto-repulsión. 😔" << endl << endl;
-    origenAsco = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- Una acción o comportamiento de otra persona que consideras moralmente inaceptable o cruel. 💔" << endl
+                 << "3.- Una situación que te hace sentir invadido/a o que viola tus límites personales. 🚫" << endl
+                 << "4.- Un pensamiento o una acción propia que te genera auto-repulsión. 😔" << endl << endl;
+    origenAscoRaiz = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu asco/repugnancia nos da claridad sobre las raíces de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a gestionarla y elegir cómo responder. 💡" << endl
-              << "Ahora, ¿cómo ha impactado esta emoción de asco/repugnancia en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha impactado esta emoción de asco/repugnancia en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
     cout << "1.- Me genera una sensación de náusea o malestar físico. 🤢" << endl
-              << "2.- Tiendo a evitar ciertas situaciones, personas o temas para no volver a sentirlo. 🚶" << endl
-              << "3.- Me siento juzgado/a  con una actitud negativa hacia otros o hacia mí mismo/a. 👎" << endl
-              << "4.- Afecta mi apetito, mi sueño o mi energía general. 😴" << endl << endl;
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4);
+                 << "2.- Tiendo a evitar ciertas situaciones, personas o temas para no volver a sentirlo. 🚶" << endl
+                 << "3.- Me siento juzgado/a con una actitud negativa hacia otros o hacia mí mismo/a. 👎" << endl
+                 << "4.- Afecta mi apetito, mi sueño o mi energía general. 😴" << endl << endl;
+    impactoPersonalAsco = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
     // La siguiente sección se mantiene como un "dummy switch" para mantener la estructura de diálogo,
     // pero no solicita más entrada del usuario aquí, para agilizar el flujo.
-    switch (impactoPersonal) {
+    switch (impactoPersonalAsco) { // Usando la variable renombrada
         case 1:
             cout << endl << "Comprendo. Ese malestar físico es una señal clara de la intensidad del asco. Reconocerlo y saber su significado es importante. 🤢" << endl;
             break;
@@ -4190,59 +4605,59 @@ void terapiaAsco ()
     system("cls");
 
     cout << endl << "Reconocer cómo el asco/repugnancia se manifiesta en tu vida es vital. Estas señales son mensajes importantes que tu sistema te envía sobre lo que necesitas abordar. Escucharlas te ayudará a darte el cuidado que mereces. 🫂" << endl << endl
-              << "¿Qué señales internas notas en tu cuerpo o mente cuando sientes que el asco/repugnancia está surgiendo? 😟" << endl << endl;
+                 << "¿Qué señales internas notas en tu cuerpo o mente cuando sientes que el asco/repugnancia está surgiendo? 😟" << endl << endl;
     cout << "1.- Náuseas, contracción en el estómago, o el impulso de alejarte físicamente. 🤢" << endl
-              << "2.- Una expresión facial de disgusto, como arrugar la nariz o fruncir el ceño. 😒" << endl
-              << "3.- Pensamientos de desaprobación intensa, crítica o rechazo hacia lo que lo provoca. 💬" << endl
-              << "4.- La sensación de que algo es  'corrupto' o 'inaceptable'. 🤮" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "2.- Una expresión facial de disgusto, como arrugar la nariz o fruncir el ceño. 😒" << endl
+                 << "3.- Pensamientos de desaprobación intensa, crítica o rechazo hacia lo que lo provoca. 💬" << endl
+                 << "4.- La sensación de que algo es 'corrupto' o 'inaceptable'. 🤮" << endl << endl;
+    senalesInternasAsco = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que esta emoción está presente y necesita ser explorada. 💡" << endl << endl;
 
     cout << "¿Qué recurso interno o fortaleza personal, por pequeña que parezca, crees que aún posees para empezar a transformar este **asco/repugnancia en una respuesta más equilibrada? 🌟" << endl << endl
-              << "1.- Mi capacidad para la observación y el análisis de la situación. 🧠" << endl
-              << "2.- Mi deseo de comprender la situación o el comportamiento, incluso si es difícil. 💡" << endl
-              << "3.- Mi habilidad para establecer límites saludables cuando algo me resulta inaceptable. 🚫" << endl
-              << "4.- Mi resiliencia para no dejar que las emociones fuertes me dominen. 💪" << endl << endl;
-    recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi capacidad para la observación y el análisis de la situación. 🧠" << endl
+                 << "2.- Mi deseo de comprender la situación o el comportamiento, incluso si es difícil. 💡" << endl
+                 << "3.- Mi habilidad para establecer límites saludables cuando algo me resulta inaceptable. 🚫" << endl
+                 << "4.- Mi resiliencia para no dejar que las emociones fuertes me dominen. 💪" << endl << endl;
+    recursosInternosAsco = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando sientes asco/repugnancia, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes un poder interior inmenso para elegir cómo respondes. 💖" << endl
-              << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
+                 << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "Exploremos ahora las posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento para gestionar el **asco/repugnancia? 🤝" << endl << endl
-              << "1.- Hablar con un profesional para procesar las causas profundas del asco (ej. trauma, experiencias pasadas). 🗣" << endl
-              << "2.- Practicar la exposición gradual y controlada si el asco es desproporcionado (con guía profesional). 📈" << endl
-              << "3.- Fortalecer tus propios valores y límites, para sentirte más seguro/a en tus reacciones. ⚖" << endl
-              << "4.- Buscar actividades que te generen sensaciones de limpieza, pureza o renovación (ej. ordenar, tomar un baño relajante). ✨" << endl << endl;
-    posibilidadesApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Hablar con un profesional para procesar las causas profundas del asco (ej. trauma, experiencias pasadas). 🗣" << endl
+                 << "2.- Practicar la exposición gradual y controlada si el asco es desproporcionado (con guía profesional). 📈" << endl
+                 << "3.- Fortalecer tus propios valores y límites, para sentirte más seguro/a en tus reacciones. ⚖" << endl
+                 << "4.- Buscar actividades que te generen sensaciones de limpieza, pureza o renovación (ej. ordenar, tomar un baño relajante). ✨" << endl << endl;
+    posibilidadesApoyoAsco = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar el asco/repugnancia. Es un paso hacia tu bienestar emocional. ✨" << endl << endl;
 
     cout << "¿Qué pequeño paso concreto puedes comprometerte a tomar HOY o en los próximos días para empezar a gestionar el asco/repugnancia cuando surja? 👣" << endl << endl
-              << "1.- Apartarte físicamente de la situación o el estímulo que te lo provoca, si es posible. 🚶" << endl
-              << "2.- Practicar una respiración profunda y lenta para calmar tu sistema nervioso. 🌬" << endl
-              << "3.- Identificar si el asco es hacia la acción en sí o hacia la persona/cosa que la realiza, para diferenciar. 💡" << endl
-              << "4.- Escribir sobre lo que te genera asco, para procesarlo fuera de ti. 📝" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Apartarte físicamente de la situación o el estímulo que te lo provoca, si es posible. 🚶" << endl
+                 << "2.- Practicar una respiración profunda y lenta para calmar tu sistema nervioso. 🌬" << endl
+                 << "3.- Identificar si el asco es hacia la acción en sí o hacia la persona/cosa que la realiza, para diferenciar. 💡" << endl
+                 << "4.- Escribir sobre lo que te genera asco, para procesarlo fuera de ti. 📝" << endl << endl;
+    accionConcretaAsco = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia tu bienestar. 💪" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "¿De qué manera crees que el proceso de transformar el asco/repugnancia puede enriquecer tu vida y tus relaciones? 🌱" << endl << endl
-              << "1.- Me permitirá tener mayor control sobre mis reacciones viscerales. 🏞" << endl
-              << "2.- Me ayudará a establecer límites más claros y saludables en mis interacciones. 🤝" << endl
-              << "3.- Aumentará mi capacidad de discernimiento y de responder con sabiduría. 🚀" << endl
-              << "4.- Todas las anteriores, me abrirá a una vida con más libertad y menos evitación. 🦋" << endl << endl;
-    transformarAsco = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me permitirá tener mayor control sobre mis reacciones viscerales. 🏞" << endl
+                 << "2.- Me ayudará a establecer límites más claros y saludables en mis interacciones. 🤝" << endl
+                 << "3.- Aumentará mi capacidad de discernimiento y de responder con sabiduría. 🚀" << endl
+                 << "4.- Todas las anteriores, me abrirá a una vida con más libertad y menos evitación. 🦋" << endl << endl;
+    transformarAscoProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de este proceso es un paso significativo. Tu capacidad para buscar el crecimiento y el bienestar es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué mensaje de auto-compasión o aceptación te gustaría darte a ti mismo/a al iniciar este camino de transformación del asco/repugnancia? ✨" << endl << endl
-              << "1.- 'Mi sensación de asco me protege, pero puedo elegir cuándo y cómo respondo a él.' 🙏" << endl
-              << "2.- 'Merezco sentirme seguro/a y en control de mis emociones.' 💪" << endl
-              << "3.- 'Estoy aprendiendo a procesar las cosas que me repelen de una manera sana.' 💖" << endl
-              << "4.- 'Puedo encontrar la pureza y la calma incluso en situaciones desafiantes.' 🌟" << endl << endl;
-    mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Mi sensación de asco me protege, pero puedo elegir cuándo y cómo respondo a él.' 🙏" << endl
+                 << "2.- 'Merezco sentirme seguro/a y en control de mis emociones.' 💪" << endl
+                 << "3.- 'Estoy aprendiendo a procesar las cosas que me repelen de una manera sana.' 💖" << endl
+                 << "4.- 'Puedo encontrar la pureza y la calma incluso en situaciones desafiantes.' 🌟" << endl << endl;
+    mensajeFinalAsco = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en tu camino hacia la gestión del asco/repugnancia. Recuerda que mereces vivir una vida con más discernimiento y menos incomodidad. 💖" << endl << endl;
 
     // --- Preguntas adicionales de opción múltiple ---
@@ -4250,57 +4665,75 @@ void terapiaAsco ()
     system("cls");
 
     cout << endl << "Para profundizar en tu reflexión, ¿qué mensaje interno fundamental crees que el asco está tratando de comunicarte sobre tus valores o tus necesidades? (Ej: 'Esto es tóxico', 'Mis límites han sido cruzados', 'Necesito pureza') 🤔" << endl << endl
-              << "1.- 'Necesito proteger mi integridad física o emocional.' 🛡" << endl
-              << "2.- 'Mis valores morales están siendo desafiados o violados.' ⚖" << endl
-              << "3.- 'Necesito un entorno más limpio o un trato más respetuoso.' ✨" << endl
-              << "4.- 'Debo ser más consciente de lo que permito en mi vida.' 🚫" << endl << endl;
-    mensajeInternoAsco = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4);
+                 << "1.- 'Necesito proteger mi integridad física o emocional.' 🛡" << endl
+                 << "2.- 'Mis valores morales están siendo desafiados o violados.' ⚖" << endl
+                 << "3.- 'Necesito un entorno más limpio o un trato más respetuoso.' ✨" << endl
+                 << "4.- 'Debo ser más consciente de lo que permito en mi vida.' 🚫" << endl << endl;
+    mensajeInternoAscoProfundo = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Gracias por esa reflexión. Entender el mensaje interno del asco es crucial, ya que te guía hacia lo que es verdaderamente importante para ti y lo que necesitas proteger o establecer. 💡" << endl << endl;
 
     cout << "Cuando el asco te impulse a reaccionar (ej. alejarte bruscamente, criticar), ¿qué respuesta saludable y consciente podrías elegir en su lugar para gestionar la emoción sin dañar? 🧘" << endl << endl
-              << "1.- Establecer un límite verbal claro y calmado si la situación lo permite. 🗣" << endl
-              << "2.- Reconocer el sentimiento internamente y luego decidir conscientemente tu próximo paso. 🧠" << endl
-              << "3.- Si es apropiado, alejarte de la situación con respeto, sin necesidad de un juicio expresado. 🚶" << endl
-              << "4.- Buscar una actividad que te ayude a limpiar o procesar esa energía (ej. escribir, limpiar, meditar). 📝" << endl << endl;
-    respuestaSaludable = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Establecer un límite verbal claro y calmado si la situación lo permite. 🗣" << endl
+                 << "2.- Reconocer el sentimiento internamente y luego decidir conscientemente tu próximo paso. 🧠" << endl
+                 << "3.- Si es apropiado, alejarte de la situación con respeto, sin necesidad de un juicio expresado. 🚶" << endl
+                 << "4.- Buscar una actividad que te ayude a limpiar o procesar esa energía (ej. escribir, limpiar, meditar). 📝" << endl << endl;
+    respuestaSaludableAsco = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Elegir una respuesta saludable y consciente te permite honrar tus sentimientos sin ser controlado/a por ellos. Estás eligiendo el autocontrol y la sabiduría sobre la reactividad. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Asco/Repugnancia ---
+    cout << endl << "--- Resumen de tu Terapia de Asco/Repugnancia ---" << endl;
+    cout << "Causa del asco/repugnancia: " << causaAsco << endl;
+    cout << "Origen principal del asco/repugnancia: " << origenAscoRaiz << endl;
+    cout << "Impacto personal del asco/repugnancia: " << impactoPersonalAsco << endl;
+    cout << "Señales internas del asco/repugnancia: " << senalesInternasAsco << endl;
+    cout << "Recursos internos para transformar el asco/repugnancia: " << recursosInternosAsco << endl;
+    cout << "Posibilidades de apoyo para gestionar el asco/repugnancia: " << posibilidadesApoyoAsco << endl;
+    cout << "Pequeño paso concreto para gestionar el asco/repugnancia: " << accionConcretaAsco << endl;
+    cout << "Cómo el proceso de transformar el asco/repugnancia enriquece tu vida: " << transformarAscoProceso << endl;
+    cout << "Mensaje de auto-compasión o aceptación para el asco/repugnancia: " << mensajeFinalAsco << endl;
+    cout << "Mensaje interno fundamental que el asco comunica: " << mensajeInternoAscoProfundo << endl;
+    cout << "Respuesta saludable y consciente a elegir ante el asco: " << respuestaSaludableAsco << endl;
+    cout << "---------------------------------------" << endl;
+    
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración del asco/repugnancia." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la auto-protección, el discernimiento y una mayor paz interior. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la auto-protección, el discernimiento y una mayor paz interior. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-void terapiaDesinteres ()
+void terapiaDesinteres()
 {
-    string causa;
-    int origenDesinteres, impactoPersonal, senalesInternas, recursosInternos, posibilidadesApoyo;
-    int accionConcreta, transformarDesinteres, mensajeFinal, reconocerNecesidadInterna, reconectarActividad;
+    string causaDesinteres; // Variable renombrada
+    int origenDesinteresRaiz, impactoPersonalDesinteres, senalesInternasDesinteres, recursosInternosDesinteres, posibilidadesApoyoDesinteres; // Variables renombradas
+    int accionConcretaDesinteres, transformarDesinteresProceso, mensajeFinalDesinteres, reconocerNecesidadInternaDesinteres, reconectarActividadDesinteres; // Variables renombradas
 
     // --- Inicio de la mini-terapia sobre la emoción del desinterés ---
     cout << endl << "¡Hola! Este es un espacio seguro para que exploremos la emoción del *desinterés*. A menudo, el desinterés se manifiesta como una falta de entusiasmo, motivación o preocupación por algo que antes podría haberte importado. Es un acto de valentía reconocer esta ausencia de emoción y abordarla. 😴" << endl
-              << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *desinterés*? No necesitas entrar en detalles, solo el aspecto principal. 💔" << endl
-              << "🌟 Tu respuesta:" << endl << endl;
-    getline(cin, causa);
+                 << "¿Podrías compartirme brevemente una situación reciente o un patrón recurrente donde sentiste *desinterés*? No necesitas entrar en detalles, solo el aspecto principal. 💔" << endl
+                 << "🌟 Tu respuesta:" << endl << endl;
+    getline(cin, causaDesinteres); // Usando la variable renombrada
     cout << endl << "Gracias por abrirte y compartir eso. Reconocer el *desinterés* es el primer paso para entender qué lo provoca y cómo te afecta. Es una señal importante que puede indicarnos algo más profundo. Permítete sentir sin juicio. 🙏" << endl << endl
-              << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *desinterés*? 🤔" << endl << endl;
+                 << "Pensando en esa situación, ¿cuál dirías que es el *origen principal* de tu *desinterés*? 🤔" << endl << endl;
     cout << "1.- La sensación de estar abrumado/a, agotado/a o con falta de energía. 😴" << endl
-              << "2.- La pérdida de sentido o propósito en lo que estás haciendo o en tu vida. 📉" << endl
-              << "3.- Sentir que tus esfuerzos no son valorados o que no puedes generar un impacto. 😔" << endl
-              << "4.- Un cambio significativo en tu vida o una transición importante. 🔄" << endl << endl;
-    origenDesinteres = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4);
+                 << "2.- La pérdida de sentido o propósito en lo que estás haciendo o en tu vida. 📉" << endl
+                 << "3.- Sentir que tus esfuerzos no son valorados o que no puedes generar un impacto. 😔" << endl
+                 << "4.- Un cambio significativo en tu vida o una transición importante. 🔄" << endl << endl;
+    origenDesinteresRaiz = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa el origen: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Entender el origen de tu *desinterés* nos da claridad sobre las raíces de esta emoción. Este reconocimiento es una herramienta poderosa para empezar a abordarla y elegir cómo responder. 💡" << endl
-              << "Ahora, ¿cómo ha *impactado* esta emoción de *desinterés* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
+                 << "Ahora, ¿cómo ha *impactado* esta emoción de *desinterés* en tu bienestar personal y en tus relaciones? 😥" << endl << endl;
     cout << "1.- Me siento apático/a, sin ganas de hacer cosas o con poca motivación. 😔" << endl
-              << "2.- Mis relaciones personales se han visto afectadas por mi falta de participación o entusiasmo. 🧊" << endl
-              << "3.- Me cuesta concentrarme, tomar decisiones o sentir alegría. 🧠" << endl
-              << "4.- Siento un vacío, o una desconexión general con mi entorno. 🕸" << endl << endl;
-    impactoPersonal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4);
+                 << "2.- Mis relaciones personales se han visto afectadas por mi falta de participación o entusiasmo. 🧊" << endl
+                 << "3.- Me cuesta concentrarme, tomar decisiones o sentir alegría. 🧠" << endl
+                 << "4.- Siento un vacío, o una desconexión general con mi entorno. 🕸" << endl << endl;
+    impactoPersonalDesinteres = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor se adapte al impacto: ", 1, 4); // Usando la variable renombrada
     system("cls"); // Limpia la pantalla de la consola
 
     // La siguiente sección se mantiene como un "dummy switch" para mantener la estructura de diálogo,
     // pero no solicita más entrada del usuario aquí, para agilizar el flujo.
-    switch (impactoPersonal) {
+    switch (impactoPersonalDesinteres) { // Usando la variable renombrada
         case 1:
             cout << endl << "Comprendo. Esa apatía puede hacer que todo se sienta pesado. Reconocerlo es importante. 😔" << endl;
             break;
@@ -4319,59 +4752,59 @@ void terapiaDesinteres ()
     system("cls");
 
     cout << endl << "Reconocer cómo el *desinterés* se manifiesta en tu vida es vital. Estas señales son mensajes importantes que tu sistema te envía sobre lo que necesitas abordar. Escucharlas te ayudará a darte el cuidado que mereces. 🫂" << endl << endl
-              << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que el *desinterés* está presente? 😟" << endl << endl;
+                 << "¿Qué *señales internas* notas en tu cuerpo o mente cuando sientes que el *desinterés* está presente? 😟" << endl << endl;
     cout << "1.- Cansancio físico persistente, falta de energía o pesadez en el cuerpo. 😴" << endl
-              << "2.- Dificultad para iniciar tareas, postergación constante. ⏳" << endl
-              << "3.- Pensamientos de que 'nada importa realmente' o 'para qué molestarse'. 💬" << endl
-              << "4.- Una sensación de 'niebla mental' o de poca claridad. 🌫" << endl << endl;
-    senalesInternas = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4);
+                 << "2.- Dificultad para iniciar tareas, postergación constante. ⏳" << endl
+                 << "3.- Pensamientos de que 'nada importa realmente' o 'para qué molestarse'. 💬" << endl
+                 << "4.- Una sensación de 'niebla mental' o de poca claridad. 🌫" << endl << endl;
+    senalesInternasDesinteres = obtenerEntradaNumerica<int>("Selecciona el número de tu opción: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Reconocer estas señales internas es un acto de conciencia crucial. Son tus alarmas personales que te indican que esta emoción está presente y necesita ser explorada. 💡" << endl << endl;
 
     cout << "¿Qué *recurso interno* o *fortaleza personal*, por pequeña que parezca, crees que aún posees para empezar a reavivar el interés en tu vida? 🌟" << endl << endl
-              << "1.- Mi curiosidad natural por aprender o probar cosas nuevas. 🧐" << endl
-              << "2.- Mi deseo de sentirme más vivo/a y conectado/a. ✨" << endl
-              << "3.- Mi habilidad para dar pequeños pasos, incluso cuando no siento motivación. 👣" << endl
-              << "4.- Mi resiliencia para buscar soluciones y mejorar mi bienestar. 💪" << endl << endl;
-    recursosInternos = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Mi curiosidad natural por aprender o probar cosas nuevas. 🧐" << endl
+                 << "2.- Mi deseo de sentirme más vivo/a y conectado/a. ✨" << endl
+                 << "3.- Mi habilidad para dar pequeños pasos, incluso cuando no siento motivación. 👣" << endl
+                 << "4.- Mi resiliencia para buscar soluciones y mejorar mi bienestar. 💪" << endl << endl;
+    recursosInternosDesinteres = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Es muy poderoso reconocer tus propias fortalezas! 🚀 Incluso cuando sientes *desinterés*, estas capacidades residen en ti y pueden ser tus anclas. Recuerda que tienes un poder interior inmenso para elegir cómo respondes y cómo buscas el bienestar. 💖" << endl
-              << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
+                 << "Recuerda que no tienes que hacer esto solo/a. 🫂" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "Exploremos ahora las *posibilidades de apoyo. ¿Qué tipo de apoyo crees que podría ser más útil para ti en este momento para gestionar el **desinterés*? 🤝" << endl << endl
-              << "1.- Buscar ayuda profesional (terapia, coaching) para explorar las causas y estrategias. 🗣" << endl
-              << "2.- Re conectar con actividades que solías disfrutar, incluso si es solo por unos minutos. 🎨" << endl
-              << "3.- Hablar con un amigo o familiar cercano que pueda ofrecerte motivación y compañía. 🫂" << endl
-              << "4.- Establecer pequeñas metas realistas y celebrar cada logro, por insignificante que parezca. ✅" << endl << endl;
-    posibilidadesApoyo = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Buscar ayuda profesional (terapia, coaching) para explorar las causas y estrategias. 🗣" << endl
+                 << "2.- Re conectar con actividades que solías disfrutar, incluso si es solo por unos minutos. 🎨" << endl
+                 << "3.- Hablar con un amigo o familiar cercano que pueda ofrecerte motivación y compañía. 🫂" << endl
+                 << "4.- Establecer pequeñas metas realistas y celebrar cada logro, por insignificante que parezca. ✅" << endl << endl;
+    posibilidadesApoyoDesinteres = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Identificar y buscar apoyo es un signo de valentía y una estrategia fundamental para afrontar el *desinterés*. Es un paso hacia tu bienestar emocional. ✨" << endl << endl;
 
     cout << "¿Qué *pequeño paso concreto* puedes comprometerte a tomar HOY o en los próximos días para empezar a combatir el *desinterés*? 👣" << endl << endl
-              << "1.- Dedicar 5 minutos a una actividad que antes disfrutabas, sin presión de hacer más. ⏳" << endl
-              << "2.- Salir a la naturaleza o a un espacio abierto para un cambio de ambiente. 🌳" << endl
-              << "3.- Conectar con una persona que te inspire o te haga sentir bien. 💖" << endl
-              << "4.- Anotar una cosa, por pequeña que sea, por la que sientes gratitud. 🙏" << endl << endl;
-    accionConcreta = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4);
+                 << "1.- Dedicar 5 minutos a una actividad que antes disfrutabas, sin presión de hacer más. ⏳" << endl
+                 << "2.- Salir a la naturaleza o a un espacio abierto para un cambio de ambiente. 🌳" << endl
+                 << "3.- Conectar con una persona que te inspire o te haga sentir bien. 💖" << endl
+                 << "4.- Anotar una cosa, por pequeña que sea, por la que sientes gratitud. 🙏" << endl << endl;
+    accionConcretaDesinteres = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones. Comprométete con esa acción y date crédito por dar este paso hacia tu bienestar. 💪" << endl << endl;
 
     system("pause");
     system("cls");
 
     cout << endl << "¿De qué manera crees que el proceso de transformar el *desinterés* puede enriquecer tu vida y tus relaciones? 🌱" << endl << endl
-              << "1.- Me permitirá experimentar más alegría, entusiasmo y vitalidad. 🌟" << endl
-              << "2.- Mis relaciones serán más dinámicas y significativas. 🤝" << endl
-              << "3.- Aumentará mi sentido de propósito y mi conexión con el mundo. 🚀" << endl
-              << "4.- Todas las anteriores, me abrirá a una vida más rica y plena. 🦋" << endl << endl;
-    transformarDesinteres = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4);
+                 << "1.- Me permitirá experimentar más alegría, entusiasmo y vitalidad. 🌟" << endl
+                 << "2.- Mis relaciones serán más dinámicas y significativas. 🤝" << endl
+                 << "3.- Aumentará mi sentido de propósito y mi conexión con el mundo. 🚀" << endl
+                 << "4.- Todas las anteriores, me abrirá a una vida más rica y plena. 🦋" << endl << endl;
+    transformarDesinteresProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! Reconocer el valor de este proceso es un paso significativo. Tu capacidad para buscar el crecimiento y el bienestar es una gran fortaleza. 🌱" << endl << endl;
 
     cout << "¿Qué *mensaje de auto-compasión* o *esperanza* te gustaría darte a ti mismo/a al iniciar este camino de transformación del *desinterés*? ✨" << endl << endl
-              << "1.- 'Está bien no sentirme siempre motivado/a, y puedo encontrar mi camino de regreso.' 🙏" << endl
-              << "2.- 'Merezco una vida llena de pasión y significado.' 💪" << endl
-              << "3.- 'Cada pequeño paso que doy para reconectarme cuenta.' 💖" << endl
-              << "4.- 'La chispa está dentro de mí, y puedo reavivarla.' 🌟" << endl << endl;
-    mensajeFinal = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4);
+                 << "1.- 'Está bien no sentirme siempre motivado/a, y puedo encontrar mi camino de regreso.' 🙏" << endl
+                 << "2.- 'Merezco una vida llena de pasión y significado.' 💪" << endl
+                 << "3.- 'Cada pequeño paso que doy para reconectarme cuenta.' 💖" << endl
+                 << "4.- 'La chispa está dentro de mí, y puedo reavivarla.' 🌟" << endl << endl;
+    mensajeFinalDesinteres = obtenerEntradaNumerica<int>("Selecciona el mensaje que más te resuene: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Qué poderoso mensaje! Lleva contigo esas palabras. Son un faro de luz en tu camino hacia la gestión del *desinterés*. Recuerda que mereces vivir una vida con más vitalidad y propósito. 💖" << endl << endl;
 
     // --- Preguntas adicionales de opción múltiple ---
@@ -4379,58 +4812,81 @@ void terapiaDesinteres ()
     system("cls");
 
     cout << endl << "Para profundizar en tu reflexión, ¿qué *necesidad interna* no satisfecha (ej. descanso, autonomía, validación, desafío) crees que podría estar manifestándose como *desinterés*? 🤔" << endl << endl
-              << "1.- Necesidad de descanso y recuperación profunda (física o mental). 😴" << endl
-              << "2.- Necesidad de autonomía y control sobre mis decisiones. 👑" << endl
-              << "3.- Necesidad de sentir que mis contribuciones son valoradas. 🏆" << endl
-              << "4.- Necesidad de un nuevo desafío o propósito que me inspire. 🚀" << endl << endl;
-    reconocerNecesidadInterna = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4);
+                 << "1.- Necesidad de descanso y recuperación profunda (física o mental). 😴" << endl
+                 << "2.- Necesidad de autonomía y control sobre mis decisiones. 👑" << endl
+                 << "3.- Necesidad de sentir que mis contribuciones son valoradas. 🏆" << endl
+                 << "4.- Necesidad de un nuevo desafío o propósito que me inspire. 🚀" << endl << endl;
+    reconocerNecesidadInternaDesinteres = obtenerEntradaNumerica<int>("Selecciona la opción que más resuene contigo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "Gracias por esa reflexión. Identificar esas *necesidades internas* es clave, ya que el desinterés a menudo es una señal de que algo fundamental no está siendo nutrido. Al atenderlas, puedes empezar a sentir un cambio. 💡" << endl << endl;
 
     cout << "Si pudieras *reconectar* con una *actividad o área de tu vida* que antes te apasionaba, ¿cuál sería y qué pequeña acción concreta podrías tomar hoy para acercarte a ella? 🌟" << endl << endl
-              << "1.- Volver a un hobby creativo (ej. dibujar, escribir, tocar música) por 10 minutos. 🎨" << endl
-              << "2.- Leer sobre un tema que antes te interesaba, aunque sea un artículo corto. 📚" << endl
-              << "3.- Recordar un momento en el que sentiste gran entusiasmo y qué lo provocó. 💖" << endl
-              << "4.- Planificar una salida o experiencia que sabes que te solía llenar de energía. 🗺" << endl << endl;
-    reconectarActividad = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4);
+                 << "1.- Volver a un hobby creativo (ej. dibujar, escribir, tocar música) por 10 minutos. 🎨" << endl
+                 << "2.- Leer sobre un tema que antes te interesaba, aunque sea un artículo corto. 📚" << endl
+                 << "3.- Recordar un momento en el que sentiste gran entusiasmo y qué lo provocó. 💖" << endl
+                 << "4.- Planificar una salida o experiencia que sabes que te solía llenar de energía. 🗺" << endl << endl;
+    reconectarActividadDesinteres = obtenerEntradaNumerica<int>("Selecciona la opción que te parezca más útil: ", 1, 4); // Usando la variable renombrada
     cout << endl << "¡Excelente! *Reconectar* con lo que una vez te apasionó es un camino poderoso para reavivar tu interés y energía. Estás eligiendo la curiosidad y la vitalidad sobre la apatía. 💪" << endl << endl;
 
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Desinterés ---
+    cout << endl << "--- Resumen de tu Terapia de Desinterés ---" << endl;
+    cout << "Causa del desinterés: " << causaDesinteres << endl;
+    cout << "Origen principal del desinterés: " << origenDesinteresRaiz << endl;
+    cout << "Impacto personal del desinterés: " << impactoPersonalDesinteres << endl;
+    cout << "Señales internas del desinterés: " << senalesInternasDesinteres << endl;
+    cout << "Recursos internos para reavivar el interés: " << recursosInternosDesinteres << endl;
+    cout << "Posibilidades de apoyo para gestionar el desinterés: " << posibilidadesApoyoDesinteres << endl;
+    cout << "Pequeño paso concreto para combatir el desinterés: " << accionConcretaDesinteres << endl;
+    cout << "Cómo el proceso de transformar el desinterés enriquece tu vida: " << transformarDesinteresProceso << endl;
+    cout << "Mensaje de auto-compasión o esperanza: " << mensajeFinalDesinteres << endl;
+    cout << "Necesidad interna no satisfecha que el desinterés podría manifestar: " << reconocerNecesidadInternaDesinteres << endl;
+    cout << "Actividad o área de tu vida para reconectar y pequeña acción: " << reconectarActividadDesinteres << endl;
+    cout << "---------------------------------------" << endl;
+    
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración del *desinterés*." << endl
-              << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
-              << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la reconexión con tu propósito y la vitalidad. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que reconocer y procesar esta emoción es un acto de amor propio y de profunda conciencia. No estás solo/a en esto." << endl
+                 << "😊 Confío en tu resiliencia para transitar este sentimiento y encontrar el camino hacia la reconexión con tu propósito y la vitalidad. Si necesitas seguir explorando esto o cualquier otra emoción, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
 
-//Terapia de la opción de apoyo profesional para saber si la necesita
+
+/****************************************************************************
+    Terapia de la opción de apoyo profesional para saber si la necesita
+    By: Mauricio Canseco
+******************************************************************************/
+
 void terapiaApoyoProfesional()
 {
-    int razonPrincipal;
-    int senalNecesidad, intentosPrevios, expectativaApoyo, miedoObstaculo, primerPaso;
-    int confianzaProceso, bienestarActual, creenciasAyuda, apoyoActual, momentoDecisivo, compromisoPersonal;
+    int razonPrincipalApoyoProfesional; // Variable renombrada
+    int intentosPreviosApoyoProfesional, expectativaApoyoProfesional, miedoObstaculoApoyoProfesional, primerPasoApoyoProfesional; // Variables renombradas
+    int confianzaProcesoApoyoProfesional, bienestarActualApoyoProfesional, creenciasAyudaApoyoProfesional, apoyoActualApoyoProfesional, momentoDecisivoApoyoProfesional, compromisoPersonalApoyoProfesional; // Variables renombradas
 
     system ("cls");
 
     cout << endl << "😲 Es valiente de tu parte explorar la posibilidad de buscar apoyo profesional." << endl 
     << "🤓 Surge cuando sentimos que hemos intentado manejar nuestras emociones o situaciones por nuestra cuenta" << endl 
     << "y necesitamos ahora una perspectiva y herramientas adicionales. 🙏" << endl << endl
-              << "¿Por qué consideras que necesitas buscar apoyo profesional? 🤔" << endl << endl;
+                 << "¿Por qué consideras que necesitas buscar apoyo profesional? 🤔" << endl << endl;
     cout << "1.- Me siento abrumado/a y mis emociones son difíciles de manejar por mi cuenta. 🌊" << endl
-              << "2.- Mi comportamiento negativo o hábitos me están causando problemas constantemente. 🔄" << endl
-              << "3.- Quiero aprender a frontar mejor mis problemas o situaciones emocionales futuras. 🌱" << endl
-              << "4.- He pasado por una situación traumática o un evento muy estresante. 💔" << endl
-              << "5.- Mis relaciones interpersonales se están viendo seriamente afectadas por algo. 🧊" << endl
-              << "6.- Siento un malestar general que no puedo identificar ni resolver. ❓" << endl
-              << "7.- Un médico o alguien de confianza me lo ha sugerido. 🗣️" << endl << endl;
-    razonPrincipal = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa tu situación: ", 1, 7);
+                 << "2.- Mi comportamiento negativo o hábitos me están causando problemas constantemente. 🔄" << endl
+                 << "3.- Quiero aprender a frontar mejor mis problemas o situaciones emocionales futuras. 🌱" << endl
+                 << "4.- He pasado por una situación traumática o un evento muy estresante. 💔" << endl
+                 << "5.- Mis relaciones interpersonales se están viendo seriamente afectadas por algo. 🧊" << endl
+                 << "6.- Siento un malestar general que no puedo identificar ni resolver. ❓" << endl
+                 << "7.- Un médico o alguien de confianza me lo ha sugerido. 🗣️" << endl << endl;
+    razonPrincipalApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa tu situación: ", 1, 7); // Usando la variable renombrada
     cout << endl << "😊 Gracias por compartir eso." << endl 
     << "🤓 Reconocerlo es el primer paso para poder trabajar en ello." << endl << endl
-              << "¿Cómo describirías tu estado actual comparado a cuando en algún momento te sentías bien? 😥" << endl << endl;
+                 << "¿Cómo describirías tu estado actual comparado a cuando en algún momento te sentías bien? 😥" << endl << endl;
     cout << "1.- Me siento notoriamente peor y mi actitud ha decaido mucho. 📉" << endl
-              << "2.- Siento que estoy estancado/a y eso me frustra. 🚧" << endl
-              << "3.- Hay días buenos y días malos, pero los malos son cada vez más frecuentes. 🎢" << endl
-              << "4.- Por mas que espero, no alcanzo un bienestar ni equilibrio. ⚖️" << endl << endl;
-    bienestarActual = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor refleje tu estado: ", 1, 4);
+                 << "2.- Siento que estoy estancado/a y eso me frustra. 🚧" << endl
+                 << "3.- Hay días buenos y días malos, pero los malos son cada vez más frecuentes. 🎢" << endl
+                 << "4.- Por mas que espero, no alcanzo un bienestar ni equilibrio. ⚖️" << endl << endl;
+    bienestarActualApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor refleje tu estado: ", 1, 4); // Usando la variable renombrada
 
-    switch (bienestarActual) {
+    switch (bienestarActualApoyoProfesional) { // Usando la variable renombrada
         case 1: cout << endl << "Entiendo. Esa disminución en la calidad de vida es una señal clara. 📉" << endl;
             break;
         case 2: cout << endl << "Comprendo la frustración de sentirse estancado/a. 🚧" << endl;
@@ -4446,17 +4902,17 @@ void terapiaApoyoProfesional()
 
     cout << endl << "¿Qué tipo de estrategias has probado para manejar esta situación y cuál fue el resultado? 🤔" << endl << endl;
     cout << "1.- Hablar con amigos/familiares: Me ayudó un poco, pero no resolvió el problema de fondo. 🗣️" << endl
-              << "2.- Leer libros de autoayuda/artículos online: Obtuve algo de información, pero no pude aplicarlo consistentemente. 📚" << endl
-              << "3.- Ejercicio, meditación o hobbies: Me distrae temporalmente, pero el problema persiste. 🧘" << endl
-              << "4.- Ignorar o suprimir el problema: Solo ha empeorado la situación o las emociones. 💨" << endl
-              << "5.- No he intentado mucho, me siento paralizado/a. ❄️" << endl << endl;
-    intentosPrevios = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tus intentos previos: ", 1, 5);
-    if (intentosPrevios == 1 || intentosPrevios == 2 || intentosPrevios == 3)
+                 << "2.- Leer libros de autoayuda/artículos online: Obtuve algo de información, pero no pude aplicarlo consistentemente. 📚" << endl
+                 << "3.- Ejercicio, meditación o hobbies: Me distrae temporalmente, pero el problema persiste. 🧘" << endl
+                 << "4.- Ignorar o suprimir el problema: Solo ha empeorado la situación o las emociones. 💨" << endl
+                 << "5.- No he intentado mucho, me siento paralizado/a. ❄️" << endl << endl;
+    intentosPreviosApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tus intentos previos: ", 1, 5); // Usando la variable renombrada
+    if (intentosPreviosApoyoProfesional == 1 || intentosPreviosApoyoProfesional == 2 || intentosPreviosApoyoProfesional == 3)
     {
     cout << endl << "Es admirable que hayas intentado manejar esto con tus propios recursos." << endl 
     << "Cada uno de esos intentos te ha brindado información valiosa sobre lo que funciona y lo que no. ✨" << endl << endl;
     }
-    else if (intentosPrevios == 4 || intentosPrevios == 5)
+    else if (intentosPreviosApoyoProfesional == 4 || intentosPreviosApoyoProfesional == 5)
     {
         cout << "😔 Comprendo, es entendible esta situación" << endl 
         << "🫡 Aunque una buana manera de comenzar es intentado conseguir apoyo" << endl << endl;
@@ -4464,12 +4920,12 @@ void terapiaApoyoProfesional()
 
     cout << "¿Qué crees que podría ofrecerte un profesional de la salud mental? 🤝" << endl << endl;
     cout << "1.- Herramientas o estrategias para manejar mis emociones y situaciones. 🛠️" << endl
-              << "2.- Un espacio para explorar y liberar mis pensamientos y sentimientos. 🗣️" << endl
-              << "3.- Ayuda para comprender las raíces de mis sentimientos y/o problemas. 🔍" << endl
-              << "4.- Apoyo para desarrollar un crecimiento personal. 🌱" << endl
-              << "5.- Perspectivas y nuevas formas de ver mi situación. 🧠" << endl
-              << "6.- Todas las anteriores y un camino hacia una vida más plena. 🌈" << endl << endl;
-    expectativaApoyo = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa tu expectativa: ", 1, 6);
+                 << "2.- Un espacio para explorar y liberar mis pensamientos y sentimientos. 🗣️" << endl
+                 << "3.- Ayuda para comprender las raíces de mis sentimientos y/o problemas. 🔍" << endl
+                 << "4.- Apoyo para desarrollar un crecimiento personal. 🌱" << endl
+                 << "5.- Perspectivas y nuevas formas de ver mi situación. 🧠" << endl
+                 << "6.- Todas las anteriores y un camino hacia una vida más plena. 🌈" << endl << endl;
+    expectativaApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que mejor describa tu expectativa: ", 1, 6); // Usando la variable renombrada
     cout << endl << "😁¡Excelente! El tener expectativas claras te ayudará a mejorar.";
 
     system("pause");
@@ -4477,33 +4933,33 @@ void terapiaApoyoProfesional()
 
     cout << "¿Qué miedos o preocupaciones te surgen al pensar en buscar apoyo profesional?😟" << endl << endl;
     cout << "1.- Miedo a lo que otros puedan pensar/decir. 🤫" << endl
-              << "2.- Preocupación por el costo económico. 💸" << endl
-              << "3.- Incertidumbre sobre si encontraré al profesional adecuado o si realmente me ayudará. ❓" << endl
-              << "4.- Miedo a enfrentar verdades incómodas o molestas sobre mí mismo/a o mi pasado. 😨" << endl
-              << "5.- Falta de tiempo para las sesiones en mi horario. ⏰" << endl
-              << "6.- No saber por dónde empezar o como expresarme. 🗺️" << endl
-              << "7.- No estoy seguro/a de si estoy lo suficientemente mal como para necesitarlo. ⚖️" << endl << endl;
-    miedoObstaculo = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más resuene con tus miedos o dudas: ", 1, 7);
+                 << "2.- Preocupación por el costo económico. 💸" << endl
+                 << "3.- Incertidumbre sobre si encontraré al profesional adecuado o si realmente me ayudará. ❓" << endl
+                 << "4.- Miedo a enfrentar verdades incómodas o molestas sobre mí mismo/a o mi pasado. 😨" << endl
+                 << "5.- Falta de tiempo para las sesiones en mi horario. ⏰" << endl
+                 << "6.- No saber por dónde empezar o como expresarme. 🗺️" << endl
+                 << "7.- No estoy seguro/a de si estoy lo suficientemente mal como para necesitarlo. ⚖️" << endl << endl;
+    miedoObstaculoApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona el número de la opción que más resuene con tus miedos o dudas: ", 1, 7); // Usando la variable renombrada
     cout << endl << " 🤗Es completamente normal sentir esos miedos o dudas." << endl 
     << "🤓De hecho, son parte del proceso y reconocerlos son clave para resolverlos.🫂" << endl << endl;
 
     cout << "¿Para ti que representa buscar ayuda profecional? 🤔" << endl << endl;
     cout << "1.- Es un signo de fortaleza y auto-cuidado. 💪" << endl
-              << "2.- Es una opción válida cuando otras estrategias no funcionan. 💡" << endl
-              << "3.- A veces es necesario, pero preferiría resolverlo por mi cuenta. 🚧" << endl
-              << "4.- Es solo para personas con problemas 'graves' o 'locura'.😔" << endl << endl;
-    creenciasAyuda = obtenerEntradaNumerica<int>("Selecciona la opción que más se acerque a tu creencia: ", 1, 4);
-    if (creenciasAyuda == 1 || creenciasAyuda == 2)
+                 << "2.- Es una opción válida cuando otras estrategias no funcionan. 💡" << endl
+                 << "3.- A veces es necesario, pero preferiría resolverlo por mi cuenta. 🚧" << endl
+                 << "4.- Es solo para personas con problemas 'graves' o 'locura'.😔" << endl << endl;
+    creenciasAyudaApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona la opción que más se acerque a tu creencia: ", 1, 4); // Usando la variable renombrada
+    if (creenciasAyudaApoyoProfesional == 1 || creenciasAyudaApoyoProfesional == 2)
     {
     cout << endl << "😊Tu perspectiva sobre buscar ayuda influye mucho en su solución." << endl 
     << "Me alegro mucho que pienses eso. ✨" << endl << endl;
     }
-    else if (creenciasAyuda == 3)
+    else if (creenciasAyudaApoyoProfesional == 3)
     {
         cout << endl << "😊Ok, es entendible, intentar resolver las cosas por tu cuenta es buena opción 😁" << endl
         << "Aunque siempre, cuando no puedas, es bueno buscar ayuda 🤗" << endl << endl;
     }
-    else if (creenciasAyuda == 4)
+    else if (creenciasAyudaApoyoProfesional == 4)
     {
         cout << endl << "🤓Es entendible tu punto de vista, sin embargo..." << endl
         << "Es totalmente normal y válido buscar ayuda, ya que es un  símbolo de valentía y reponsabilidad 😁" << endl << endl;
@@ -4514,28 +4970,28 @@ void terapiaApoyoProfesional()
 
     cout << endl << "¿Cómo describirías el apoyo que recibes actualmente de la gente que te rodea? 👥" << endl << endl;
     cout << "1.- Recibo mucho apoyo y me siento bien, pero siento que necesito algo más allá de lo que me pueden ofrecer. 💖" << endl
-              << "2.- Tengo algo de apoyo, pero a veces no me comprenden o ayudan del todo. 🤝" << endl
-              << "3.- Siento que tengo poco o ningún apoyo en este momento. 🧊" << endl
-              << "4.- No quiero que mis seres queridos carguen con mis problemas. 🤫" << endl << endl;
-    apoyoActual = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tu apoyo actual: ", 1, 4);
+                 << "2.- Tengo algo de apoyo, pero a veces no me comprenden o ayudan del todo. 🤝" << endl
+                 << "3.- Siento que tengo poco o ningún apoyo en este momento. 🧊" << endl
+                 << "4.- No quiero que mis seres queridos carguen con mis problemas. 🤫" << endl << endl;
+    apoyoActualApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tu apoyo actual: ", 1, 4); // Usando la variable renombrada
     cout << endl << "😊 Es útil evaluar el apoyo que ya tienes." << endl 
     << "A veces, el apoyo profesional complementa el personal de maneras únicas, inténtalo. 🫂" << endl << endl;
 
     cout << "¿Cuál es el hecho principal de que ahora busques apoyo profesional? 🤔" << endl << endl;
     cout << "1.- La situación o mis emociones han alcanzado un nivel que ya no puedo manejar. 💥" << endl
-              << "2.- Me he dado cuenta de que lo negativo se repite y necesito romperlo. 🔄" << endl
-              << "3.- Quiero mejorar en mi crecimiento y bienestar a largo plazo. 🌱" << endl
-              << "4.- Me siento motivado/a en poder sentirme mejor o lograr mis metas. 🚀" << endl << endl;
-    momentoDecisivo = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tu momento decisivo: ", 1, 4);
+                 << "2.- Me he dado cuenta de que lo negativo se repite y necesito romperlo. 🔄" << endl
+                 << "3.- Quiero mejorar en mi crecimiento y bienestar a largo plazo. 🌱" << endl
+                 << "4.- Me siento motivado/a en poder sentirme mejor o lograr mis metas. 🚀" << endl << endl;
+    momentoDecisivoApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona la opción que mejor describa tu momento decisivo: ", 1, 4); // Usando la variable renombrada
     cout << endl << "🤓Ok, identificar este hecho es fundamental para mejorar. 💡" << endl << endl;
 
     cout << "¿Qué paso estás dispuesto a dar para obtener ayuda profesional? 👣" << endl << endl;
     cout << "1.- Investigar opciones de profesionales o clínicas cerca de mí(online, recomendaciones). 💻" << endl
-              << "2.- Hablar con alguien de confianza que ya haya recibido apoyo profesional o me pueda aconsejar. 🗣️" << endl
-              << "3.- Leer un artículo o un blog sobre los beneficios de la terapia. 📚" << endl
-              << "4.- Contactar a un profesional para una primera consulta breve. 🗓️" << endl
-              << "5.- Identificar y anotar los 3 principales obstáculos que te impiden dar el primer paso. 🚧" << endl << endl;
-    primerPaso = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 5);
+                 << "2.- Hablar con alguien de confianza que ya haya recibido apoyo profesional o me pueda aconsejar. 🗣️" << endl
+                 << "3.- Leer un artículo o un blog sobre los beneficios de la terapia. 📚" << endl
+                 << "4.- Contactar a un profesional para una primera consulta breve. 🗓️" << endl
+                 << "5.- Identificar y anotar los 3 principales obstáculos que te impiden dar el primer paso. 🚧" << endl << endl;
+    primerPasoApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona la acción que te sientes capaz de realizar: ", 1, 5); // Usando la variable renombrada
     cout << endl << "🤗 ¡Maravilloso! Los pequeños pasos son el inicio de grandes transformaciones." << endl 
     << "Comprométete con esa acción y da este paso tan importante hacia tu bienestar. 💪" << endl << endl;
 
@@ -4544,40 +5000,59 @@ void terapiaApoyoProfesional()
 
     cout << "¿Cómo crees que buscar y recibir apoyo profesional podría beneficiarte tu vida? 🌱" << endl << endl;
     cout << "1.- Aumentará mi auto-conocimiento y mi inteligencia emocional. 🧠" << endl
-              << "2.- Mejorará mi capacidad para afrontar desafíos futuros y tomar decisiones saludables. 🚀" << endl
-              << "3.- Fortalecerá mi bienestar general, llevándome a una vida más plena. 💖" << endl
-              << "4.- Me empoderará para vivir una vida más consciente y centrada en mis valores. 🦋" << endl
-              << "5.- Todas las anteriores y me ayudará a desarrollar una mayor resiliencia. 🌟" << endl << endl;
-    confianzaProceso = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 5);
+                 << "2.- Mejorará mi capacidad para afrontar desafíos futuros y tomar decisiones saludables. 🚀" << endl
+                 << "3.- Fortalecerá mi bienestar general, llevándome a una vida más plena. 💖" << endl
+                 << "4.- Me empoderará para vivir una vida más consciente y centrada en mis valores. 🦋" << endl
+                 << "5.- Todas las anteriores y me ayudará a desarrollar una mayor resiliencia. 🌟" << endl << endl;
+    confianzaProcesoApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona la opción que más te resuene: ", 1, 5); // Usando la variable renombrada
     cout << endl << "🤩 ¡Excelente! Reconocer el valor a largo plazo es una gran motivación." << endl 
     << "Buscar las metas futuras y beneficios son clave del proceso. 🌱" << endl << endl;
 
     cout << "¿Cuál sería tu conclusión final? ✨" << endl << endl;
     cout << "1.- Estoy listo/a para buscar apoyo profesional y dar el siguiente paso. ✅" << endl
-              << "2.- Necesito más información, tiempo o reflexión antes de decidir. 💡" << endl
-              << "3.- Por ahora, creo que puedo seguir manejando esto por mi cuenta, pero si la llego a neceitar la buscaré. ⚖️" << endl
-              << "4.- Reconozco la necesidad, pero mis obstáculos (ej. costo, miedo) son más grandes en este momento. 🚧" << endl << endl;
-    compromisoPersonal = obtenerEntradaNumerica<int>("Selecciona la opción que mejor refleje tu decisión actual: ", 1, 4);
-    if (compromisoPersonal == 1 || compromisoPersonal == 2 ||  compromisoPersonal == 3)
+                 << "2.- Necesito más información, tiempo o reflexión antes de decidir. 💡" << endl
+                 << "3.- Por ahora, creo que puedo seguir manejando esto por mi cuenta, pero si la llego a neceitar la buscaré. ⚖️" << endl
+                 << "4.- Reconozco la necesidad, pero mis obstáculos (ej. costo, miedo) son más grandes en este momento. 🚧" << endl << endl;
+    compromisoPersonalApoyoProfesional = obtenerEntradaNumerica<int>("Selecciona la opción que mejor refleje tu decisión actual: ", 1, 4); // Usando la variable renombrada
+    if (compromisoPersonalApoyoProfesional == 1 || compromisoPersonalApoyoProfesional == 2 ||  compromisoPersonalApoyoProfesional == 3)
     {
     cout << endl << "🤗 ¡Qué valiosa reflexión!" <<  endl 
     << "Lleva contigo esta claridad para tu bienestar. 💖" << endl << endl;
     }
-    else if (compromisoPersonal == 4)
+    else if (compromisoPersonalApoyoProfesional == 4)
     {
         cout << endl << "🫡 Es comprensible" <<  endl 
-    << "Tómate tu tiempo para reflexionar, recuerda que tu bienestar es lo principal. 💖" << endl << endl;
+        << "Tómate tu tiempo para reflexionar, recuerda que tu bienestar es lo principal. 💖" << endl << endl;
     }
     
+    system ("pause");
+    system ("cls");
+
+    // --- Resumen de tu Terapia de Apoyo Profesional ---
+    cout << endl << "--- Resumen de tu Terapia de Apoyo Profesional ---" << endl;
+    cout << "Razón principal para buscar apoyo profesional: " << razonPrincipalApoyoProfesional << endl;
+    cout << "Estado actual de bienestar comparado con antes: " << bienestarActualApoyoProfesional << endl;
+    cout << "Intentos previos para manejar la situación: " << intentosPreviosApoyoProfesional << endl;
+    cout << "Expectativa de lo que podría ofrecerte un profesional: " << expectativaApoyoProfesional << endl;
+    cout << "Miedos u obstáculos al buscar apoyo profesional: " << miedoObstaculoApoyoProfesional << endl;
+    cout << "Creencia personal sobre buscar ayuda profesional: " << creenciasAyudaApoyoProfesional << endl;
+    cout << "Descripción del apoyo actual recibido: " << apoyoActualApoyoProfesional << endl;
+    cout << "Momento decisivo para buscar apoyo profesional: " << momentoDecisivoApoyoProfesional << endl;
+    cout << "Paso concreto a dar para obtener ayuda profesional: " << primerPasoApoyoProfesional << endl;
+    cout << "Beneficios esperados al recibir apoyo profesional: " << confianzaProcesoApoyoProfesional << endl;
+    cout << "Conclusión final sobre buscar apoyo profesional: " << compromisoPersonalApoyoProfesional << endl;
+    cout << "---------------------------------------" << endl;
 
     cout << endl << "🤗 Ha sido un honor acompañarte en esta exploración profunda de la necesidad de apoyo profesional." << endl
-              << "😄 Recuerda que buscar ayuda no es un signo de debilidad, sino de gran valentía y te llevará una mejor vida." << endl
-              << "😊 Confío en tu sabiduría para tomar la mejor decisión para ti, cualquier cosa, estoy aquí para apoyarte." << endl
-              << "Hasta la próxima. 👋😊" << endl;
+                 << "😄 Recuerda que buscar ayuda no es un signo de debilidad, sino de gran valentía y te llevará una mejor vida." << endl
+                 << "😊 Confío en tu sabiduría para tomar la mejor decisión para ti, cualquier cosa, estoy aquí para apoyarte." << endl
+                 << "Hasta la próxima. 👋😊" << endl;
 }
+
 
 /********************************************************
     Funciones adicionales apoyo profesional
+    By: Daniela Vargas and América Ramirez 
 **********************************************************/
 
 void tiposDeProfecionales()
@@ -4591,7 +5066,7 @@ void tiposDeProfecionales()
         do
         {
             system ("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
             // Menu principal
             cout << "Bienvenido/a. Aquí puedes explorar diferentes caminos para tu bienestar emocional." << endl;
         cout << "Por favor, selecciona el número de la opción que te interese para conocer más:" << endl << endl;
@@ -4606,7 +5081,7 @@ void tiposDeProfecionales()
         cout << "8. 🚪 Salir del menú" << endl << endl;
 
         opcionMenu = obtenerEntradaNumerica<int>("Ingresa tu opción: ", 1, 8);
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
 
             switch (opcionMenu)
             {
@@ -4732,7 +5207,7 @@ void recursosEnLinea()
         do
         {
             system ("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
             // Menu principal
             cout << "Explora diferentes recursos digitales para tu bienestar." << endl;
         cout << "Por favor, selecciona el número de la categoría que te interese:" << endl << endl;
@@ -4744,7 +5219,7 @@ void recursosEnLinea()
         cout << "5.- 🚪 Salir del menú" << endl << endl;
 
         opcionMenu = obtenerEntradaNumerica<int>("Ingresa tu opción: ", 1, 5);
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
 
             switch (opcionMenu)
             {
@@ -4877,7 +5352,7 @@ void institucionesCentrosApoyo()
         do
         {
             system ("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
             // Menu principal
             cout << "--- 🏥 Directorio de Instituciones y Centros de Apoyo en Salud Mental ---" << endl; 
         cout << "Descubre opciones de apoyo presencial y especializado en Veracruz y zonas cercanas." << endl;
@@ -4891,7 +5366,7 @@ void institucionesCentrosApoyo()
         cout << "6.- 🚪 Salir del menú" << endl << endl;
 
         opcionMenu = obtenerEntradaNumerica<int>("Ingresa tu opción: ", 1, 6);
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
 
             switch (opcionMenu)
             {
@@ -5045,8 +5520,10 @@ void institucionesCentrosApoyo()
     } while (opcExt != "Si" && opcExt != "si" && opcionMenu != 6);
 }
 
+
 /******************************************************
     Funciones para las opciones del menú principal
+    By: Enrique López
 ******************************************************/
 
 // Funcion emocion alegría
@@ -5062,25 +5539,45 @@ void Alegria()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
+            cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
+            cout << R"(
+   ___      _              __ _             _            
+  /   \    | |     ___    / _` |    _ _    (_)    __ _   
+  | - |    | |    / -_)   \__, |   | '_|   | |   / _` |  
+  |_|_|   _|_|_   \___|   |___/   _|_|_   _|_|_  \__,_|  
+_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
+"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
+)";
+        cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+        cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
             cout << endl << "😀 La alegría es una emoción agradable de bienestar y placer." << endl << endl;
             cout << "🤓 Pero se puede manifestar en estas otras emociones:" << endl << endl;
-            cout << "1.- 😁Alegria pura😁" << endl;
-            cout << "Es un poco más enérgica que la serenidad." << endl;
-            cout << "Hay un entusiasmo moderado, una sonrisa fácil y ganas de compartir el momento." << endl << endl;
-            cout << "2.- 🥰Amor💕" << endl;
-            cout << "Sientes una profunda conexión emocional, afecto o cariño." << endl;
-            cout << "Además de un sentimiento de seguridad en la relación con otra persona o incluso una pasión." << endl << endl;
-            cout << "3.- 😊Optimismo😊" << endl;
-            cout << "Es una esperanza activa de que cosas buenas y hay entusiasmo por lo que suceda." << endl;
-            cout << "Causa una sensación de ilusión, expectativa positiva y alegría hacia el futuro." << endl << endl;
-            cout << "4.- 😌Placer😌" << endl;
-            cout << "Es una alegría placentera, a menudo inesperada; mezcla de asombro y disfrute." << endl;
-            cout << "Suele expresarse con una sonrisa inesperada, una sorpresa grata, asombro o admiración." << endl << endl;
-            cout << "5.- 😊Calma😊" << endl;
-            cout << "Una sensación de paz interior, tranquilidad, equilibrio. Te sientes a gusto, relajado, sin prisas." << endl;
-            cout << "Respiración tranquila, mente clara, sensación de bienestar y pacibidad." << endl << endl;
-            cout << "6.- Volver al menu anterior🔚" << endl << endl;
+            cout << "__________________________________________________________________________________________________" << endl;
+            cout << "| 1.- 😁Alegria pura😁                                                                           |" << endl;
+            cout << "| Es un poco más enérgica que la serenidad.                                                       |" << endl;
+            cout << "| Hay un entusiasmo moderado, una sonrisa fácil y ganas de compartir el momento.                  |" << endl;
+            cout << "|=================================================================================================|" << endl;
+            cout << "| 2.- 🥰Amor💕                                                                                   |" << endl;
+            cout << "| Sientes una profunda conexión emocional, afecto o cariño.                                       |" << endl;
+            cout << "| Además de un sentimiento de seguridad en la relación con otra persona o incluso una pasión.     |" << endl;
+            cout << "|=================================================================================================|" << endl;
+            cout << "| 3.- 😊Optimismo😊                                                                              |" << endl;
+            cout << "| Es una esperanza activa de que cosas buenas y hay entusiasmo por lo que suceda.                 |" << endl;
+            cout << "| Causa una sensación de ilusión, expectativa positiva y alegría hacia el futuro.                 |" << endl;
+            cout << "|=================================================================================================|" << endl;
+            cout << "| 4.- 😌Placer😌                                                                                 |" << endl;
+            cout << "| Es una alegría placentera, a menudo inesperada; mezcla de asombro y disfrute.                   |" << endl;
+            cout << "| Suele expresarse con una sonrisa inesperada, una sorpresa grata, asombro o admiración.          |" << endl;
+            cout << "|=================================================================================================|" << endl;
+            cout << "| 5.- 😊Calma😊                                                                                  |" << endl;
+            cout << "| Una sensación de paz interior, tranquilidad, equilibrio, a gusto, relajado, sin prisas.         |" << endl;
+            cout << "|=================================================================================================|" << endl;
+            cout << "| Respiración tranquila, mente clara, sensación de bienestar y pacibidad.                         |" << endl;
+            cout << "|=================================================================================================|" << endl;
+            cout << "| 6.- Volver al menu anterior 🔚                                                                 |" << endl;
+            cout << "|_________________________________________________________________________________________________|" << endl << endl;
             opcSB = obtenerEntradaNumerica<int>("😊 Selecciona el número de la emoción que sientes: ", 1, 6); // Reutilizando la función de validación
             system("cls");
 
@@ -5131,25 +5628,45 @@ void Tristeza()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
+            cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
+            cout << R"( 
+  ______     _      __                  
+ /_  __/____(_)____/ /____  ____  ____ _
+  / / / ___/ / ___/ __/ _ \/_  / / __ `/
+ / / / /  / (__  ) /_/  __/ / /_/ /_/ / 
+/_/ /_/  /_/____/\__/\___/ /___/\__,_/                                                                              
+            )";
+            cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
             cout << endl << "La tristeza es una emoción dolorosa que surge ante una pérdida, decepción o desilusión." << endl << endl;
             cout << "🤓 Pero se puede manifestar en estas otras emociones:" << endl << endl;
-            cout << "1.- 😞Decepción😞" << endl;
-            cout << "Surge cuando una expectativa o una esperanza no se cumple" << endl;
-            cout << "Sientes desilusión, frustración con tristeza o engaño por la realidad." << endl << endl;
-            cout << "2.- 😫Remordimiento😫" << endl;
-            cout << "Sensación de de arrepentimiento profundo por haber causado daño o actuado de forma equivocada." << endl;
-            cout << "Sientes culpa o pesar en la conciencia, ansiedad y un deseo de deshacer lo hecho." << endl << endl;
-            cout << "3.- 😩Desesperación🤯" << endl;
-            cout << "Tristeza intensa y abrumadora donde se percibe que no hay salida, solución o esperanza" << endl;
-            cout << "Sentimiento de vacío, derrota, impotencia, falta total de energía, hambre y/o sueño" << endl << endl;
-            cout << "4.- 😿Tristeza pura😿" << endl;
-            cout << "Un dolor emocional más evidente, puedes sentir ganas de llorar, baja energía y desinterés." << endl;
-            cout << "Ojos llorosos, voz apagada, tu cuerpo se encorva y quieres aislarte o ser consolado." << endl << endl;
-            cout << "5.- 😔Melancolía😔" << endl;
-            cout << "Es una tristeza leve, una sensación de nostalgia, puede haber un suspiro frecuente o una leve opresión en el pecho." << endl;
-            cout << "Piensas sobre el pasado, sientes que las cosas son grises, pero no hay desesperación." << endl << endl;
-            cout << "6.- Volver al menu principal🔚" << endl << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 1.- 😞Decepción😞                                                                              |"<< endl;
+            cout << "| Surge cuando una expectativa o una esperanza no se cumple                                      |" << endl;
+            cout << "| Sientes desilusión, frustración con tristeza o engaño por la realidad.                         |" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 2.- 😫Remordimiento😫                                                                          |" << endl;
+            cout << "| Sensación de de arrepentimiento profundo por haber causado daño o actuado de forma equivocada. |" << endl;
+            cout << "| Sientes culpa o pesar en la conciencia, ansiedad y un deseo de deshacer lo hecho.              |" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 3.- 😩Desesperación🤯                                                                          |" << endl;
+            cout << "| Tristeza intensa y abrumadora donde se percibe que no hay salida, solución o esperanza         |" << endl;
+            cout << "| Sentimiento de vacío, derrota, impotencia, falta total de energía, hambre y/o sueño            |" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 4.- 😿Tristeza pura😿                                                                          |" << endl;
+            cout << "| Un dolor emocional más evidente, puedes sentir ganas de llorar, baja energía y desinterés      |" << endl;
+            cout << "| Ojos llorosos, voz apagada, tu cuerpo se encorva y quieres aislarte o ser consolado.           |" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 5.- 😔Melancolía😔                                                                             |" << endl;
+            cout << "| Es una tristeza leve, nostalgia, un suspiro frecuente o una leve opresión en el pecho.         |" << endl;
+            cout << "| Piensas sobre el pasado, sientes que las cosas son grises, pero no hay desesperación.          |" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 6.- Volver al menu principal🔚                                                                 |" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "=================================================================================================" << endl;
             opcSB = obtenerEntradaNumerica<int>("😊 Selecciona el número de que emoción sientes: ", 1, 6); // Reutilizando la función de validación
             system("cls");
 
@@ -5199,25 +5716,45 @@ void Miedo()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
+            cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
+            cout << R"(
+    __  ____          __    
+   /  |/  (_)__  ____/ /___ 
+  / /|_/ / / _ \/ __  / __ \
+ / /  / / /  __/ /_/ / /_/ /
+/_/  /_/_/\___/\__,_/\____/                                   
+            )";
+            cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
             cout << endl << "El miedo es una emoción que surge ante una amenaza o peligro." << endl << endl;
             cout << "🤓 Pero se puede manifestar en estas otras emociones:" << endl << endl;
-            cout << "1.- 🚨Alarmado😨" << endl;
-            cout << "Reacción de susto o sobresalto por el miedo de algo inesperado percibido como peligroso." << endl;
-            cout << "Tienes un sobresalto repentino, el corazón se acelera, tienes escalofríos y preocupación." << endl << endl;
-            cout << "2.- 😥Ansiedad😖" << endl;
-            cout << "Preocupación y nerviosismo constantes por eventos futuros inciertos o amenazantes" << endl;
-            cout << "Sientes unaa inquietud constante, tensión, dificultad para relajarse y pensamientos acelerados." << endl << endl;
-            cout << "3.- 🙇Sumiso🥹" << endl;
-            cout << "Ceder o someterse a la autoridad o poder de otro, por temor a las consecuencias de no hacerlo." << endl;
-            cout << "Crees que así no habrá problemas, sientes obediencia, resignación y control" << endl << endl;
-            cout << "4.- 😰Temor puro😰" << endl;
-            cout << "Preocupación o anticipación de algo negativo, te sientes más tenso y más ancioso." << endl;
-            cout << "Tienes pensamientos recurrentes sobre un problema y mayor dificultad para relajarte." << endl << endl;
-            cout << "5.- 🫨Inquietud🫨" << endl;
-            cout << "Una leve preocupación o anticipación de algo negativo, te sientes un poco tenso." << endl;
-            cout << "Tienes pensamientos recurrentes sobre un posible problema y necesidad de controlar la situación" << endl << endl;
-            cout << "6.- Volver al menu anterior🔚" << endl << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 1.- 🚨Alarmado😨                                                                               |" << endl;
+            cout << "| Reacción de susto o sobresalto por el miedo de algo inesperado percibido como peligroso.       |" << endl;
+            cout << "| Tienes un sobresalto repentino, el corazón se acelera, tienes escalofríos y preocupación.      |" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 2.- 😥Ansiedad😖                                                                               |" << endl;
+            cout << "| Preocupación y nerviosismo constantes por eventos futuros inciertos o amenazantes              |" << endl;
+            cout << "| Sientes unaa inquietud constante, tensión, dificultad para relajarse y pensamientos acelerados.|" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 3.- 🙇Sumiso🥹                                                                                 |" << endl;
+            cout << "| Ceder o someterse a la autoridad o poder de otro, por temor a las consecuencias de no hacerlo. |" << endl;
+            cout << "| Crees que así no habrá problemas, sientes obediencia, resignación y control                    |" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 4.- 😰Temor puro😰                                                                             |" << endl;
+            cout << "| Preocupación o anticipación de algo negativo, te sientes más tenso y más ancioso.              |" << endl;
+            cout << "| Tienes pensamientos recurrentes sobre un problema y mayor dificultad para relajarte.           |" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 5.- 🫨Inquietud🫨                                                                              |" << endl;
+            cout << "| Una leve preocupación o anticipación de algo negativo, te sientes un poco tenso.               |" << endl;
+            cout << "| Tienes pensamientos recurrentes sobre un posible problema y necesidad de controlar la situación|" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "| 6.- Volver al menu anterior🔚                                                                  |" << endl;
+            cout << "|                                                                                                |" << endl;
+            cout << "=================================================================================================" << endl;
             opcSB = obtenerEntradaNumerica<int>("😊 Selecciona el número de que emoción sientes: ", 1, 6); // Reutilizando la función de validación
 
             system("cls");
@@ -5267,26 +5804,44 @@ void Ira()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
+             cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
+            cout << R"(
+    ____          
+   /  _/________ _
+   / // ___/ __ `/
+ _/ // /  / /_/ / 
+/___/_/   \__,_/                  
+            )";
+             cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
             cout << endl << "La ira es una emoción que surge cuando te sientes frustrado, injustamente tratado o amenazado." << endl << endl;
             cout << "🤓 Pero se puede manifestar en estas otras emociones:" << endl << endl;
-            cout << "1.- 😒Desprecio😒" << endl;
-            cout << "Mezcla potente de enojo y repulsión hacia otra persona, grupo o situación." << endl;
-            cout << "Rechazo intenso, indignación moral y creer que el otro es menos" << endl << endl;
-            cout << "2.- 😠Agresión😠" << endl;
-            cout << "Es la ira canalizada hacia la acción o la confrontación, es el impulso de atacar, defenderse o dominar." << endl;
-            cout << "Impulso de confrontar, hostilidad, tensión por liberar, ganas de defenderse y/o  idear una pelea." << endl << endl;
-            cout << "3.- 😤Dominio(Negativo)💪🏻" << endl;
-            cout << "Cuando la ira se combina con una fuerte confianza, sueles querer controlar una situación o a otros" << endl;
-            cout << "Hablas con autoridad, te niegas a seder, quieres el control de la situación y que debes imponer." << endl << endl;
-            cout << "4.- 😡Furia😡" << endl;
-            cout << "Un enojo explosivo y descontrolado, querer golpear, gritar o destruir." << endl;
-            cout << "Tensión extrema, dificultad para pensar claramente, impulsos agresivos y descontrol." << endl << endl;
-            cout << "5.- 🫤Molestia🫤" << endl;
-            cout << "Es una irritación leve o fastidio por algo, impaciencia, con ganas de que algo cambie o pare." << endl;
-            cout << "Se representa en un ceño fruncido, apretar un poco la mandíbula, pensamientos de tu molesta." << endl << endl;
-            cout << "6.- Volver al menu principal🔚" << endl << endl;
-            opcSB = obtenerEntradaNumerica<int>("😊 Selecciona el número de que emoción sientes: ", 1, 5); // Reutilizando la función de validación
+            cout << "=================================================================================================" << endl;
+            cout << "| 1.- 😒Desprecio😒                                                                             |" << endl;
+            cout << "| Mezcla potente de enojo y repulsión hacia otra persona, grupo o situación.                     |" << endl;
+            cout << "| Rechazo intenso, indignación moral y creer que el otro es menos                                |" << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 2.- 😠Agresión😠                                                                              |" << endl;
+            cout << "| Es la ira canalizada hacia la acción, es el impulso de atacar, defenderse o dominar.           |" << endl;
+            cout << "| Impulso de confrontar, hostilidad, tensión por liberar, ganas de defenderse y/o idear una pelea|" << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 3.- 😤Dominio(Negativo)💪🏻                                                                     |" << endl;
+            cout << "| Cuando la ira se combina con una fuerte confianza, sueles querer controlar una situación       |" << endl;
+            cout << "| Hablas con autoridad, te niegas a seder, quieres el control de la situación e imponer.         |" << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 4.- 😡Furia😡                                                                                 |" << endl;
+            cout << "| Un enojo explosivo y descontrolado, querer golpear, gritar o destruir.                         |" << endl;
+            cout << "| Tensión extrema, dificultad para pensar claramente, impulsos agresivos y descontrol.           |" << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 5.- 🫤Molestia🫤                                                                              |" << endl;
+            cout << "| Es una irritación leve o fastidio por algo, impaciencia, con ganas de que algo cambie o pare.  |" << endl;
+            cout << "| Se representa en un ceño fruncido, apretar un poco la mandíbula, pensamientos de tu molesta.   |" << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 6.- Volver al menu principal🔚                                                                |" << endl;
+            cout << "=================================================================================================" << endl;
+            opcSB = obtenerEntradaNumerica<int>("😊 Selecciona el número de que emoción sientes: ", 1, 6); // Reutilizando la función de validación
 
             system("cls");
             switch (opcSB)
@@ -5335,25 +5890,43 @@ void Asco()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
+             cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
+            cout << R"(
+    ___                  
+   /   |  ______________ 
+  / /| | / ___/ ___/ __ \
+ / ___ |(__  ) /__/ /_/ /
+/_/  |_/____/\___/\____/                         
+            )";
+             cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
             cout << endl << "El Asco/Desagrado es una emoción de aversión o rechazo hacia algo que percibimos como desagradable o tóxico." << endl << endl;
             cout << "🤓 Pero se puede manifestar en estas otras emociones:" << endl << endl;
-            cout << "1.- 😫Remordimiento😖" << endl;
-            cout << "Una tristeza que nace de sentir aversión por una acción propia o algo que hiciste." << endl;
-            cout << "Piensas repetidamente en lo sucedido, sientes vergüenza, malestar contigo mismo/a y culpa." << endl << endl;
-            cout << "2.- 😒Desprecio😒" << endl;
-            cout << "Una mezcla de enojo y repulsión hacia otra persona, grupo o situación." << endl;
-            cout << "Rechazo intenso, condescendencia, indignación moral, evación y repulsión" << endl << endl;
-            cout << "3.- 😳Verguenza🫨" << endl;
-            cout << "Sientes que se ha cometido un error y ha sido expuesto de forma negativa " << endl;
-            cout << "Alta Incomodidad, deseo de esconderse, sonrojo, mirada hacia abajo, voz baja y humillación." << endl << endl;
-            cout << "4.- 🤢Asco/Repugnancia🤢" << endl;
-            cout << "Es una aversión hacia algo, incluso con una sensación de náuse o querer alejarse." << endl;
-            cout << "Quieres cerrar los ojos o taparse la nariz/boca, sudoración fría y repulsión extrema." << endl << endl;
-            cout << "5.- 🙄Desinterés🙄" << endl;
-            cout << "Es una sensación de falta de estimulación o de que algo no es interesante." << endl;
-            cout << "Se expresa en bostezos, dificultad para prestar atención, sensación de que el tiempo pasa lento y buscas distracción." << endl << endl;
-            cout << "6.- Volver al menu principal🔚" << endl << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 1.- 😫Remordimiento😖                                                                         |" << endl;
+            cout << "| Una tristeza que nace de sentir aversión por una acción propia o algo que hiciste.             |" << endl;
+            cout << "| Piensas repetidamente en lo sucedido, sientes vergüenza, malestar contigo mismo/a y culpa.     |" << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 2.- 😒Desprecio😒                                                                             |" << endl;
+            cout << "| Una mezcla de enojo y repulsión hacia otra persona, grupo o situación.                         |" << endl;
+            cout << "| Rechazo intenso, condescendencia, indignación moral, evación y repulsión                       |" << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 3.- 😳Verguenza🫨                                                                             |" << endl;
+            cout << "| Sientes que se ha cometido un error y ha sido expuesto de forma negativa                       |" << endl;
+            cout << "| Alta Incomodidad, deseo de esconderse, sonrojo, mirada hacia abajo, voz baja y humillación.    |" << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 4.- 🤢Asco/Repugnancia🤢                                                                      |" << endl;
+            cout << "| Es una aversión hacia algo, incluso con una sensación de náuse o querer alejarse.              |" << endl;
+            cout << "| Quieres cerrar los ojos o taparse la nariz/boca, sudoración fría y repulsión extrema.          |" << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 5.- 🙄Desinterés🙄                                                                            |" << endl;
+            cout << "| Es una sensación de falta de estimulación o de que algo no es interesante.                     |" << endl;
+            cout << "| Se expresa en bostezos, dificultad para prestar atención y buscas distracción.                 |" << endl;
+            cout << "=================================================================================================" << endl;
+            cout << "| 6.- Volver al menu principal🔚                                                                |" << endl;
+            cout << "=================================================================================================" << endl;
             opcSB = obtenerEntradaNumerica<int>("😊 Selecciona el número de que emoción sientes: ", 1, 6); // Reutilizando la función de validación
 
             system("cls");
@@ -5404,7 +5977,18 @@ void DescubrirEmocion()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
+             cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
+            cout << R"(
+    ____                       __                 __           ______                     _           
+   / __ \___  ____________  __/ /_  ________     / /___  __   / ____/___ ___  ____  _____(_)___  ____ 
+  / / / / _ \/ ___/ ___/ / / / __ \/ ___/ _ \   / __/ / / /  / __/ / __ `__ \/ __ \/ ___/ / __ \/ __ \
+ / /_/ /  __(__  ) /__/ /_/ / /_/ / /  /  __/  / /_/ /_/ /  / /___/ / / / / / /_/ / /__/ / /_/ / / / /
+/_____/\___/____/\___/\__,_/_.___/_/   \___/   \__/\__,_/  /_____/_/ /_/ /_/\____/\___/_/\____/_/ /_/ 
+            )";
+             cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
 
             cout << endl << "Veamos que es lo que te sucede 🤓" << endl;
             cout << "Sientes algo como: " << endl << endl;
@@ -5476,10 +6060,21 @@ void apoyoProfesional()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
             // Menu principal
-            cout << "<<--🚨AYUDA PROFESIONAL🚑--" << endl;
-            cout << "🤓 Es valiente buscar apoyo profesional." << endl
+            cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
+            cout << R"(
+    ___                   __         ____             ____          _                   __
+   /   | __  ____  ______/ /___ _   / __ \_________  / __/__  _____(_)___  ____  ____ _/ /
+  / /| |/ / / / / / / __  / __ `/  / /_/ / ___/ __ \/ /_/ _ \/ ___/ / __ \/ __ \/ __ `/ / 
+ / ___ / /_/ / /_/ / /_/ / /_/ /  / ____/ /  / /_/ / __/  __(__  ) / /_/ / / / / /_/ / /  
+/_/  |_\__, /\__,_/\__,_/\__,_/  /_/   /_/   \____/_/  \___/____/_/\____/_/ /_/\__,_/_/   
+      /____/                                                                              
+            )";
+            cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
+            cout << endl << "🤓 Es valiente buscar apoyo profesional." << endl
                  << "😊 No soy un especialista, pero puedo ofrecerte algunas sugerencias para apoyarte:" << endl << endl;
             cout << "1. 🤔¿Por qué crees que la necesitas?🤔" << endl;
             cout << "2. 🤓Tipos de profesionales de la salud mental🧠" << endl;
@@ -5487,7 +6082,7 @@ void apoyoProfesional()
             cout << "4. 🩺Instituciones y centros de apoyo🪪" << endl;
             cout << "5. Volver al menú principal🔙" << endl << endl;
             opcSB = obtenerEntradaNumerica<int>("🤓 Esperando tu respuesta: ", 1, 5); // Reutilizando la función de validación
-            system("color 9");                                                        // Color azul claro
+            system("color 0B");                                                        // Color azul claro
 
             switch (opcSB)
             {
@@ -5533,10 +6128,20 @@ void InformacionAsistente()
         do
         {
             system("cls");
-            system("color 9"); // Color azul claro
+            system("color 0B"); // Color azul claro
             // Menu principal
-   cout << "\n--- 🤓 INFORMACIÓN SOBRE EL PROGRAMA 🤓---\n"; 
-        cout << "1. 🧠 Teoría Psicológica en la que fue basada.\n";
+            cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
+            cout << R"(
+   ____     ___                        _                      __                 __  ___                                   
+  /  _/__  / _/__  ______ _  ___ _____(_)__  ___    ___ ___  / /  _______   ___ / / / _ \_______  ___ ________ ___ _  ___ _
+ _/ // _ \/ _/ _ \/ __/  ' \/ _ `/ __/ / _ \/ _ \  (_-</ _ \/ _ \/ __/ -_) / -_) / / ___/ __/ _ \/ _ `/ __/ _ `/  ' \/ _ `/
+/___/_//_/_/ \___/_/ /_/_/_/\_,_/\__/_/\___/_//_/ /___/\___/_.__/_/  \__/  \__/_/ /_/  /_/  \___/\_, /_/  \_,_/_/_/_/\_,_/ 
+                                                                                                /___/                      
+            )";
+            cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ " << endl;
+            cout << "|______|______|______|______|______|______|______|______|" << endl << endl;
+        cout << endl << "1. 🧠 Teoría Psicológica en la que fue basada.\n";
         cout << "2. 💻 Programadores que participaron.\n";
         cout << "3. 🌟 Descripción del Programa.\n";
         cout << "4. 📚 Fuentes Consultadas.\n";
@@ -5622,10 +6227,10 @@ void InformacionAsistente()
 
 int main()
 {
+
     /*******************************************
         <<--Menú principal del programa-->>
     ********************************************/
-
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
@@ -5635,29 +6240,53 @@ int main()
 
     cout << endl << "<<--✨Bienvenido a tu asistente emocional✨-->>" << endl;
     cout << "¡Hola! 😁" << endl;
-    cout << "Soy E.D.I.T.H." << endl
+    cout << "Soy E.D.I.T.H. (Escucha De Ideas Terapéuticas Humanas)" << endl
          << "Como te llamas? " << endl;
     getline(cin, nombre);
     do
     {
         system("cls");
-        system("color 9"); // Color azul claro
+        system("color 0B"); // Color azul claro
 
         cout << endl << "Mucho gusto " << nombre << " 😄" << endl;
+        cout << "Bienvenido a: " << endl;
         // Bucle Do-While para repetir el menu
+        cout << " ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______" << endl;
+        cout << "|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|" << endl;
+        cout << R"(
+ _ _    ______         ___         _      __             __          ______                     _                   __   _ _ 
+( | )  /_  __/_  __   /   |  _____(_)____/ /____  ____  / /____     / ____/___ ___  ____  _____(_)___  ____  ____ _/ /  ( | )
+|/|/    / / / / / /  / /| | / ___/ / ___/ __/ _ \/ __ \/ __/ _ \   / __/ / __ `__ \/ __ \/ ___/ / __ \/ __ \/ __ `/ /   |/|/ 
+       / / / /_/ /  / ___ |(__  ) (__  ) /_/  __/ / / / /_/  __/  / /___/ / / / / / /_/ / /__/ / /_/ / / / / /_/ / /         
+      /_/  \__,_/  /_/  |_/____/_/____/\__/\___/_/ /_/\__/\___/  /_____/_/ /_/ /_/\____/\___/_/\____/_/ /_/\__,_/_/           
+)";
+        cout << endl << " ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______" << endl;
+        cout << "|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|" << endl << endl;
         cout << "Soy tu asistente emocional. ¿Cómo te sientes hoy? 😊 " << endl;
-        cout << "Puedes elegir entre las siguientes opciones:" << endl << endl;
-        cout << "1.- Alegría 😀" << endl;
-        cout << "2.- Tristeza 😞" << endl;
-        cout << "3.- Miedo 😰" << endl;
-        cout << "4.- Ira 😡" << endl;
-        cout << "5.- Asco 🤢" << endl;
-        cout << "6.- ¿Qué es la emoción que siento? 🫠" << endl;
-        cout << "7.- Buscar apoyo o recursos profesionales 📚" << endl;
-        cout << "8.- Información sobre tu asistente 🔎" << endl;
-        cout << "9.- Salir del programa🚪" << endl;
-        opcMN = obtenerEntradaNumerica<int>("🤓 Esperando tu emoción: ", 1, 9); // Reutilizando la función de validación
-        system("color 9");                                                      // Color azul claro
+        cout << "Puedes elegir entre las siguientes opciones:" << endl;
+        cout << "_________________________________________________" << endl;
+        cout << "| 1.- Alegría 😀                                |" << endl;
+        cout << "=================================================" << endl;
+        cout << "| 2.- Tristeza 😞                               |" << endl;
+        cout << "=================================================" << endl;
+        cout << "| 3.- Miedo 😰                                  |" << endl;
+        cout << "=================================================" << endl;
+        cout << "| 4.- Ira 😡                                    |" << endl;
+        cout << "=================================================" << endl;
+        cout << "| 5.- Asco 🤢                                   |" << endl;
+        cout << "=================================================" << endl;
+        cout << "| 6.- ¿Qué es la emoción que siento? 🫠         |" << endl;
+        cout << "=================================================" << endl;
+        cout << "| 7.- Buscar apoyo o recursos profesionales 📚  |" << endl;
+        cout << "=================================================" << endl;
+        cout << "| 8.- Información sobre tu asistente 🔎         |" << endl;
+        cout << "=================================================" << endl;
+        cout << "| 9.- Salir del programa🚪                      |" << endl;
+        cout << "=================================================" << endl;
+        opcMN = obtenerEntradaNumerica<int>("= 🤓 Esperando tu emoción: ", 1, 9); // Reutilizando la función de validación
+        cout << "______________________________________________________________________________________________________________________________" << endl;
+        cout << "______________________________________________________________________________________________________________________________" << endl;
+        system("color 0B");                                                      // Color azul claro
         switch (opcMN)
         {
         case 1:
